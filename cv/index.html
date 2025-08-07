@@ -89,22 +89,6 @@ a:hover {
   color: #bbb;
   text-decoration: underline;
 }
-
-/* Botões para links */
-.button {
-  display: inline-block;
-  padding: 0.6rem 1rem;
-  border: 1px solid #fff;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #fff;
-  color: #000;
-  text-decoration: none;
-}
-
 .links {
   display: flex;
   flex-direction: column;
@@ -113,6 +97,25 @@ a:hover {
   max-width: 320px;
   margin-top: 1rem;
   align-items: flex-start;
+}
+
+a.button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: left;
+  border: 2px solid #fff; /* mantém contraste */
+}
+
+a.button:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 blockquote {
