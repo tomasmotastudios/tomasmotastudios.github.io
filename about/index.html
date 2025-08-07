@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tomás Mota — Full-Stack Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tomás Mota — About</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -11,166 +11,128 @@
     }
     body {
       margin: 0;
-      padding: 0;
+      padding: 2rem;
       background-color: #0f172a;
       color: #e2e8f0;
       font-family: 'Inter', sans-serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      overflow-y: auto;
-      padding: 2rem;
-    }
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
+      align-items: flex-start; /* alinhado à esquerda */
+      justify-content: flex-start;
       max-width: 800px;
-      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: justify; /* texto justificado */
+      line-height: 1.6;
     }
     h1 {
       font-size: 2.8rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
       color: #60a5fa;
+      text-align: left;
+      width: 100%;
     }
-    h2 {
+    h3 {
       font-size: 1.4rem;
-      font-weight: 500;
+      font-weight: 600;
       color: #94a3b8;
-      margin-bottom: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      text-align: left;
+      width: 100%;
     }
-    section {
-      margin-bottom: 3rem;
+    strong {
+      color: #60a5fa;
     }
-    p {
-      max-width: 600px;
-      font-size: 1rem;
-      line-height: 1.6;
+    p, li {
+      max-width: 700px;
       color: #cbd5e1;
-      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      text-align: justify;
     }
     ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1.5rem;
-    }
-    ul li::before {
-      content: "• ";
-      color: #60a5fa;
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
     }
     ul li {
-      margin: 0.3rem 0;
-      color: #cbd5e1;
+      margin-bottom: 0.5rem;
     }
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      width: 100%;
-      max-width: 320px;
-      margin-top: 1rem;
-    }
-    a.button {
-      background-color: #1e293b;
+    ul li::marker {
       color: #60a5fa;
-      padding: 0.9rem 1.2rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      font-size: 1rem;
+    }
+    a {
+      color: #60a5fa;
       text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 0 transparent;
     }
-    a.button:hover {
-      background-color: #3b82f6;
-      color: white;
-      box-shadow: 0 0 12px rgba(96, 165, 250, 0.6);
+    a:hover {
+      text-decoration: underline;
     }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #475569;
-      text-align: center;
+    blockquote {
+      margin: 2rem 0;
+      font-style: italic;
+      color: #94a3b8;
+      border-left: 4px solid #60a5fa;
+      padding-left: 1rem;
+      max-width: 700px;
     }
     @media (min-width: 600px) {
       h1 {
         font-size: 3.2rem;
       }
-      h2 {
+      h3 {
         font-size: 1.6rem;
       }
-      a.button {
+      p, li {
         font-size: 1.1rem;
       }
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Tomás Mota</h1>
-    <h2>Full-stack Developer from Marinha Grande, Portugal 🇵🇹</h2>
+  <h1>Tomás Mota</h1>
+  <p><strong>Full-stack developer</strong> from Marinha Grande, Portugal 🇵🇹. He works as a freelancer, focusing on building modern, accessible, and responsive interfaces — always balancing aesthetics with functionality.</p>
 
-    <section>
-      <p>
-        I work as a freelancer focused on building modern, accessible, and responsive interfaces —
-        always balancing aesthetics with functionality.
-      </p>
-    </section>
+  <h3>💻 Technical Experience</h3>
+  <p>Tomás has hands-on experience with:</p>
+  <ul>
+    <li><strong>Tech Stack</strong></li>
+    <li>Languages: <strong>HTML, CSS, JavaScript, PHP, Java</strong></li>
+    <li>Tools: <strong>Git, GitHub, VS Code</strong></li>
+    <li>Additional Skills: <strong>Basic UI/UX, responsive design, a11y (web accessibility)</strong></li>
+  </ul>
+  <p>He focuses on <strong>clean code</strong>, <strong>solid version control practices</strong>, and <strong>reusable components</strong> — always aiming to deliver digital products that balance <strong>usability, performance, and visual design.</strong></p>
 
-    <section>
-      <h3>💻 Technical Experience</h3>
-      <ul>
-        <li><strong>Languages:</strong> HTML, CSS, JavaScript, PHP, Java</li>
-        <li><strong>Tools:</strong> Git, GitHub, VS Code</li>
-        <li><strong>Additional Skills:</strong> Basic UI/UX, responsive design, accessibility (a11y)</li>
-      </ul>
-      <p>
-        I focus on clean code, solid version control practices, and reusable components —
-        always aiming to deliver digital products that balance usability, performance, and visual design.
-      </p>
-    </section>
+  <h3>🎓 Creative & Technical Background</h3>
+  <p>He’s currently completing a professional <strong>Multimedia</strong> course, where he has gained both technical and creative skills, including:</p>
+  <ul>
+    <li>📸 <strong>Photography</strong> (sports, portrait, institutional)</li>
+    <li>🎨 <strong>Graphic design</strong> and branding</li>
+    <li>🤖 <strong>Robotics programming</strong> (Arduino & basic automation)</li>
+    <li>🎬 <strong>Video production</strong> and multimedia content creation</li>
+  </ul>
+  <p>This creative background enhances his development work, bringing a more visual, organized, and user-centered approach to everything he builds.</p>
 
-    <section>
-      <h3>🎓 Creative & Technical Background</h3>
-      <p>Currently completing a professional Multimedia course, where I’ve gained:</p>
-      <ul>
-        <li>📸 Photography (sports, portrait, institutional)</li>
-        <li>🎨 Graphic design and branding</li>
-        <li>🤖 Robotics programming (Arduino & automation)</li>
-        <li>🎬 Video production and multimedia content creation</li>
-      </ul>
-      <p>
-        This creative background enhances my development work, bringing a more visual, organized, and user-centered approach.
-      </p>
-    </section>
+  <h3>🧠 Professional Profile</h3>
+  <p>Tomás is someone who:</p>
+  <ul>
+    <li>🧼 Writes clean and well-structured code</li>
+    <li>👁️ Pays attention to detail and visual aesthetics</li>
+    <li>📚 Is always learning new tools and technologies</li>
+    <li>🤝 Values collaboration, communication, and feedback</li>
+    <li>⚡ Has real-world experience with clients and local institutions</li>
+  </ul>
 
-    <section>
-      <h3>🧠 Professional Profile</h3>
-      <ul>
-        <li>🧼 Writes clean and well-structured code</li>
-        <li>👁️ Pays attention to detail and visual aesthetics</li>
-        <li>📚 Always learning new tools and technologies</li>
-        <li>🤝 Values collaboration, communication, and feedback</li>
-        <li>⚡ Real-world experience with clients and local institutions</li>
-      </ul>
-    </section>
+  <h3>📬 Contacts & Links</h3>
+  <ul>
+    <li>📧 <a href="mailto:tomasmotadev@proton.me">tomasmotadev@proton.me</a></li>
+    <li>📄 <a href="https://tomasmotadev.lnk.to/cvonline" target="_blank" rel="noopener">CV Online</a></li>
+    <li>🐙 <a href="https://tomasmotadev.lnk.to/github" target="_blank" rel="noopener">GitHub</a></li>
+    <li>💼 <a href="https://tomasmotadev.lnk.to/linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
+  </ul>
 
-    <section>
-      <h3>📬 Contacts & Links</h3>
-      <div class="links">
-        <a class="button" href="mailto:tomasmotadev@proton.me">📧 Email</a>
-        <a class="button" href="https://tomasmotadev.lnk.to/cvonline" target="_blank">📄 CV Online</a>
-        <a class="button" href="https://tomasmotadev.lnk.to/github" target="_blank">🐙 GitHub</a>
-        <a class="button" href="https://tomasmotadev.lnk.to/linkedin" target="_blank">💼 LinkedIn</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    “Tomás is where code meets creativity.”
-  </footer>
+  <blockquote>“Tomás is where code meets creativity.”</blockquote>
 </body>
 </html>
