@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomás Mota — CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: auto;
+      padding: 2rem;
+      /* text-align:center removido para aplicar o texto alinhado à esquerda */
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* alinhado à esquerda */
+      width: 100%;
+      max-width: 800px;
+      text-align: justify; /* texto justificado */
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #60a5fa;
+      text-align: left; /* cabeçalho alinhado à esquerda */
+      width: 100%;
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #94a3b8;
+      margin-bottom: 2rem;
+      text-align: left; /* subtítulo alinhado à esquerda */
+      width: 100%;
+    }
+    h3 {
+      font-size: 1.2rem;
+      color: #60a5fa;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      text-align: left; /* seções alinhadas à esquerda */
+      width: 100%;
+    }
+    section {
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+    p {
+      max-width: 600px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin: 0 auto 1.5rem;
+      text-align: justify; /* texto justificado */
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+      text-align: justify; /* texto justificado */
+      max-width: 600px;
+      margin-left: 0;
+    }
+    ul li::before {
+      content: "• ";
+      color: #60a5fa;
+    }
+    ul li {
+      margin: 0.3rem 0;
+      color: #cbd5e1;
+    }
+    .meta {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      max-width: 600px;
+    }
+    .role {
+      font-weight: 600;
+      color: #cbd5e1;
+      text-align: left;
+      max-width: 600px;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 320px;
+      margin-top: 1rem;
+      align-items: flex-start; /* botões alinhados à esquerda */
+    }
+    a.button {
+      background-color: #1e293b;
+      color: #60a5fa;
+      padding: 0.9rem 1.2rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 0 transparent;
+      width: 100%;
+      text-align: left;
+    }
+    a.button:hover {
+      background-color: #3b82f6;
+      color: white;
+      box-shadow: 0 0 12px rgba(96, 165, 250, 0.6);
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #475569;
+      text-align: center;
+      width: 100%;
+    }
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 3.2rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      a.button {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tomás Mota</h1>
+    <h2>🎯 Full-Stack Developer • 📍 Leiria, Portugal</h2>
+    <p>
+      📩 tomasmotadev@proton.me <br />
+      🔗 <a href="https://github.com/tomasmotadev" target="_blank" rel="noopener">GitHub</a> • 
+      <a href="https://www.linkedin.com/in/tomasmotadev" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+    <p><em>“Clean code, good UX, self-taught mindset.”</em></p>
+
+    <section>
+      <h3>🧠 Summary</h3>
+      <p>
+        Full-Stack developer focused on web programming using HTML, CSS, Java, JavaScript, PHP, Git, and GitHub.<br />
+        Currently studying Multimedia, emphasizing building functional, responsive, and efficient interfaces while continuously improving skills in:
+      </p>
+      <ul>
+        <li>Full-stack development (HTML, CSS, JavaScript, PHP)</li>
+        <li>Version control and collaboration via Git and GitHub</li>
+        <li>Clean code best practices and user experience (UX)</li>
+        <li>Component-based programming and modern frameworks</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>💻 Dev Experience</h3>
+      <p class="role">👨‍💻 Full-Stack Developer — Freelancer</p>
+      <p class="meta">Jun 2025 – Present</p>
+      <p>
+        Development of responsive and optimized web interfaces, focusing on performance, accessibility, and user experience.<br />
+        <strong>Stack:</strong> HTML, CSS, Java, JavaScript, PHP, Git & GitHub
+      </p>
+    </section>
+
+    <section>
+      <h3>🎓 Education</h3>
+      <p class="role">Calazans Duarte Secondary School</p>
+      <p class="meta">Multimedia Technician (Professional Course) | Sep 2023 – Jul 2026</p>
+    </section>
+
+    <section>
+      <h3>🧰 Stack</h3>
+      <ul>
+        <li>HTML / CSS / JavaScript</li>
+        <li>React (basic)</li>
+        <li>Git & GitHub</li>
+        <li>PHP / JSON / Java</li>
+        <li>Photoshop / Lightroom</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>🗣️ Languages</h3>
+      <ul>
+        <li>🇵🇹 Portuguese – Native</li>
+        <li>🇬🇧 English – Professional</li>
+        <li>🇪🇸 Spanish – Professional</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>📜 Certifications</h3>
+      <ul>
+        <li>👨‍💻 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1753991965008/single-media-viewer" target="_blank" rel="noopener">Savegnago - Programming Logic</a></li>
+        <li>👨‍💻 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1753469115001/single-media-viewer" target="_blank" rel="noopener">GFT Start #6 - Programming Logic</a></li>
+        <li>👨‍💻 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1749648901937/single-media-viewer" target="_blank" rel="noopener">GitHub Copilot</a></li>
+        <li>🎯 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1749668511644/single-media-viewer" target="_blank" rel="noopener">Storytelling for Digital Marketing</a></li>
+        <li>🤖 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1751963118367/single-media-viewer" target="_blank" rel="noopener">Google AI & Productivity</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>📸 Photography</h3>
+      <p class="role">Marinha Grande Poente School Group</p>
+      <p class="meta">Sep 2023 – Jun 2025</p>
+      <p>Event coverage, institutional content, campaign support.</p>
+
+      <p class="role">Atlético Clube Marinhense <em>(Internship)</em></p>
+      <p class="meta">Jun 2025 – Jul 2025</p>
+      <p>Sports event coverage and content delivery for social media.</p>
+
+      <p class="role">Sport Lisboa e Marinha <em>(Internship)</em></p>
+      <p class="meta">Jun 2024 – Jul 2024</p>
+      <p>Game/training photography, editing, and club media support.</p>
+    </section>
+
+    <section>
+      <h3>📎 Links</h3>
+      <div class="links">
+        <a class="button" href="https://tomasmotadev.github.io/about/" target="_blank" rel="noopener">🌐 About</a>
+        <a class="button" href="https://github.com/tomasmotadev" target="_blank" rel="noopener">🐙 GitHub</a>
+        <a class="button" href="https://www.linkedin.com/in/tomasmotadev" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="button" href="https://tomasmotadev.github.io/cv/" target="_blank" rel="noopener">📄 CV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Tomás Mota — CV • 2025
+  </footer>
+</body>
+</html>
