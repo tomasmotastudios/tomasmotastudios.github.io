@@ -12,8 +12,8 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #0f172a;
-      color: #e2e8f0;
+      background-color: #ffffff;
+      color: #111111;
       font-family: 'Inter', sans-serif;
       display: flex;
       flex-direction: column;
@@ -23,23 +23,32 @@
       padding: 2rem;
       text-align: center;
     }
+    .profile-photo {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 3px solid #111;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
     h1 {
       font-size: 2.8rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
-      color: #60a5fa;
+      color: #111;
     }
     h2 {
       font-size: 1.4rem;
       font-weight: 500;
-      color: #94a3b8;
+      color: #555;
       margin-bottom: 2rem;
     }
     p {
       max-width: 600px;
       font-size: 1rem;
       line-height: 1.6;
-      color: #cbd5e1;
+      color: #333;
       margin-bottom: 2rem;
     }
     .links {
@@ -50,25 +59,24 @@
       max-width: 320px;
     }
     a.button {
-      background-color: #1e293b;
-      color: #60a5fa;
+      background-color: #ffffff;
+      color: #111;
+      border: 2px solid #111;
       padding: 0.9rem 1.2rem;
       border-radius: 0.5rem;
       font-weight: 600;
       font-size: 1rem;
       text-decoration: none;
       transition: all 0.3s ease;
-      box-shadow: 0 0 0 transparent;
     }
     a.button:hover {
-      background-color: #3b82f6;
-      color: white;
-      box-shadow: 0 0 12px rgba(96, 165, 250, 0.6);
+      background-color: #111;
+      color: #fff;
     }
     footer {
       margin-top: 3rem;
       font-size: 0.8rem;
-      color: #475569;
+      color: #777;
     }
     @media (min-width: 600px) {
       h1 {
@@ -81,37 +89,27 @@
         font-size: 1.1rem;
       }
     }
-
-    .profile-photo {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
-      border: 3px solid #3b82f6;
-    }
-
   </style>
 </head>
 <body>
 
   <img src="profile.jpg" alt="Profile photo of Tomás Mota" class="profile-photo" />
-  
+
   <h1>Tomás Mota</h1>
   <h2>Fullstack Developer</h2>
 
   <p>
-    I turn ideas into full digital solutions — from clean, responsive frontends to fast, reliable backends.  
-    I care about performance, simplicity, and writing maintainable code.
+    I build full digital experiences — from elegant, accessible frontends to robust, scalable backends.  
+    Passionate about clean code, usability, and performance.
   </p>
 
   <div class="links">
-    <a class="button" href="/cv" aria-label="View CV">📄 View CV</a>
-    <a class="button" href="/linkedin" aria-label="LinkedIn">💼 LinkedIn</a>
-    <a class="button" href="/github" aria-label="GitHub">💻 GitHub</a>
-    <a class="button" href="mailto:tomasmotadev@proton.me" aria-label="Email">✉️ Email</a>
-    <a class="button" href="/about" aria-label="About Me">🧠 About Me</a>
+    <a class="button" href="/cv">📄 View CV</a>
+    <a class="button" href="/linkedin">💼 LinkedIn</a>
+    <a class="button" href="/github">💻 GitHub</a>
+    <a class="button" href="mailto:tomasmotadev@proton.me">✉️ Email</a>
+    <a class="button" href="/photography">📷 Photography</a>
+    <a class="button" href="/about">🧠 About Me</a>
   </div>
 
   <footer>
