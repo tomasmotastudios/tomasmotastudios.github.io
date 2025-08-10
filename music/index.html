@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tomás Mota - Music Portfolio - TøMōta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg-color: #000;
+      --text-color: #fff;
+      --subtext-color: #ccc;
+      --link-hover: #bbb;
+    }
+
+    body.light {
+      --bg-color: #fff;
+      --text-color: #000;
+      --subtext-color: #333;
+      --link-hover: #444;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      color: var(--subtext-color);
+      margin: 2rem 0 1rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .toggle-btn {
+      background: none;
+      border: 2px solid var(--text-color);
+      color: var(--text-color);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-btn:hover {
+      background: var(--text-color);
+      color: var(--bg-color);
+    }
+
+    .album-row {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .items-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .item {
+      flex: 0 0 auto;
+      width: 250px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      filter: grayscale(100%);
+      transition: all 0.3s ease;
+    }
+
+    .item img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.02);
+    }
+
+    .item-title {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .item {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+<body class="dark">
+  <h1>TøMōta</h1>
+
+  <button class="toggle-btn" onclick="window.location.href='https://tomasmotadev.github.io'">Go to Home</button>
+  <button class="toggle-btn" onclick="toggleMode()">Change Theme</button>
+
+  <!-- Álbum -->
+  <div class="album-row">
+    <h3><a href="#" data-aos="fade-up" style="color: inherit; text-decoration: none;">Álbuns</a></h3>
+    <div class="items-container">
+      <a href="/albums/ghoststory" class="item" data-aos="fade-up">
+        <img src="src/music/album1.jpg" alt="Álbum 1">
+        <div class="item-title">Ghost Story</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Singles -->
+  <div class="album-row">
+    <h3><a href="#" data-aos="fade-up" style="color: inherit; text-decoration: none;">Singles</a></h3>
+    <div class="items-container">
+      <a href="/singles/spies" class="item" data-aos="fade-up">
+        <img src="src/img/singles/spies.jpg" alt="Single 1">
+        <div class="item-title">Spies</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Performances -->
+  <div class="album-row">
+    <h3><a href="#" data-aos="fade-up" style="color: inherit; text-decoration: none;">Performances ao Vivo</a></h3>
+    <div class="items-container">
+      <a href="#" class="item" data-aos="fade-up">
+        <img src="src/music/live1.jpg" alt="Live Performance 1">
+        <div class="item-title">Festival da Cidade 2024</div>
+      </a>
+      <a href="#" class="item" data-aos="fade-up">
+        <img src="src/music/live2.jpg" alt="Live Performance 2">
+        <div class="item-title">Concerto Solidário</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 <a href="https://tomasmotadev.github.io" style="color: inherit; text-decoration: underline;">Tomás Mota</a>. All Rights Reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleMode() {
+      document.body.classList.toggle("light");
+    }
+  </script>
+</body>
+</html>
