@@ -45,6 +45,8 @@ No JavaScript frameworks or build tools — just straight-to-the-point web devel
 ├── linkedin/
     ├── index.html
 ├── photography/
+    ├── acm/
+        ├── index.html
     ├── atleticoclubemarinhense/
         ├── acmseason202425finaleparty/
             ├── index.html
@@ -62,6 +64,81 @@ No JavaScript frameworks or build tools — just straight-to-the-point web devel
     ├── songraiders/
         ├── marinhagrande224cityfestivals/
             ├── index.html
+    ├── calazansduartesecondaryschool/
+        ├── xiveditionofmediatecacomvida/
+            ├── index.html
+        ├── index.html
+    ├── gdpcc/
+        ├── index.html
+    ├── grupodesportivodospescadoresdacostadacaparica/
+        ├── impor4millsummercup/
+            ├── index.html
+        ├── luis-santos/
+            ├── index.html
+        ├── tomas-ramos/
+            ├── index.html
+    ├── iberoalpla/
+        ├── intercompanytournament/
+            ├── index.html
+        ├── index.html
+    ├── ospenetras/
+        ├── liveatcalazansduarte/
+            ├── index.html
+        ├── liveatestrelasaosabado/
+            ├── index.html
+        ├── photoshoot/
+            ├── index.html
+        ├── index.html
+    ├── personal/
+        ├── david-ferromau/
+            ├── index.html
+        ├── gabriel-eloi/
+            ├── index.html
+        ├── tomas-macedo/
+            ├── index.html
+        ├── index.html
+    ├── slmarinha/
+        ├── index.html
+    ├── songraiders/
+        ├── marinhagrande2024cityfestivals/
+            ├── index.html
+        ├── index.html
+    ├── sportlisboaemarinha/
+        ├── bernardo-lopes/
+            ├── index.html
+        ├── brazao/
+            ├── index.html
+        ├── francisco-teixeira/
+            ├── index.html
+        ├── pedro-baptista/
+            ├── index.html
+        ├── tomas-lordelo/
+            ├── index.html
+    ├── src/
+        ├── img/
+            ├── README.md
+            ├── acmarinhense-project1.jpg
+            ├── acmarinhense-project2.jpg
+            ├── acmarinhense-project3.jpg
+            ├── acmarinhense-project4.jpg
+            ├── acmarinhense-project5.jpg
+            ├── aemgpoente-project1.jpg
+            ├── bernardolopes-project1.jpg
+            ├── brazao-project1.jpg
+            ├── davidferromau-project1.jpg
+            ├── franciscoteixeira-project1.jpg
+            ├── grabrieleloi-project1.jpg
+            ├── gdpcc-project1.jpg
+            ├── iberoalpla-project1.jpg
+            ├── luissantos-project1.jpg
+            ├── ospenetras-project1.jpg
+            ├── ospenetras-project2.jpg
+            ├── ospenetras-project3.jpg
+            ├── pedrobaptista-project1.jpg
+            ├── songraiders-project1.jpg
+            ├── tomaslordelo-project1.jpg
+            ├── tomasmacedo-project1.jpg
+            ├── tomasramos-project1.jpg
 ├── index.html
 ├── profile.jpg
 ```
