@@ -121,6 +121,16 @@
         width: 180px;
       }
     }
+
+    .code-block {
+        background-color: #1e1e1e; /* fundo escuro */
+        color: #d4d4d4; /* cor do texto */
+        padding: 15px;
+        border-radius: 8px;
+        font-family: "Courier New", Courier, monospace; /* fonte monoespaçada */
+        overflow-x: auto; /* scroll horizontal se precisar */
+        font-size: 1.2em; /* tamanho do texto */
+    }
   </style>
 </head>
 <body class="dark">
@@ -148,7 +158,9 @@
       <a href="https://tomasmotadev.github.io/music/single/spies" class="item" data-aos="fade-up">
         <img src="src/img/singles/spies.jpg" alt="Single 1">
         <div class="item-title">Spies</div>
-        <div> `Makyneta (feat. Coldplay)` </div>
+        <div class="code-block">
+          <pre><code>Makyneta &amp; Coldplay</code></pre>
+        </div>
       </a>
     </div>
   </div>
