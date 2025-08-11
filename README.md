@@ -44,6 +44,16 @@ No JavaScript frameworks or build tools — just straight-to-the-point web devel
     ├── index.html
 ├── linkedin/
     ├── index.html
+├── music/
+    ├── single/
+        ├── spies
+            ├── index.html
+    ├── singles/
+        ├── index.html
+    ├── src/
+        ├── img/
+            ├── README.md
+            ├── spies.jpg
 ├── photography/
     ├── acm/
         ├── index.html
@@ -139,6 +149,7 @@ No JavaScript frameworks or build tools — just straight-to-the-point web devel
             ├── tomaslordelo-project1.jpg
             ├── tomasmacedo-project1.jpg
             ├── tomasramos-project1.jpg
+├── README.md
 ├── index.html
 ├── profile.jpg
 ```
