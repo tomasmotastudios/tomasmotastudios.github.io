@@ -1,115 +1,100 @@
 <!DOCTYPE html>
-<html lang="en-UK">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tomás Mota - Photography Portfolio - Francisco Teixeira - Download</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-
   <style>
     :root {
-      --bg-color: #000;
-      --text-color: #fff;
-      --subtext-color: #ccc;
-      --link-hover: #bbb;
+      --bg-gradient-start: #071022;
+      --bg-gradient-end: #082033;
+      --modal-bg-start: #071226;
+      --modal-bg-end: #041021;
+      --text-color: #e6eef8;
+      --subtext-color: #94a3b8;
+      --accent-color: #7dd3fc;
+      --btn-bg: transparent;
+      --btn-border: var(--accent-color);
+      --btn-hover-bg: var(--accent-color);
+      --btn-hover-color: #071022;
+      --shadow: rgba(2, 6, 23, 0.6);
+      --font-family: 'Inter', sans-serif;
     }
-    body.light {
-      --bg-color: #fff;
-      --text-color: #000;
-      --subtext-color: #333;
-      --link-hover: #444;
-    }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
-      padding: 2rem;
-      background-color: var(--bg-color);
+      padding: 3rem 1.5rem;
+      background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
       color: var(--text-color);
-      font-family: 'Inter', sans-serif;
-      transition: background-color 0.4s ease, color 0.4s ease;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-    p { color: var(--subtext-color); margin-bottom: 1rem; }
-    .toggle-btn,
-    .home-btn,
-    .download-btn {
-      background: none;
-      border: 2px solid var(--text-color);
-      color: var(--text-color);
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      font-weight: bold;
-      cursor: pointer;
-      margin-bottom: 2rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .toggle-btn:hover,
-    .home-btn:hover,
-    .download-btn:hover {
-      background: var(--text-color);
-      color: var(--bg-color);
-    }
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-    .projeto { text-decoration: none; color: inherit; }
-    .projeto img {
-      width: 100%; border-radius: 0.5rem;
-      filter: grayscale(100%);
-      transition: all 0.3s ease;
-    }
-    .projeto img:hover { filter: grayscale(0%); transform: scale(1.02); }
-    .projeto-title { margin-top: 0.5rem; font-size: 1rem; }
-    a.voltar { display: inline-block; margin-bottom: 2rem; color: var(--link-hover); text-decoration: none; }
-    a.voltar:hover { text-decoration: underline; color: var(--text-color); }
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      color: #777;
-    }
-
-    .header-section {
+      font-family: var(--font-family);
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
+      min-height: 100vh;
       text-align: center;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 8px var(--shadow);
+    }
+    p {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: var(--subtext-color);
       margin-bottom: 2rem;
+      text-shadow: 0 1px 4px var(--shadow);
     }
-
-    .download-btn {
-      margin-top: 1rem;
+    a.download-btn {
+      display: inline-block;
+      padding: 0.85rem 2.2rem;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--accent-color);
+      background: var(--btn-bg);
+      border: 2.5px solid var(--btn-border);
+      border-radius: 0.8rem;
+      text-decoration: none;
+      box-shadow: 0 6px 12px rgba(125, 211, 252, 0.35);
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      user-select: none;
     }
-
+    a.download-btn:hover,
+    a.download-btn:focus {
+      background-color: var(--btn-hover-bg);
+      color: var(--btn-hover-color);
+      box-shadow: 0 8px 20px rgba(125, 211, 252, 0.6);
+      outline: none;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.85rem;
+      color: var(--subtext-color);
+      user-select: none;
+    }
+    footer a {
+      color: var(--accent-color);
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+    footer a:hover,
+    footer a:focus {
+      color: #a0d8ff;
+      outline: none;
+    }
   </style>
 </head>
 <body>
-
-  
-<div class="header-section">
   <h1>Francisco Teixeira</h1>
   <p>Download all photos below</p>
-  <a href="https://tomasmotadev.github.io/photography/sportlisboaemarinha/francisco-teixeira/download/file" class="download-btn">Download Photos</a>
-</div>
-
+  <a href="https://tomasmotadev.github.io/photography/sportlisboaemarinha/francisco-teixeira/download/file/index.html" class="download-btn" aria-label="Download all photos">Download Photos</a>
 
   <footer>
     © 2025 <a href="https://tomasmotadev.github.io" style="color: inherit; text-decoration: underline;">Tomás Mota</a>. All Rights Reserved.
   </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    function toggleMode() {
-      document.body.classList.toggle("light");
-    }
-  </script>
 </body>
 </html>
