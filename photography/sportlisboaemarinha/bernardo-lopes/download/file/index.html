@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta http-equiv="refresh" content="0; url=https://tomasmotadev.github.io/photography/sportlisboaemarinha/bernardo-lopes/download/file/SLMarinha's%20Bernardo%20Lopes%20Photoshoot.zip" />
-  <title> </title>
+  <title>Download — Loading</title>
   <style>
     :root{--bg:#0f1724;--card:#0b1220;--accent:#7dd3fc;--muted:#94a3b8}
     *{box-sizing:border-box}
@@ -21,10 +20,43 @@
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="overlayTitle">
       <div class="spinner" aria-hidden="true"><div class="ring"></div></div>
       <div style="text-align:center">
-        <div id="overlayTitle" style="font-weight:700">Preparing download...</div>
-        <div id="overlayDesc" style="color:var(--muted);font-size:0.95rem;margin-top:6px">The download will start automatically.</div>
+        <div id="overlayTitle" style="font-weight:700">Preparing downloads...</div>
+        <div id="overlayDesc" style="color:var(--muted);font-size:0.95rem;margin-top:6px">The downloads will start automatically.</div>
       </div>
     </div>
   </div>
+
+  <script>
+    // Array of files to download, with URL and suggested filename
+    const files = [
+      {
+        url: "https://tomasmotadev.github.io/photography/sportlisboaemarinha/bernardo-lopes/download/file/SLMarinha's%20Bernardo%20Lopes%20Photoshoot%20%2301.tar.gz",
+        filename: "SLMarinha's Bernardo Lopes Photoshoot #01.tar.gz"
+      },
+      {
+        url: "https://tomasmotadev.github.io/photography/sportlisboaemarinha/bernardo-lopes/download/file/SLMarinha's%20Bernardo%20Lopes%20Photoshoot%20%2302.tar.gz",
+        filename: "SLMarinha's Bernardo Lopes Photoshoot #02.tar.gz"
+      }
+    ];
+
+    // Function to trigger download by creating an <a> and clicking it
+    function triggerDownload(url, filename) {
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    // Trigger downloads one by one with a small delay
+    window.addEventListener('load', () => {
+      files.forEach((file, index) => {
+        setTimeout(() => {
+          triggerDownload(file.url, file.filename);
+        }, index * 1500); // 1.5s interval between downloads to avoid blocking
+      });
+    });
+  </script>
 </body>
 </html>
