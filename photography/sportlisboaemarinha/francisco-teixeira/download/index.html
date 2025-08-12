@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tomás Mota - Photography Portfolio - Atlético Clube Marinhense</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg-color: #000;
+      --text-color: #fff;
+      --subtext-color: #ccc;
+      --link-hover: #bbb;
+    }
+    body.light {
+      --bg-color: #fff;
+      --text-color: #000;
+      --subtext-color: #333;
+      --link-hover: #444;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 2rem;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1 { font-size: 2.4rem; margin-bottom: 1rem; }
+    p { color: var(--subtext-color); margin-bottom: 2rem; }
+    .toggle-btn,
+    .home-btn,
+    .download-btn {
+      background: none;
+      border: 2px solid var(--text-color);
+      color: var(--text-color);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .toggle-btn:hover,
+    .home-btn:hover,
+    .download-btn:hover {
+      background: var(--text-color);
+      color: var(--bg-color);
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .projeto { text-decoration: none; color: inherit; }
+    .projeto img {
+      width: 100%; border-radius: 0.5rem;
+      filter: grayscale(100%);
+      transition: all 0.3s ease;
+    }
+    .projeto img:hover { filter: grayscale(0%); transform: scale(1.02); }
+    .projeto-title { margin-top: 0.5rem; font-size: 1rem; }
+    a.voltar { display: inline-block; margin-bottom: 2rem; color: var(--link-hover); text-decoration: none; }
+    a.voltar:hover { text-decoration: underline; color: var(--text-color); }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://tomasmotadev.github.io" class="home-btn">Home</a>
+  
+  <h1>Francico Teixeira</h1>
+  <p>Download all photos.</p>
+
+  <a href="https://exemplo.com/download" class="download-btn">Download Photos</a>
+
+  <footer>
+    © 2025 <a href="https://tomasmotadev.github.io" style="color: inherit; text-decoration: underline;">Tomás Mota</a>. All Rights Reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleMode() {
+      document.body.classList.toggle("light");
+    }
+  </script>
+</body>
+</html>
