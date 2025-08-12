@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tomás Mota - Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg-color: #000;
+      --text-color: #fff;
+      --subtext-color: #ccc;
+      --link-hover: #bbb;
+      --card-bg: rgba(255,255,255,0.05);
+    }
+    body.light {
+      --bg-color: #fff;
+      --text-color: #000;
+      --subtext-color: #333;
+      --link-hover: #444;
+      --card-bg: rgba(0,0,0,0.05);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 2rem;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1 { font-size: 2.4rem; margin-bottom: 1rem; }
+    p { color: var(--subtext-color); margin-bottom: 2rem; }
+    .toggle-btn {
+      background: none;
+      border: 2px solid var(--text-color);
+      color: var(--text-color);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+    .toggle-btn:hover { background: var(--text-color); color: var(--bg-color); }
+    .voltar { display: inline-block; margin-bottom: 2rem; color: var(--link-hover); text-decoration: none; }
+    .voltar:hover { text-decoration: underline; color: var(--text-color); }
+
+    /* GALERIA DE PROJETOS */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .projeto {
+      background: var(--card-bg);
+      border-radius: 0.8rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .projeto:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.1);
+    }
+    .projeto h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    .projeto p {
+      font-size: 0.9rem;
+      flex-grow: 1;
+    }
+    .tech-icons {
+      margin: 0.5rem 0;
+    }
+    .tech-icons img {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    .repo-btn {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      border: 2px solid var(--text-color);
+      border-radius: 0.4rem;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .repo-btn:hover {
+      background: var(--text-color);
+      color: var(--bg-color);
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="voltar">← Voltar ao Portfólio</a>
+  <button class="toggle-btn" onclick="toggleMode()">Alterar Tema</button>
+
+  <h1>📁 Projetos em Destaque</h1>
+  <p>Principais trabalhos e repositórios desenvolvidos.</p>
+
+  <div class="galeria">
+    <div class="projeto" data-aos="fade-up">
+      <h3>🔗 <a href="https://tomasmotadev.github.io" target="_blank">tomasmotadev.github.io</a></h3>
+      <p>Portfólio pessoal com design limpo e responsivo.</p>
+      <div class="tech-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="25"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="25"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="25"/>
+      </div>
+      <a class="repo-btn" href="https://github.com/tomasmotadev" target="_blank">Ver Repositório</a>
+    </div>
+
+    <div class="projeto" data-aos="fade-up">
+      <h3>🛍️ Flash Sale</h3>
+      <p>Calcula desconto com base no valor da compra.</p>
+      <div class="tech-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="25"/>
+      </div>
+      <a class="repo-btn" href="https://github.com/tomasmotadev/exploring-java-syntax-and-logic/tree/main/flash-sale" target="_blank">Ver Repositório</a>
+    </div>
+
+    <div class="projeto" data-aos="fade-up">
+      <h3>📦 Organizing Inventory</h3>
+      <p>Organiza e resume dados de inventário de lojas.</p>
+      <div class="tech-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="25"/>
+      </div>
+      <a class="repo-btn" href="https://github.com/tomasmotadev/exploring-java-syntax-and-logic/tree/main/organizing-inventory" target="_blank">Ver Repositório</a>
+    </div>
+
+    <div class="projeto" data-aos="fade-up">
+      <h3>🎵 'The Shiver' Landing Page</h3>
+      <p>Landing page moderna e responsiva para projeto musical.</p>
+      <div class="tech-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="25"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="25"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="25"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="25"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="25"/>
+      </div>
+      <a class="repo-btn" href="https://github.com/tomasmotadev" target="_blank">Ver Repositório</a>
+    </div>
+
+    <div class="projeto" data-aos="fade-up">
+      <h3>🧠 Hero Level Classifier</h3>
+      <p>Classifica nível de herói de Iron a Radiant.</p>
+      <div class="tech-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="25"/>
+      </div>
+      <a class="repo-btn" href="https://github.com/tomasmotadev/hero-level-classifier" target="_blank">Ver Repositório</a>
+    </div>
+
+    <div class="projeto" data-aos="fade-up">
+      <h3>🎮 Ranked Calculator</h3>
+      <p>Calcula ranking de jogador baseado em vitórias e derrotas.</p>
+      <div class="tech-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="25"/>
+      </div>
+      <a class="repo-btn" href="https://github.com/tomasmotadev/ranked-calculator" target="_blank">Ver Repositório</a>
+    </div>
+
+    <div class="projeto" data-aos="fade-up">
+      <h3>⚔️ Writing Hero Class Game</h3>
+      <p>Projeto OOP com classes de herói e métodos de ataque.</p>
+      <div class="tech-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="25"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg" width="25"/>
+      </div>
+      <a class="repo-btn" href="https://github.com/tomasmotadev/hero_game" target="_blank">Ver Repositório</a>
+    </div>
+
+    <div class="projeto" data-aos="fade-up">
+      <h3>🔐 Credit Card Brand Validator</h3>
+      <p>Detecta bandeira de cartão usando regex.</p>
+      <div class="tech-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="25"/>
+      </div>
+      <a class="repo-btn" href="https://github.com/tomasmotadev/credit-card-brand-validator" target="_blank">Ver Repositório</a>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleMode() {
+      document.body.classList.toggle("light");
+    }
+  </script>
+</body>
+</html>
