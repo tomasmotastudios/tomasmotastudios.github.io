@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="https://tomasmotadev.github.io/profile.jpg" type="image/jpeg" />
+  <title>Spies – Single by Makyneta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg-color: #000;
+      --text-color: #fff;
+      --subtext-color: #ccc;
+    }
+    body.light {
+      --bg-color: #fff;
+      --text-color: #000;
+      --subtext-color: #333;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      text-align: center;
+    }
+    header {
+      padding: 2rem 1rem 0;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+    }
+    h3 {
+      color: var(--subtext-color);
+      font-weight: normal;
+      margin-bottom: 2rem;
+    }
+    .album-cover {
+      max-width: 400px;
+      width: 90%;
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .link-btn {
+      border: 2px solid var(--text-color);
+      padding: 0.7rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .link-btn:hover {
+      background: var(--text-color);
+      color: var(--bg-color);
+    }
+    .tracklist {
+      max-width: 600px;
+      margin: 0 auto 4rem;
+      text-align: left;
+      font-size: 1rem;
+    }
+    .track {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .track span {
+      color: var(--subtext-color);
+    }
+    .track a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .track a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      font-size: 0.8rem;
+      color: var(--subtext-color);
+      padding: 2rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 data-aos="fade-up">SPIES</h1>
+    <h3 data-aos="fade-up">Released: 15 August 2025</h3>
+  </header>
+
+  <main>
+    <img src="https://tomasmotadev.github.io/music/src/img/singles/spies.jpg" alt="Spies Song Cover" class="album-cover" data-aos="zoom-in">
+    
+    <div class="links" data-aos="fade-up">
+      <a href="#" class="link-btn">Listen</a>
+      <a href="#" class="link-btn">Buy CD</a>
+    </div>
+
+    <section class="tracklist" data-aos="fade-up">
+      <div class="track">
+        <span>01</span> <a href="https://tomasmotadev.github.io/music/song/spies">Spies</a> <span>Lyrics</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Makyneta. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
