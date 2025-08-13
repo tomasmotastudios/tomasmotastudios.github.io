@@ -13,30 +13,26 @@
       --bg-color: #000;
       --text-color: #fff;
       --subtext-color: #ccc;
+      --card-bg: #062255;
     }
     body.light {
       --bg-color: #fff;
       --text-color: #000;
       --subtext-color: #333;
+      --card-bg: #e0e0e0;
     }
     body {
       margin: 0;
-      padding: 0;
+      padding: 2rem;
       background-color: var(--bg-color);
       color: var(--text-color);
       font-family: 'Inter', sans-serif;
       transition: background-color 0.4s ease, color 0.4s ease;
     }
     .top-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
       display: flex;
       gap: 1rem;
-      padding: 1rem;
-      background: transparent;
-      z-index: 10;
+      margin-bottom: 2rem;
     }
     .btn {
       background: none;
@@ -54,47 +50,66 @@
     }
     .container {
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-      padding: 6rem 2rem 2rem;
-      gap: 2rem;
+      gap: 3rem;
     }
     .left {
       flex: 1;
-      max-width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
     .right {
       flex: 1;
-      max-width: 60%;
+      white-space: pre-line;
+      color: var(--subtext-color);
+      font-style: italic;
+      line-height: 1.6;
     }
     h1 {
       font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+      margin: 0;
     }
     h3 {
       color: var(--subtext-color);
       margin-bottom: 2rem;
     }
-    .cover {
-      width: 100%;
-      max-width: 350px;
-      border-radius: 0.5rem;
-      display: block;
-      margin-bottom: 2rem;
-    }
     iframe {
       width: 100%;
-      height: 315px;
+      height: 200px;
       border: none;
       border-radius: 0.5rem;
-      margin-bottom: 2rem;
     }
-    .lyrics {
-      white-space: pre-line;
+    /* Card estilo "Appears on" */
+    .album-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background-color: var(--card-bg);
+      padding: 0.5rem;
+      border-radius: 0.3rem;
+      width: fit-content;
+    }
+    .album-card img {
+      width: 40px;
+      height: 40px;
+      border-radius: 0.2rem;
+    }
+    .album-card-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.85rem;
+    }
+    .album-card-text span {
       color: var(--subtext-color);
-      font-style: italic;
-      line-height: 1.6;
+      font-size: 0.7rem;
+    }
+    .album-card-text a {
+      color: var(--text-color);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .album-card-text a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -105,15 +120,24 @@
   </div>
 
   <div class="container">
-    <div class="left" data-aos="fade-up">
-      <h1>Spies</h1>
-      <h3>Released: 05.08.2025</h3>
-      <iframe src="https://www.youtube.com/embed/Nf-zAejXXVU" allowfullscreen></iframe>
+    <!-- Lado esquerdo -->
+    <div class="left">
+      <h1 data-aos="fade-up">Spies</h1>
+      <h3 data-aos="fade-up">Released: 13.08.2025</h3>
+      <iframe src="https://www.youtube.com/embed/Nf-zAejXXVU" allowfullscreen data-aos="fade-up"></iframe>
+      
+      <!-- Card pequeno estilo "Appears on" -->
+      <div class="album-card" data-aos="fade-up">
+        <img src="https://tomasmotadev.github.io/music/src/img/albums/the-sun-always-shines.jpg" alt="The Sun Always Shines album cover">
+        <div class="album-card-text">
+          <span>Appears on</span>
+          <a href="#">The Sun Always Shines</a>
+        </div>
+      </div>
     </div>
 
+    <!-- Lado direito -->
     <div class="right" data-aos="fade-up">
-      <h2>Lyrics</h2>
-      <div class="lyrics">
 I awake to find no peace of mind
 I said, "How do you live as a fugitive down here"
 "Where I cannot see so clear?"
@@ -124,4 +148,8 @@ And the spies came out of the water
 But you're feeling so bad 'cause you know
 That the spies hide out in every corner
 But you can't touch them, no
-'Cause they're all
+'Cause they're all spies
+
+They're all spies
+
+I awake to see
