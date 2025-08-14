@@ -1,259 +1,447 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="https://tomasmotadev.github.io/profile.jpg" type="image/jpeg" />
-  <title>Tomás Mota – Fullstack Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #111111;
-      font-family: 'Inter', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2rem;
-      text-align: center;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tomás Mota - Home</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+/* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
+:root {
+--c-white: #ffffff;
+--c-white2: #cfcfcf;
+--c-black: #0b0b0b;
+--c-gray: #2b2f36;
+--c-gray-2: #3a3f46;
+--c-red: #ff3b3b;
+--c-blue: #1a73ff;
+--c-yellow: #ffd43b;
+}
+body {
+text-align: center;
+background: var(--c-black);
+color: var(--c-white);
+}
+/* Fundo "hero" parecido com a imagem enviada */
+.hero-wrap {
+background: radial-gradient(1200px 600px at 10% 10%, rgba(26, 115, 255, 0.12), transparent 60%),
+radial-gradient(900px 500px at 90% 80%, rgba(255, 59, 59, 0.12), transparent 60%),
+linear-gradient(180deg, #0f1620 0%, #0c121a 100%);
+color: var(--c-white);
+box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+}
+#herop {
+color: var(--c-white2);
+}
+/* Chips de techs com cantos levemente arredondados */
+.tech-chip {
+border-radius: 999px;
+font-weight: 600;
+padding: .6rem 1rem;
+background: var(--c-gray);
+color: var(--c-white);
+}
+/* Sombra suave e borda arredondada padrão */
+.card {
+border-radius: 1rem;
+box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+background: var(--c-gray-2);
+color: var(--c-white);
+}
+/* Botões primários */
+.btn {
+border-radius: .8rem;
+font-weight: 600;
+transition: transform .15s ease, box-shadow .15s ease;
+background: var(--c-blue);
+color: var(--c-white);
+}
+.btn:active {
+transform: translateY(1px);
+}
+/* REMOVIDO: A regra de timeline global. */
+/* ADICIONADO: A regra dentro de uma media query para o breakpoint 'md' */
+@media (min-width: 768px) {
+  .timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, var(--c-red), var(--c-blue));
+    border-radius: 999px;
+  }
+}
+/* Carrossel de certificados - ocultar barra */
+#cert-track {
+scrollbar-width: none;
+}
+#cert-track::-webkit-scrollbar {
+display: none;
+}
+/* Header ajustado para o tema escuro */
+header {
+background: var(--c-gray-2);
+color: var(--c-white);
+}
+header a {
+color: var(--c-white);
+}
+header a:hover {
+color: var(--c-white);
+}
+/* Mobile menu ajustado para o tema escuro */
+#mobile-menu {
+background: var(--c-gray-2);
+color: var(--c-white);
+}
+#mobile-menu a {
+color: var(--c-white);
+}
+/* Projetos, certificados, fotografia e música ajustados para o tema escuro */
+.card {
+  background: var(--c-gray-2);
+  color: var(--c-white);
+}
 
-        /* Loading Screen Styles */
-        #loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff; /* White background */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            text-align: center;
-        }
+.card img {
+  filter: brightness(0.8);
+}
 
-        .loader-container {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            margin-bottom: 20px;
-        }
+.card h3 {
+  color: var(--c-white);
+}
 
-        .loader {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 6px solid transparent;
-            border-top: 6px solid #4a6bff; /* Modern blue */
-            border-radius: 50%;
-            animation: spin 1.5s linear infinite;
-        }
+/* Alteração aqui: cor do texto da descrição dos certificados */
+#certificados .card p {
+  color: var(--c-white);
+}
 
-        .loader-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 6px solid #e0e0e0; /* Light gray */
-            border-radius: 50%;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        #loading-screen p {
-            color: #333333; /* Dark gray text */
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        /* Main COntent Styles */
-    .profile-photo {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 1.5rem;
-      border: 3px solid #111;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    }
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: inherit;
-    }
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 500;
-      color: #555;
-      margin-bottom: 2rem;
-    }
-    p {
-      max-width: 600px;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: inherit;
-      margin-bottom: 2rem;
-    }
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      width: 100%;
-      max-width: 320px;
-    }
-    a.button, button.theme-toggle {
-      background-color: #ffffff;
-      color: #111;
-      border: 2px solid #111;
-      padding: 0.9rem 1.2rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    a.button:hover, button.theme-toggle:hover {
-      background-color: #111;
-      color: #fff;
-    }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      color: #777;
-    }
-    /* Tema escuro */
-    body.dark {
-      background-color: #111;
-      color: #fff;
-    }
-    body.dark h2 {
-      color: #ccc;
-    }
-    body.dark .profile-photo {
-      border-color: #fff;
-    }
-    body.dark a.button, 
-    body.dark button.theme-toggle {
-      background-color: #111;
-      color: #fff;
-      border-color: #fff;
-    }
-    body.dark a.button:hover, 
-    body.dark button.theme-toggle:hover {
-      background-color: #fff;
-      color: #111;
-    }
-    @media (min-width: 600px) {
-      h1 {
-        font-size: 3.2rem;
-      }
-      h2 {
-        font-size: 1.6rem;
-      }
-      a.button {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+/* Experiência profissional ajustada para o tema escuro */
+#cv {
+background: var(--c-gray-2);
+}
+#cv p {
+color: var(--c-white2);
+}
+#cv h3 {
+color: var(--c-white);
+}
+/* Footer ajustado para o tema escuro */
+footer {
+color: var(--c-gray);
+}
+</style>
 </head>
 <body>
-
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loader-container">
-            <div class="loader-background"></div>
-            <div class="loader"></div>
-        </div>
-        <p>Loading your experience...</p>
+<header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+        <img src="logo.png" alt="Logo" class="w-10 h-10 rounded-full">
+        <span class="font-bold text-xl">Tomás Mota</span>
     </div>
+    <nav class="hidden md:flex space-x-3">
+        <a href="/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-red-500 hover:text-white transition">Dev Projects</a>
+        <a href="/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-blue-500 hover:text-white transition">CV</a>
+        <a href="/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-yellow-500 hover:text-white transition">About</a>
+        <a href="/github" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-gray-700 hover:text-white transition">GitHub</a>
+        <a href="/linkedin" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-blue-700 hover:text-white transition">LinkedIn</a>
+        <a href="/photography" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-red-400 hover:text-white transition">Photography</a>
+        <a href="/music" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-yellow-400 hover:text-black transition">Music</a>
+    </nav>
+    <div class="md:hidden">
+        <button id="menu-btn" class="focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </div>
+</header>
+<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 bg-white shadow-md md:hidden">
+    <a href="/projects" class="block px-4 py-2 bg-gray-200 rounded-lg">Dev Projects</a>
+    <a href="/cv" class="block px-4 py-2 bg-gray-200 rounded-lg">CV</a>
+    <a href="/about" class="block px-4 py-2 bg-gray-200 rounded-lg">About</a>
+    <a href="/github" target="_blank" class="block px-4 py-2 bg-gray-200 rounded-lg">GitHub</a>
+    <a href="/linkedin" target="_blank" class="block px-4 py-2 bg-gray-200 rounded-lg">LinkedIn</a>
+    <a href="/photography" class="block px-4 py-2 bg-gray-200 rounded-lg">Photography</a>
+    <a href="/music" class="block px-4 py-2 bg-gray-200 rounded-lg">Music</a>
+</div>
+<section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+    <div class="hero-wrap card p-8 md:p-12 rounded-2xl">
+        <p id="herop" class="text-2xl md:text-3xl font-extrabold mb-2 opacity-90">My name is</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+            <span class="text-[var(--c-red)]">&lt;</span>
+            <span class="text-white">Tomás Mota</span>
+            <span class="text-[var(--c-red)]" /> /&gt;</span>
+        </h1>
+        <p id="herop" class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
+            I am <span class="font-semibold text-[var(--c-red)]">Developer Fullstack</span> — I transform ideas into digital experiences. I build modern websites and apps with optimized, engaging interfaces.
+        </p>
+        <div class="mt-8 bg-[var(--c-gray)]/80 backdrop-blur px-4 py-4 md:py-5 rounded-2xl border border-white/10">
+            <div class="flex flex-wrap gap-3 justify-center">
+                <span class="tech-chip text-white" style="background:var(--c-red)">React Native</span>
+                <span class="tech-chip text-white" style="background:var(--c-blue)">ReactJS</span>
+                <span class="tech-chip text-black" style="background:var(--c-yellow)">CodeIgniter 3</span>
+                <span class="tech-chip text-white" style="background:#7c4dff">PHP</span>
+                <span class="tech-chip text-white" style="background:#39424e">SQL</span>
+                <span class="tech-chip text-white" style="background:#16a34a">NodeJS</span>
+            </div>
+            </div>
+    </div>
+</section>
+<section id="projects" class="px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">Projetos em Destaque</h2>
+    <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
+        <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
+            <img src="projeto1.jpg" alt="Projeto 1" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Projeto 1</h3>
+            <p class="text-gray-600 text-sm">Breve descrição do projeto.</p>
+        </article>
+        <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">>
+            <img src="projeto2.jpg" alt="Projeto 2" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Projeto 2</h3>
+            <p class="text-gray-600 text-sm">Breve descrição do projeto.</p>
+        </article>
+        <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
+            <img src="projeto3.jpg" alt="Projeto 3" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Projeto 3</h3>
+            <p class="text-gray-600 text-sm">Breve descrição do projeto.</p>
+        </article>
+        <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
+            <img src="projeto4.jpg" alt="Projeto 4" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Projeto 4</h3>
+            <p class="text-gray-600 text-sm">Breve descrição do projeto.</p>
+        </article>
+        <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
+            <img src="projeto5.jpg" alt="Projeto 5" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Projeto 5</h3>
+            <p class="text-gray-600 text-sm">Breve descrição do projeto.</p>
+        </article>
+        <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
+            <img src="projeto6.jpg" alt="Projeto 6" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Projeto 6</h3>
+            <p class="text-gray-600 text-sm">Breve descrição do projeto.</p>
+        </article>
+    </div>
+    <a href="/projects" class="inline-block mt-6 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+        See more
+    </a>
+</section>
+<section id="cv" class="bg-gray-50 py-14">
+    <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl font-extrabold mb-10">Profession Experience</h2>
+        <div class="relative timeline">
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div class="md:w-1/2 md:text-right md:pr-10">
+                        <p class="text-sm text-gray-500">2023 — Atual</p>
+                        <h3 class="font-bold">Senior Fullstack Developer</h3>
+                        <p class="text-gray-600">Empresa X</p>
+                    </div>
+                    <div class="md:w-1/2 md:text-left md:pl-10">
+                        <p class="text-gray-700">Liderança de features, arquitetura, performance e mentorias.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div class="md:w-1/2 md:order-2 md:text-left md:pl-10">
+                        <p class="text-sm text-gray-500">2021 — 2023</p>
+                        <h3 class="font-bold">Fullstack Developer</h3>
+                        <p class="text-gray-600">Empresa Y</p>
+                    </div>
+                    <div class="md:w-1/2 md:order-1 md:text-right md:pr-10">
+                        <p class="text-gray-700">Desenvolvimento end‑to‑end de apps e APIs.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div class="md:w-1/2 md:text-right md:pr-10">
+                        <p class="text-sm text-gray-500">2019 — 2021</p>
+                        <h3 class="font-bold">Frontend Developer</h3>
+                        <p class="text-gray-600">Empresa Z</p>
+                    </div>
+                    <div class="md:w-1/2 md:text-left md:pl-10">
+                        <p class="text-gray-700">Interfaces acessíveis e reativas com foco em UX.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!--
   
-  <!-- Loading Screen -->
-  <img src="profile.jpg" alt="Profile photo of Tomás Mota" class="profile-photo" />
+<section id="certificados" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <h2 class="text-3xl font-extrabold mb-8">Certificados</h2>
+    <div class="relative card bg-white p-4">
+        <div id="cert-track" class="flex gap-4 overflow-x-auto scroll-smooth">
+            <article class="card p-4 text-left flex-shrink-0 w-80">
+                <img src="cert1.png" alt="Certificado 1" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold text-lg">Nome do Certificado</h3>
+                <p class="text-gray-400 text-sm">Breve descrição do conteúdo ou tecnologia abordada. Ex: Fundamentos de UX/UI.</p>
+            </article>
+            <article class="card p-4 text-left flex-shrink-0 w-80">
+                <img src="cert2.png" alt="Certificado 2" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold text-lg">Certificação em React</h3>
+                <p class="text-gray-400 text-sm">Desenvolvimento de interfaces modernas e reativas.</p>
+            </article>
+            <article class="card p-4 text-left flex-shrink-0 w-80">
+                <img src="cert3.png" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
+                <h3 class="font-bold text-lg">Certificado em Cloud</h3>
+                <p class="text-gray-400 text-sm">Gerenciamento de serviços em nuvem AWS.</p>
+            </article>
+            <article class="card p-4 text-left flex-shrink-0 w-80">
+                <img src="cert4.png" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 4">
+                <h3 class="font-bold text-lg">Python Avançado</h3>
+                <p class="text-gray-400 text-sm">Automação de tarefas e processamento de dados.</p>
+            </article>
+            <article class="card p-4 text-left flex-shrink-0 w-80">
+                <img src="cert5.png" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 5">
+                <h3 class="font-bold text-lg">JavaScript Moderno</h3>
+                <p class="text-gray-400 text-sm">Entendendo ES6+ e melhores práticas de desenvolvimento.</p>
+            </article>
 
-  <h1>Tomás Mota</h1>
-  <h2>Full-Stack Developer</h2>
+                        <article class="card p-4 text-left flex-shrink-0 w-80">
+                <img src="cert1.png" alt="Certificado 1" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold text-lg">Nome do Certificado</h3>
+                <p class="text-gray-400 text-sm">Breve descrição do conteúdo ou tecnologia abordada. Ex: Fundamentos de UX/UI.</p>
+            </article>
+            <article class="card p-4 text-left flex-shrink-0 w-80">
+                <img src="cert2.png" alt="Certificado 2" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold text-lg">Certificação em React</h3>
+                <p class="text-gray-400 text-sm">Desenvolvimento de interfaces modernas e reativas.</p>
+            </article>
+            <article class="card p-4 text-left flex-shrink-0 w-80">
+                <img src="cert3.png" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
+                <h3 class="font-bold text-lg">Certificado em Cloud</h3>
+                <p class="text-gray-400 text-sm">Gerenciamento de serviços em nuvem AWS.</p>
+            </article>
+            <article class="card p-4 text-left flex-shrink-0 w-80">
+                <img src="cert4.png" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 4">
+                <h3 class="font-bold text-lg">Python Avançado</h3>
+                <p class="text-gray-400 text-sm">Automação de tarefas e processamento de dados.</p>
+            </article>
+            <article class="card p-4 text-left flex-shrink-0 w-80">
+                <img src="cert5.png" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 5">
+                <h3 class="font-bold text-lg">JavaScript Moderno</h3>
+                <p class="text-gray-400 text-sm">Entendendo ES6+ e melhores práticas de desenvolvimento.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+  -->
   
-  <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+<section id="photography" class="px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">Photography</h2>
+    <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
+        <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
+            <img src="foto1.jpg" alt="Foto 1" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Foto 1</h3>
+            <p class="text-gray-600 text-sm">Breve descrição da fotografia.</p>
+        </article>
+        <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
+            <img src="foto2.jpg" alt="Foto 2" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Foto 2</h3>
+            <p class="text-gray-600 text-sm">Breve descrição da fotografia.</p>
+        </article>
+        <!-- <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
+            <img src="foto3.jpg" alt="Foto 3" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Foto 3</h3>
+            <p class="text-gray-600 text-sm">Breve descrição da fotografia.</p>
+        </article> -->
+    </div>
+    <a href="/photography" class="inline-block mt-6 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+        See more
+    </a>
+</section>
+<section id="music" class="px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">Music</h2>
+    <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
+        <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
+            <img src="musica1.jpg" alt="Música 1" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Música 1</h3>
+            <p class="text-gray-600 text-sm">Breve descrição da música.</p>
+        </article>
+        <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
+            <img src="musica2.jpg" alt="Música 2" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Música 2</h3>
+            <p class="text-gray-600 text-sm">Breve descrição da música.</p>
+        </article>
+        <!-- <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
+            <img src="musica3.jpg" alt="Música 3" class="w-full h-40 object-cover rounded-xl mb-3">
+            <h3 class="font-bold">Música 3</h3>
+            <p class="text-gray-600 text-sm">Breve descrição da música.</p> -->
+        </article>
+    </div>
+    <a href="/music" class="inline-block mt-6 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+        See more
+    </a>
+</section>
+<footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Seu Nome — Todos os direitos reservados.</footer>
+<script>
+// Ano do footer
+document.getElementById('year').textContent = new Date().getFullYear();
+// Menu mobile
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+// Ver mais projetos: revela até 6
+const seeMoreBtn = document.getElementById('seeMoreBtn');
+if (seeMoreBtn) {
+    seeMoreBtn.addEventListener('click', () => {
+        document.querySelectorAll('.more').forEach(el => el.classList.remove('hidden'));
+        seeMoreBtn.style.display = 'none';
+    });
+}
+// ... (seu código JavaScript existente, como menu mobile, etc.) ...
 
-  <p>
-    I build full digital experiences — from elegant, accessible frontends to robust, scalable backends.  
-    Passionate about clean code, usability, and performance.
-  </p>
+// Carrossel de certificados com loop infinito
+const track = document.getElementById('cert-track');
+const scrollInterval = 3000; // Tempo entre cada rolagem
+const scrollStep = 300; // Valor em pixels para a rolagem
 
-  <div class="links">
-    <a class="button" href="/projects">👨‍💻 Dev Projects</a>
-    <a class="button" href="/cv">📄 View CV</a>
-    <a class="button" href="/about">🧠 About Me</a>
-    <a class="button" href="mailto:tomasmotadev@proton.me">✉️ Email</a>
-    <a class="button" href="/github">💻 GitHub</a>
-    <a class="button" href="/linkedin">💼 LinkedIn</a>
-    <a class="button" href="/photography">📷 Photography</a>
-    <a class="button" href="/music">💿 Music</a>
-  </div>
+let autoScroll;
 
-  <footer>
-     © 2025 <a href="https://tomasmotadev.github.io" style="color: inherit; text-decoration: underline;">Tomás Mota</a>. All Rights Reserved.
-  </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Show loading screen
-            document.getElementById('loading-screen').style.display = 'flex';
-
-            // Simulate loading delay
-            setTimeout(function() {
-                // Hide loading screen
-                document.getElementById('loading-screen').style.display = 'none';
-
-                // Small delay to ensure the loading screen is completely hidden
-                setTimeout(function() {
-                    // Show main content
-                    document.getElementById('main-content').style.display = 'block';
-                }, 100); // 100ms delay to ensure the loading screen is completely hidden
-            }, 2000); // 2 seconds delay for demonstration purposes
-        });
+function startAutoScroll() {
+    if (!track) return;
     
-    // main js
-    const body = document.body;
-    const themeBtn = document.querySelector('.theme-toggle');
+    // Obter o primeiro card para calcular a largura (opcional, pode usar um valor fixo como scrollStep)
+    const firstCard = track.querySelector('article');
+    const cardWidth = firstCard ? firstCard.offsetWidth + 16 : scrollStep;
 
-    // Carregar tema salvo
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      body.classList.add('dark');
-      themeBtn.textContent = '☀️ White Mode';
-    }
+    autoScroll = setInterval(() => {
+        const maxScrollLeft = track.scrollWidth - track.clientWidth;
+        
+        // Verifica se a rolagem chegou ao final da lista original (antes dos cards duplicados)
+        // Isso é uma estimativa. Se o carrossel tiver 5 itens e duplicamos 3,
+        // o "ponto de retorno" é a rolagem no 5º item.
+        const originalEndPosition = maxScrollLeft / 2; // Uma forma simples de estimar
 
-    function toggleTheme() {
-      const isDark = body.classList.toggle('dark');
-      if (isDark) {
-        localStorage.setItem('theme', 'dark');
-        themeBtn.textContent = '☀️ White Mode';
-      } else {
-        localStorage.setItem('theme', 'light');
-        themeBtn.textContent = '🌙 Dark Mode';
-      }
-    }
-  </script>
+        if (track.scrollLeft >= originalEndPosition) {
+            // Retorna instantaneamente para o início para criar a ilusão de loop
+            track.scrollBy({ left: -track.scrollLeft, behavior: 'instant' });
+        } else {
+            // Rola suavemente para a direita
+            track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }
+    }, scrollInterval);
+}
 
+function stopAutoScroll() {
+    clearInterval(autoScroll);
+}
+
+// Iniciar a rolagem automática
+startAutoScroll();
+
+// Pausar a rolagem ao passar o mouse e reiniciar ao sair
+if (track) {
+    track.addEventListener('mouseenter', stopAutoScroll);
+    track.addEventListener('mouseleave', startAutoScroll);
+}
+
+
+</script>
 </body>
 </html>
