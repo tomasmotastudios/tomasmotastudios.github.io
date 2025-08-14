@@ -1,236 +1,270 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://tomasmotadev.github.io/profile.jpg" type="image/jpeg" />
-  <title>Tomás Mota — CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-* {
-  box-sizing: border-box;
-}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://tomasmotadev.github.io/profile.jpg" type="image/jpeg" />
+    <title>Tomás Mota — CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* Paleta de cores da página inicial */
+        :root {
+            --c-white: #ffffff;
+            --c-white2: #cfcfcf;
+            --c-black: #0b0b0b;
+            --c-gray: #2b2f36;
+            --c-gray-2: #3a3f46;
+            --c-red: #ff3b3b;
+            --c-blue: #1a73ff;
+            --c-yellow: #ffd43b;
+        }
 
-body {
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #000;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  min-height: 100vh;
-  max-width: 800px;
-  text-align: justify;
-  line-height: 1.6;
-}
+        /* Estilos gerais da página inicial */
+        body {
+            text-align: center;
+            background: var(--c-black);
+            color: var(--c-white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
 
-h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #fff;
-  width: 100%;
-  text-align: left;
-}
+        /* Card (usado para sections no CV) */
+        .card {
+            border-radius: 1rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+            background: var(--c-gray-2);
+            color: var(--c-white);
+        }
 
-h2 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #ccc;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  text-align: left;
-  width: 100%;
-}
+        /* Header e Footer */
+        header { background: var(--c-gray-2); color: var(--c-white); }
+        header a, header button { color: var(--c-white); }
+        header a:hover, header button:hover { color: var(--c-white); }
+        footer { color: var(--c-gray); }
 
-h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #fff;
-  margin-top: 1.5rem;
-  margin-bottom: 0.8rem;
-}
+        /* Menu Mobile */
+        #mobile-menu { background: var(--c-gray-2); color: var(--c-white); }
+        #mobile-menu a { color: var(--c-white); }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content {
+            display: none; position: absolute; background-color: var(--c-gray-2);
+            min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1; border-radius: 0.5rem; overflow: hidden;
+            left: 50%; transform: translateX(-50%); top: 100%;
+            padding-top: 0.5rem; padding-bottom: 0.5rem;
+        }
+        .dropdown-content a { padding: 12px 16px; text-decoration: none; display: block; text-align: left; }
+        .dropdown-content a:hover { background-color: var(--c-gray); }
+        .dropdown:hover .dropdown-content { display: block; }
+        .mobile-dropdown-btn { display: block; cursor: pointer; }
+        .mobile-dropdown-content { display: none; padding-left: 1rem; padding-top: 0.5rem; }
+        .mobile-dropdown-content a { padding: 8px 0; }
 
-p, li {
-  max-width: 700px;
-  color: #eee;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
+        /* Estilos adaptados do CV original para o novo tema */
+        h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff; width: 100%; text-align: left; }
+        h2 { font-size: 1.4rem; font-weight: 600; color: #ccc; margin-top: 2rem; margin-bottom: 1rem; text-align: left; width: 100%; }
+        h3 { font-size: 1.2rem; font-weight: 600; color: #fff; margin-top: 1.5rem; margin-bottom: 0.8rem; }
+        p, li { color: #eee; font-size: 1rem; margin-bottom: 1rem; }
+        .role { font-weight: bold; color: #fff; }
+        .meta { font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem; }
+        ul { padding-left: 1.2rem; margin-bottom: 1rem; list-style-type: disc; }
+        ul li::marker { color: #fff; }
+        a { color: #fff; text-decoration: none; }
+        a:hover { color: #bbb; text-decoration: underline; }
+        
+        /* Timeline style for Dev Experience from home page */
+        @media (min-width: 768px) {
+            .timeline:before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 4px;
+                transform: translateX(-50%);
+                background: linear-gradient(180deg, var(--c-red), var(--c-blue));
+                border-radius: 999px;
+            }
+        }
+        
+        /* Styles for Links section from original CV */
+        .links { display: flex; flex-direction: column; gap: 1rem; width: 100%; max-width: 320px; margin-top: 1rem; align-items: flex-start; }
+        a.button {
+            background-color: #111; color: #fff; padding: 0.9rem 1.2rem;
+            border-radius: 0.5rem; font-weight: 600; font-size: 1rem;
+            text-decoration: none; transition: all 0.3s ease;
+            width: 100%; text-align: left;
+        }
+        a.button:hover { background-color: #333; color: #eee; }
 
-.role {
-  font-weight: bold;
-  color: #fff;
-}
-
-.meta {
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-bottom: 0.5rem;
-}
-
-ul {
-  padding-left: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-ul li::marker {
-  color: #fff;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #bbb;
-  text-decoration: underline;
-}
-
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      width: 100%;
-      max-width: 320px;
-      margin-top: 1rem;
-      align-items: flex-start;
-    }
-    a.button {
-      background-color: #111;
-      color: #fff;
-      padding: 0.9rem 1.2rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      width: 100%;
-      text-align: left;
-    }
-    a.button:hover {
-      background-color: #333;
-      color: #eee;
-    }
-
-blockquote {
-  margin: 2rem 0;
-  font-style: italic;
-  color: #aaa;
-  border-left: 4px solid #fff;
-  padding-left: 1rem;
-  max-width: 700px;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid #444;
-  margin: 2rem 0;
-}
-
-@media (min-width: 600px) {
-  h1 {
-    font-size: 3.2rem;
-  }
-  h2 {
-    font-size: 1.6rem;
-  }
-  p, li {
-    font-size: 1.1rem;
-  }
-}
-
-footer {
-  margin-top: 3rem;
-  font-size: 0.8rem;
-  color: #777;
-}
-
-  </style>
+    </style>
 </head>
 <body>
-  <main>
-    <h1>Tomás Mota</h1>
-    <h2>Full-Stack Developer</h2>
-<hr />
-    <section>
-      <h3>🧠 Summary</h3>
-      <p>
-        Full-Stack developer focused on web programming using HTML, CSS, Java, JavaScript, PHP, Git, and GitHub.<br />
-        Currently studying Multimedia, emphasizing building functional, responsive, and efficient interfaces while continuously improving skills in:
-      </p>
-      <ul>
-        <li>Full-stack development (HTML, CSS, JavaScript, PHP)</li>
-        <li>Version control and collaboration via Git and GitHub</li>
-        <li>Clean code best practices and user experience (UX)</li>
-        <li>Component-based programming and modern frameworks</li>
-      </ul>
-    </section>
-<hr />
-    <section>
-      <h3>💻 Dev Experience</h3>
-      <p class="role">👨‍💻 Full-Stack Developer — Freelancer</p>
-      <p class="meta">Jun 2025 – Present</p>
-      <p>
-        Development of responsive and optimized web interfaces, focusing on performance, accessibility, and user experience.<br />
-        <strong>Stack:</strong> HTML, CSS, Java, JavaScript, PHP, Git & GitHub
-      </p>
-    </section>
-<hr />
-    <section>
-      <h3>🎓 Education</h3>
-      <p class="role">Calazans Duarte Secondary School</p>
-      <p class="meta">Multimedia Technician (Professional Course) | Sep 2023 – Jul 2026</p>
-    </section>
-<hr />
-    <section>
-      <h3>🧰 Stack</h3>
-      <ul>
-        <li>HTML / CSS / JavaScript</li>
-        <li>React (basic)</li>
-        <li>Git & GitHub</li>
-        <li>PHP / JSON / Java</li>
-        <li>Photoshop / Lightroom</li>
-      </ul>
-    </section>
-<hr />
-    <section>
-      <h3>🗣️ Languages</h3>
-      <ul>
-        <li>🇵🇹 Portuguese – Native</li>
-        <li>🇬🇧 English – Professional</li>
-        <li>🇪🇸 Spanish – Professional</li>
-      </ul>
-    </section>
-<hr />
-    <section>
-      <h3>📜 Certifications</h3>
-      <ul>
-        <li>👨‍💻 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1753991965008/single-media-viewer" target="_blank" rel="noopener">Savegnago - Programming Logic</a></li>
-        <li>👨‍💻 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1753469115001/single-media-viewer" target="_blank" rel="noopener">GFT Start #6 - Programming Logic</a></li>
-        <li>👨‍💻 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1749648901937/single-media-viewer" target="_blank" rel="noopener">GitHub Copilot</a></li>
-        <li>🎯 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1749668511644/single-media-viewer" target="_blank" rel="noopener">Storytelling for Digital Marketing</a></li>
-        <li>🤖 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1751963118367/single-media-viewer" target="_blank" rel="noopener">Google AI & Productivity</a></li>
-      </ul>
-    </section>
-<hr />
-      <h3>📬 Contacts & Links</h3>
-      <div class="links">
-        <a class="button" href="https://tomasmotadev.github.io/" target="_blank" rel="noopener">🌐 Website</a>
-        <a class="button" href="mailto:tomasmotadev@proton.me" target="_blank" rel="noopener">📩 Email</a>
-        <a class="button" href="https://tomasmotadev.github.io/about/" target="_blank" rel="noopener">🌐 About</a>
-        <a class="button" href="https://tomasmotadev.github.io/github/" target="_blank" rel="noopener">🐙 GitHub</a>
-        <a class="button" href="https://tomasmotadev.github.io/linkedin/" target="_blank" rel="noopener">💼 LinkedIn</a>
-      </div>
-  </main>
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <a href="https://tomasmotadev.github.io" class="flex items-center space-x-3">
+            <img src="https://tomasmotadev.github.io/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota</span>
+        </a>
+        <nav class="hidden md:flex space-x-3">
+            <a href="/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">Dev Projects</a>
+            <a href="/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">CV</a>
+            <a href="/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">About</a>
+            <a href="/github" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">GitHub</a>
+            <a href="/linkedin" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">LinkedIn</a>
+            <div class="dropdown">
+                <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">Photography</button>
+                <div class="dropdown-content">
+                    <a href="https://tomasmotadev.github.io/photography/category/sport">Sport</a>
+                    <a href="https://tomasmotadev.github.io/photography/category/music">Music</a>
+                    <a href="https://tomasmotadev.github.io/photography/category/casual">Casual</a>
+                </div>
+            </div>
+            <a href="/music" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-black transition">Music</a>
+        </nav>
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 bg-white shadow-md md:hidden">
+        <a href="/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>
+        <a href="/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
+        <a href="/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
+        <a href="/github" target="_blank" class="block px-4 py-2 bg-gray-500 rounded-lg">GitHub</a>
+        <a href="/linkedin" target="_blank" class="block px-4 py-2 bg-gray-500 rounded-lg">LinkedIn</a>
+        <div class="flex flex-col">
+            <span id="mobile-photography-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Photography</span>
+            <div id="mobile-photography-menu" class="mobile-dropdown-content">
+                <a href="/photography/sport" class="block px-4 py-2">Sport</a>
+                <a href="/photography/music" class="block px-4 py-2">Music</a>
+                <a href="/photography/casual" class="block px-4 py-2">Casual</a>
+            </div>
+        </div>
+        <a href="/music" class="block px-4 py-2 bg-gray-500 rounded-lg">Music</a>
+    </div>
 
-  <footer>
-    Tomás Mota — CV • 2025
-  </footer>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+            <span class="text-[var(--c-red)]">&lt;</span>
+            <span class="text-white">Tomás Mota</span>
+            <span class="text-[var(--c-red)]" /> /&gt;</span>
+        </h1>
+        <h2 class="text-xl font-bold mb-8 text-[var(--c-white2)]">Full-Stack Developer</h2>
+
+        <div class="card p-8 md:p-12 mb-8 text-left">
+            <h3 class="text-2xl font-bold mb-4">🧠 Summary</h3>
+            <p>
+                Full-Stack developer focused on web programming using HTML, CSS, Java, JavaScript, PHP, Git, and GitHub.
+                Currently studying Multimedia, emphasizing building functional, responsive, and efficient interfaces while continuously improving skills in:
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li>Full-stack development (HTML, CSS, JavaScript, PHP)</li>
+                <li>Version control and collaboration via Git and GitHub</li>
+                <li>Clean code best practices and user experience (UX)</li>
+                <li>Component-based programming and modern frameworks</li>
+            </ul>
+        </div>
+
+        <div class="card p-8 md:p-12 mb-8 text-left">
+            <h3 class="text-2xl font-bold mb-4">💻 Dev Experience</h3>
+            <div class="relative timeline">
+                <div class="space-y-12">
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <div class="md:w-1/2 md:text-right md:pr-10">
+                            <p class="text-sm text-[var(--c-white2)]">Jun 2025 – Present</p>
+                            <h3 class="font-bold">👨‍💻 Full-Stack Developer — Freelancer</h3>
+                        </div>
+                        <div class="md:w-1/2 md:text-left md:pl-10">
+                            <p class="text-[var(--c-white2)]">Development of responsive and optimized web interfaces, focusing on performance, accessibility, and user experience.<br><strong>Stack:</strong> HTML, CSS, Java, JavaScript, PHP, Git & GitHub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-8 md:p-12 mb-8 text-left">
+            <h3 class="text-2xl font-bold mb-4">🎓 Education</h3>
+            <p class="role">Calazans Duarte Secondary School</p>
+            <p class="meta">Multimedia Technician (Professional Course) | Sep 2023 – Jul 2026</p>
+        </div>
+
+        <div class="card p-8 md:p-12 mb-8 text-left">
+            <h3 class="text-2xl font-bold mb-4">🧰 Stack</h3>
+            <ul class="list-disc list-inside mt-4">
+                <li>HTML / CSS / JavaScript</li>
+                <li>React (basic)</li>
+                <li>Git & GitHub</li>
+                <li>PHP / JSON / Java</li>
+                <li>Photoshop / Lightroom</li>
+            </ul>
+        </div>
+        
+        <div class="card p-8 md:p-12 mb-8 text-left">
+            <h3 class="text-2xl font-bold mb-4">🗣️ Languages</h3>
+            <ul class="list-disc list-inside mt-4">
+                <li>🇵🇹 Portuguese – Native</li>
+                <li>🇬🇧 English – Professional</li>
+                <li>🇪🇸 Spanish – Professional</li>
+            </ul>
+        </div>
+
+        <div class="card p-8 md:p-12 mb-8 text-left">
+            <h3 class="text-2xl font-bold mb-4">📜 Certifications</h3>
+            <ul class="list-disc list-inside mt-4">
+                <li>👨‍💻 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1753991965008/single-media-viewer" target="_blank" rel="noopener" class="text-white hover:text-gray-400">Savegnago - Programming Logic</a></li>
+                <li>👨‍💻 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1753469115001/single-media-viewer" target="_blank" rel="noopener" class="text-white hover:text-gray-400">GFT Start #6 - Programming Logic</a></li>
+                <li>👨‍💻 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1749648901937/single-media-viewer" target="_blank" rel="noopener" class="text-white hover:text-gray-400">GitHub Copilot</a></li>
+                <li>🎯 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1749668511644/single-media-viewer" target="_blank" rel="noopener" class="text-white hover:text-gray-400">Storytelling for Digital Marketing</a></li>
+                <li>🤖 <a href="https://www.linkedin.com/in/tomasmotadev/details/certifications/1751963118367/single-media-viewer" target="_blank" rel="noopener" class="text-white hover:text-gray-400">Google AI & Productivity</a></li>
+            </ul>
+        </div>
+        
+        <div class="card p-8 md:p-12 mb-8 text-left">
+            <h3 class="text-2xl font-bold mb-4">📬 Contacts & Links</h3>
+            <div class="links">
+                <a class="button" href="https://tomasmotadev.github.io/" target="_blank" rel="noopener">🌐 Website</a>
+                <a class="button" href="mailto:tomasmotadev@proton.me" target="_blank" rel="noopener">📩 Email</a>
+                <a class="button" href="https://tomasmotadev.github.io/about/" target="_blank" rel="noopener">🌐 About</a>
+                <a class="button" href="https://tomasmotadev.github.io/github/" target="_blank" rel="noopener">🐙 GitHub</a>
+                <a class="button" href="https://tomasmotadev.github.io/linkedin/" target="_blank" rel="noopener">💼 LinkedIn</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Tomás Mota. All Rights Reserved.</footer>
+
+    <script>
+        // Ano do footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Menu mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                const photoMenu = document.getElementById('mobile-photography-menu');
+                if (photoMenu) photoMenu.style.display = 'none';
+            }
+        });
+        
+        // Menu dropdown de fotografia no mobile
+        const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
+        const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
+        if (mobilePhotoBtn) {
+            mobilePhotoBtn.addEventListener('click', () => {
+                if (mobilePhotoMenu.style.display === 'block') {
+                    mobilePhotoMenu.style.display = 'none';
+                } else {
+                    mobilePhotoMenu.style.display = 'block';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
