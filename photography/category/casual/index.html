@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tomás Mota - Photography</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+/* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
+:root {
+--c-white: #ffffff;
+--c-white2: #cfcfcf;
+--c-black: #0b0b0b;
+--c-gray: #2b2f36;
+--c-gray-2: #3a3f46;
+--c-red: #ff3b3b;
+--c-blue: #1a73ff;
+--c-yellow: #ffd43b;
+}
+body {
+text-align: center;
+background: var(--c-black);
+color: var(--c-white);
+}
+/* Fundo "hero" parecido com a imagem enviada */
+.hero-wrap {
+background: radial-gradient(1200px 600px at 10% 10%, rgba(26, 115, 255, 0.12), transparent 60%),
+radial-gradient(900px 500px at 90% 80%, rgba(255, 59, 59, 0.12), transparent 60%),
+linear-gradient(180deg, #0f1620 0%, #0c121a 100%);
+color: var(--c-white);
+box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+}
+#herop {
+color: var(--c-white2);
+}
+/* Chips de techs com cantos levemente arredondados */
+.tech-chip {
+border-radius: 999px;
+font-weight: 600;
+padding: .6rem 1rem;
+background: var(--c-gray);
+color: var(--c-white);
+}
+/* Sombra suave e borda arredondada padrão */
+.card {
+border-radius: 1rem;
+box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+background: var(--c-gray-2);
+color: var(--c-white);
+}
+/* Botões primários */
+.btn {
+border-radius: .8rem;
+font-weight: 600;
+transition: transform .15s ease, box-shadow .15s ease;
+background: var(--c-blue);
+color: var(--c-white);
+}
+.btn:active {
+transform: translateY(1px);
+}
+/* REMOVIDO: A regra de timeline global. */
+/* ADICIONADO: A regra dentro de uma media query para o breakpoint 'md' */
+@media (min-width: 768px) {
+  .timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, var(--c-red), var(--c-blue));
+    border-radius: 999px;
+  }
+}
+/* Carrossel de certificados - ocultar barra */
+#cert-track {
+scrollbar-width: none;
+}
+#cert-track::-webkit-scrollbar {
+display: none;
+}
+/* Header ajustado para o tema escuro */
+header {
+background: var(--c-gray-2);
+color: var(--c-white);
+}
+header a {
+color: var(--c-white);
+}
+header a:hover {
+color: var(--c-white);
+}
+/* Mobile menu ajustado para o tema escuro */
+#mobile-menu {
+background: var(--c-gray-2);
+color: var(--c-white);
+}
+#mobile-menu a {
+color: var(--c-white);
+}
+/* Projetos, certificados, fotografia e música ajustados para o tema escuro */
+.card {
+  background: var(--c-gray-2);
+  color: var(--c-white);
+}
+
+.card img {
+  filter: brightness(0.8);
+}
+
+.card h3 {
+  color: var(--c-white);
+}
+
+/* Alteração aqui: cor do texto da descrição dos certificados */
+#certificados .card p {
+  color: var(--c-white);
+}
+
+/* Experiência profissional ajustada para o tema escuro */
+#cv {
+background: var(--c-gray-2);
+}
+#cv p {
+color: var(--c-white2);
+}
+#cv h3 {
+color: var(--c-white);
+}
+/* Footer ajustado para o tema escuro */
+footer {
+color: var(--c-gray);
+}
+</style>
+</head>
+<body>
+<header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+        <img src="profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+        <span class="font-bold text-xl">Tomás Mota</span>
+    </div>
+    <nav class="hidden md:flex space-x-3">
+        <a href="/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-red-500 hover:text-white transition">Dev Projects</a>
+        <a href="/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-blue-500 hover:text-white transition">CV</a>
+        <a href="/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-yellow-500 hover:text-white transition">About</a>
+        <a href="/github" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-gray-700 hover:text-white transition">GitHub</a>
+        <a href="/linkedin" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-blue-700 hover:text-white transition">LinkedIn</a>
+        <a href="/photography" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-red-400 hover:text-white transition">Photography</a>
+        <a href="/music" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-yellow-400 hover:text-black transition">Music</a>
+    </nav>
+    <div class="md:hidden">
+        <button id="menu-btn" class="focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </div>
+</header>
+<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 bg-white shadow-md md:hidden">
+    <a href="https://tomasmotadev.github.io" class="block px-4 py-2 bg-gray-500 rounded-lg">Home</a>
+    <a href="/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>
+    <a href="/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
+    <a href="/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
+    <a href="/github" target="_blank" class="block px-4 py-2 bg-gray-500 rounded-lg">GitHub</a>
+    <a href="/linkedin" target="_blank" class="block px-4 py-2 bg-gray-500 rounded-lg">LinkedIn</a>
+    <a href="/music" class="block px-4 py-2 bg-gray-500 rounded-lg">Music</a>
+</div>
+<section id="photography" class="px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">Casual Photography</h2>
+    <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
+      
+        <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://tomasmotadev.github.io/photography/src/img/alexandresancheira-project2.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Alexandre Sancheira</h3>
+            </article>
+        </a>
+      
+        <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://tomasmotadev.github.io/photography/src/img/tomasmacedo-project1.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Tomás Macedo</h3>
+            </article>
+        </a>
+
+        <a href="https://tomasmotadev.github.io/photography/personal/david-ferromau" class="block w-full md:w-[calc(33.333333%-16px)]">
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://tomasmotadev.github.io/photography/src/img/davidferromau-project1.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                <h3 class="font-bold">David Ferromau</h3>
+            </article>
+        </a>
+
+        <a href="https://tomasmotadev.github.io/photography/personal/gabriel-eloi" class="block w-full md:w-[calc(33.333333%-16px)]">
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://tomasmotadev.github.io/photography/src/img/gabrieleloi-project1.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Gabriel Elói</h3>
+            </article>
+        </a>
+    
+    </div>
+    <a href="/photography" class="inline-block mt-6 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+        All Work as a Photographer
+    </a>
+</section>
+<footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Seu Nome — Todos os direitos reservados.</footer>
+<script>
+// Ano do footer
+document.getElementById('year').textContent = new Date().getFullYear();
+// Menu mobile
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+</script>
+</body>
+</html>
