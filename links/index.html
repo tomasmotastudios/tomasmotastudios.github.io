@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://tomasmotadev.github.io/profile.jpg" type="image/jpeg" />
+  <title>Tomás Mota – Fullstack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #111111;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* White background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .loader-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 6px solid transparent;
+            border-top: 6px solid #4a6bff; /* Modern blue */
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+        }
+
+        .loader-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 6px solid #e0e0e0; /* Light gray */
+            border-radius: 50%;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #loading-screen p {
+            color: #333333; /* Dark gray text */
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Main COntent Styles */
+    .profile-photo {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 3px solid #111;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: inherit;
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    p {
+      max-width: 600px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: inherit;
+      margin-bottom: 2rem;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 320px;
+    }
+    a.button, button.theme-toggle {
+      background-color: #ffffff;
+      color: #111;
+      border: 2px solid #111;
+      padding: 0.9rem 1.2rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    a.button:hover, button.theme-toggle:hover {
+      background-color: #111;
+      color: #fff;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #777;
+    }
+    /* Tema escuro */
+    body.dark {
+      background-color: #111;
+      color: #fff;
+    }
+    body.dark h2 {
+      color: #ccc;
+    }
+    body.dark .profile-photo {
+      border-color: #fff;
+    }
+    body.dark a.button, 
+    body.dark button.theme-toggle {
+      background-color: #111;
+      color: #fff;
+      border-color: #fff;
+    }
+    body.dark a.button:hover, 
+    body.dark button.theme-toggle:hover {
+      background-color: #fff;
+      color: #111;
+    }
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 3.2rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      a.button {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-container">
+            <div class="loader-background"></div>
+            <div class="loader"></div>
+        </div>
+        <p>Loading your experience...</p>
+    </div>
+  
+  <!-- Loading Screen -->
+  <img src="profile.jpg" alt="Profile photo of Tomás Mota" class="profile-photo" />
+
+  <h1>Tomás Mota</h1>
+  <h2>Full-Stack Developer</h2>
+  
+  <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+
+  <p>
+    I build full digital experiences — from elegant, accessible frontends to robust, scalable backends.  
+    Passionate about clean code, usability, and performance.
+  </p>
+
+  <div class="links">
+    <a class="button" href="/projects">👨‍💻 Dev Projects</a>
+    <a class="button" href="/cv">📄 View CV</a>
+    <a class="button" href="/about">🧠 About Me</a>
+    <a class="button" href="mailto:tomasmotadev@proton.me">✉️ Email</a>
+    <a class="button" href="/github">💻 GitHub</a>
+    <a class="button" href="/linkedin">💼 LinkedIn</a>
+    <a class="button" href="/photography">📷 Photography</a>
+    <a class="button" href="/music">💿 Music</a>
+  </div>
+
+  <footer>
+     © 2025 <a href="https://tomasmotadev.github.io" style="color: inherit; text-decoration: underline;">Tomás Mota</a>. All Rights Reserved.
+  </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Show loading screen
+            document.getElementById('loading-screen').style.display = 'flex';
+
+            // Simulate loading delay
+            setTimeout(function() {
+                // Hide loading screen
+                document.getElementById('loading-screen').style.display = 'none';
+
+                // Small delay to ensure the loading screen is completely hidden
+                setTimeout(function() {
+                    // Show main content
+                    document.getElementById('main-content').style.display = 'block';
+                }, 100); // 100ms delay to ensure the loading screen is completely hidden
+            }, 2000); // 2 seconds delay for demonstration purposes
+        });
+    
+    // main js
+    const body = document.body;
+    const themeBtn = document.querySelector('.theme-toggle');
+
+    // Carregar tema salvo
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark');
+      themeBtn.textContent = '☀️ White Mode';
+    }
+
+    function toggleTheme() {
+      const isDark = body.classList.toggle('dark');
+      if (isDark) {
+        localStorage.setItem('theme', 'dark');
+        themeBtn.textContent = '☀️ White Mode';
+      } else {
+        localStorage.setItem('theme', 'light');
+        themeBtn.textContent = '🌙 Dark Mode';
+      }
+    }
+  </script>
+
+</body>
+</html>
