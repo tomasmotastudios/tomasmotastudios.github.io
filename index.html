@@ -27,23 +27,8 @@
     }
 
 /* Loading Screen Styles */
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff; /* White background */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    text-align: center;
-}
-
 .loader {
-    border: 16px solid #f5deb3; /* Burnt yellow */
+    border: 16px solid rgba(245, 222, 179, 0.3); /* Burnt yellow with opacity */
     border-top: 16px solid #1e90ff; /* Blue */
     border-radius: 50%;
     width: 120px;
@@ -60,6 +45,7 @@
 #loading-screen p {
     color: #000000; /* Black text */
     font-size: 18px;
+    font-weight: bold;
 }
     
     .profile-photo {
@@ -191,17 +177,18 @@
 
   <script>
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Show loading screen
-    document.getElementById('loading-screen').style.display = 'flex';
+        document.addEventListener("DOMContentLoaded", function() {
+            // Show loading screen
+            document.getElementById('loading-screen').style.display = 'flex';
 
-    // Simulate loading delay
-    setTimeout(function() {
-        // Hide loading screen and show main content
-        document.getElementById('loading-screen').style.display = 'none';
-        document.getElementById('main-content').style.display = 'block';
-    }, 2000); // 2 seconds delay for demonstration purposes
-});
+            // Simulate loading delay
+            setTimeout(function() {
+                // Hide loading screen and show main content
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }, 2000); // 2 seconds delay for demonstration purposes
+        });
+    
     
     const body = document.body;
     const themeBtn = document.querySelector('.theme-toggle');
