@@ -187,10 +187,69 @@ color: var(--c-gray);
 .mobile-dropdown-content a {
     padding: 8px 0;
 }
+
+  #popup-container {
+  display: none; /* Esconde o pop-up por padrão */
+  position: fixed; /* Mantém o pop-up no mesmo lugar na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro transparente */
+  z-index: 1000; /* Garante que o pop-up esteja acima de outros elementos */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  max-width: 600px;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporção 16:9 para vídeos responsivos */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
   
 </style>
 </head>
 <body>
+
+  <div id="popup-container">
+  <div class="popup-content">
+    <span class="close-button">&times;</span>
+    <div class="video-container">
+      <iframe width="560" height="315" src="URL_DO_SEU_VIDEO_AQUI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p>Esta é uma pequena descrição sobre o vídeo. Fique à vontade para explorar nosso site!</p>
+  </div>
+</div>
+  
     <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
         <a href="https://tomasmotadev.github.io" class="flex items-center space-x-3">
             <img src="https://tomasmotadev.github.io/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
@@ -544,6 +603,27 @@ mobilePhotoBtn.addEventListener('click', () => {
     } else {
         mobilePhotoMenu.style.display = 'block';
     }
+});
+
+// popup
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const popup = document.getElementById('popup-container');
+    const closeButton = document.querySelector('.close-button');
+
+    // Exibe o pop-up assim que a página é carregada
+    popup.style.display = 'flex';
+
+    // Fecha o pop-up ao clicar no botão
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+    
+    // Opcional: Fecha o pop-up ao clicar fora dele
+    window.addEventListener('click', (event) => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
 });
   
 </script>
