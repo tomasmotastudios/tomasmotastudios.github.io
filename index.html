@@ -188,23 +188,27 @@ color: var(--c-gray);
     padding: 8px 0;
 }
 
-  #popup-container {
+  /* Container POPUP */
+  
+#popup-container {
+  /* Fundo escuro que cobre a tela inteira */
   display: none; /* Esconde o pop-up por padrão */
-  position: fixed; /* Mantém o pop-up no mesmo lugar na tela */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro transparente */
-  z-index: 1000; /* Garante que o pop-up esteja acima de outros elementos */
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
   justify-content: center;
   align-items: center;
 }
 
 .popup-content {
+  /* Estilo da caixa principal do pop-up */
   background-color: #fff;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px; /* Cantos arredondados na caixa do pop-up */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   position: relative;
   max-width: 600px;
@@ -212,6 +216,7 @@ color: var(--c-gray);
 }
 
 .close-button {
+  /* Botão de fechar (o 'x') */
   position: absolute;
   top: 10px;
   right: 15px;
@@ -219,34 +224,32 @@ color: var(--c-gray);
   font-weight: bold;
   cursor: pointer;
   color: #888;
+  transition: color 0.3s ease; /* Efeito de transição suave */
 }
 
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* Proporção 16:9 para vídeos responsivos */
-  height: 0;
-  overflow: hidden;
+.close-button:hover {
+  /* Muda a cor ao passar o mouse */
+  color: #555;
 }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.popup-content img {
+  /* Estilo para a imagem dentro do pop-up */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Cantos arredondados na imagem */
+  margin-bottom: 10px; /* Espaço abaixo da imagem */
 }
   
 </style>
 </head>
 <body>
 
-  <div id="popup-container">
+    <span class="close-button">&times;</span>
+    <div id="popup-container">
   <div class="popup-content">
     <span class="close-button">&times;</span>
-    <div class="video-container">
-      <iframe width="560" height="315" src="URL_DO_SEU_VIDEO_AQUI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p>Esta é uma pequena descrição sobre o vídeo. Fique à vontade para explorar nosso site!</p>
+    <img src="https://tomasmotadev.github.io/music/src/img/singles/spies.jpg" alt="Spies" style="max-width: 100%; height: auto;">
+    <p>My new song "Spies" is available today at 2PM (London Time). More info at <a href="https://tomasmotadev.github.io/music/release/spies">tomasmotadev.github.io/music/release/spies</a> </p>
   </div>
 </div>
   
