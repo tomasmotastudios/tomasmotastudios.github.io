@@ -27,27 +27,65 @@
     }
 
 /* Loading Screen Styles */
-.loader {
-    border: 16px solid rgba(245, 222, 179, 0.3); /* Burnt yellow with opacity */
-    border-top: 16px solid #1e90ff; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-    margin-bottom: 20px;
-}
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* White background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            text-align: center;
+        }
 
-#loading-screen p {
-    color: #000000; /* Black text */
-    font-size: 18px;
-    font-weight: bold;
-}
-    
+        .loader-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 10px solid transparent;
+            border-top: 10px solid #1e90ff; /* Blue */
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loader-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 10px solid #f5deb3; /* Burnt yellow */
+            border-radius: 50%;
+        }
+
+        #loading-screen p {
+            color: #000000; /* Black text */
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+
+        /* Main COntent Styles */
     .profile-photo {
       width: 140px;
       height: 140px;
@@ -142,10 +180,13 @@
 <body>
 
   <!-- Loading Screen -->
-  <div id="loading-screen">
-      <div class="loader"></div>
-      <p>Loading...</p>
-  </div>
+    <div id="loading-screen">
+        <div class="loader-container">
+            <div class="loader-background"></div>
+            <div class="loader"></div>
+        </div>
+        <p>Loading...</p>
+    </div>
   
   <!-- Loading Screen -->
   <img src="profile.jpg" alt="Profile photo of Tomás Mota" class="profile-photo" />
@@ -175,26 +216,25 @@
      © 2025 <a href="https://tomasmotadev.github.io" style="color: inherit; text-decoration: underline;">Tomás Mota</a>. All Rights Reserved.
   </footer>
 
-  <script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Show loading screen
+            document.getElementById('loading-screen').style.display = 'flex';
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Show loading screen
-    document.getElementById('loading-screen').style.display = 'flex';
+            // Simulate loading delay
+            setTimeout(function() {
+                // Hide loading screen
+                document.getElementById('loading-screen').style.display = 'none';
 
-    // Simulate loading delay
-    setTimeout(function() {
-        // Hide loading screen
-        document.getElementById('loading-screen').style.display = 'none';
-
-        // Small delay to ensure the loading screen is completely hidden
-        setTimeout(function() {
-            // Show main content
-            document.getElementById('main-content').style.display = 'block';
-        }, 100); // 100ms delay to ensure the loading screen is completely hidden
-    }, 2000); // 2 seconds delay for demonstration purposes
-});
+                // Small delay to ensure the loading screen is completely hidden
+                setTimeout(function() {
+                    // Show main content
+                    document.getElementById('main-content').style.display = 'block';
+                }, 100); // 100ms delay to ensure the loading screen is completely hidden
+            }, 2000); // 2 seconds delay for demonstration purposes
+        });
     
-    
+    // main js
     const body = document.body;
     const themeBtn = document.querySelector('.theme-toggle');
 
