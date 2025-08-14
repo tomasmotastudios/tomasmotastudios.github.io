@@ -177,17 +177,22 @@
 
   <script>
 
-        document.addEventListener("DOMContentLoaded", function() {
-            // Show loading screen
-            document.getElementById('loading-screen').style.display = 'flex';
+document.addEventListener("DOMContentLoaded", function() {
+    // Show loading screen
+    document.getElementById('loading-screen').style.display = 'flex';
 
-            // Simulate loading delay
-            setTimeout(function() {
-                // Hide loading screen and show main content
-                document.getElementById('loading-screen').style.display = 'none';
-                document.getElementById('main-content').style.display = 'block';
-            }, 2000); // 2 seconds delay for demonstration purposes
-        });
+    // Simulate loading delay
+    setTimeout(function() {
+        // Hide loading screen
+        document.getElementById('loading-screen').style.display = 'none';
+
+        // Small delay to ensure the loading screen is completely hidden
+        setTimeout(function() {
+            // Show main content
+            document.getElementById('main-content').style.display = 'block';
+        }, 100); // 100ms delay to ensure the loading screen is completely hidden
+    }, 2000); // 2 seconds delay for demonstration purposes
+});
     
     
     const body = document.body;
