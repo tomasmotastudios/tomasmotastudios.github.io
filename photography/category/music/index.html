@@ -133,22 +133,87 @@ color: var(--c-white);
 footer {
 color: var(--c-gray);
 }
+
+  
+
+  /* Estilos para o menu dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--c-gray-2);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.dropdown-content a {
+    color: var(--c-white);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--c-gray);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mobile Dropdown */
+.mobile-dropdown-btn {
+    display: block;
+    cursor: pointer;
+}
+
+.mobile-dropdown-content {
+    display: none;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+.mobile-dropdown-content a {
+    padding: 8px 0;
+}
+  
+  
 </style>
 </head>
 <body>
 <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
-    <div class="flex items-center space-x-3">
-        <img src="profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+    <a href="https://tomasmotadev.github.io" class="flex items-center space-x-3">
+        <img src="https://tomasmotadev.github.io/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
         <span class="font-bold text-xl">Tomás Mota</span>
-    </div>
+    </a>
     <nav class="hidden md:flex space-x-3">
-        <a href="/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-red-500 hover:text-white transition">Dev Projects</a>
-        <a href="/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-blue-500 hover:text-white transition">CV</a>
-        <a href="/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-yellow-500 hover:text-white transition">About</a>
-        <a href="/github" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-gray-700 hover:text-white transition">GitHub</a>
-        <a href="/linkedin" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-blue-700 hover:text-white transition">LinkedIn</a>
-        <a href="/photography" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-red-400 hover:text-white transition">Photography</a>
-        <a href="/music" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-yellow-400 hover:text-black transition">Music</a>
+        <a href="/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">Dev Projects</a>
+        <a href="/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">CV</a>
+        <a href="/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">About</a>
+        <a href="/github" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">GitHub</a>
+        <a href="/linkedin" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">LinkedIn</a>
+        <div class="dropdown">
+            <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-white transition">Photography</button>
+            <div class="dropdown-content">
+                <a href="https://tomasmotadev.github.io/photography/category/sport">Sport</a>
+                <a href="https://tomasmotadev.github.io/photography/category/music">Music</a>
+                <a href="https://tomasmotadev.github.io/photography/category/casual">Casual</a>
+            </div>
+        </div>
+       <a href="/music" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-black-500 hover:text-black transition">Music</a>
     </nav>
     <div class="md:hidden">
         <button id="menu-btn" class="focus:outline-none">
@@ -159,13 +224,20 @@ color: var(--c-gray);
     </div>
 </header>
 <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 bg-white shadow-md md:hidden">
-    <a href="https://tomasmotadev.github.io" class="block px-4 py-2 bg-gray-500 rounded-lg">Home</a>
     <a href="/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>
     <a href="/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
     <a href="/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
     <a href="/github" target="_blank" class="block px-4 py-2 bg-gray-500 rounded-lg">GitHub</a>
     <a href="/linkedin" target="_blank" class="block px-4 py-2 bg-gray-500 rounded-lg">LinkedIn</a>
-    <a href="/music" class="block px-4 py-2 bg-gray-500 rounded-lg">Music</a>
+    <div class="flex flex-col">
+        <span id="mobile-photography-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Photography</span>
+        <div id="mobile-photography-menu" class="mobile-dropdown-content">
+            <a href="/photography/sport" class="block px-4 py-2">Sport</a>
+            <a href="/photography/music" class="block px-4 py-2">Music</a>
+            <a href="/photography/casual" class="block px-4 py-2">Casual</a>
+        </div>
+    </div>
+  <a href="/music" class="block px-4 py-2 bg-gray-500 rounded-lg">Music</a>
 </div>
 <section id="photography" class="px-6 py-12">
     <h2 class="text-2xl font-bold mb-6">Music Photography</h2>
@@ -212,18 +284,29 @@ color: var(--c-gray);
         </a>
     
     </div>
-    <a href="/photography" class="inline-block mt-6 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
-        All Work as a Photographer
-    </a>
 </section>
-<footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Seu Nome — Todos os direitos reservados.</footer>
+<footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Tomás Mota. All Rights Reserved.</footer>
 <script>
 // Ano do footer
 document.getElementById('year').textContent = new Date().getFullYear();
+  
 // Menu mobile
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Menu dropdown de fotografia no mobile
+const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
+const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
+
+mobilePhotoBtn.addEventListener('click', () => {
+    if (mobilePhotoMenu.style.display === 'block') {
+        mobilePhotoMenu.style.display = 'none';
+    } else {
+        mobilePhotoMenu.style.display = 'block';
+    }
+});
+  
 </script>
 </body>
 </html>
