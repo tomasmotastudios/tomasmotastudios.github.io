@@ -1,201 +1,320 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="https://tomasmotadev.github.io/profile.jpg" type="image/jpeg" />
-  <title>Tomás Mota - Music Portfolio - Makyneta</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-
-  <style>
-    :root {
-      --bg-color: #000;
-      --text-color: #fff;
-      --subtext-color: #ccc;
-      --link-hover: #bbb;
-    }
-
-    body.light {
-      --bg-color: #fff;
-      --text-color: #000;
-      --subtext-color: #333;
-      --link-hover: #444;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 2rem;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: 'Inter', sans-serif;
-      transition: background-color 0.4s ease, color 0.4s ease;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 2rem;
-    }
-
-    h3 {
-      font-size: 1.6rem;
-      color: var(--subtext-color);
-      margin: 2rem 0 1rem;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .toggle-btn {
-      background: none;
-      border: 2px solid var(--text-color);
-      color: var(--text-color);
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      font-weight: bold;
-      cursor: pointer;
-      margin-bottom: 2rem;
-      transition: all 0.3s ease;
-    }
-
-    .toggle-btn:hover {
-      background: var(--text-color);
-      color: var(--bg-color);
-    }
-
-    .album-row {
-      position: relative;
-      margin-bottom: 2rem;
-    }
-
-    .items-container {
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      gap: 1rem;
-      padding-bottom: 1rem;
-    }
-
-    .item {
-      flex: 0 0 auto;
-      width: 250px;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .item img {
-      width: 100%;
-      height: auto;
-      border-radius: 0.5rem;
-      filter: grayscale(50%);
-      transition: all 0.3s ease;
-    }
-
-    .item img:hover {
-      filter: grayscale(0%);
-      transform: scale(1.02);
-    }
-
-    .item-title {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      text-align: left;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      color: #777;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      .item {
-        width: 180px;
-      }
-    }
-
-    .code-block {
-        display: inline-flex; /* flex para alinhar */
-        align-items: center;  /* centraliza verticalmente */
-        background-color: #1e1e1e;
-        color: #d4d4d4;
-        padding: 0 08px; /* só espaço lateral */
-        height: 20px; /* altura fixa */
-        border-radius: 8px;
-        font-family: "Courier New", Courier, monospace;
-        font-size: 0.9em;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="https://tomasmotadev.github.io/profile.jpg" type="image/jpg" />
+    <title>Tomás Mota - Music</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
+        :root {
+            --c-white: #ffffff;
+            --c-white2: #cfcfcf;
+            --c-black: #0b0b0b;
+            --c-gray: #2b2f36;
+            --c-gray-2: #3a3f46;
+            --c-red: #ff3b3b;
+            --c-blue: #1a73ff;
+            --c-yellow: #ffd43b;
+            --border-color: #444;
+        }
+        body {
+            text-align: center;
+            background: var(--c-black);
+            color: var(--c-white);
+            font-family: 'Inter', sans-serif;
+        }
+        .card {
+            border-radius: 1rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+            background: var(--c-gray-2);
+            color: var(--c-white);
+        }
+        .card img {
+            filter: brightness(0.8);
+        }
+        .card h3 {
+            color: var(--c-white);
+        }
+        header {
+            background: var(--c-gray-2);
+            color: var(--c-white);
+        }
+        header a, header button {
+            color: var(--c-white);
+        }
+        header a:hover, header button:hover {
+            color: var(--c-white);
+        }
+        #mobile-menu {
+            background: var(--c-gray-2);
+            color: var(--c-white);
+        }
+        #mobile-menu a {
+            color: var(--c-white);
+        }
+        footer {
+            color: var(--c-gray);
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--c-gray-2);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .dropdown-content a {
+            color: var(--c-white);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: var(--c-gray);
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .mobile-dropdown-btn {
+            display: block;
+            cursor: pointer;
+        }
+        .mobile-dropdown-content {
+            display: none;
+            padding-left: 1rem;
+            padding-top: 0.5rem;
+        }
+        .mobile-dropdown-content a {
+            padding: 8px 0;
+        }
+        /* Estilos específicos da página de música */
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+        .tab-button {
+            background: none;
+            border: none;
+            color: var(--c-white2);
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            outline: none;
+        }
+        .tab-button:hover {
+            color: var(--c-white);
+        }
+        .tab-button.active {
+            color: var(--c-white);
+        }
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--c-red);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .music-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .music-item {
+            display: block;
+            width: 100%;
+            max-width: 250px;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+        .music-item:hover {
+            transform: translateY(-5px);
+        }
+        .music-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+        }
+        .music-item h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+        }
+        .music-item p {
+            font-size: 0.9rem;
+            color: var(--c-white2);
+            margin: 0;
+        }
+    </style>
 </head>
-<body class="dark">
+<body>
 
-  <button class="toggle-btn" onclick="window.location.href='https://tomasmotadev.github.io'">Home</button>
-  <button class="toggle-btn" onclick="toggleMode()">Change Theme</button>
-
-  <h1>Makyneta</h1>
-  
-  <!-- Álbum -->
-  <div class="album-row">
-    <h3><a href="https://tomasmotadev.github.io/music/albums" data-aos="fade-up" style="color: inherit; text-decoration: none;">Albums</a></h3>
-    <div class="items-container">
-      <a href="https://tomasmotadev.github.io/music/release/the-sun-always-shines" class="item" data-aos="fade-up">
-        <img src="src/img/albums/the-sun-always-shines.jpg" alt="Álbum 1">
-        <div class="item-title">The Sun Always Shines</div>
-        <div class="code-block">
-          Relese: 25.06.2026
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <a href="https://tomasmotadev.github.io" class="flex items-center space-x-3">
+            <img src="https://tomasmotadev.github.io/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota</span>
+        </a>
+        <nav class="hidden md:flex space-x-3">
+            <a href="https://tomasmotadev.github.io/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">CV</a>
+            <a href="https://tomasmotadev.github.io/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">About</a>
+            <a href="https://tomasmotadev.github.io/github" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">GitHub</a>
+            <a href="https://tomasmotadev.github.io/linkedin" target="_blank" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">LinkedIn</a>
+            <div class="dropdown">
+                <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Photography</button>
+                <div class="dropdown-content">
+                    <a href="https://tomasmotadev.github.io/photography/category/sport">Sport</a>
+                    <a href="https://tomasmotadev.github.io/photography/category/music">Music</a>
+                    <a href="https://tomasmotadev.github.io/photography/category/casual">Casual</a>
+                </div>
+            </div>
+            <a href="https://tomasmotadev.github.io/music" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Music</a>
+        </nav>
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- Singles -->
-  <div class="album-row">
-    <h3><a href="https://tomasmotadev.github.io/music/singles" data-aos="fade-up" style="color: inherit; text-decoration: none;">Singles</a></h3>
-    <div class="items-container">
-      <a href="https://tomasmotadev.github.io/music/release/spies" class="item" data-aos="fade-up">
-        <img src="src/img/singles/spies.jpg" alt="Single 1">
-        <div class="item-title">Spies</div>
-        <div class="code-block">
-          Released: 13.08.2025
+    </header>
+    <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 bg-white shadow-md md:hidden">
+        <a href="https://tomasmotadev.github.io/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
+        <a href="https://tomasmotadev.github.io/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
+        <a href="https://tomasmotadev.github.io/github" target="_blank" class="block px-4 py-2 bg-gray-500 rounded-lg">GitHub</a>
+        <a href="https://tomasmotadev.github.io/linkedin" target="_blank" class="block px-4 py-2 bg-gray-500 rounded-lg">LinkedIn</a>
+        <div class="flex flex-col">
+            <span id="mobile-photography-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Photography</span>
+            <div id="mobile-photography-menu" class="mobile-dropdown-content">
+                <a href="https://tomasmotadev.github.io/photography/category/sport" class="block px-4 py-2">Sport</a>
+                <a href="https://tomasmotadev.github.io/photography/category/music" class="block px-4 py-2">Music</a>
+                <a href="https://tomasmotadev.github.io/photography/category/casual" class="block px-4 py-2">Casual</a>
+            </div>
         </div>
-      </a>
+        <a href="https://tomasmotadev.github.io/music" class="block px-4 py-2 bg-gray-500 rounded-lg">Music</a>
     </div>
-  </div>
 
-  <!-- Performances 
-  <div class="album-row">
-    <h3><a href="#" data-aos="fade-up" style="color: inherit; text-decoration: none;">Performances ao Vivo</a></h3>
-    <div class="items-container">
-      <a href="#" class="item" data-aos="fade-up">
-        <img src="src/music/live1.jpg" alt="Live Performance 1">
-        <div class="item-title">Festival da Cidade 2024</div>
-      </a>
-      <a href="#" class="item" data-aos="fade-up">
-        <img src="src/music/live2.jpg" alt="Live Performance 2">
-        <div class="item-title">Concerto Solidário</div>
-      </a>
-    </div>
-  </div> -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+            <span class="text-[var(--c-red)]">&lt;</span>
+            <span class="text-white">Makyneta</span>
+            <span class="text-[var(--c-red)]" /> /&gt;</span>
+        </h1>
 
-  <footer>
-    © 2025 <a href="https://tomasmotadev.github.io" style="color: inherit; text-decoration: underline;">Tomás Mota</a>. All Rights Reserved.
-  </footer>
+        <div class="tabs-container">
+            <button class="tab-button active" onclick="showTab('albums')">Albums</button>
+            <button class="tab-button" onclick="showTab('singles')">Singles</button>
+        </div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    function toggleMode() {
-      document.body.classList.toggle("light");
-    }
-  </script>
+        <div id="albums" class="tab-content active">
+            <section class="py-6">
+                <div class="music-grid">
+                    <a href="https://tomasmotadev.github.io/music/release/the-sun-always-shines" class="music-item">
+                        <article class="card p-4 text-left rounded-xl shadow-md">
+                            <img src="music/src/img/albums/the-sun-always-shines.jpg" alt="Álbum: The Sun Always Shines" class="w-full h-auto object-cover rounded-xl mb-3">
+                            <h3>The Sun Always Shines</h3>
+                            <p>Relese: 25.06.2026</p>
+                        </article>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div id="singles" class="tab-content">
+            <section class="py-6">
+                <div class="music-grid">
+                    <a href="https://tomasmotadev.github.io/music/release/spies" class="music-item">
+                        <article class="card p-4 text-left rounded-xl shadow-md">
+                            <img src="music/src/img/singles/spies.jpg" alt="Single: Spies" class="w-full h-auto object-cover rounded-xl mb-3">
+                            <h3>Spies</h3>
+                            <p>Released: 13.08.2025</p>
+                        </article>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Tomás Mota. All Rights Reserved.</footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                const photoMenu = document.getElementById('mobile-photography-menu');
+                if (photoMenu) photoMenu.style.display = 'none';
+            }
+        });
+
+        const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
+        const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
+        if (mobilePhotoBtn) {
+            mobilePhotoBtn.addEventListener('click', () => {
+                if (mobilePhotoMenu.style.display === 'block') {
+                    mobilePhotoMenu.style.display = 'none';
+                } else {
+                    mobilePhotoMenu.style.display = 'block';
+                }
+            });
+        }
+
+        // Função para mostrar a aba selecionada
+        function showTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(tabId).classList.add('active');
+            const clickedButton = document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`);
+            if (clickedButton) {
+                clickedButton.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
