@@ -315,6 +315,16 @@
                 clickedButton.classList.add('active');
             }
         }
+
+        const hash = window.location.hash.substring(1);
+    if (hash === 'singles' || hash === 'albums') {
+        showTab(hash);
+    } else {
+        // Se não houver hash, garanta que a aba de álbuns esteja ativa por padrão
+        showTab('albums');
+    }
+});
+        
     </script>
 </body>
 </html>
