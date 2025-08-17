@@ -191,16 +191,16 @@ color: var(--c-gray);
 </style>
 </head>
 <body>
-    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+
+      <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
         <a href="https://tomasmotadev.github.io" class="flex items-center space-x-3">
             <img src="https://tomasmotadev.github.io/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
             <span class="font-bold text-xl">Tomás Mota</span>
         </a>
-        <nav class="hidden md:flex space-x-3">
-            <!-- <a href="https://tomasmotaoliveira.github.io/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Dev Projects</a> -->
-            <a href="https://tomasmotadev.github.io/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">CV</a>
-            <a href="https://tomasmotadev.github.io/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">About</a>
-            <div class="dropdown">
+         <nav class="hidden md:flex space-x-3">
+            <a href="https://tomasmotaoliveira.github.io/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Dev Projects</a>
+            
+           <div class="dropdown">
                 <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Photography</button>
                 <div class="dropdown-content">
                     <a href="https://tomasmotadev.github.io/photography/category/sport">Sport</a>
@@ -208,7 +208,10 @@ color: var(--c-gray);
                     <a href="https://tomasmotadev.github.io/photography/category/casual">Casual</a>
                 </div>
             </div>
-            <a href="https://tomasmotadev.github.io/music" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Music</a>
+             
+            <a href="https://tomasmotadev.github.io/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">CV</a>
+            <a href="https://tomasmotadev.github.io/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">About</a>
+             
             <div class="dropdown">
                 <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Contact</button>
                 <div class="dropdown-content">
@@ -228,9 +231,8 @@ color: var(--c-gray);
         </div>
     </header>
     <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 bg-white shadow-md md:hidden">
-        <!-- <a href="https://tomasmotaoliveira.github.io/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a> -->
-        <a href="https://tomasmotadev.github.io/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
-        <a href="https://tomasmotadev.github.io/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
+        <a href="https://tomasmotaoliveira.github.io/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>
+      
         <div class="flex flex-col">
             <span id="mobile-photography-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Photography</span>
             <div id="mobile-photography-menu" class="mobile-dropdown-content">
@@ -239,7 +241,10 @@ color: var(--c-gray);
                 <a href="https://tomasmotadev.github.io/photography/category/casual" class="block px-4 py-2">Casual</a>
             </div>
         </div>
-        <a href="https://tomasmotadev.github.io/music" class="block px-4 py-2 bg-gray-500 rounded-lg">Music</a>
+        
+        <a href="https://tomasmotadev.github.io/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
+        <a href="https://tomasmotadev.github.io/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
+
         <div class="flex flex-col">
             <span id="mobile-contact-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Contact</span>
             <div id="mobile-contact-menu" class="mobile-dropdown-content">
