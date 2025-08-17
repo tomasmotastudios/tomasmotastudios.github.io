@@ -52,14 +52,19 @@
         }
         /* Botões primários */
         .btn {
-            border-radius: .8rem;
+            border-radius: .6rem;
             font-weight: 600;
             transition: transform .15s ease, box-shadow .15s ease;
-            background: var(--c-blue);
+            background: var(--c-black);
             color: var(--c-white);
+            padding: 0.4rem 0.7rem;
+            display: inline-block;
+            margin-top: 1rem;
         }
-        .btn:active {
+        .btn:hover {
             transform: translateY(1px);
+            background: var(--c-white);
+            color: var(--c-black);
         }
         /* Projetos, certificados, fotografia e música ajustados para o tema escuro */
         .card {
@@ -133,7 +138,7 @@
         </a>
          <nav class="hidden md:flex space-x-3">
             <a href="https://tomasmotadev.github.io/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Dev Projects</a>
-            
+             
            <div class="dropdown">
                 <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Photography</button>
                 <div class="dropdown-content">
@@ -142,10 +147,10 @@
                     <a href="https://tomasmotadev.github.io/photography/category/casual">Casual</a>
                 </div>
             </div>
-             
+              
             <a href="https://tomasmotadev.github.io/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">CV</a>
             <a href="https://tomasmotadev.github.io/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">About</a>
-             
+              
             <div class="dropdown">
                 <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Contact</button>
                 <div class="dropdown-content">
@@ -155,7 +160,7 @@
                 </div>
             </div>
         </nav>
-      
+       
         <div class="md:hidden">
             <button id="menu-btn" class="focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,7 +171,7 @@
     </header>
     <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 bg-white shadow-md md:hidden">
         <a href="https://tomasmotadev.github.io/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>
-      
+       
         <div class="flex flex-col">
             <span id="mobile-photography-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Photography</span>
             <div id="mobile-photography-menu" class="mobile-dropdown-content">
@@ -175,7 +180,7 @@
                 <a href="https://tomasmotadev.github.io/photography/category/casual" class="block px-4 py-2">Casual</a>
             </div>
         </div>
-        
+         
         <a href="https://tomasmotadev.github.io/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
         <a href="https://tomasmotadev.github.io/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
 
@@ -188,9 +193,9 @@
             </div>
         </div>
     </div>
-    
-    <main class="py-8 text-left">
-        <div class="max-w-4xl mx-auto px-4">
+     
+    <main class="py-8 text-left max-w-7xl mx-auto px-4 md:px-0">
+        <div>
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-center">
                 <span class="text-[var(--c-red)]">&lt;</span>
                 <span class="text-white">My Projects</span>
@@ -200,40 +205,65 @@
                 Aqui você encontra todos os meus projetos de desenvolvimento. Cada projeto é um reflexo do meu aprendizado e paixão por transformar ideias em soluções digitais funcionais e criativas.
             </p>
         </div>
-        
-        <h2 class="text-2xl font-bold mb-6 mt-12 px-4 md:px-20">View my Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 md:px-20 justify-items-center">
-            <a href="#" class="block">
-                <article class="card p-4 text-left rounded-xl shadow-md">
-                    <img src="https://tomasmotadev.github.io/projects/src/img/Project1.png" alt="Project 1" class="w-full h-40 object-cover rounded-xl mb-3">
-                    <h3 class="font-bold">Website, CV, About</h3>
-                    <p class="text-gray-200 text-sm">Feito com HTML, CSS, JavaScript e Tailwind CSS. Uma demonstração das minhas habilidades de frontend.</p>
-                </article>
-            </a>
-            
-            <a href="#" class="block">
-                <article class="card p-4 text-left rounded-xl shadow-md">
-                    <img src="projects/src/img/project2.png" alt="Project 2" class="w-full h-40 object-cover rounded-xl mb-3">
-                    <h3 class="font-bold">E-commerce API</h3>
-                    <p class="text-gray-200 text-sm">API RESTful completa para um e-commerce, construída com Python e Django. Inclui autenticação de usuário, gerenciamento de produtos e processamento de pedidos.</p>
-                </article>
-            </a>
+         
+        <h2 class="text-2xl font-bold mb-6 mt-12">Explore meus projetos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-y-6 md:gap-x-8">
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://tomasmotadev.github.io/projects/src/img/Project1.png" alt="Project 1" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Website, CV, About</h3>
+                <p class="text-gray-200 text-sm">Feito com HTML, CSS, JavaScript e Tailwind CSS. Uma demonstração das minhas habilidades de frontend.</p>
+                <a href="#" class="btn">View Repository</a>
+            </article>
+             
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://via.placeholder.com/150/1a73ff/FFFFFF?text=Flash+Sale" alt="Flash Sale" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Flash Sale</h3>
+                <p class="text-gray-200 text-sm">Calcula desconto com base no valor da compra.</p>
+                <a href="https://github.com/tomasmotadev/exploring-java-syntax-and-logic/tree/main/flash-sale" target="_blank" class="btn">GitHub Repository</a>
+                <a href="https://github.com/tomasmotadev/exploring-java-syntax-and-logic/tree/main/flash-sale" target="_blank" class="btn">Live Demo</a>
+            </article>
 
-            <a href="#" class="block">
-                <article class="card p-4 text-left rounded-xl shadow-md">
-                    <img src="projects/src/img/project3.png" alt="Project 3" class="w-full h-40 object-cover rounded-xl mb-3">
-                    <h3 class="font-bold">Todo App com React</h3>
-                    <p class="text-gray-200 text-sm">Um aplicativo de lista de tarefas interativo e moderno, desenvolvido com React e TypeScript para um gerenciamento de estado eficiente.</p>
-                </article>
-            </a>
-            
-            <a href="#" class="block">
-                <article class="card p-4 text-left rounded-xl shadow-md">
-                    <img src="projects/src/img/project4.png" alt="Project 4" class="w-full h-40 object-cover rounded-xl mb-3">
-                    <h3 class="font-bold">Sistema de Blog</h3>
-                    <p class="text-gray-200 text-sm">Um sistema de blog completo com painel de administração, gerenciamento de posts, categorias e comentários. Desenvolvido com PHP e MySQL.</p>
-                </article>
-            </a>
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://via.placeholder.com/150/1a73ff/FFFFFF?text=Organizing+Inventory" alt="Organizing Inventory" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Organizing Inventory</h3>
+                <p class="text-gray-200 text-sm">Organiza e resume dados de inventário de lojas.</p>
+                <a href="https://github.com/tomasmotadev/exploring-java-syntax-and-logic/tree/main/organizing-inventory" target="_blank" class="btn">View Repository</a>
+            </article>
+
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://via.placeholder.com/150/1a73ff/FFFFFF?text=The+Shiver+Landing+Page" alt="'The Shiver' Landing Page" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold">'The Shiver' Landing Page</h3>
+                <p class="text-gray-200 text-sm">Landing page moderna e responsiva para projeto musical.</p>
+                <a href="https://github.com/tomasmotadev" target="_blank" class="btn">View Repository</a>
+            </article>
+
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://via.placeholder.com/150/1a73ff/FFFFFF?text=Hero+Level+Classifier" alt="Hero Level Classifier" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Hero Level Classifier</h3>
+                <p class="text-gray-200 text-sm">Classifica nível de herói de Iron a Radiant.</p>
+                <a href="https://github.com/tomasmotadev/hero-level-classifier" target="_blank" class="btn">View Repository</a>
+            </article>
+             
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://via.placeholder.com/150/1a73ff/FFFFFF?text=Ranked+Calculator" alt="Ranked Calculator" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Ranked Calculator</h3>
+                <p class="text-gray-200 text-sm">Calcula ranking de jogador baseado em vitórias e derrotas.</p>
+                <a href="https://github.com/tomasmotadev/ranked-calculator" target="_blank" class="btn">View Repository</a>
+            </article>
+
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://via.placeholder.com/150/1a73ff/FFFFFF?text=Writing+Hero+Class+Game" alt="Writing Hero Class Game" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Writing Hero Class Game</h3>
+                <p class="text-gray-200 text-sm">Projeto OOP com classes de herói e métodos de ataque.</p>
+                <a href="https://github.com/tomasmotadev/hero_game" target="_blank" class="btn">View Repository</a>
+            </article>
+
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="https://via.placeholder.com/150/1a73ff/FFFFFF?text=Credit+Card+Brand+Validator" alt="Credit Card Brand Validator" class="w-full h-40 object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Credit Card Brand Validator</h3>
+                <p class="text-gray-200 text-sm">Detecta bandeira de cartão usando regex.</p>
+                <a href="https://github.com/tomasmotadev/credit-card-brand-validator" target="_blank" class="btn">View Repository</a>
+            </article>
         </div>
     </main>
 
@@ -246,7 +276,7 @@
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        
+         
         // Menu dropdown de fotografia no mobile
         const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
         const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
@@ -255,7 +285,7 @@
                 mobilePhotoMenu.style.display = mobilePhotoMenu.style.display === 'block' ? 'none' : 'block';
             });
         }
-        
+         
         // Menu dropdown de Contactos no mobile
         const mobileContactBtn = document.getElementById('mobile-contact-btn');
         const mobileContactMenu = document.getElementById('mobile-contact-menu');
