@@ -627,6 +627,20 @@ mobilePhotoBtn.addEventListener('click', () => {
     }
 });
 
+  // NOVO CÓDIGO para o menu dropdown de Contactos no mobile
+const mobileContactBtn = document.getElementById('mobile-contact-btn');
+const mobileContactMenu = document.getElementById('mobile-contact-menu');
+
+if (mobileContactBtn && mobileContactMenu) {
+    mobileContactBtn.addEventListener('click', () => {
+        if (mobileContactMenu.style.display === 'block') {
+            mobileContactMenu.style.display = 'none';
+        } else {
+            mobileContactMenu.style.display = 'block';
+        }
+    });
+}
+
 // popup
   document.addEventListener('DOMContentLoaded', (event) => {
     const popup = document.getElementById('popup-container');
