@@ -188,76 +188,10 @@ color: var(--c-gray);
 .mobile-dropdown-content a {
     padding: 8px 0;
 }
-
-  /* Container POPUP */
-  
-#popup-container {
-  /* Fundo escuro que cobre a tela inteira */
-  display: none; /* Esconde o pop-up por padrão */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-content {
-  /* Estilo da caixa principal do pop-up */
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px; /* Cantos arredondados na caixa do pop-up */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  position: relative;
-  max-width: 600px;
-  text-align: center;
-}
-
-.close-button {
-  /* Botão de fechar (o 'x') */
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #888;
-  transition: color 0.3s ease; /* Efeito de transição suave */
-}
-
-.close-button:hover {
-  /* Muda a cor ao passar o mouse */
-  color: #555;
-}
-
-.popup-content img {
-  /* Estilo para a imagem dentro do pop-up */
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px; /* Cantos arredondados na imagem */
-  margin-bottom: 10px; /* Espaço abaixo da imagem */
-}
-
-.popup-content p
-  {
-    color: #000;
-  }
   
 </style>
 </head>
 <body>
-
-    <!-- <span class="close-button">&times;</span>
-    <div id="popup-container">
-  <div class="popup-content">
-    <span class="close-button">&times;</span>
-    <img src="https://tomasmotadev.github.io/music/src/img/singles/spies.jpg" alt="Spies" style="max-width: 100%; height: auto;">
-    <p>My new song "Spies" is now avalable on all platforms! Listen, download, buy, and read more at <a href="https://tomasmotadev.github.io/music/release/spies">tomasmotadev.github.io/music/release/spies</a> </p>
-  </div>
-</div> -->
   
     <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
         <a href="https://tomasmotadev.github.io" class="flex items-center space-x-3">
@@ -265,17 +199,7 @@ color: var(--c-gray);
             <span class="font-bold text-xl">Tomás Mota</span>
         </a>
          <nav class="hidden md:flex space-x-3">
-            <a href="https://tomasmotadev.github.io/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Dev Projects</a>
-            
-           <div class="dropdown">
-                <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Photography</button>
-                <div class="dropdown-content">
-                    <a href="https://tomasmotadev.github.io/photography/category/sport">Sport</a>
-                    <a href="https://tomasmotadev.github.io/photography/category/music">Music</a>
-                    <a href="https://tomasmotadev.github.io/photography/category/casual">Casual</a>
-                </div>
-            </div>
-             
+            <a href="https://tomasmotadev.github.io/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Dev Projects</a>             
             <a href="https://tomasmotadev.github.io/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">CV</a>
             <a href="https://tomasmotadev.github.io/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">About</a>
              
@@ -298,17 +222,7 @@ color: var(--c-gray);
         </div>
     </header>
     <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 bg-white shadow-md md:hidden">
-        <a href="https://tomasmotadev.github.io/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>
-      
-        <div class="flex flex-col">
-            <span id="mobile-photography-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Photography</span>
-            <div id="mobile-photography-menu" class="mobile-dropdown-content">
-                <a href="https://tomasmotadev.github.io/photography/category/sport" class="block px-4 py-2">Sport</a>
-                <a href="https://tomasmotadev.github.io/photography/category/music" class="block px-4 py-2">Music</a>
-                <a href="https://tomasmotadev.github.io/photography/category/casual" class="block px-4 py-2">Casual</a>
-            </div>
-        </div>
-        
+        <a href="https://tomasmotadev.github.io/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>       
         <a href="https://tomasmotadev.github.io/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
         <a href="https://tomasmotadev.github.io/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
 
@@ -317,7 +231,7 @@ color: var(--c-gray);
             <div id="mobile-contact-menu" class="mobile-dropdown-content">
                 <a href="https://tomasmotadev.github.io/github" class="block px-4 py-2">GitHub</a>
                 <a href="https://tomasmotadev.github.io/linkedin" class="block px-4 py-2">LinkedIn</a>
-                <a href="mailto:tomasmotadev@proton.me" class="block px-4 py-2">Email</a>
+                <a href="mailto:tomasmotadev@proton.me" class="block px-4 py-2">Email * tomasmotadev@proton.me</a>
             </div>
         </div>
     </div>
@@ -485,67 +399,8 @@ color: var(--c-gray);
         </div>
     </div>
 </section>
-
-
-  
-<section id="photography" class="px-6 py-12">
-    <h2 class="text-2xl font-bold mb-6">Photography</h2>
-    <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
-      
-        <a href="https://tomasmotadev.github.io/photography/category/sport" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="photography/src/img/sport16.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
-                <h3 class="font-bold">Sport Photography</h3>
-                <p class="text-gray-200 text-sm">Here you can find my work as a sports photographer.</p>
-            </article>
-        </a>
-      
-        <a href="https://tomasmotadev.github.io/photography/category/music" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="photography/src/img/music05.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
-                <h3 class="font-bold">Music Photography</h3>
-                <p class="text-gray-200 text-sm">Here you can find my work as a photographer for musicians/bands.</p>
-            </article>
-        </a>
-
-        <a href="https://tomasmotadev.github.io/photography/category/casual" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="photography/src/img/casual04.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
-                <h3 class="font-bold">Casual Photography</h3>
-                <p class="text-gray-200 text-sm">Here you can find my work as a casual photographer - personal photographer.</p>
-            </article>
-        </a>
-      
-    </div>
-</section>
-<!-- <section id="music" class="px-6 py-12">
-    <h2 class="text-2xl font-bold mb-6">Music</h2>
-    <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
-      
-        <a href="https://tomasmotadev.github.io/music#albums" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-            <img src="music/src/img/albums/the-sun-always-shines.jpg" alt="Música 2" class="w-full h-auto object-cover rounded-xl mb-3">
-            <h3 class="font-bold text-black">Albums & EPs</h3>
-            <p class="text-gray-200 text-sm">View and listen to all my albums and EPs.</p>
-        </article>
-      </a>
-      
-        <a href="https://tomasmotadev.github.io/music#singles" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-            <img src="music/src/img/singles/spies.jpg" alt="Spies" class="w-full h-auto object-cover rounded-xl mb-3">
-            <h3 class="font-bold text-black">Singles</h3>
-            <p class="text-gray-200 text-sm">View and listen to all my singles.</p>
-        </article>
-      </a>
-      
-        <!-- <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
-            <img src="musica3.jpg" alt="Música 3" class="w-full h-40 object-cover rounded-xl mb-3">
-            <h3 class="font-bold">Música 3</h3>
-            <p class="text-gray-600 text-sm">Breve descrição da música.</p> 
-        </article> -->
-    </div>
-</section>
 <footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Tomás Mota. All Rights Reserved.</footer>
+  
 <script>
 // Ano do footer
 document.getElementById('year').textContent = new Date().getFullYear();
@@ -607,18 +462,6 @@ if (track) {
     track.addEventListener('mouseenter', stopAutoScroll);
     track.addEventListener('mouseleave', startAutoScroll);
 }
-
-// Menu dropdown de fotografia no mobile
-const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
-const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
-
-mobilePhotoBtn.addEventListener('click', () => {
-    if (mobilePhotoMenu.style.display === 'block') {
-        mobilePhotoMenu.style.display = 'none';
-    } else {
-        mobilePhotoMenu.style.display = 'block';
-    }
-});
 
   // NOVO CÓDIGO para o menu dropdown de Contactos no mobile
 const mobileContactBtn = document.getElementById('mobile-contact-btn');
