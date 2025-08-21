@@ -7,63 +7,6 @@
 <title>Tomás Mota - Home</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-
-  /* Container POPUP */
-#popup-container {
-  /* Fundo escuro que cobre a tela inteira */
-  display: none; /* Esconde o pop-up por padrão */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-content {
-  /* Estilo da caixa principal do pop-up */
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px; /* Cantos arredondados na caixa do pop-up */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  position: relative;
-  max-width: 600px;
-  text-align: center;
-}
-
-.close-button {
-  /* Botão de fechar (o 'x') */
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #888;
-  transition: color 0.3s ease; /* Efeito de transição suave */
-}
-
-.close-button:hover {
-  /* Muda a cor ao passar o mouse */
-  color: #555;
-}
-
-.popup-content img {
-  /* Estilo para a imagem dentro do pop-up */
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px; /* Cantos arredondados na imagem */
-  margin-bottom: 10px; /* Espaço abaixo da imagem */
-}
-
-.popup-content p
-  {
-    color: #000;
-  }
-  
 /* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
 :root {
 --c-white: #ffffff;
@@ -251,8 +194,10 @@ color: var(--c-gray);
 .slideshow-container {
   position: relative;
   width: 100%;
-  height: 300px; /* ou auto se quiseres adaptar */
+  padding-top: 66.66%; /* Para manter uma proporção 3:2, por exemplo */
   overflow: hidden;
+  border-radius: 1rem; /* Borda arredondada do card */
+  margin-bottom: 12px; /* Espaço abaixo da imagem */
 }
 
 .slide {
@@ -261,14 +206,9 @@ color: var(--c-gray);
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .slide.active {
@@ -280,15 +220,6 @@ color: var(--c-gray);
 </head>
 <body>
 
-    <!-- <span class="close-button">&times;</span>
-    <div id="popup-container">
-  <div class="popup-content">
-    <span class="close-button">&times;</span>
-    <img src="https://tomasmotadev.github.io/music/src/img/singles/spies.jpg" alt="Spies" style="max-width: 100%; height: auto;">
-    <p>My new song "Spies" is now avalable on all platforms! Listen, download, buy, and read more at <a href="https://tomasmotadev.github.io/music/release/spies">tomasmotadev.github.io/music/release/spies</a> </p>
-  </div>
-</div> -->
-  
     <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
         <a href="https://tomasmotadev.github.io" class="flex items-center space-x-3">
             <img src="https://tomasmotadev.github.io/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
@@ -386,47 +317,12 @@ color: var(--c-gray);
     <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
         <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
             <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="projects/src/img/Project1.png" alt="Project 1" class="w-full h-40 object-cover rounded-xl mb-3">
+                <img src="https://tomasmotadev.github.io/projects/src/img/Project1.png" alt="Project 1" class="w-full h-40 object-cover rounded-xl mb-3">
                 <h3 class="font-bold">Website, CV, About</h3>
                 <p class="text-gray-200 text-sm">Made with HTML, CSS, JavaScript, Tailwind CSS</p>
             </article>
         </a>
-        <!-- <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="projeto2.jpg" alt="Projeto 2" class="w-full h-40 object-cover rounded-xl mb-3">
-                <h3 class="font-bold">Projeto 2</h3>
-                <p class="text-gray-600 text-sm">Breve descrição do projeto.</p>
-            </article>
-        </a>
-        <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="projeto3.jpg" alt="Projeto 3" class="w-full h-40 object-cover rounded-xl mb-3">
-                <h3 class="font-bold">Projeto 3</h3>
-                <p class="text-gray-600 text-sm">Breve descrição do projeto.</p>
-            </article>
-        </a>
-        <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="projeto4.jpg" alt="Projeto 4" class="w-full h-40 object-cover rounded-xl mb-3">
-                <h3 class="font-bold">Projeto 4</h3>
-                <p class="text-gray-600 text-sm">Breve descrição do projeto.</p>
-            </article>
-        </a>
-        <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="projeto5.jpg" alt="Projeto 5" class="w-full h-40 object-cover rounded-xl mb-3">
-                <h3 class="font-bold">Projeto 5</h3>
-                <p class="text-gray-600 text-sm">Breve descrição do projeto.</p>
-            </article>
-        </a>
-        <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="projeto6.jpg" alt="Projeto 6" class="w-full h-40 object-cover rounded-xl mb-3">
-                <h3 class="font-bold">Projeto 6</h3>
-                <p class="text-gray-600 text-sm">Breve descrição do projeto.</p>
-            </article>
-        </a> -->
-    </div> 
+        </div> 
       
 <a href="/projects" class="inline-block mt-6 px-6 py-2 bg-gray-400 text-white rounded-lg hover:bg-white-600 text-black transition"> See more </a>
       
@@ -447,27 +343,7 @@ color: var(--c-gray);
                         <p class="text-gray-700">I transform ideas into digital experiences. I build modern websites and apps with optimized, engaging interfaces.</p>
                     </div>
                 </div>
-                <!-- <div class="flex flex-col md:flex-row gap-6 items-center">
-                    <div class="md:w-1/2 md:order-2 md:text-left md:pl-10">
-                        <p class="text-sm text-gray-500">2021 — 2023</p>
-                        <h3 class="font-bold">Fullstack Developer</h3>
-                        <p class="text-gray-600">Empresa Y</p>
-                    </div>
-                    <div class="md:w-1/2 md:order-1 md:text-right md:pr-10">
-                        <p class="text-gray-700">Desenvolvimento end‑to‑end de apps e APIs.</p>
-                    </div>
                 </div>
-                <div class="flex flex-col md:flex-row gap-6 items-center">
-                    <div class="md:w-1/2 md:text-right md:pr-10">
-                        <p class="text-sm text-gray-500">2019 — 2021</p>
-                        <h3 class="font-bold">Frontend Developer</h3>
-                        <p class="text-gray-600">Empresa Z</p>
-                    </div>
-                    <div class="md:w-1/2 md:text-left md:pl-10">
-                        <p class="text-gray-700">Interfaces acessíveis e reativas com foco em UX.</p>
-                    </div>
-                </div> -->
-            </div>
         </div>
     </div>
 </section>
@@ -478,27 +354,27 @@ color: var(--c-gray);
     <div class="relative card bg-white p-4">
         <div id="cert-track" class="flex gap-4 overflow-x-auto scroll-smooth">
             <article class="card p-4 text-left flex-shrink-0 w-80">
-                <img src="src/img/GVICZUBH.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                <img src="https://tomasmotadev.github.io/src/img/GVICZUBH.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
                 <h3 class="font-bold text-lg">Programming Logic</h3>
                 <p class="text-gray-400 text-sm">DIO and Savegnago</p>
             </article>
             <article class="card p-4 text-left flex-shrink-0 w-80">
-                <img src="src/img/XXV6HR2X.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                <img src="https://tomasmotadev.github.io/src/img/XXV6HR2X.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
                 <h3 class="font-bold text-lg">Programming Logic</h3>
                 <p class="text-gray-400 text-sm">DIO and GFT</p>
             </article>
             <article class="card p-4 text-left flex-shrink-0 w-80">
-                <img src="src/img/XDSCTEF8.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
+                <img src="https://tomasmotadev.github.io/src/img/XDSCTEF8.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
                 <h3 class="font-bold text-lg">GitHub Copilot</h3>
                 <p class="text-gray-400 text-sm">DIO and Microsoft</p>
             </article>
             <article class="card p-4 text-left flex-shrink-0 w-80">
-                <img src="src/img/OA-2025-0611001221149.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
+                <img src="https://tomasmotadev.github.io/src/img/OA-2025-0611001221149.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
                 <h3 class="font-bold text-lg">Storytelling for Digital Marketing</h3>
                 <p class="text-gray-400 text-sm">Santander and Univesity Of Chicago</p>
             </article>
             <article class="card p-4 text-left flex-shrink-0 w-80">
-                <img src="src/img/OA-2025-0707001338334.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
+                <img src="https://tomasmotadev.github.io/src/img/OA-2025-0707001338334.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
                 <h3 class="font-bold text-lg">AI and Productivity</h3>
                 <p class="text-gray-400 text-sm">Santander and Google</p>
             </article>
@@ -506,27 +382,27 @@ color: var(--c-gray);
 
           
             <article class="card p-4 text-left flex-shrink-0 w-80">
-                <img src="src/img/GVICZUBH.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                <img src="https://tomasmotadev.github.io/src/img/GVICZUBH.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
                 <h3 class="font-bold text-lg">Programming Logic</h3>
                 <p class="text-gray-400 text-sm">DIO and Savegnago</p>
             </article>
             <article class="card p-4 text-left flex-shrink-0 w-80">
-                <img src="src/img/XXV6HR2X.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                <img src="https://tomasmotadev.github.io/src/img/XXV6HR2X.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
                 <h3 class="font-bold text-lg">Programming Logic</h3>
                 <p class="text-gray-400 text-sm">DIO and GFT</p>
             </article>
             <article class="card p-4 text-left flex-shrink-0 w-80">
-                <img src="src/img/XDSCTEF8.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
+                <img src="https://tomasmotadev.github.io/src/img/XDSCTEF8.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
                 <h3 class="font-bold text-lg">GitHub Copilot</h3>
                 <p class="text-gray-400 text-sm">DIO and Microsoft</p>
             </article>
             <article class="card p-4 text-left flex-shrink-0 w-80">
-                <img src="src/img/OA-2025-0611001221149.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
+                <img src="https://tomasmotadev.github.io/src/img/OA-2025-0611001221149.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
                 <h3 class="font-bold text-lg">Storytelling for Digital Marketing</h3>
                 <p class="text-gray-400 text-sm">Santander and Univesity Of Chicago</p>
             </article>
             <article class="card p-4 text-left flex-shrink-0 w-80">
-                <img src="src/img/OA-2025-0707001338334.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
+                <img src="https://tomasmotadev.github.io/src/img/OA-2025-0707001338334.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
                 <h3 class="font-bold text-lg">AI and Productivity</h3>
                 <p class="text-gray-400 text-sm">Santander and Google</p>
             </article>
@@ -535,14 +411,13 @@ color: var(--c-gray);
     </div>
 </section>
 
-<!-- Secção de Fotografia-->
 <section id="photography" class="px-6 py-12">
     <h2 class="text-2xl font-bold mb-6">Photography</h2>
     <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
 
 <a href="https://tomasmotadev.github.io/photography/category/sport" class="block w-full md:w-[calc(33.333333%-16px)]">
     <article class="card p-4 text-left rounded-xl shadow-md">
-        <div class="slideshow-container w-full h-auto rounded-xl mb-3">
+        <div class="slideshow-container">
             <img src="https://tomasmotadev.github.io/photography/src/img/sport16.jpg" alt="Sport Photography 1" class="slide active">
             <img src="https://tomasmotadev.github.io/photography/src/img/sport15.jpg" alt="Sport Photography 2" class="slide">
             <img src="https://tomasmotadev.github.io/photography/src/img/sport14.jpg" alt="Sport Photography 3" class="slide">
@@ -554,7 +429,7 @@ color: var(--c-gray);
 
 <a href="https://tomasmotadev.github.io/photography/category/music" class="block w-full md:w-[calc(33.333333%-16px)]">
     <article class="card p-4 text-left rounded-xl shadow-md">
-        <div class="slideshow-container w-full h-auto rounded-xl mb-3">
+        <div class="slideshow-container">
             <img src="https://tomasmotadev.github.io/photography/src/img/music05.jpg" alt="Music Photography 1" class="slide active">
             <img src="https://tomasmotadev.github.io/photography/src/img/music04.jpg" alt="Music Photography 2" class="slide">
             <img src="https://tomasmotadev.github.io/photography/src/img/music03.jpg" alt="Music Photography 3" class="slide">
@@ -566,7 +441,7 @@ color: var(--c-gray);
 
 <a href="https://tomasmotadev.github.io/photography/category/casual" class="block w-full md:w-[calc(33.333333%-16px)]">
     <article class="card p-4 text-left rounded-xl shadow-md">
-        <div class="slideshow-container w-full h-auto rounded-xl mb-3">
+        <div class="slideshow-container">
             <img src="https://tomasmotadev.github.io/photography/src/img/casual04.jpg" alt="Casual Photography 1" class="slide active">
             <img src="https://tomasmotadev.github.io/photography/src/img/casual03.jpg" alt="Casual Photography 2" class="slide">
             <img src="https://tomasmotadev.github.io/photography/src/img/casual02.jpg" alt="Casual Photography 3" class="slide">
@@ -578,33 +453,23 @@ color: var(--c-gray);
     </div>
 </section>
       
-<!-- Secção de Música -->
 <section id="music" class="px-6 py-12">
     <h2 class="text-2xl font-bold mb-6">Music</h2>
     <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
 
-        <!-- <a href="https://tomasmotadev.github.io/music#albums" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-            <img src="music/src/img/albums/the-sun-always-shines.jpg" alt="Música 2" class="w-full h-auto object-cover rounded-xl mb-3">
-            <h3 class="font-bold text-black">Albums & EPs</h3>
-            <p class="text-gray-200 text-sm">View and listen to all my albums and EPs.</p>
-        </article>
-      </a>-->
-  
         <a href="https://tomasmotadev.github.io/music#singles" class="block w-full md:w-[calc(33.333333%-16px)]">
             <article class="card p-4 text-left rounded-xl shadow-md">
-            <img src="https://tomasmotadev.github.io/music/src/img/singles/spies.jpg" alt="Spies" class="w-full h-auto object-cover rounded-xl mb-3">
+            <div class="slideshow-container">
+            <img src="https://tomasmotadev.github.io/music/src/img/singles/spies.jpg" alt="Music Single 1" class="slide active">
+            <!-- <img src="https://tomasmotadev.github.io/music/src/img/singles/spies.jpg" alt="Music Single 2" class="slide">
+            <img src="https://tomasmotadev.github.io/music/src/img/singles/spies.jpg" alt="Music Single 3" class="slide"> -->
+            </div>
             <h3 class="font-bold text-black">Singles</h3>
             <p class="text-gray-200 text-sm">View and listen to all my singles.</p>
         </article>
       </a>
   
-        <!-- <article class="card bg-white w-full p-4 text-left rounded-xl shadow-md md:w-[calc(33.333333%-16px)]">
-            <img src="musica3.jpg" alt="Música 3" class="w-full h-40 object-cover rounded-xl mb-3">
-            <h3 class="font-bold">Música 3</h3>
-            <p class="text-gray-600 text-sm">Breve descrição da música.</p> 
-        </article> -->
-    </div>
+        </div>
 </section>
   
 <footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Tomás Mota LLC. All Rights Reserved.</footer>
@@ -627,10 +492,9 @@ if (seeMoreBtn) {
     });
 }
 
-// NOVO CÓDIGO para o menu dropdown de Contactos no mobile
+// Menu dropdown de Contactos no mobile
 const mobileContactBtn = document.getElementById('mobile-contact-btn');
 const mobileContactMenu = document.getElementById('mobile-contact-menu');
-
 if (mobileContactBtn && mobileContactMenu) {
     mobileContactBtn.addEventListener('click', () => {
         mobileContactMenu.style.display =
@@ -641,7 +505,6 @@ if (mobileContactBtn && mobileContactMenu) {
 // Menu dropdown de fotografia no mobile
 const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
 const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
-
 if (mobilePhotoBtn && mobilePhotoMenu) {
     mobilePhotoBtn.addEventListener('click', () => {
         mobilePhotoMenu.style.display =
@@ -652,13 +515,12 @@ if (mobilePhotoBtn && mobilePhotoMenu) {
 // Carrossel de certificados com loop infinito
 const track = document.getElementById('cert-track');
 const scrollInterval = 3000; // Tempo entre cada rolagem
-const scrollStep = 300; // Valor em pixels para a rolagem
 let autoScroll;
 
 function startAutoScroll() {
     if (!track) return;
     const firstCard = track.querySelector('article');
-    const cardWidth = firstCard ? firstCard.offsetWidth + 16 : scrollStep;
+    const cardWidth = firstCard ? firstCard.offsetWidth + 16 : 300;
 
     autoScroll = setInterval(() => {
         const maxScrollLeft = track.scrollWidth - track.clientWidth;
@@ -671,48 +533,36 @@ function startAutoScroll() {
         }
     }, scrollInterval);
 }
-
-function stopAutoScroll() {
-    clearInterval(autoScroll);
-}
+function stopAutoScroll() { clearInterval(autoScroll); }
 
 startAutoScroll();
-
 if (track) {
     track.addEventListener('mouseenter', stopAutoScroll);
     track.addEventListener('mouseleave', startAutoScroll);
 }
 
 // Slideshow @ Photography
-function setupSlideshows() {
+document.addEventListener('DOMContentLoaded', () => {
     const slideshowContainers = document.querySelectorAll('.slideshow-container');
     slideshowContainers.forEach(container => {
         const slides = container.querySelectorAll('.slide');
-        if (slides.length === 0) return;
+        if (slides.length < 2) return; 
 
-        let currentSlide = 0;
+        let current = 0;
 
-        // mostra a primeira logo ao carregar
-        slides[currentSlide].classList.add('active');
-
-        function showSlide(n) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[n].classList.add('active');
+        function showNextSlide() {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
         }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        setInterval(nextSlide, 3000);
+        // Garante que a primeira imagem está ativa ao carregar
+        slides[0].classList.add('active');
+        
+        setInterval(showNextSlide, 3000);
     });
-}
-
-// chama no fim do script
-setupSlideshows();
-
-
+});
 </script>
+
 </body>
 </html>
