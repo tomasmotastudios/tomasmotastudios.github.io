@@ -198,8 +198,10 @@ color: var(--c-gray);
             <span class="font-bold text-xl">Tomás Mota</span>
         </a>
          <nav class="hidden md:flex space-x-3">
-            <a href="https://tomasmotadev.github.io/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Dev Projects</a>
-            
+            <a href="https://tomasmotadev.github.io/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Dev Projects</a>             
+            <a href="https://tomasmotadev.github.io/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">CV</a>
+            <a href="https://tomasmotadev.github.io/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">About</a>
+
            <div class="dropdown">
                 <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Photography</button>
                 <div class="dropdown-content">
@@ -208,10 +210,7 @@ color: var(--c-gray);
                     <a href="https://tomasmotadev.github.io/photography/category/casual">Casual</a>
                 </div>
             </div>
-             
-            <a href="https://tomasmotadev.github.io/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">CV</a>
-            <a href="https://tomasmotadev.github.io/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">About</a>
-             
+           
             <div class="dropdown">
                 <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Contact</button>
                 <div class="dropdown-content">
@@ -231,7 +230,9 @@ color: var(--c-gray);
         </div>
     </header>
     <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 bg-white shadow-md md:hidden">
-        <a href="https://tomasmotadev.github.io/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>
+        <a href="https://tomasmotadev.github.io/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>        
+        <a href="https://tomasmotadev.github.io/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
+        <a href="https://tomasmotadev.github.io/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
       
         <div class="flex flex-col">
             <span id="mobile-photography-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Photography</span>
@@ -241,9 +242,6 @@ color: var(--c-gray);
                 <a href="https://tomasmotadev.github.io/photography/category/casual" class="block px-4 py-2">Casual</a>
             </div>
         </div>
-        
-        <a href="https://tomasmotadev.github.io/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
-        <a href="https://tomasmotadev.github.io/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
 
         <div class="flex flex-col">
             <span id="mobile-contact-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Contact</span>
@@ -266,12 +264,12 @@ color: var(--c-gray);
             </article>
         </a>
       
-        <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
+        <!-- <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
             <article class="card p-4 text-left rounded-xl shadow-md">
                 <img src="https://tomasmotadev.github.io/photography/src/img/casual03.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
                 <h3 class="font-bold">Tomás Macedo</h3>
             </article>
-        </a>
+        </a> -->
 
         <a href="https://www.behance.net/gallery/232185153/Casual-David-Ferromau" class="block w-full md:w-[calc(33.333333%-16px)]">
             <article class="card p-4 text-left rounded-xl shadow-md">
@@ -289,7 +287,7 @@ color: var(--c-gray);
     
     </div>
 </section>
-<footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Tomás Mota. All Rights Reserved.</footer>
+<footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Tomás Mota LLC. All Rights Reserved.</footer>
 <script>
 // Ano do footer
 document.getElementById('year').textContent = new Date().getFullYear();
