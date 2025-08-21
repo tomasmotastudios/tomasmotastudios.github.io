@@ -249,26 +249,33 @@ color: var(--c-gray);
 
 /*Slideshow @ Photography*/
 .slideshow-container {
-    position: relative; /* Contêiner relativo para posicionar as imagens */
-    overflow: hidden;
-    height: 300px; /* Defina uma altura fixa para evitar que o layout "pule" */
+  position: relative;
+  width: 100%;
+  height: 300px; /* ou auto se quiseres adaptar */
+  overflow: hidden;
 }
 
 .slide {
-    position: absolute; /* Imagens se sobrepõem */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorção */
-    opacity: 0; /* Imagens inicialmente invisíveis */
-    transition: opacity 1s ease-in-out; /* Efeito de transição de 1 segundo */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .slide.active {
-    opacity: 1; /* A imagem com a classe 'active' fica visível */
+  opacity: 1;
 }
-  
+
+
 </style>
 </head>
 <body>
@@ -605,10 +612,12 @@ color: var(--c-gray);
 <script>
 // Ano do footer
 document.getElementById('year').textContent = new Date().getFullYear();
+
 // Menu mobile
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
 // Ver mais projetos: revela até 6
 const seeMoreBtn = document.getElementById('seeMoreBtn');
 if (seeMoreBtn) {
@@ -617,82 +626,47 @@ if (seeMoreBtn) {
         seeMoreBtn.style.display = 'none';
     });
 }
-// popup
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const popup = document.getElementById('popup-container');
-    const closeButton = document.querySelector('.close-button');
 
-    // Exibe o pop-up assim que a página é carregada
-    popup.style.display = 'flex';
-
-    // Fecha o pop-up ao clicar no botão
-    closeButton.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
-    
-    // Opcional: Fecha o pop-up ao clicar fora dele
-    window.addEventListener('click', (event) => {
-        if (event.target === popup) {
-            popup.style.display = 'none';
-        }
-    });
-});
-
-
-  
-  // NOVO CÓDIGO para o menu dropdown de Contactos no mobile
+// NOVO CÓDIGO para o menu dropdown de Contactos no mobile
 const mobileContactBtn = document.getElementById('mobile-contact-btn');
 const mobileContactMenu = document.getElementById('mobile-contact-menu');
 
 if (mobileContactBtn && mobileContactMenu) {
     mobileContactBtn.addEventListener('click', () => {
-        if (mobileContactMenu.style.display === 'block') {
-            mobileContactMenu.style.display = 'none';
-        } else {
-            mobileContactMenu.style.display = 'block';
-        }
+        mobileContactMenu.style.display =
+            mobileContactMenu.style.display === 'block' ? 'none' : 'block';
     });
 }
 
 // Menu dropdown de fotografia no mobile
 const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
 const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
-  
-mobilePhotoBtn.addEventListener('click', () => {
-    if (mobilePhotoMenu.style.display === 'block') {
-        mobilePhotoMenu.style.display = 'none';
-    } else {
-        mobilePhotoMenu.style.display = 'block';
-    }
-});
-  
+
+if (mobilePhotoBtn && mobilePhotoMenu) {
+    mobilePhotoBtn.addEventListener('click', () => {
+        mobilePhotoMenu.style.display =
+            mobilePhotoMenu.style.display === 'block' ? 'none' : 'block';
+    });
+}
+
 // Carrossel de certificados com loop infinito
 const track = document.getElementById('cert-track');
 const scrollInterval = 3000; // Tempo entre cada rolagem
 const scrollStep = 300; // Valor em pixels para a rolagem
-
 let autoScroll;
 
 function startAutoScroll() {
     if (!track) return;
-    
-    // Obter o primeiro card para calcular a largura (opcional, pode usar um valor fixo como scrollStep)
     const firstCard = track.querySelector('article');
     const cardWidth = firstCard ? firstCard.offsetWidth + 16 : scrollStep;
 
     autoScroll = setInterval(() => {
         const maxScrollLeft = track.scrollWidth - track.clientWidth;
-        
-        // Verifica se a rolagem chegou ao final da lista original (antes dos cards duplicados)
-        // Isso é uma estimativa. Se o carrossel tiver 5 itens e duplicamos 3,
-        // o "ponto de retorno" é a rolagem no 5º item.
-        const originalEndPosition = maxScrollLeft / 2; // Uma forma simples de estimar
+        const originalEndPosition = maxScrollLeft / 2;
 
         if (track.scrollLeft >= originalEndPosition) {
-            // Retorna instantaneamente para o início para criar a ilusão de loop
             track.scrollBy({ left: -track.scrollLeft, behavior: 'instant' });
         } else {
-            // Rola suavemente para a direita
             track.scrollBy({ left: cardWidth, behavior: 'smooth' });
         }
     }, scrollInterval);
@@ -702,24 +676,24 @@ function stopAutoScroll() {
     clearInterval(autoScroll);
 }
 
-// Iniciar a rolagem automática
 startAutoScroll();
 
-// Pausar a rolagem ao passar o mouse e reiniciar ao sair
 if (track) {
     track.addEventListener('mouseenter', stopAutoScroll);
     track.addEventListener('mouseleave', startAutoScroll);
 }
 
-
-
 // Slideshow @ Photography
-    // Função para iniciar um slideshow em um contêiner específico (já deve existir)
-    function startSlideshow(containerSelector, interval) {
-        const slides = document.querySelectorAll(containerSelector + ' .slide');
+function setupSlideshows() {
+    const slideshowContainers = document.querySelectorAll('.slideshow-container');
+    slideshowContainers.forEach(container => {
+        const slides = container.querySelectorAll('.slide');
         if (slides.length === 0) return;
 
         let currentSlide = 0;
+
+        // mostra a primeira logo ao carregar
+        slides[currentSlide].classList.add('active');
 
         function showSlide(n) {
             slides.forEach(slide => slide.classList.remove('active'));
@@ -731,15 +705,14 @@ if (track) {
             showSlide(currentSlide);
         }
 
-        showSlide(currentSlide);
-        setInterval(nextSlide, interval);
-    }
+        setInterval(nextSlide, 3000);
+    });
+}
 
-    // Inicia o slideshow para a seção de música (já deve existir)
-    startSlideshow('.slideshow-container', 3000);
+// chama no fim do script
+setupSlideshows();
 
-    // Adiciona a chamada para a nova seção de casual
-    startSlideshow('.slideshow-container', 3000);
+
 </script>
 </body>
 </html>
