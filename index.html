@@ -7,6 +7,63 @@
 <title>Tomás Mota - Home</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
+
+  /* Container POPUP */
+#popup-container {
+  /* Fundo escuro que cobre a tela inteira */
+  display: none; /* Esconde o pop-up por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  /* Estilo da caixa principal do pop-up */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px; /* Cantos arredondados na caixa do pop-up */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  max-width: 600px;
+  text-align: center;
+}
+
+.close-button {
+  /* Botão de fechar (o 'x') */
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s ease; /* Efeito de transição suave */
+}
+
+.close-button:hover {
+  /* Muda a cor ao passar o mouse */
+  color: #555;
+}
+
+.popup-content img {
+  /* Estilo para a imagem dentro do pop-up */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Cantos arredondados na imagem */
+  margin-bottom: 10px; /* Espaço abaixo da imagem */
+}
+
+.popup-content p
+  {
+    color: #000;
+  }
+  
 /* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
 :root {
 --c-white: #ffffff;
@@ -60,6 +117,7 @@ color: var(--c-white);
 .btn:active {
 transform: translateY(1px);
 }
+  
 /* REMOVIDO: A regra de timeline global. */
 /* ADICIONADO: A regra dentro de uma media query para o breakpoint 'md' */
 @media (min-width: 768px) {
@@ -189,62 +247,27 @@ color: var(--c-gray);
     padding: 8px 0;
 }
 
-
-  /* Container POPUP */
-#popup-container {
-  /* Fundo escuro que cobre a tela inteira */
-  display: none; /* Esconde o pop-up por padrão */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
+/*Slideshow @ Photography*/
+.slideshow-container {
+    position: relative; /* Contêiner relativo para posicionar as imagens */
+    overflow: hidden;
+    height: 300px; /* Defina uma altura fixa para evitar que o layout "pule" */
 }
 
-.popup-content {
-  /* Estilo da caixa principal do pop-up */
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px; /* Cantos arredondados na caixa do pop-up */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  position: relative;
-  max-width: 600px;
-  text-align: center;
+.slide {
+    position: absolute; /* Imagens se sobrepõem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorção */
+    opacity: 0; /* Imagens inicialmente invisíveis */
+    transition: opacity 1s ease-in-out; /* Efeito de transição de 1 segundo */
 }
 
-.close-button {
-  /* Botão de fechar (o 'x') */
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #888;
-  transition: color 0.3s ease; /* Efeito de transição suave */
+.slide.active {
+    opacity: 1; /* A imagem com a classe 'active' fica visível */
 }
-
-.close-button:hover {
-  /* Muda a cor ao passar o mouse */
-  color: #555;
-}
-
-.popup-content img {
-  /* Estilo para a imagem dentro do pop-up */
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px; /* Cantos arredondados na imagem */
-  margin-bottom: 10px; /* Espaço abaixo da imagem */
-}
-
-.popup-content p
-  {
-    color: #000;
-  }
   
 </style>
 </head>
@@ -505,36 +528,48 @@ color: var(--c-gray);
     </div>
 </section>
 
-
+<!-- Secção de Fotografia-->
 <section id="photography" class="px-6 py-12">
     <h2 class="text-2xl font-bold mb-6">Photography</h2>
     <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
 
-        <a href="https://tomasmotadev.github.io/photography/category/sport" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="photography/src/img/sport16.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
-                <h3 class="font-bold">Sport Photography</h3>
-                <p class="text-gray-200 text-sm">Here you can find my work as a sports photographer.</p>
-            </article>
-        </a>
+<a href="https://tomasmotadev.github.io/photography/category/sport" class="block w-full md:w-[calc(33.333333%-16px)]">
+    <article class="card p-4 text-left rounded-xl shadow-md">
+        <div class="slideshow-container w-full h-auto rounded-xl mb-3">
+            <img src="photography/src/img/sport16.jpg" alt="Sport Photography 1" class="slide active">
+            <img src="photography/src/img/sport15.jpg" alt="Sport Photography 2" class="slide">
+            <img src="photography/src/img/sport14.jpg" alt="Sport Photography 3" class="slide">
+            </div>
+        <h3 class="font-bold">Sport Photography</h3>
+        <p class="text-gray-200 text-sm">Here you can find my work as a sports photographer.</p>
+    </article>
+</a>
 
-        <a href="https://tomasmotadev.github.io/photography/category/music" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="photography/src/img/music05.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
-                <h3 class="font-bold">Music Photography</h3>
-                <p class="text-gray-200 text-sm">Here you can find my work as a photographer for musicians/bands.</p>
-            </article>
-        </a>
-        <a href="https://tomasmotadev.github.io/photography/category/casual" class="block w-full md:w-[calc(33.333333%-16px)]">
-            <article class="card p-4 text-left rounded-xl shadow-md">
-                <img src="photography/src/img/casual04.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
-                <h3 class="font-bold">Casual Photography</h3>
-                <p class="text-gray-200 text-sm">Here you can find my work as a casual photographer - personal photographer.</p>
-            </article>
-        </a>
-    </div>
-</section>
+<a href="https://tomasmotadev.github.io/photography/category/music" class="block w-full md:w-[calc(33.333333%-16px)]">
+    <article class="card p-4 text-left rounded-xl shadow-md">
+        <div class="slideshow-container w-full h-auto rounded-xl mb-3">
+            <img src="photography/src/img/music05.jpg" alt="Music Photography 1" class="slide active">
+            <img src="photography/src/img/music04.jpg" alt="Music Photography 2" class="slide">
+            <img src="photography/src/img/music03.jpg" alt="Music Photography 3" class="slide">
+            </div>
+        <h3 class="font-bold">Music Photography</h3>
+        <p class="text-gray-200 text-sm">Here you can find my work as a photographer for musicians/bands.</p>
+    </article>
+</a>
 
+<a href="https://tomasmotadev.github.io/photography/category/casual" class="block w-full md:w-[calc(33.333333%-16px)]">
+    <article class="card p-4 text-left rounded-xl shadow-md">
+        <div class="slideshow-container w-full h-auto rounded-xl mb-3">
+            <img src="photography/src/img/casual04.jpg" alt="Casual Photography 1" class="slide active">
+            <img src="photography/src/img/casual03.jpg" alt="Casual Photography 2" class="slide">
+            <img src="photography/src/img/casual02.jpg" alt="Casual Photography 3" class="slide">
+            </div>
+        <h3 class="font-bold">Casual Photography</h3>
+        <p class="text-gray-200 text-sm">Here you can find my work as a casual photographer - personal photographer.</p>
+    </article>
+</a>
+
+<!-- Secção de Música -->
 <section id="music" class="px-6 py-12">
     <h2 class="text-2xl font-bold mb-6">Music</h2>
     <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
@@ -580,8 +615,55 @@ if (seeMoreBtn) {
         seeMoreBtn.style.display = 'none';
     });
 }
-// ... (seu código JavaScript existente, como menu mobile, etc.) ...
+// popup
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const popup = document.getElementById('popup-container');
+    const closeButton = document.querySelector('.close-button');
 
+    // Exibe o pop-up assim que a página é carregada
+    popup.style.display = 'flex';
+
+    // Fecha o pop-up ao clicar no botão
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+    
+    // Opcional: Fecha o pop-up ao clicar fora dele
+    window.addEventListener('click', (event) => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+});
+
+
+  
+  // NOVO CÓDIGO para o menu dropdown de Contactos no mobile
+const mobileContactBtn = document.getElementById('mobile-contact-btn');
+const mobileContactMenu = document.getElementById('mobile-contact-menu');
+
+if (mobileContactBtn && mobileContactMenu) {
+    mobileContactBtn.addEventListener('click', () => {
+        if (mobileContactMenu.style.display === 'block') {
+            mobileContactMenu.style.display = 'none';
+        } else {
+            mobileContactMenu.style.display = 'block';
+        }
+    });
+}
+
+// Menu dropdown de fotografia no mobile
+const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
+const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
+  
+mobilePhotoBtn.addEventListener('click', () => {
+    if (mobilePhotoMenu.style.display === 'block') {
+        mobilePhotoMenu.style.display = 'none';
+    } else {
+        mobilePhotoMenu.style.display = 'block';
+    }
+});
+  
 // Carrossel de certificados com loop infinito
 const track = document.getElementById('cert-track');
 const scrollInterval = 3000; // Tempo entre cada rolagem
@@ -627,54 +709,35 @@ if (track) {
     track.addEventListener('mouseleave', startAutoScroll);
 }
 
-  // NOVO CÓDIGO para o menu dropdown de Contactos no mobile
-const mobileContactBtn = document.getElementById('mobile-contact-btn');
-const mobileContactMenu = document.getElementById('mobile-contact-menu');
 
-if (mobileContactBtn && mobileContactMenu) {
-    mobileContactBtn.addEventListener('click', () => {
-        if (mobileContactMenu.style.display === 'block') {
-            mobileContactMenu.style.display = 'none';
-        } else {
-            mobileContactMenu.style.display = 'block';
+
+// Slideshow @ Photography
+    // Função para iniciar um slideshow em um contêiner específico (já deve existir)
+    function startSlideshow(containerSelector, interval) {
+        const slides = document.querySelectorAll(containerSelector + ' .slide');
+        if (slides.length === 0) return;
+
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[n].classList.add('active');
         }
-    });
-}
 
-// Menu dropdown de fotografia no mobile
-const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
-const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
-  
-mobilePhotoBtn.addEventListener('click', () => {
-    if (mobilePhotoMenu.style.display === 'block') {
-        mobilePhotoMenu.style.display = 'none';
-    } else {
-        mobilePhotoMenu.style.display = 'block';
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+        setInterval(nextSlide, interval);
     }
-});
 
-  
-// popup
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const popup = document.getElementById('popup-container');
-    const closeButton = document.querySelector('.close-button');
+    // Inicia o slideshow para a seção de música (já deve existir)
+    startSlideshow('.slideshow-container', 3000);
 
-    // Exibe o pop-up assim que a página é carregada
-    popup.style.display = 'flex';
-
-    // Fecha o pop-up ao clicar no botão
-    closeButton.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
-    
-    // Opcional: Fecha o pop-up ao clicar fora dele
-    window.addEventListener('click', (event) => {
-        if (event.target === popup) {
-            popup.style.display = 'none';
-        }
-    });
-});
-  
+    // Adiciona a chamada para a nova seção de casual
+    startSlideshow('.slideshow-container', 3000);
 </script>
 </body>
 </html>
