@@ -191,9 +191,10 @@
             <span class="font-bold text-xl">Tomás Mota</span>
         </a>
         <nav class="hidden md:flex space-x-3">
-            <!-- <a href="https://tomasmotaoliveira.github.io/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Dev Projects</a> -->
+            <a href="https://tomasmotaoliveira.github.io/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Dev Projects</a>
             <a href="https://tomasmotadev.github.io/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">CV</a>
             <a href="https://tomasmotadev.github.io/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">About</a>
+
             <div class="dropdown">
                 <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Photography</button>
                 <div class="dropdown-content">
@@ -202,7 +203,9 @@
                     <a href="https://tomasmotadev.github.io/photography/category/casual">Casual</a>
                 </div>
             </div>
-            <a href="https://tomasmotadev.github.io/music" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Music</a>
+
+            <!-- <a href="https://tomasmotadev.github.io/music" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Music</a> -->
+
             <div class="dropdown">
                 <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Contact</button>
                 <div class="dropdown-content">
@@ -222,9 +225,10 @@
         </div>
     </header>
     <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 bg-white shadow-md md:hidden">
-        <!-- <a href="https://tomasmotaoliveira.github.io/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a> -->
+        <a href="https://tomasmotaoliveira.github.io/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>
         <a href="https://tomasmotadev.github.io/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
         <a href="https://tomasmotadev.github.io/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
+
         <div class="flex flex-col">
             <span id="mobile-photography-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Photography</span>
             <div id="mobile-photography-menu" class="mobile-dropdown-content">
@@ -233,7 +237,9 @@
                 <a href="https://tomasmotadev.github.io/photography/category/casual" class="block px-4 py-2">Casual</a>
             </div>
         </div>
-        <a href="https://tomasmotadev.github.io/music" class="block px-4 py-2 bg-gray-500 rounded-lg">Music</a>
+
+        <!-- <a href="https://tomasmotadev.github.io/music" class="block px-4 py-2 bg-gray-500 rounded-lg">Music</a> -->
+
         <div class="flex flex-col">
             <span id="mobile-contact-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Contact</span>
             <div id="mobile-contact-menu" class="mobile-dropdown-content">
@@ -252,11 +258,11 @@
         </h1>
 
         <div class="tabs-container">
-            <button class="tab-button active" onclick="showTab('albums')">Albums</button>
+            <!-- <button class="tab-button activate" onclick="showTab('albums')">Albums</button> -->
             <button class="tab-button" onclick="showTab('singles')">Singles</button>
         </div>
 
-        <!-- <div id="albums" class="tab-content active">
+        <div id="albums" class="tab-content active">
             <section class="py-6">
                 <div class="music-grid">
                     <a href="https://tomasmotadev.github.io/music/release/the-sun-always-shines" class="music-item">
@@ -268,7 +274,7 @@
                     </a>
                 </div>
             </section>
-        </div> -->
+        </div>
 
         <div id="singles" class="tab-content">
             <section class="py-6">
@@ -285,7 +291,7 @@
         </div>
     </main>
 
-    <footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Tomás Mota. All Rights Reserved.</footer>
+    <footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Tomás Mota LLC. All Rights Reserved.</footer>
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
@@ -373,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showTab(hash);
     } else {
         // Se não houver hash, garanta que a aba de álbuns esteja ativa por padrão
-        showTab('albums');
+        showTab('singles');
     }
 });
         
