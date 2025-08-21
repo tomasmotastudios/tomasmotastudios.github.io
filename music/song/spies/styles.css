@@ -1,0 +1,100 @@
+    :root {
+      --bg-color: #000;
+      --text-color: #fff;
+      --subtext-color: #ccc;
+      --lyric-color: #bbb;
+      --card-bg: rgba(255,255,255,0.05);
+    }
+    body.light {
+      --bg-color: #fff;
+      --text-color: #000;
+      --subtext-color: #444;
+      --lyric-color: #555;
+      --card-bg: rgba(0,0,0,0.05);
+    }
+    body {
+      margin: 0;
+      padding: 2rem;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+    .top-bar {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      background: none;
+      border: 2px solid var(--text-color);
+      color: var(--text-color);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: var(--text-color);
+      color: var(--bg-color);
+    }
+    .container {
+      display: flex;
+      gap: 3rem;
+      min-height: calc(100vh - 6rem);
+    }
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: top;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .right {
+      flex: 1;
+      white-space: pre-line;
+      line-height: 1.6;
+      font-style: italic;
+      color: var(--lyric-color);
+      font-size: 0.9rem;
+      align-self: center;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+    h3 {
+      color: var(--subtext-color);
+      margin-bottom: 1rem;
+    }
+    .album-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--card-bg);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      width: fit-content;
+      transition: background 0.4s ease;
+    }
+    .album-info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 0.25rem;
+    }
+    .album-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.8rem;
+    }
+    .album-text span:first-child {
+      color: var(--subtext-color);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+    }
+    .album-text span:last-child {
+      font-weight: bold;
+      color: var(--text-color);
+    }
