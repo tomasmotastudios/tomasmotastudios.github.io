@@ -14,6 +14,11 @@ text-align: center;
 background: var(--c-black);
 color: var(--c-white);
 }
+
+h1{
+  padding: .3rem;
+}
+
 /* Fundo "hero" parecido com a imagem enviada */
 .hero-wrap {
 background: radial-gradient(1200px 600px at 10% 10%, rgba(26, 115, 255, 0.12), transparent 60%),
@@ -25,14 +30,7 @@ box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
 #herop {
 color: var(--c-white2);
 }
-/* Chips de techs com cantos levemente arredondados */
-.tech-chip {
-border-radius: 999px;
-font-weight: 600;
-padding: .6rem 1rem;
-background: var(--c-gray);
-color: var(--c-white);
-}
+
 /* Sombra suave e borda arredondada padrão */
 .card {
 border-radius: 1rem;
@@ -40,6 +38,7 @@ box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
 background: var(--c-gray-2);
 color: var(--c-white);
 }
+
 /* Botões primários */
 .btn {
 border-radius: .8rem;
