@@ -205,3 +205,29 @@ color: var(--c-gray);
 .slide.active {
   opacity: 1;
 }
+
+/* Tema claro */
+body.light-mode {
+  background: var(--c-white);
+  color: var(--c-black);
+}
+
+body.light-mode header {
+  background: var(--c-white2);
+  color: var(--c-black);
+}
+
+body.light-mode .card {
+  background: var(--c-white);
+  color: var(--c-black);
+}
+
+body.light-mode #mobile-menu {
+  background: var(--c-white2);
+  color: var(--c-black);
+}
+
+body.light-mode footer {
+  color: var(--c-black);
+}
+
