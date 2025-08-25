@@ -227,7 +227,8 @@ body.light-mode header a {
 }
 
 body.light-mode header a:hover {
-  color: var(--c-red);
+  background: var(--c-white2);
+  color: var(--c-black);
 }
 
 /* Mobile menu */
@@ -272,7 +273,7 @@ body.light-mode #herop {
 
 /* Timeline (Experiência Profissional) */
 body.light-mode #cv {
-  background: var(--c-white);
+  background: var(--c-gray);
 }
 
 body.light-mode #cv p {
@@ -304,6 +305,5 @@ body.light-mode .mobile-dropdown-content a {
 
 /* Footer */
 body.light-mode footer {
-  background: var(--c-white2);
   color: var(--c-black);
 }
