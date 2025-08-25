@@ -10,36 +10,64 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-          <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
-        <a href="https://tomasmotadev.github.io" class="flex items-center space-x-3">
+    <!-- ===================== -->
+    <!-- Header / Navegação -->
+    <!-- ===================== -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <!-- Logo / Nome -->
+        <a href="https://tomasmotadev.github.io" class="flex items-center space-x-3" >
             <img src="https://tomasmotadev.github.io/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
-            <span class="font-bold text-xl">Tomás Mota</span>
+            <span class="font-bold text-xl">Tomás Mota </span> 
         </a>
-         <nav class="hidden md:flex space-x-3">
-            <a href="https://tomasmotadev.github.io/projects" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Dev Projects</a>             
-            <a href="https://tomasmotadev.github.io/cv" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">CV</a>
-            <a href="https://tomasmotadev.github.io/about" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">About</a>
 
-           <div class="dropdown">
-                <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Photography</button>
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <!-- Links principais -->
+                <a href="https://tomasmotadev.github.io/projects" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Dev Projects
+                </a>
+
+                <a href="https://tomasmotadev.github.io/cv" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                CV
+                </a>
+
+                <a href="https://tomasmotadev.github.io/about"
+                class="px-4 py-2 rounded-lg text-white"
+                style="background-color: rgba(15, 22, 32, 0); backdrop-filter: blur(10px);">
+                About
+                </a>
+
+            <!-- Dropdown Photography -->
+            <div class="dropdown">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Photography
+                </a>
                 <div class="dropdown-content">
                     <a href="https://tomasmotadev.github.io/photography/category/sport">Sport</a>
                     <a href="https://tomasmotadev.github.io/photography/category/music">Music</a>
                     <a href="https://tomasmotadev.github.io/photography/category/casual">Casual</a>
                 </div>
             </div>
-                
+
+            <!-- Dropdown Contact -->
             <div class="dropdown">
-                <button class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-white-500 hover:text-black transition">Contact</button>
-                <div class="dropdown-content">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Contact
+                </a>                <div class="dropdown-content">
                     <a href="https://tomasmotadev.github.io/github">GitHub</a>
                     <a href="https://tomasmotadev.github.io/linkedin">LinkedIn</a>
                     <a href="mailto:tomasmotadev@proton.me">Email</a>
                 </div>
-            </div>
+            </div>            
         </nav>
       
+        <!-- Menu Mobile -->
         <div class="md:hidden">
             <button id="menu-btn" class="focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -48,11 +76,17 @@
             </button>
         </div>
     </header>
+
+    <!-- ===================== -->
+    <!-- Mobile Menu -->
+    <!-- ===================== -->
     <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 bg-white shadow-md md:hidden">
-        <a href="https://tomasmotadev.github.io/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>        
+        <!-- Links principais -->
+        <a href="https://tomasmotadev.github.io/projects" class="block px-4 py-2 bg-gray-500 rounded-lg">Dev Projects</a>       
         <a href="https://tomasmotadev.github.io/cv" class="block px-4 py-2 bg-gray-500 rounded-lg">CV</a>
         <a href="https://tomasmotadev.github.io/about" class="block px-4 py-2 bg-gray-500 rounded-lg">About</a>
 
+        <!-- Dropdown Photography Mobile -->
         <div class="flex flex-col">
             <span id="mobile-photography-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Photography</span>
             <div id="mobile-photography-menu" class="mobile-dropdown-content">
@@ -61,13 +95,14 @@
                 <a href="https://tomasmotadev.github.io/photography/category/casual" class="block px-4 py-2">Casual</a>
             </div>
         </div>
-        
+
+        <!-- Dropdown Contact Mobile -->
         <div class="flex flex-col">
             <span id="mobile-contact-btn" class="mobile-dropdown-btn px-4 py-2 bg-gray-500 rounded-lg">Contact</span>
             <div id="mobile-contact-menu" class="mobile-dropdown-content">
                 <a href="https://tomasmotadev.github.io/github" class="block px-4 py-2">GitHub</a>
                 <a href="https://tomasmotadev.github.io/linkedin" class="block px-4 py-2">LinkedIn</a>
-                <a href="mailto:tomasmotadev@proton.me" class="block px-4 py-2">Email</a>
+                <a href="mailto:tomasmotadev@proton.me" class="block px-4 py-2">Email * tomasmotadev@proton.me</a>
             </div>
         </div>
     </div>
