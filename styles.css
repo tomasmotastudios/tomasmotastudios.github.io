@@ -206,28 +206,104 @@ color: var(--c-gray);
   opacity: 1;
 }
 
-/* Tema claro */
+
+/* ===================== */
+/* Tema Claro (Light Mode) */
+/* ===================== */
+
 body.light-mode {
   background: var(--c-white);
   color: var(--c-black);
 }
 
+/* Header */
 body.light-mode header {
   background: var(--c-white2);
   color: var(--c-black);
 }
 
-body.light-mode .card {
-  background: var(--c-white);
+body.light-mode header a {
   color: var(--c-black);
 }
 
+body.light-mode header a:hover {
+  color: var(--c-red);
+}
+
+/* Mobile menu */
 body.light-mode #mobile-menu {
   background: var(--c-white2);
   color: var(--c-black);
 }
 
-body.light-mode footer {
+body.light-mode #mobile-menu a {
   color: var(--c-black);
 }
 
+/* Cards (projetos, certificados, fotografia) */
+body.light-mode .card {
+  background: var(--c-white);
+  color: var(--c-black);
+}
+
+body.light-mode .card h3 {
+  color: var(--c-black);
+}
+
+body.light-mode .card p {
+  color: var(--c-gray-2);
+}
+
+body.light-mode .card img {
+  filter: brightness(1);
+}
+
+/* Hero */
+body.light-mode .hero-wrap {
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(26, 115, 255, 0.08), transparent 60%),
+              radial-gradient(900px 500px at 90% 80%, rgba(255, 59, 59, 0.08), transparent 60%),
+              linear-gradient(180deg, #f0f0f0 0%, #ffffff 100%);
+  color: var(--c-black);
+}
+
+body.light-mode #herop {
+  color: var(--c-gray-2);
+}
+
+/* Timeline (Experiência Profissional) */
+body.light-mode #cv {
+  background: var(--c-white);
+}
+
+body.light-mode #cv p {
+  color: var(--c-gray-2);
+}
+
+body.light-mode #cv h3 {
+  color: var(--c-black);
+}
+
+/* Dropdown Desktop */
+body.light-mode .dropdown-content {
+  background-color: var(--c-white2);
+}
+
+body.light-mode .dropdown-content a {
+  color: var(--c-black);
+}
+
+body.light-mode .dropdown-content a:hover {
+  background-color: var(--c-gray);
+  color: var(--c-white);
+}
+
+/* Dropdown Mobile */
+body.light-mode .mobile-dropdown-content a {
+  color: var(--c-black);
+}
+
+/* Footer */
+body.light-mode footer {
+  background: var(--c-white2);
+  color: var(--c-black);
+}
