@@ -1,55 +1,154 @@
-     /* Paleta de cores da página inicial */
-        :root {
-            --c-white: #ffffff;
-            --c-white2: #cfcfcf;
-            --c-black: #0b0b0b;
-            --c-gray: #2b2f36;
-            --c-gray-2: #3a3f46;
-            --c-red: #ff3b3b;
-            --c-blue: #1a73ff;
-            --c-yellow: #ffd43b;
-        }
+/* ===================== */
+/* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
+/* ===================== */
+:root {
+  --c-white: #ffffff;
+  --c-white2: #cfcfcf;
+  --c-black: #000000;
+  --c-gray: #2b2f36;
+  --c-gray-2: #3a3f46;
+  --c-red: #ff3b3b;
+  --c-blue: #1a73ff;
+  --c-yellow: #ffd43b;
+}
 
-        /* Estilos gerais da página inicial */
-        body {
-            text-align: center;
-            background: var(--c-black);
-            color: var(--c-white);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-        }
+/* ===================== */
+/* Estilos Globais */
+/* ===================== */
+body {
+  text-align: center;
+  color: var(--c-white);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================== */
+/* Background Animado do Site */
+/* ===================== */
+body {
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(26, 115, 255, 0.2), transparent 50%),
+    radial-gradient(circle at 85% 80%, rgba(255, 59, 59, 0.2), transparent 50%),
+    linear-gradient(180deg, #464749 0%, #141b2a 100%);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  color: var(--c-white);
+  min-height: 100vh;
+  animation: moveBackground 30s ease infinite;
+}
+
+/* Animação suave do background */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* ===================== */
+/* Header e Menus */
+/* ===================== */
+header {
+  background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
+  backdrop-filter: blur(10px) !important;
+  color: var(--c-white);
+}
+
+/* Remove background apenas do link do logo */
+header > a:first-child {
+  background: transparent;
+}
+
+
+header a {
+  background: var(--c-gray-2);
+  color: var(--c-white);
+}
+
+header a:hover {
+  color: var(--c-white);
+}
+
+#mobile-menu {
+  background: var(--c-gray-2);
+  color: var(--c-white);
+}
+
+#mobile-menu a {
+  color: var(--c-white);
+}
+
+/* Dropdown Desktop */
+.dropdown {
+  position: relative;
+  display: flex;       /* alinhar com os outros links */
+  align-items: center; /* centraliza verticalmente */
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--c-gray-2);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.dropdown-content a {
+  color: var(--c-white);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--c-gray);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown Mobile */
+.mobile-dropdown-btn {
+  display: block;
+  cursor: pointer;
+}
+
+.mobile-dropdown-content {
+  display: none;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+.mobile-dropdown-content a {
+  padding: 8px 0;
+}
+
 
         /* Card (usado para sections no CV) */
         .card {
             border-radius: 1rem;
             box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
-            background: var(--c-gray-2);
+              background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
+              backdrop-filter: blur(10px) !important;
             color: var(--c-white);
         }
-
-        /* Header e Footer */
-        header { background: var(--c-gray-2); color: var(--c-white); }
-        header a, header button { color: var(--c-white); }
-        header a:hover, header button:hover { color: var(--c-white); }
-        footer { color: var(--c-gray); }
-
-        /* Menu Mobile */
-        #mobile-menu { background: var(--c-gray-2); color: var(--c-white); }
-        #mobile-menu a { color: var(--c-white); }
-        .dropdown { position: relative; display: inline-block; }
-        .dropdown-content {
-            display: none; position: absolute; background-color: var(--c-gray-2);
-            min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1; border-radius: 0.5rem; overflow: hidden;
-            left: 50%; transform: translateX(-50%); top: 100%;
-            padding-top: 0.5rem; padding-bottom: 0.5rem;
-        }
-        .dropdown-content a { padding: 12px 16px; text-decoration: none; display: block; text-align: left; }
-        .dropdown-content a:hover { background-color: var(--c-gray); }
-        .dropdown:hover .dropdown-content { display: block; }
-        .mobile-dropdown-btn { display: block; cursor: pointer; }
-        .mobile-dropdown-content { display: none; padding-left: 1rem; padding-top: 0.5rem; }
-        .mobile-dropdown-content a { padding: 8px 0; }
 
         /* Estilos adaptados do CV original para o novo tema */
         h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff; width: 100%; text-align: left; }
@@ -81,7 +180,8 @@
         /* Styles for Links section from original CV */
         .links { display: flex; flex-direction: column; gap: 1rem; width: 100%; max-width: 320px; margin-top: 1rem; align-items: flex-start; }
         a.button {
-            background-color: #111; color: #fff; padding: 0.9rem 1.2rem;
+            background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */ padding: 0.9rem 1.2rem;
+            backdrop-filter: blur(10px) !important;
             border-radius: 0.5rem; font-weight: 600; font-size: 1rem;
             text-decoration: none; transition: all 0.3s ease;
             width: 100%; text-align: left;
