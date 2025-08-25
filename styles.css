@@ -16,9 +16,9 @@ color: var(--c-white);
 }
 /* Fundo "hero" parecido com a imagem enviada */
 .hero-wrap {
-background: radial-gradient(1200px 600px at 10% 10%, rgba(26, 115, 255, 0.12), transparent 60%),
-radial-gradient(900px 500px at 90% 80%, rgba(255, 59, 59, 0.12), transparent 60%),
-linear-gradient(180deg, #0f1620 0%, #0c121a 100%);
+background: background: radial-gradient(1200px 600px at 10% 10%, rgba(26, 115, 255, 0.12), transparent 60%),
+            radial-gradient(900px 500px at 90% 80%, rgba(255, 59, 59, 0.12), transparent 60%),
+            linear-gradient(180deg, #0f1620 0%, #0c121a 100%);
 color: var(--c-white);
 box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
 }
@@ -33,13 +33,13 @@ padding: .6rem 1rem;
 background: var(--c-gray);
 color: var(--c-white);
 }
-/* Sombra suave e borda arredondada padrão */
+/* Sombra suave e borda arredondada padrão 
 .card {
 border-radius: 1rem;
 box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
 background: var(--c-gray-2);
 color: var(--c-white);
-}
+} */
 /* Botões primários */
 .btn {
 border-radius: .8rem;
