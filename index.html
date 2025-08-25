@@ -7,9 +7,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="https://tomasmotadev.github.io/profile.jpg" type="image/jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Tomás Mota - Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
 
@@ -18,21 +19,38 @@
     <!-- ===================== -->
     <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
         <!-- Logo / Nome -->
-        <a href="https://tomasmotadev.github.io" class="flex items-center space-x-3">
+        <a href="https://tomasmotadev.github.io" class="flex items-center space-x-3" >
             <img src="https://tomasmotadev.github.io/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
-            <span class="font-bold text-xl">Tomás Mota</span>
+            <span class="font-bold text-xl">Tomás Mota </span> 
         </a>
 
         <!-- Navegação Desktop -->
         <nav class="hidden md:flex space-x-3">
             <!-- Links principais -->
-            <a href="https://tomasmotadev.github.io/projects" class="px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-400 hover:text-white transition">Dev Projects</a>             
-            <a href="https://tomasmotadev.github.io/cv" class="px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-400 hover:text-white transition">CV</a>
-            <a href="https://tomasmotadev.github.io/about" class="px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-400 hover:text-white transition">About</a>
+                <a href="https://tomasmotadev.github.io/projects" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Dev Projects
+                </a>
+
+                <a href="https://tomasmotadev.github.io/cv" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Dev Projects
+                </a>
+
+                <a href="https://tomasmotadev.github.io/about" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Dev Projects
+                </a>
 
             <!-- Dropdown Photography -->
             <div class="dropdown">
-                <button class="px-4 py-2 bg-gray-500 rounded-lg bg-white text-black rounded-lg hover:bg-gray-400 hover:text-white transition">Photography</button>
+                <a class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Photography
+                </a>
                 <div class="dropdown-content">
                     <a href="https://tomasmotadev.github.io/photography/category/sport">Sport</a>
                     <a href="https://tomasmotadev.github.io/photography/category/music">Music</a>
@@ -42,8 +60,10 @@
 
             <!-- Dropdown Contact -->
             <div class="dropdown">
-                <button class="px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-400 hover:text-white transition">Contact</button>
-                <div class="dropdown-content">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Contact
+                </a>                <div class="dropdown-content">
                     <a href="https://tomasmotadev.github.io/github">GitHub</a>
                     <a href="https://tomasmotadev.github.io/linkedin">LinkedIn</a>
                     <a href="mailto:tomasmotadev@proton.me">Email</a>
