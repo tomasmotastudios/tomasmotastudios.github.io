@@ -253,7 +253,7 @@ body.light-mode .card h3 {
 }
 
 body.light-mode .card p {
-  color: var(--c-gray-2);
+  color: var(--c-black);
 }
 
 body.light-mode .card img {
@@ -291,6 +291,7 @@ body.light-mode .dropdown-content {
 }
 
 body.light-mode .dropdown-content a {
+  background-color: var(--c-white2);
   color: var(--c-black);
 }
 
