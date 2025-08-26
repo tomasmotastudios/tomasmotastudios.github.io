@@ -1,40 +1,39 @@
         // Ano do footer
         document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Menu mobile
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                const photoMenu = document.getElementById('mobile-photography-menu');
-                if (photoMenu) photoMenu.style.display = 'none';
-            }
-        });
+//
+// Mobile Menu
+//
+// Menu mobile toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
-  // NOVO CÓDIGO para o menu dropdown de Contactos no mobile
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+});
+
+// Dropdown Photography
+const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
+const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
+
+mobilePhotoMenu.style.display = 'none';
+mobilePhotoBtn.classList.remove('active');
+
+mobilePhotoBtn.addEventListener('click', () => {
+  const isOpen = mobilePhotoMenu.style.display === 'block';
+  mobilePhotoMenu.style.display = isOpen ? 'none' : 'block';
+  mobilePhotoBtn.classList.toggle('active', !isOpen);
+});
+
+// Dropdown Contact
 const mobileContactBtn = document.getElementById('mobile-contact-btn');
 const mobileContactMenu = document.getElementById('mobile-contact-menu');
 
-if (mobileContactBtn && mobileContactMenu) {
-    mobileContactBtn.addEventListener('click', () => {
-        if (mobileContactMenu.style.display === 'block') {
-            mobileContactMenu.style.display = 'none';
-        } else {
-            mobileContactMenu.style.display = 'block';
-        }
-    });
-}
-        
-        // Menu dropdown de fotografia no mobile
-        const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
-        const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
-        if (mobilePhotoBtn) {
-            mobilePhotoBtn.addEventListener('click', () => {
-                if (mobilePhotoMenu.style.display === 'block') {
-                    mobilePhotoMenu.style.display = 'none';
-                } else {
-                    mobilePhotoMenu.style.display = 'block';
-                }
-            });
-        }
+mobileContactMenu.style.display = 'none';
+mobileContactBtn.classList.remove('active');
+
+mobileContactBtn.addEventListener('click', () => {
+  const isOpen = mobileContactMenu.style.display === 'block';
+  mobileContactMenu.style.display = isOpen ? 'none' : 'block';
+  mobileContactBtn.classList.toggle('active', !isOpen);
+});
