@@ -124,20 +124,93 @@ header a:hover {
   display: block;
 }
 
-/* Dropdown Mobile */
+/* =====================
+   Menu Mobile Fullscreen
+   ===================== */
+#mobile-menu {
+  background-color: rgba(15, 22, 32, 0.349); /* mesmo fundo */
+  backdrop-filter: blur(10px);              /* mesmo blur */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--c-white);
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 2rem 2rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 40;
+}
+
+/* Menu ativo */
+#mobile-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* =====================
+   Todos os links Mobile e títulos dropdown
+   ===================== */
+#mobile-menu a,
 .mobile-dropdown-btn {
-  display: block;
-  cursor: pointer;
+  background-color: rgba(15, 22, 32, 0.349);
+  backdrop-filter: blur(10px);
+  color: var(--c-white);
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: block; /* garante que ocupam toda a largura */
+  text-decoration: none;
 }
 
+/* Hover */
+#mobile-menu a:hover,
+.mobile-dropdown-btn:hover {
+  text-decoration: underline;
+  background-color: rgba(15, 22, 32, 0.45);
+}
+
+/* =====================
+   Dropdown Mobile
+   ===================== */
 .mobile-dropdown-content {
-  display: none;
-  padding-left: 1rem;
-  padding-top: 0.5rem;
+  display: none; /* inicia fechado */
+  flex-direction: column;
+  margin-left: 0.5rem; /* indentação dos sublinks */
 }
 
+/* Links dentro do dropdown: mesmo estilo dos outros */
 .mobile-dropdown-content a {
-  padding: 8px 0;
+  background-color: rgba(15, 22, 32, 0.349); /* mesmo fundo */
+  backdrop-filter: blur(10px);              /* mesmo blur */
+  color: var(--c-white);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+/* Hover dos links do dropdown */
+.mobile-dropdown-content a:hover {
+  text-decoration: underline;
+  background-color: rgba(15, 22, 32, 0);
+}
+
+/* =====================
+   Mostrar dropdown quando ativo
+   ===================== */
+.mobile-dropdown-btn.active + .mobile-dropdown-content {
+  display: flex;
 }
 
 /* ===================== */
