@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" href="https://tomasmotadev.github.io/profile.jpg" type="image/jpg" />
+    <title>Tomás Mota - Music</title>
+    <title>Zyra Nyx - Music</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+    <!-- ===================== -->
+    <!-- Header / Navegação -->
+    <!-- ===================== -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <!-- Logo / Nome -->
+        <a href="https://tomasmotahq.github.io" class="flex items-center space-x-3" >
+            <img src="https://tomasmotahq.github.io/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota </span> 
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <!-- Links principais -->
+                <a href="https://tomasmotahq.github.io/cv" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                CV
+                </a>
+
+                <a href="https://tomasmotahq.github.io/about" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                About
+                </a>
+
+                <a href="https://tomasmotahq.github.io/projects" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Dev Projects
+                </a>
+
+            <!-- Dropdown Photography -->
+            <div class="dropdown">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Photography
+                </a>
+                <div class="dropdown-content">
+                    <a href="https://tomasmotahq.github.io/photography/category/sport">Sport</a>
+                    <a href="https://tomasmotahq.github.io/photography/category/music">Music</a>
+                    <a href="https://tomasmotahq.github.io/photography/category/casual">Casual</a>
+                </div>
+            </div>
+
+            <!-- Dropdown Contact -->
+            <div class="dropdown">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Contact
+                </a>                <div class="dropdown-content">
+                    <a href="https://tomasmotahq.github.io/github">GitHub</a>
+                    <a href="https://tomasmotahq.github.io/linkedin">LinkedIn</a>
+                    <a href="mailto:tomasmota.coffee934@silomails.com">Email</a>
+                </div>
+            </div>            
+        </nav>
+      
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+<!-- ===================== -->
+<!-- Mobile Menu -->
+<!-- ===================== -->
+<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+    <!-- Links principais -->
+
+
+    <a href="https://tomasmotahq.github.io/cv" class="block">CV</a>
+    <a href="https://tomasmotahq.github.io/about" class="block">About</a>
+
+    <a href="https://tomasmotahq.github.io/projects" class="block">Dev Projects</a>
+    
+        <!-- Dropdown Photography Mobile -->
+    <div class="flex flex-col">
+        <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Photography</span>
+        <div id="mobile-photography-menu" class="mobile-dropdown-content">
+            <a href="https://tomasmotahq.github.io/photography/category/sport" class="block">Sport</a>
+            <a href="https://tomasmotahq.github.io/photography/category/music" class="block">Music</a>
+            <a href="https://tomasmotahq.github.io/photography/category/casual" class="block">Casual</a>
+        </div>
+    </div>
+
+
+    <!-- Dropdown Contact Mobile -->
+    <div class="flex flex-col">
+        <span id="mobile-contact-btn" class="mobile-dropdown-btn block">Contact</span>
+        <div id="mobile-contact-menu" class="mobile-dropdown-content">
+            <a href="https://tomasmotahq.github.io/github" class="block">GitHub</a>
+            <a href="https://tomasmotahq.github.io/linkedin" class="block">LinkedIn</a>
+            <a href="mailto:tomasmota.coffee934@silomails.com" class="block">Email</a>
+        </div>
+    </div>
+</div>
+
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+<span class="text-[var(--c-red)]">&lt;</span>
+            <span class="text-white">Tomás Mota</span>
+<span class="text-[var(--c-red)]" /> /&gt;</span>
+</h1> 
+
+<div class="tabs-container">
+<button class="tab-button activate" onclick="showTab('albums')">Albums</button>
+<button class="tab-button" onclick="showTab('singles')">Singles</button>
+</div>
+
+<div id="albums" class="tab-content active">
+<section class="py-6">
+<div class="music-grid">
+<a href="https://tomasmotadev.github.io/music/release/the-sun-always-shines" class="music-item">
+<article class="card p-4 text-left rounded-xl shadow-md">
+<img src="src/img/albums/the-sun-always-shines.jpg" alt="Album: The Sun Always Shines" class="w-full h-auto object-cover rounded-xl mb-3">
+<h3>The Sun Always Shines</h3>
+<p>Relese: 25.06.2026</p>
+</article>
+</a>
+</div>
+</section>
+</div>
+
+<div id="singles" class="tab-content">
+<section class="py-6">
+<div class="music-grid">
+<a href="https://tomasmotadev.github.io/music/release/a-tua-rua" class="music-item">
+<article class="card p-4 text-left rounded-xl shadow-md">
+<img src="src/img/singles/atuarua.jpg" alt="Single: A Tua Rua" class="w-full h-auto object-cover rounded-xl mb-3">
+<h3>A Tua Rua (Remix)</h3>
+<p>Released: 15.09.2025</p>
+</article>
+</a>
+
+<a href="https://tomasmotadev.github.io/music/release/spies" class="music-item">
+<article class="card p-4 text-left rounded-xl shadow-md">
+<img src="src/img/singles/spies.jpg" alt="Single: Spies" class="w-full h-auto object-cover rounded-xl mb-3">
+<h3>Spies (Remix)</h3>
+<p>Released: 15.08.2025</p>
+</article>
+</a>
+</div>
+</section>
+</div>
+</main>
+
+<footer class="py-10 text-sm text-gray-500">© <span id="year"></span> Tomás Mota. All Rights Reserved.</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
