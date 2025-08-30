@@ -23,10 +23,17 @@
         <!-- Navegação Desktop -->
         <nav class="hidden md:flex space-x-3">
             <!-- Links principais -->
+
+                <a href="/about" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                About
+                </a>
+            
                 <a href="/projects" 
                 class="px-4 py-2 rounded-lg text-white transition hover:underline"
                 style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                Dev Projects
+                FullStack Projects
                 </a>
 
                 <a href="/cv" 
@@ -35,37 +42,23 @@
                 CV
                 </a>
 
-                <a href="/about" 
-                class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                About
-                </a>
-
-            <!-- Dropdown Photography -->
+            <!-- Dropdown Creative Work -->
             <div class="dropdown">
-                <a class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
                 style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                Photography
+                Creative Work ▾
                 </a>
                 <div class="dropdown-content">
-                    <a href="/photography/category/sport">Sport</a>
-                    <a href="/photography/category/music">Music</a>
-                    <a href="/photography/category/casual">Casual</a>
+                    <a href="/photography">Photography</a>
+                    <a href="/music">Music</a>
                 </div>
             </div>
 
-            <!-- Dropdown Contact -->
-            <div class="dropdown">
-                <a class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                <a href="/contact" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
                 style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
                 Contact
-                </a>
-              <div class="dropdown-content">
-                    <a href="/github">GitHub</a>
-                    <a href="/linkedin">LinkedIn</a>
-                    <a href="mailto:tomasmota.coffee934@silomails.com">Email</a>
-                </div>
-            </div>            
+                </a>          
         </nav>
       
         <!-- Menu Mobile -->
@@ -82,32 +75,25 @@
 <!-- Mobile Menu -->
 <!-- ===================== -->
 <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
-    <!-- Links principais -->
-    <a href="/projects" class="block">Dev Projects</a>       
-    <a href="/cv" class="block">CV</a>
+    <!-- Links principais -->      
     <a href="/about" class="block">About</a>
+    <a href="/projects" class="block">FullStack Work</a> 
+    <a href="/cv" class="block">CV</a>
 
-    <!-- Dropdown Photography Mobile -->
+    <!-- Dropdown Creative Work Mobile -->
     <div class="flex flex-col">
-        <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Photography</span>
+        <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
         <div id="mobile-photography-menu" class="mobile-dropdown-content">
-            <a href="/photography/category/sport" class="block">Sport</a>
-            <a href="/photography/category/music" class="block">Music</a>
-            <a href="/photography/category/casual" class="block">Casual</a>
+            <a href="/photography" class="block">Photography</a>
+            <a href="/music" class="block">Music</a>
         </div>
     </div>
 
-    <!-- Dropdown Contact Mobile -->
-    <div class="flex flex-col">
-        <span id="mobile-contact-btn" class="mobile-dropdown-btn block">Contact</span>
-        <div id="mobile-contact-menu" class="mobile-dropdown-content">
-            <a href="/github" class="block">GitHub</a>
-            <a href="/linkedin" class="block">LinkedIn</a>
-            <a href="mailto:tomasmota.coffee934@silomails.com" class="block">Email</a>
-        </div>
-    </div>
+    <a href="/contact" class="block">Contact</a>
+
 </div>
   
+<!-- PHOTOGRAPHY -->
 <section id="photography" class="px-6 py-12">
     <h2 class="text-2xl font-bold mb-6">Sport Photography</h2>
     <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
