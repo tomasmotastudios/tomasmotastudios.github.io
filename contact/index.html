@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tomás Mota - Contact</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[var(--c-gray)] text-white">
+
+    <!-- ===================== -->
+    <!-- Header / Navegação -->
+    <!-- ===================== -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <!-- Logo / Nome -->
+        <a href="/" class="flex items-center space-x-3" >
+            <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota </span> 
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <!-- Links principais -->
+
+                <a href="/about" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                About
+                </a>
+            
+                <a href="/projects" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                FullStack Projects
+                </a>
+
+                <a href="/cv" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                CV
+                </a>
+
+            <!-- Dropdown Creative Work -->
+            <div class="dropdown">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Creative Work ▾
+                </a>
+                <div class="dropdown-content">
+                    <a href="/photography">Photography</a>
+                    <a href="/music">Music</a>
+                </div>
+            </div>
+
+                <a href="/contact" 
+                class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
+                style="background-color: rgba(15, 22, 32, 0); backdrop-filter: blur(10px);">
+                Contact
+                </a>          
+        </nav>
+      
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+<!-- ===================== -->
+<!-- Mobile Menu -->
+<!-- ===================== -->
+<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+    <!-- Links principais -->      
+    <a href="/about" class="block">About</a>
+    <a href="/projects" class="block">FullStack Work</a> 
+    <a href="/cv" class="block">CV</a>
+
+    <!-- Dropdown Creative Work Mobile -->
+    <div class="flex flex-col">
+        <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
+        <div id="mobile-photography-menu" class="mobile-dropdown-content">
+            <a href="/photography" class="block">Photography</a>
+            <a href="/music" class="block">Music</a>
+        </div>
+    </div>
+
+    <a href="/contact" class="block">Contact</a>
+
+</div>
+
+<!-- ===================== -->
+<!-- Contact Section -->
+<!-- ===================== -->
+<section class="contact-section max-w-4xl mx-auto mt-16 px-6 py-12 space-y-10">
+
+  <!-- ===================== -->
+  <!-- Quadro 1: Formulário -->
+  <!-- ===================== -->
+  <div class="contact-form-wrapper card rounded-2xl bg-[rgba(15,22,32,0.356)] backdrop-blur-lg p-8">
+    <h2 class="text-2xl font-extrabold mb-6">Send Me a Message</h2>
+    <form action="https://formspree.io/f/xvgbagja" method="POST" class="flex flex-col gap-4">
+      <input type="text" name="name" placeholder="Your Name" class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
+      <input type="email" name="email" placeholder="Your Email" class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
+      <textarea name="message" rows="5" placeholder="Your Message" class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]"></textarea>
+      <button type="submit" class="btn mt-2 px-6 py-3 w-max self-center">Send Message</button>
+    </form>
+  </div>
+    <!-- ===================== -->
+  <!-- Quadro 2: Redes sociais -->
+  <!-- ===================== -->
+<!-- Container centralizado horizontal e verticalmente -->
+<div class="flex justify-center items-center">
+  <div class="contact-icons flex justify-center gap-6">
+
+    <a href="/github" target="_blank" class="flex flex-col items-center">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg" alt="GitHub" class="w-7 h-7 mb-1">
+    </a>
+
+    <a href="/linkedin" target="_blank" class="flex flex-col items-center">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/linkedin.svg" alt="LinkedIn" class="w-7 h-7 mb-1">
+    </a>
+
+    <a href="/youtube" target="_blank" class="flex flex-col items-center">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/youtube.svg" alt="YouTube" class="w-7 h-7 mb-1">
+    </a>
+  </div>
+</div>
+</div>
+</section>
+
+
+<!-- ===================== -->
+<!-- Footer -->
+<!-- ===================== -->
+<footer class="py-10 text-sm text-gray-500">
+    © <span id="year"></span> 
+    <a href="/" class="text-gray-400 hover:text-gray-300 transition no-underline">
+        Tomás Mota Studios.
+    </a>All Rights Reserved.
+</footer>
+
+<!-- ===================== -->
+<!-- Scripts -->
+<!-- ===================== -->
+<script src="script.js"></script>
+</body>
+</html>
