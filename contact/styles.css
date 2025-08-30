@@ -424,15 +424,13 @@ footer {
 }
 
 .contact-icons a:hover {
-  background-color: rgba(163, 163, 163, 0);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 /* Ícones menores */
 .contact-icons img {
   width: 36px;
   height: 36px;
-  margin-bottom: 0.5rem;
 }
 
 
