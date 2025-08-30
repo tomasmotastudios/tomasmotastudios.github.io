@@ -102,43 +102,39 @@
 <span class="text-[var(--c-red)]">&lt;</span>
             <span class="text-white">Tomás Mota</span>
 <span class="text-[var(--c-red)]" /> /&gt;</span>
-</h1> 
-
+</h1>
+    
 <div class="tabs-container">
-<button class="tab-button" onclick="showTab('albums')">Albums</button>
-<button class="tab-button" onclick="showTab('singles')">Singles</button>
+  <button class="tab-button" onclick="showTab('albums')">Albums</button>
+  <button class="tab-button active" onclick="showTab('singles')">Singles</button>
 </div>
 
 <div id="albums" class="tab-content">
-<section class="py-6">
-<div class="music-grid">
-    
-<a href="#" class="music-item">
-<article class="card p-4 text-left rounded-xl shadow-md">
-<img src="src/img/album01.jpg" alt="Album: The Sun Always Shines" class="w-full h-auto object-cover rounded-xl mb-3">
-<h3>The Sun Always Shines</h3>
-<p>Relese Date: coming soon</p>
-</article> 
-</a>
-    
-</div>
-</section>
+  <section class="py-6">
+    <div class="music-grid">
+      <a href="#" class="music-item">
+        <article class="card p-4 text-left rounded-xl shadow-md">
+          <img src="src/img/album01.jpg" alt="Album: The Sun Always Shines" class="w-full h-auto object-cover rounded-xl mb-3">
+          <h3>The Sun Always Shines</h3>
+          <p>Release Date: coming soon</p>
+        </article> 
+      </a>
+    </div>
+  </section>
 </div>
 
-<div id="singles" class="tab-content">
-<section class="py-6">
-<div class="music-grid">
-
-<a href="/music/release/spies" class="music-item">
-<article class="card p-4 text-left rounded-xl shadow-md">
-<img src="src/img/single01.jpg" alt="Single: Spies" class="w-full h-auto object-cover rounded-xl mb-3">
-<h3>Spies</h3>
-<p>Released: 15.08.2025</p>
-</article>
-</a>
-    
-</div>
-</section>
+<div id="singles" class="tab-content active">
+  <section class="py-6">
+    <div class="music-grid">
+      <a href="/music/release/spies" class="music-item">
+        <article class="card p-4 text-left rounded-xl shadow-md">
+          <img src="src/img/single01.jpg" alt="Single: Spies" class="w-full h-auto object-cover rounded-xl mb-3">
+          <h3>Spies</h3>
+          <p>Released: 15.08.2025</p>
+        </article>
+      </a>
+    </div>
+  </section>
 </div>
 </main>
 
