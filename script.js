@@ -25,19 +25,6 @@ mobilePhotoBtn.addEventListener('click', () => {
   mobilePhotoBtn.classList.toggle('active', !isOpen);
 });
 
-// Dropdown Contact
-const mobileContactBtn = document.getElementById('mobile-contact-btn');
-const mobileContactMenu = document.getElementById('mobile-contact-menu');
-
-mobileContactMenu.style.display = 'none';
-mobileContactBtn.classList.remove('active');
-
-mobileContactBtn.addEventListener('click', () => {
-  const isOpen = mobileContactMenu.style.display === 'block';
-  mobileContactMenu.style.display = isOpen ? 'none' : 'block';
-  mobileContactBtn.classList.toggle('active', !isOpen);
-});
-
 // Carrossel de certificados com loop infinito
 const track = document.getElementById('cert-track');
 const scrollInterval = 3000; // Tempo entre cada rolagem
@@ -91,19 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
-
-// Carregar tema salvo no localStorage
-if (localStorage.getItem("theme") === "light") {
-  body.classList.add("light-mode");
-}
-
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("light-mode");
-
-  if (body.classList.contains("light-mode")) {
-    localStorage.setItem("theme", "light");
-  } else {
-    localStorage.setItem("theme", "dark");
-  }
-});
 
