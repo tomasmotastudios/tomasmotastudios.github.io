@@ -233,7 +233,7 @@ header a:hover {
 }
 
 /* ===================== */
-/* Slideshow */
+/* Slideshow (Fotografia) */
 /* ===================== */
 .slideshow-container {
   position: relative;
@@ -252,7 +252,7 @@ header a:hover {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease-in-out; /* fade */
+  transition: opacity 1s ease-in-out;
 }
 
 .slide.active {
