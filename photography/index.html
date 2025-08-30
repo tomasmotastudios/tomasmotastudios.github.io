@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <!-- ===================== -->
+    <!-- Metadados da Página -->
+    <!-- ===================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/profile.jpg" type="image/jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Tomás Mota - Home</title>
+
+</head>
+<body>
+
+    <!-- ===================== -->
+    <!-- Header / Navegação -->
+    <!-- ===================== -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <!-- Logo / Nome -->
+        <a href="/" class="flex items-center space-x-3" >
+            <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota </span> 
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <!-- Links principais -->
+
+                <a href="/about" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                About
+                </a>
+            
+                <a href="/projects" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                FullStack Projects
+                </a>
+
+                <a href="/cv" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                CV
+                </a>
+
+            <!-- Dropdown Creative Work -->
+            <div class="dropdown">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Creative Work ▾
+                </a>
+                <div class="dropdown-content">
+                    <a href="/photography">Photography</a>
+                    <a href="/music">Music</a>
+                </div>
+            </div>
+
+            <!-- Dropdown Contact -->
+            <div class="dropdown">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Contact
+                </a>
+                <div class="dropdown-content">
+                    <a href="mailto:tomasmota.coffee934@silomails.com">Email</a>
+                    <a href="/github">GitHub</a>
+                    <a href="/linkedin">LinkedIn</a>
+                    <a href="/youtube">YouTube</a>
+                </div>
+            </div>            
+        </nav>
+      
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+<!-- ===================== -->
+<!-- Mobile Menu -->
+<!-- ===================== -->
+<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+    <!-- Links principais -->      
+    <a href="/about" class="block">About</a>
+    <a href="/projects" class="block">FullStack Work</a> 
+    <a href="/cv" class="block">CV</a>
+
+    <!-- Dropdown Creative Work Mobile -->
+    <div class="flex flex-col">
+        <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
+        <div id="mobile-photography-menu" class="mobile-dropdown-content">
+            <a href="/photography" class="block">Photography</a>
+            <a href="/music" class="block">Music</a>
+        </div>
+    </div>
+
+    <!-- Dropdown Contact Mobile -->
+    <div class="flex flex-col">
+        <span id="mobile-contact-btn" class="mobile-dropdown-btn block">Contact</span>
+        <div id="mobile-contact-menu" class="mobile-dropdown-content">
+            <a href="mailto:tomasmota.coffee934@silomails.com" class="block">Email</a>
+            <a href="/github" class="block">GitHub</a>
+            <a href="/linkedin" class="block">LinkedIn</a>
+            <a href="/youtube" class="block">YouTube</a>
+        </div>
+    </div>
+</div>
+
+    <!-- ===================== -->
+    <!-- Hero Section / Sobre Mim -->
+    <!-- ===================== -->
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <div class="hero-wrap card p-8 md:p-12 rounded-2xl">
+            <!-- Título -->
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+                <span class="text-[var(--c-red)]">&lt;</span>
+                <span class="text-white">Tomás Mota</span>
+                <span class="text-[var(--c-red)]" /> /&gt;</span>
+            </h1>
+            <!-- Descrição / Subtítulo secundário -->
+            <p id="herop" class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
+                My work as a <span class="font-semibold text-[var(--c-white)]">Photographer</span> — Sport, Music, and Casual Photography
+            </p>
+        </div>
+
+    <!-- ===================== -->
+    <!-- Photography Section -->
+    <!-- ===================== -->
+    <section id="photography" class="px-6 py-12">
+        <!-- Título -->
+        <h2 class="text-2xl font-bold mb-6"></h2>
+        <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
+
+            <!-- Sport Photography -->
+            <a href="/photography/category/sport" class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <div class="slideshow-container">
+                        <img src="/photography/src/img/sport16.jpg" alt="Sport Photography 1" class="slide active">
+                        <img src="/photography/src/img/sport15.jpg" alt="Sport Photography 2" class="slide">
+                        <img src="/photography/src/img/sport14.jpg" alt="Sport Photography 3" class="slide">
+                    </div>
+                    <h3 class="font-bold">Sport Photography</h3>
+                    <p class="text-gray-200 text-sm">Here you can find my work as a sports photographer.</p>
+                </article>
+            </a>
+
+            <!-- Music Photography -->
+            <a href="https://tomasmotahq.github.io/photography/category/music" class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <div class="slideshow-container">
+                        <img src="/photography/src/img/music05.jpg" alt="Music Photography 1" class="slide active">
+                        <img src="/photography/src/img/music04.jpg" alt="Music Photography 2" class="slide">
+                        <img src="/photography/src/img/music03.jpg" alt="Music Photography 3" class="slide">
+                    </div>
+                    <h3 class="font-bold">Music Photography</h3>
+                    <p class="text-gray-200 text-sm">Here you can find my work as a photographer for musicians/bands.</p>
+                </article>
+            </a>
+
+            <!-- Casual Photography -->
+            <a href="/photography/category/casual" class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <div class="slideshow-container">
+                        <img src="/photography/src/img/casual04.jpg" alt="Casual Photography 1" class="slide active">
+                        <img src="/photography/src/img/casual03.jpg" alt="Casual Photography 2" class="slide">
+                        <img src="/photography/src/img/casual02.jpg" alt="Casual Photography 3" class="slide">
+                    </div>
+                    <h3 class="font-bold">Casual Photography</h3>
+                    <p class="text-gray-200 text-sm">Here you can find my work as a casual photographer - personal photographer.</p>
+                </article>
+            </a>
+
+        </div>
+    </section>
+
+<!-- ===================== -->
+<!-- Footer -->
+<!-- ===================== -->
+<footer class="py-10 text-sm text-gray-500">
+    © <span id="year"></span> 
+    <a href="/" class="text-gray-400 hover:text-gray-300 transition no-underline">
+        Tomás Mota Studios.
+    </a>All Rights Reserved.
+</footer>
+
+<!-- ===================== -->
+<!-- Scripts -->
+<!-- ===================== -->
+<script src="script.js"></script>
+
+        
+</body>
+</html>
