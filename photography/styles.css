@@ -233,69 +233,7 @@ header a:hover {
 }
 
 /* ===================== */
-/* Tech Chips */
-/* ===================== */
-.tech-chip {
-  border-radius: 999px;
-  font-weight: 600;
-  padding: .6rem 1rem;
-  background: var(--c-gray);
-  color: var(--c-white);
-}
-
-/* ===================== */
-/* Cards (Projetos, Fotografia, Certificados) */
-/* ===================== */
-.card {
-    background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
-  backdrop-filter: blur(10px) !important;
-  color: var(--c-white);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
-  border-radius: 1rem;
-}
-
-.card img {
-  filter: brightness(0.8);
-}
-
-.card h3 {
-  color: var(--c-white);
-}
-
-/* ===================== */
-/* Botões Primários */
-/* ===================== */
-.btn {
-  border-radius: .8rem;
-  font-weight: 600;
-  transition: transform .15s ease, box-shadow .15s ease;
-  background: var(--c-blue);
-  color: var(--c-white);
-}
-
-.btn:active {
-  transform: translateY(1px);
-}
-
-/* ===================== */
-/* Timeline (Experiência Profissional) */
-/* ===================== */
-@media (min-width: 768px) {
-  .timeline:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    transform: translateX(-50%);
-    background: linear-gradient(180deg, var(--c-red), var(--c-blue));
-    border-radius: 999px;
-  }
-}
-
-/* ===================== */
-/* Slideshow (Fotografia) */
+/* Slideshow */
 /* ===================== */
 .slideshow-container {
   position: relative;
@@ -314,12 +252,13 @@ header a:hover {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out; /* fade */
 }
 
 .slide.active {
   opacity: 1;
 }
+
 
 /* ===================== */
 /* Footer */
