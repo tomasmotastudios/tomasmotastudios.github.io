@@ -410,7 +410,6 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 1.5rem;
-  margin-bottom: 2rem;
 }
 
 .contact-icons a {
@@ -425,7 +424,7 @@ footer {
 }
 
 .contact-icons a:hover {
-  background-color: rgba(163, 163, 163, 0.699);
+  background-color: rgba(163, 163, 163, 0);
   transform: translateY(-2px);
 }
 
