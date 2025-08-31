@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/profile.jpg" type="image/jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Tomás Mota - [Article Title]</title>
+</head>
+<body>
+
+    <!-- ===================== -->
+    <!-- Header / Navegação -->
+    <!-- ===================== -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <!-- Logo / Nome -->
+        <a href="/" class="flex items-center space-x-3" >
+            <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota </span> 
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <!-- Links principais -->
+
+                <a href="/about" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                About
+                </a>
+            
+                <a href="/projects" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                FullStack Projects
+                </a>
+
+                <a href="/cv" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                CV
+                </a>
+
+            <!-- Dropdown Creative Work -->
+            <div class="dropdown">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Creative Work ▾
+                </a>
+                <div class="dropdown-content">
+                    <a href="/photography">Photography</a>
+                    <a href="/music">Music</a>
+                    <a href="/articles">Articles</a>
+                </div>
+            </div>
+
+                <a href="/contact" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Contact
+                </a>          
+        </nav>
+      
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+<!-- ===================== -->
+<!-- Mobile Menu -->
+<!-- ===================== -->
+<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+    <!-- Links principais -->      
+    <a href="/about" class="block">About</a>
+    <a href="/projects" class="block">FullStack Work</a> 
+    <a href="/cv" class="block">CV</a>
+
+    <!-- Dropdown Creative Work Mobile -->
+    <div class="flex flex-col">
+        <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
+        <div id="mobile-photography-menu" class="mobile-dropdown-content">
+            <a href="/photography" class="block">Photography</a>
+            <a href="/music" class="block">Music</a>
+        </div>
+    </div>
+
+    <a href="/contact" class="block">Contact</a>
+
+</div>
+
+  <!-- Conteúdo do artigo -->
+  <article class="max-w-3xl mx-auto px-6 py-12 text-left">
+    <!-- Título -->
+    <h1 class="text-4xl font-extrabold mb-6">[Article Title]</h1>
+    <!-- Data e tempo de leitura (tempo será calculado em JS) -->
+    <p class="text-gray-400 text-sm mb-8">
+      Published on <span>[DD MMM YYYY]</span> • 
+      <span id="reading-time"></span>
+    </p>
+
+    <!-- Texto do artigo -->
+    <p class="text-gray-200 leading-relaxed mb-6">
+      [Introdução do artigo — resumo rápido e cativante].
+    </p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">[Subtítulo 1]</h2>
+    <p class="text-gray-200 leading-relaxed mb-6">
+      [Conteúdo do subtítulo 1 — explica em detalhe].
+    </p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">[Subtítulo 2]</h2>
+    <p class="text-gray-200 leading-relaxed mb-6">
+      [Conteúdo do subtítulo 2 — explica em detalhe].
+    </p>
+
+    <!-- Citação -->
+    <blockquote class="border-l-4 border-[var(--c-blue)] pl-4 italic text-gray-300 my-8">
+      "[Frase de destaque ou citação inspiradora do artigo]"
+    </blockquote>
+
+    <p class="text-gray-200 leading-relaxed mb-6">
+      [Conclusão — fecha com reflexão ou chamada para ação].
+    </p>
+  </article>
+
+<!-- ===================== -->
+<!-- Footer -->
+<!-- ===================== -->
+<footer class="py-10 text-sm text-gray-500">
+    © <span id="year"></span> 
+    <a href="/" class="text-gray-400 hover:text-gray-300 transition no-underline">
+        Tomás Mota Studios.
+    </a>All Rights Reserved.
+</footer>
+
+<!-- ===================== -->
+<!-- Scripts -->
+<!-- ===================== -->
+<script src="script.js"></script>
+</body>
+</html>
