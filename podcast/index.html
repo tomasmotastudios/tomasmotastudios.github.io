@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tomás Mota - Podcas</title>
+    <link rel="icon" href="/cover.jpg" type="image/jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ===================== -->
+    <!-- Header -->
+    <!-- ===================== -->
+    <!-- ===================== -->
+    <!-- Header / Navegação -->
+    <!-- ===================== -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <!-- Logo / Nome -->
+        <a href="/" class="flex items-center space-x-3" >
+            <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota </span> 
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <!-- Links principais -->
+
+                <a href="/about" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                About
+                </a>
+            
+                <a href="/projects" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                FullStack Projects
+                </a>
+
+                <a href="/cv" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                CV
+                </a>
+
+            <!-- Dropdown Creative Work -->
+            <div class="dropdown">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Creative Work ▾
+                </a>
+                <div class="dropdown-content">
+                    <a href="/photography">Photography</a>
+                    <a href="/music">Music</a>
+                    <a href="/articles">Articles</a>
+                    <a href="/podcast">Podcast</a>
+                </div>
+            </div>
+
+
+                <a href="/contact" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Contact
+                </a>           
+        </nav>
+      
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+<!-- ===================== -->
+<!-- Mobile Menu -->
+<!-- ===================== -->
+<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+    <!-- Links principais -->      
+    <a href="/about" class="block">About</a>
+    <a href="/projects" class="block">FullStack Work</a> 
+    <a href="/cv" class="block">CV</a>
+
+    <!-- Dropdown Creative Work Mobile -->
+    <div class="flex flex-col">
+        <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
+        <div id="mobile-photography-menu" class="mobile-dropdown-content">
+            <a href="/photography" class="block">Photography</a>
+            <a href="/music" class="block">Music</a>
+            <a href="/articles" class="block">Articles</a>
+            <a href="/podcast" class="block">Podcast</a>
+        </div>
+    </div>
+
+    <a href="/contact" class="block">Contact</a>
+
+    <!-- ===================== -->
+    <!-- Hero -->
+    <!-- ===================== -->
+    <section class="max-w-5xl mx-auto px-6 mt-12">
+        <div class="hero-wrap card p-10 md:p-16 rounded-2xl text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+                🎙️ Meu Podcast
+            </h1>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                Conversas autênticas sobre <span class="text-[var(--c-red)] font-semibold">tecnologia</span>,
+                <span class="text-[var(--c-yellow)] font-semibold">criatividade</span> e
+                <span class="text-[var(--c-blue)] font-semibold">cultura digital</span>.
+            </p>
+            <br>
+            <div class="flex justify-center gap-6">
+                <!-- Spotify-->
+                <a href="https://spotify.com" target="_blank" title="Spotify" class="w-7 h-7 bg-white"
+                    style="mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg') no-repeat center / contain;
+                    -webkit-mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg') no-repeat center / contain;">
+                </a>
+                <!-- YouTube-->
+                <a href="https://youtube.com" target="_blank" title="YouTube" class="w-7 h-7 bg-white"
+                    style="mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg') no-repeat center / contain;
+                    -webkit-mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg') no-repeat center / contain;">
+                </a>
+                <!-- YouTube Music -->
+                <a href="https://music.youtube.com" target="_blank" title="YouTube Music" class="w-7 h-7 bg-white"
+                    style="mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtubemusic.svg') no-repeat center / contain;
+                    -webkit-mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtubemusic.svg') no-repeat center / contain;">
+                </a>
+                <!-- Apple Music-->
+                <a href="https://podcasts.apple.com" target="_blank" title="Apple Music" class="w-7 h-7 bg-white"
+                    style="mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/applepodcasts.svg') no-repeat center / contain;
+                    -webkit-mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/applepodcasts.svg') no-repeat center / contain;">
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <br>
+    <h2 class="text-2xl font-bold mb-6">Últimos Episódios</h2>
+
+    <!-- Grade de episódios -->
+    <div class="grid gap-8 md:grid-cols-3 px-2 sm:px-4 md:px-8">
+
+        <!-- Episódio -->
+        <article class="card flex items-center gap-4 p-4 rounded-xl shadow-md text-left">
+            <img src="/episodes/ep1.jpg" alt="Episódio 1" class="w-20 h-20 object-cover rounded-lg flex-shrink-0">
+            <div class="flex-1">
+                <h3 class="font-bold text-lg">Episódio #1 - A Era da IA</h3>
+                <p class="text-gray-300 text-sm mb-2">Bate-papo sobre inteligência artificial no dia a dia.</p>
+                <div class="flex gap-3">
+                    <!-- Transcrição-->
+                    <a href="/transcripts/ep1.pdf" target="_blank" title="Transcription" class="w-5 h-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-full h-full">
+                            <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h5v2H8v-2z" />
+                        </svg>
+                    </a>
+                    <!-- Spotify-->
+                    <a href="https://spotify.com" target="_blank" title="Spotify" class="w-5 h-5 bg-white"
+                        style="mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg') no-repeat center / contain;
+                    -webkit-mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg') no-repeat center / contain;">
+                    </a>
+                    <!-- YouTube-->
+                    <a href="https://youtube.com" target="_blank" title="YouTube" class="w-5 h-5 bg-white"
+                        style="mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg') no-repeat center / contain;
+                    -webkit-mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg') no-repeat center / contain;">
+                    </a>
+                    <!-- YouTube Music -->
+                    <a href="https://music.youtube.com" target="_blank" title="YouTube Music" class="w-5 h-5 bg-white"
+                        style="mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtubemusic.svg') no-repeat center / contain;
+                    -webkit-mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtubemusic.svg') no-repeat center / contain;">
+                    </a>
+                    <!-- Apple Music-->
+                    <a href="https://podcasts.apple.com" target="_blank" title="Apple Music" class="w-5 h-5 bg-white"
+                        style="mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/applepodcasts.svg') no-repeat center / contain;
+                    -webkit-mask:url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/applepodcasts.svg') no-repeat center / contain;">
+                    </a>
+
+                </div>
+            </div>
+        </article>
+
+        <!-- repete o mesmo para os outros episódios -->
+    </div>
+    </section>
+
+
+<!-- ===================== -->
+<!-- Footer -->
+<!-- ===================== -->
+<footer class="py-10 text-sm text-gray-500">
+    © <span id="year"></span> 
+    <a href="/" class="text-gray-400 hover:text-gray-300 transition no-underline">
+        Tomás Mota Studios.
+    </a>All Rights Reserved.
+</footer>
+
+<!-- ===================== -->
+<!-- Scripts -->
+<!-- ===================== -->
+<script src="script.js"></script>
+</body>
+
+</html>
