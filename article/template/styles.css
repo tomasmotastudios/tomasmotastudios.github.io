@@ -29,7 +29,7 @@ body {
 body {
   background: 
     radial-gradient(circle at 15% 20%, rgba(26, 115, 255, 0.2), transparent 50%),
-    radial-gradient(circle at 85% 80%, rgba(255, 59, 59, 0.2), transparent 50%),
+    radial-gradient(circle at 85% 80%,  #4873c4d5, transparent 50%),
     linear-gradient(180deg, #464749 0%, #141b2a 100%);
   background-size: 200% 200%;
   background-position: 0% 0%;
@@ -211,18 +211,6 @@ header a:hover {
    ===================== */
 .mobile-dropdown-btn.active + .mobile-dropdown-content {
   display: flex;
-}
-
-/* ===================== */
-/* Hero Section */
-/* ===================== */
-.hero-wrap {
-  background: 
-    radial-gradient(1200px 600px at 10% 10%, rgba(26,115,255,0.3), transparent 70%),
-    radial-gradient(900px 500px at 90% 80%, rgba(255,59,59,0.3), transparent 70%),
-    linear-gradient(180deg, #444546 0%, #595c5f 100%) !important;
-    position: relative;
-    z-index: 0;
 }
 
 /* ===================== */
