@@ -38,8 +38,3 @@ mobileContactBtn.addEventListener('click', () => {
   mobileContactBtn.classList.toggle('active', !isOpen);
 });
 
-  // Limpa os campos do formulário quando a página é recarregada
-  window.addEventListener('load', () => {
-    const form = document.querySelector('.contact-form');
-    if(form) form.reset();
-  });
