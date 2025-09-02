@@ -256,5 +256,13 @@ header a:hover {
             border-radius: 0.5rem; font-weight: 600; font-size: 1rem;
             text-decoration: none; transition: all 0.3s ease;
             width: 100%; text-align: left;
+
+
+/* ===================== */
+/* Footer */
+/* ===================== */
+footer {
+  color: var(--c-white);
+}
         }
         a.button:hover { background-color: #333; color: #eee; }
