@@ -58,7 +58,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
   pointer-events: none; /* não atrapalha cliques */
 }
 
@@ -69,6 +69,7 @@ body {
   border-radius: 50%;
   opacity: 0.8;
   animation: float linear infinite;
+  z-index: 0;
 }
 
 /* Animação das partículas subindo */
@@ -76,6 +77,13 @@ body {
   from { transform: translateY(100vh) scale(0.5); opacity: 0; }
   10% { opacity: 1; }
   to { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+
+/* Todo o conteúdo principal do site */
+body > *:not(.particle) {
+  position: relative;   /* necessário para respeitar o z-index do container */
+  z-index: 1;
 }
 
 /* ===================== */
