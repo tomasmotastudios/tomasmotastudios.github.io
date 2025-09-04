@@ -51,6 +51,33 @@ body {
   }
 }
 
+/* Container das partículas */
+#particles {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none; /* não atrapalha cliques */
+}
+
+/* Cada partícula */
+.particle {
+  position: absolute;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: float linear infinite;
+}
+
+/* Animação das partículas subindo */
+@keyframes float {
+  from { transform: translateY(100vh) scale(0.5); opacity: 0; }
+  10% { opacity: 1; }
+  to { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
 /* ===================== */
 /* Header e Menus */
 /* ===================== */
