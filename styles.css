@@ -51,41 +51,6 @@ body {
   }
 }
 
-/* Container das partículas */
-#particles {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-  pointer-events: none; /* não atrapalha cliques */
-}
-
-/* Cada partícula */
-.particle {
-  position: absolute;
-  background: rgba(255,255,255,0.7);
-  border-radius: 50%;
-  opacity: 0.8;
-  animation: float linear infinite;
-  z-index: 0;
-}
-
-/* Animação das partículas subindo */
-@keyframes float {
-  from { transform: translateY(100vh) scale(0.5); opacity: 0; }
-  10% { opacity: 1; }
-  to { transform: translateY(-10vh) scale(1); opacity: 0; }
-}
-
-
-/* Todo o conteúdo principal do site */
-body > *:not(.particle) {
-  position: relative;   /* necessário para respeitar o z-index do container */
-  z-index: 1;
-}
-
 /* ===================== */
 /* Header e Menus */
 /* ===================== */
@@ -93,9 +58,6 @@ header {
   background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
   backdrop-filter: blur(10px) !important;
   color: var(--c-white);
-  position: sticky;
-  top: 0;
-  z-index: 50; /* já tinha, mas reforçar */
 }
 
 /* Remove background apenas do link do logo */
@@ -187,7 +149,6 @@ header a:hover {
 #mobile-menu.active {
   transform: translateY(0);
   opacity: 1;
-  z-index: 60; /* acima do header */
 }
 
 /* =====================
