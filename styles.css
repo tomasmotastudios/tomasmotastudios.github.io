@@ -93,6 +93,9 @@ header {
   background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
   backdrop-filter: blur(10px) !important;
   color: var(--c-white);
+  position: sticky;
+  top: 0;
+  z-index: 50; /* já tinha, mas reforçar */
 }
 
 /* Remove background apenas do link do logo */
@@ -184,6 +187,7 @@ header a:hover {
 #mobile-menu.active {
   transform: translateY(0);
   opacity: 1;
+  z-index: 60; /* acima do header */
 }
 
 /* =====================
