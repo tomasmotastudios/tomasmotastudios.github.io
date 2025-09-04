@@ -25,33 +25,6 @@ mobilePhotoBtn.addEventListener('click', () => {
   mobilePhotoBtn.classList.toggle('active', !isOpen);
 });
 
-// Função para criar partículas
-function initParticles(containerId = "particles", numParticles = 40) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-
-    for (let i = 0; i < numParticles; i++) {
-        const particle = document.createElement("div");
-        particle.classList.add("particle");
-
-        // Tamanho aleatório
-        const size = Math.random() * 6 + 4; // 4px a 10px
-        particle.style.width = `${size}px`;
-        particle.style.height = `${size}px`;
-
-        // Posição inicial aleatória
-        particle.style.left = `${Math.random() * 100}vw`;
-        particle.style.top = `${Math.random() * 100}vh`;
-
-        // Duração e atraso da animação
-        const duration = Math.random() * 10 + 10; // 10s a 20s
-        const delay = Math.random() * 5;
-        particle.style.animationDuration = `${duration}s`;
-        particle.style.animationDelay = `${delay}s`;
-
-        container.appendChild(particle);
-    }
-}
 
 // Inicializa partículas quando a página carrega
 document.addEventListener("DOMContentLoaded", () => {
