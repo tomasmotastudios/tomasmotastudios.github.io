@@ -12,7 +12,9 @@ menuBtn.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
 });
 
-// Dropdown Photography
+// =====================
+// Dropdown Photography (Mobile)
+// =====================
 const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
 const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
 
@@ -25,7 +27,10 @@ mobilePhotoBtn.addEventListener('click', () => {
   mobilePhotoBtn.classList.toggle('active', !isOpen);
 });
 
-// Dropdown Contact
+
+// =====================
+// Dropdown Contact (Mobile) [se existir no HTML]
+// =====================
 const mobileContactBtn = document.getElementById('mobile-contact-btn');
 const mobileContactMenu = document.getElementById('mobile-contact-menu');
 
@@ -38,53 +43,38 @@ mobileContactBtn.addEventListener('click', () => {
   mobileContactBtn.classList.toggle('active', !isOpen);
 });
 
-        // Função para mostrar a aba selecionada
-        function showTab(tabId) {
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
+// =====================
+// Tabs (Discography / Tour)
+// =====================
+function showTab(tabId) {
+  const contents = document.querySelectorAll('.tab-content');
+  contents.forEach(content => {
+    content.classList.remove('active');
+  });
 
-            const buttons = document.querySelectorAll('.tab-button');
-            buttons.forEach(button => {
-                button.classList.remove('active');
-            });
+  const buttons = document.querySelectorAll('.tab-button');
+  buttons.forEach(button => {
+    button.classList.remove('active');
+  });
 
-            document.getElementById(tabId).classList.add('active');
-            const clickedButton = document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`);
-            if (clickedButton) {
-                clickedButton.classList.add('active');
-            }
-        }
+  const tabToShow = document.getElementById(tabId);
+  if (tabToShow) {
+    tabToShow.classList.add('active');
+    const clickedButton = document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`);
+    if (clickedButton) {
+      clickedButton.classList.add('active');
+    }
+    // Atualizar hash na URL
+    window.location.hash = tabId;
+  }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-    // A sua função showTab() deve ser definida globalmente, se não estiver, mova-a para fora deste listener
-    function showTab(tabId) {
-        const contents = document.querySelectorAll('.tab-content');
-        contents.forEach(content => {
-            content.classList.remove('active');
-        });
-
-        const buttons = document.querySelectorAll('.tab-button');
-        buttons.forEach(button => {
-            button.classList.remove('active');
-        });
-
-        const tabToShow = document.getElementById(tabId);
-        if (tabToShow) {
-            tabToShow.classList.add('active');
-            const clickedButton = document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`);
-            if (clickedButton) {
-                clickedButton.classList.add('active');
-            }
-        }
-    }
-
-    const hash = window.location.hash.substring(1);
-    if (hash === 'singles' || hash === 'albums') {
-        showTab(hash);
-    } else {
-        // Se não houver hash, garanta que a aba de singles esteja ativa por padrão
-        showTab('singles');
-    }
+  const hash = window.location.hash.substring(1);
+  if (hash === 'discography' || hash === 'tour') {
+    showTab(hash);
+  } else {
+    // Aba padrão
+    showTab('discography');
+  }
 });
