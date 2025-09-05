@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/profile.jpg" type="image/jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Tomás Mota - Photoshoot</title>
+</head>
+<body>
+    <!-- ===================== -->
+    <!-- Header / Navegação -->
+    <!-- ===================== -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <!-- Logo / Nome -->
+        <a href="/" class="flex items-center space-x-3" >
+            <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota </span> 
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <!-- Links principais -->
+
+                <a href="/about" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                About
+                </a>
+            
+                <a href="/projects" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                FullStack Projects
+                </a>
+
+                <a href="/cv" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                CV
+                </a>
+
+            <!-- Dropdown Creative Work -->
+            <div class="dropdown">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Creative Work ▾
+                </a>
+                <div class="dropdown-content">
+                    <a href="/photography" class="transition hover:no-underline">Photography</a>
+                    <a href="/music">Music</a>
+                    <a href="/articles">Articles</a>
+                </div>
+            </div>
+
+                <a href="/contact" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Contact
+                </a>          
+        </nav>
+      
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+<!-- ===================== -->
+<!-- Mobile Menu -->
+<!-- ===================== -->
+<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+    <!-- Links principais -->      
+    <a href="/about" class="block">About</a>
+    <a href="/projects" class="block">FullStack Work</a> 
+    <a href="/cv" class="block">CV</a>
+
+    <!-- Dropdown Creative Work Mobile -->
+    <div class="flex flex-col">
+        <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
+        <div id="mobile-photography-menu" class="mobile-dropdown-content">
+            <a href="/photography" class="block">Photography</a>
+            <a href="/music" class="block">Music</a>
+            <a href="/articles" class="block">Articles</a>
+        </div>
+    </div>
+
+    <a href="/contact" class="block">Contact</a>
+
+</div>
+
+
+  <!-- ===================== -->
+  <!-- Photoshoot Gallery -->
+  <!-- ===================== -->
+  <section id="photoshoot" class="px-6 py-12">
+    <h2 class="text-3xl font-bold mb-8 text-center">Photoshoot – David Ferromau</h2>
+    
+    <div class="grid grid-cols-3 lg:grid-cols-7 gap-4">
+
+      <!-- Fotos -->
+      <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+        <img src="src/img/1.jpg" alt="Foto 1" class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+        <img src="src/img/2.jpg" alt="Foto 2" class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+        <img src="src/img/3.jpg" alt="Foto 3" class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+        <img src="src/img/4.jpg" alt="Foto 4" class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+        <img src="src/img/5.jpg" alt="Foto 5" class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+        <img src="src/img/6.jpg" alt="Foto 6" class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+        <img src="src/img/7.jpg" alt="Foto 7" class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== -->
+  <!-- Lightbox Overlay -->
+  <!-- ===================== -->
+<div id="lightbox" class="fixed inset-0 hidden bg-black/70 backdrop-blur-sm z-50 cursor-pointer flex items-center justify-center">
+  <img id="lightbox-img" src="" alt="Expanded Photo" class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl">
+</div>
+
+  <!-- ===================== -->
+  <!-- Footer -->
+  <!-- ===================== -->
+  <footer class="py-10 text-sm text-center">
+    © 2024 - <span id="year"></span>
+    <a href="/" class="text-gray-300 hover:text-white transition no-underline">
+      Tomás Mota Studios</a>. All Rights Reserved.
+  </footer>
+
+  <!-- ===================== -->
+  <!-- Scripts -->
+  <!-- ===================== -->
+<script src="script.js"></script>
+  
+</body>
+</html>
