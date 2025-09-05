@@ -107,11 +107,11 @@
 </h1>
     
 <div class="tabs-container">
-  <button class="tab-button" onclick="showTab('albums')">Albums</button>
-  <button class="tab-button active" onclick="showTab('singles')">Singles</button>
+  <button class="tab-button active" onclick="showTab('discography')">Albums</button>
+  <button class="tab-button" onclick="showTab('tour')">Singles</button>
 </div>
 
-<div id="albums" class="tab-content">
+<div id="discography" class="tab-content active">
   <section class="py-6">
     <div class="music-grid">
       <a href="/music/release/a-bad-dream" class="music-item">
@@ -121,14 +121,22 @@
           <p>Release Date: coming soon</p>
         </article> 
       </a>
+
+      <a href="/music/release/spies" class="music-item">
+        <article class="card p-4 text-left rounded-xl shadow-md">
+          <img src="src/img/single01.jpg" alt="Album: A Bad Dream" class="w-full h-auto object-cover rounded-xl mb-3">
+          <h3>Spies</h3>
+          <p>Release Date: 19 SEP 2025</p>
+        </article> 
+      </a>
     </div>
   </section>
 </div>
 
-<div id="singles" class="tab-content active">
+<a href="/music/tour" <div id="tour" class="tab-content">
   <section class="py-6">
     <div class="music-grid">
-      <a href="/music/release/spies" class="music-item">
+      <a href="/music/tour" class="music-item">
         <article class="card p-4 text-left rounded-xl shadow-md">
           <img src="src/img/single01.jpg" alt="Single: Spies" class="w-full h-auto object-cover rounded-xl mb-3">
           <h3>Spies</h3>
@@ -136,7 +144,7 @@
         </article>
       </a>
     </div>
-  </section>
+  </a>
 </div>
 </main>
 
