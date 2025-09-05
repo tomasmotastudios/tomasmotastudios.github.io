@@ -276,6 +276,9 @@ header a:hover {
   opacity: 1;
 }
 
+#lightbox {
+  transition: opacity 0.3s ease;
+}
 
 /* ===================== */
 /* Footer */
