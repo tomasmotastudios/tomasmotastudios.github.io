@@ -134,17 +134,41 @@
 </div>
 
 <div href="/music/tour" id="tour" class="tab-content">
-  <section class="py-6">
-    <div class="music-grid">
-      <a href="/music/tour" class="music-item">
-        <article class="card p-4 text-left rounded-xl shadow-md">
-          <img src="src/img/single01.jpg" alt="Single: Spies" class="w-full h-auto object-cover rounded-xl mb-3">
-          <h3>Spies</h3>
-          <p>Released: 19 SEP 2025</p>
-        </article>
-      </a>
-    </div>
-  </section>
+  <table class="min-w-full border border-gray-700 rounded-lg overflow-hidden">
+      <thead class="bg-[var(--c-gray-2)] text-white">
+        <tr>
+          <th class="px-6 py-3 text-center">Date</th>
+          <th class="px-6 py-3 text-center">City</th>
+          <th class="px-6 py-3 text-center">Venue</th>
+          <th class="px-6 py-3 text-center">Tickets</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-700">
+        <tr>
+          <td class="px-6 py-4">05 Oct 2025</td>
+          <td class="px-6 py-4">Lisboa</td>
+          <td class="px-6 py-4">Coliseu dos Recreios</td>
+          <td class="px-6 py-4">
+            <a href="#" 
+                class="px-3 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Buy</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="px-6 py-4">08 Oct 2025</td>
+          <td class="px-6 py-4">Madrid</td>
+          <td class="px-6 py-4">WiZink Center</td>
+          <td class="px-6 py-4">
+            <a href="#" 
+                class="px-3 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Buy</a>
+          </td>
+        </tr>
+        <!-- Adiciona mais linhas -->
+      </tbody>
+    </table>
 </div>
 </main>
 
