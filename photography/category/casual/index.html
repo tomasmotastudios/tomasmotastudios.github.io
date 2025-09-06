@@ -8,7 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
+  <main class="flex-grow">
 
     <!-- ===================== -->
     <!-- Header / Navegação -->
@@ -130,16 +131,28 @@
     
     </div>
 </section>
+</main>
 
     <!-- ===================== -->
     <!-- Footer -->
     <!-- ===================== -->
-    <footer class="py-10 text-sm">
-        © 2024 - <span id="year"></span>
-        <a href="/" class="text-gray-300 hover:text-white transition no-underline">
-            Tomás Mota Studios</a>. All Rights Reserved.
-    </footer>
+<footer class="py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
 
+    <!-- Direitos Autorais -->
+    <div class="text-center md:text-left">
+      © 2024 - <span id="year"></span> 
+      <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All Rights Reserved.
+    </div>
+
+    <!-- Links Legais -->
+    <nav class="flex flex-wrap justify-center gap-4 text-center">
+      <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+      <a href="/cookies" class="hover:text-white no-underline transition">Cookies Policy</a>
+      <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
+    </nav>
+  </div>
+</footer>
 <!-- ===================== -->
 <!-- Scripts -->
 <!-- ===================== -->

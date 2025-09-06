@@ -1,10 +1,63 @@
-// Ano do footer
+    // ============================
+    // Cookie Banner Logic
+    // ============================
+document.addEventListener("DOMContentLoaded", () => {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const declineBtn = document.getElementById("decline-cookies");
+    const closeBtn = document.getElementById("close-cookies");
+
+    // Função para mostrar o banner com fade-in
+    const showBanner = () => {
+        cookieBanner.classList.remove("opacity-0", "pointer-events-none");
+        cookieBanner.classList.add("opacity-100");
+    };
+
+    // Função para esconder o banner com fade-out
+    const hideBanner = () => {
+        cookieBanner.classList.add("opacity-0", "pointer-events-none");
+        cookieBanner.classList.remove("opacity-100");
+    };
+
+    // Mostrar banner se não houver consentimento
+    if (!localStorage.getItem("cookieConsent") && cookieBanner) {
+        setTimeout(showBanner, 300); // pequeno delay para animação suave
+    }
+
+    // Aceitar cookies
+    if (acceptBtn) {
+        acceptBtn.addEventListener("click", () => {
+            localStorage.setItem("cookieConsent", "accepted");
+            hideBanner();
+        });
+    }
+
+    // Recusar cookies
+    if (declineBtn) {
+        declineBtn.addEventListener("click", () => {
+            localStorage.setItem("cookieConsent", "declined");
+            hideBanner();
+        });
+    }
+
+    // Fechar temporariamente
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            hideBanner(); // apenas esconde, sem gravar no localStorage
+        });
+    }
+});
+
+
+
+// ============================
+// Year in footer
+// ============================
 document.getElementById('year').textContent = new Date().getFullYear();
 
-//
+// ============================
 // Mobile Menu
-//
-// Menu mobile toggle
+// ============================
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -25,14 +78,36 @@ mobilePhotoBtn.addEventListener('click', () => {
   mobilePhotoBtn.classList.toggle('active', !isOpen);
 });
 
-
-// Inicializa partículas quando a página carrega
+// ============================
+// Initialize particles
+// ============================
 document.addEventListener("DOMContentLoaded", () => {
     initParticles();
+
+
+
+    // ============================
+    // Slideshow @ Photography
+    // ============================
+    const slideshowContainers = document.querySelectorAll('.slideshow-container');
+    slideshowContainers.forEach(container => {
+        const slides = container.querySelectorAll('.slide');
+        if (slides.length < 2) return;
+
+        let current = 0;
+        function showNextSlide() {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }
+        slides[0].classList.add('active');
+        setInterval(showNextSlide, 3000);
+    });
 });
 
-                                
-// Carrossel de certificados com loop infinito
+// ============================
+// Carrossel de certificados
+// ============================
 const track = document.getElementById('cert-track');
 const scrollInterval = 3000; // Tempo entre cada rolagem
 let autoScroll;
@@ -61,28 +136,8 @@ if (track) {
     track.addEventListener('mouseleave', startAutoScroll);
 }
 
-// Slideshow @ Photography
-document.addEventListener('DOMContentLoaded', () => {
-    const slideshowContainers = document.querySelectorAll('.slideshow-container');
-    slideshowContainers.forEach(container => {
-        const slides = container.querySelectorAll('.slide');
-        if (slides.length < 2) return; 
-
-        let current = 0;
-
-        function showNextSlide() {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }
-
-        // Garante que a primeira imagem está ativa ao carregar
-        slides[0].classList.add('active');
-        
-        setInterval(showNextSlide, 3000);
-    });
-});
-
+// ============================
+// Theme Toggle
+// ============================
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
-
