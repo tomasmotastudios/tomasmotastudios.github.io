@@ -31,7 +31,7 @@ This website is automatically deployed via [GitHub Pages](https://pages.github.c
 
 ## 👤 Author
 
-**[Tomás Mota](https://tomasmotadev.github.io/)**  
+**[Tomás Mota](https://tomasmotahq.github.io/)**  
 Always building with focus and minimalism.
 
 ## 📬 Contact
