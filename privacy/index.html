@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <!-- ===================== -->
+    <!-- Metadados da Página -->
+    <!-- ===================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/profile.jpg" type="image/jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Tomás Mota - Home</title>
+
+</head>
+<body>
+    <!-- ===================== -->
+    <!-- Header / Navegação -->
+    <!-- ===================== -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <!-- Logo / Nome -->
+        <a href="/" class="flex items-center space-x-3" >
+            <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota </span> 
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <!-- Links principais -->
+
+                <a href="/about" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                About
+                </a>
+            
+                <a href="/projects" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                FullStack Projects
+                </a>
+
+                <a href="/cv" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                CV
+                </a>
+
+            <!-- Dropdown Creative Work -->
+            <div class="dropdown">
+                <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Creative Work ▾
+                </a>
+                <div class="dropdown-content">
+                    <a href="/photography">Photography</a>
+                    <a href="/music">Music</a>
+                    <a href="/articles">Articles</a>
+                </div>
+            </div>
+
+                <a href="/contact" 
+                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                Contact
+                </a>          
+        </nav>
+      
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+<!-- ===================== -->
+<!-- Mobile Menu -->
+<!-- ===================== -->
+<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+    <!-- Links principais -->      
+    <a href="/about" class="block">About</a>
+    <a href="/projects" class="block">FullStack Work</a> 
+    <a href="/cv" class="block">CV</a>
+
+    <!-- Dropdown Creative Work Mobile -->
+    <div class="flex flex-col">
+        <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
+        <div id="mobile-photography-menu" class="mobile-dropdown-content">
+            <a href="/photography" class="block">Photography</a>
+            <a href="/music" class="block">Music</a>
+            <a href="/articles" class="block">Articles</a>
+        </div>
+    </div>
+
+    <a href="/contact" class="block">Contact</a>
+
+</div>
+
+<!-- ===================== -->
+<!-- Privacy Policy Section -->
+<!-- ===================== -->
+<section id="privacy" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+  <div class="card p-8 md:p-12 rounded-2xl text-left">
+    <!-- Título -->
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-[var(--c-red)]">Privacy</h2>
+    <p class="text-gray-300 mb-8">
+      This document establishes the guidelines related to the protection of my privacy and identity, applicable to any
+      <span class="font-semibold">digital or in-person interaction</span>.
+    </p>
+
+    <!-- Seções -->
+    <div class="space-y-8">
+      <!-- Princípios -->
+      <div>
+        <h3 class="text-xl font-bold mb-3">1. General Principles</h3>
+        <ul class="list-disc pl-6 space-y-1 text-gray-300">
+          <li>Respect for individual dignity</li>
+          <li>Consent must be free, informed, and explicit</li>
+          <li>Transparency in the use of personal data</li>
+          <li>Absolute confidentiality of private information</li>
+        </ul>
+      </div>
+
+      <!-- Dados Pessoais -->
+      <div>
+        <h3 class="text-xl font-bold mb-3">2. Personal Data</h3>
+        <p class="text-gray-300 mb-2">The following are considered private and may not be disclosed without explicit authorization:</p>
+        <ul class="list-disc pl-6 space-y-1 text-gray-300">
+          <li>Full name and personal documents</li>
+          <li>Physical or digital address</li>
+          <li>Personal contacts (phone, email, private networks)</li>
+          <li>Real-time or historical geolocation</li>
+          <li>Financial, professional, or academic information not public</li>
+        </ul>
+      </div>
+
+      <!-- Imagem -->
+      <div>
+        <h3 class="text-xl font-bold mb-3">3. Image, Voice, and Identity</h3>
+        <p class="text-gray-300">The use of my image, voice, or any element that identifies me requires <span class="font-semibold">prior written authorization</span>. Distorted, commercial, defamatory, or unauthorized use is strictly prohibited.</p>
+      </div>
+
+      <!-- Ambiente Digital -->
+      <div>
+        <h3 class="text-xl font-bold mb-3">4. Digital Environment and Content</h3>
+        <ul class="list-disc pl-6 space-y-1 text-gray-300">
+          <li>Content created by me must be preserved in its original context</li>
+          <li>Unauthorized use of my data for advertising, AI training, or fake profiles is prohibited</li>
+          <li>Private messages and conversations cannot be made public without authorization</li>
+        </ul>
+      </div>
+
+      <!-- Direitos -->
+      <div>
+        <h3 class="text-xl font-bold mb-3">5. Rights</h3>
+        <p class="text-gray-300">I retain the right to <span class="font-semibold">withdraw consent at any time</span>. Any violation of this policy may result in legal action, in accordance with applicable data protection laws (including LGPD and equivalent international laws).</p>
+      </div>
+
+      <!-- Contato -->
+      <div>
+        <h3 class="text-xl font-bold mb-3">6. Contact</h3>
+        <p class="text-gray-300">For authorization requests or clarifications, please contact me directly through the official channels I provide.</p>
+      </div>
+    </div>
+
+    <!-- Aviso -->
+    <div class="mt-10 p-4 rounded-xl bg-[var(--c-gray)]/80 text-gray-200 text-sm">
+      <strong>Legal Notice:</strong>  
+      This document is a public and official declaration of privacy protection. Any violation will be treated as an infraction of personality rights and may lead to civil, administrative, and/or criminal liability.
+    </div>
+  </div>
+</section>
+
+
+    <!-- ===================== -->
+    <!-- Footer -->
+    <!-- ===================== -->
+    <footer class="py-10 text-sm">
+        © 2024 - <span id="year"></span>
+        <a href="/" class="text-gray-300 hover:text-white transition no-underline">
+            Tomás Mota Studios</a>. All Rights Reserved.
+    </footer>
+
+<!-- ===================== -->
+<!-- Scripts -->
+<!-- ===================== -->
+<script src="script.js"></script>
+
+        
+</body>
+</html>
