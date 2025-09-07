@@ -1,4 +1,35 @@
-    // ============================
+
+// ============================
+// Popup de Aniversário (apenas 8 de setembro)
+// ============================
+document.addEventListener("DOMContentLoaded", () => {
+    const birthdayPopup = document.getElementById("birthday-popup");
+    const closeBirthday = document.getElementById("close-birthday");
+
+    if (!birthdayPopup || !closeBirthday) return;
+
+    // Pega a data atual
+    const today = new Date();
+    const day = today.getDate();      // dia do mês
+    const month = today.getMonth();   // Janeiro = 0, Setembro = 8
+    // Mostrar apenas no dia 8 de setembro
+    if (day === 8 && month === 8) {
+        // Mostra o popup com delay suave
+        setTimeout(() => {
+            birthdayPopup.classList.remove("opacity-0", "pointer-events-none");
+            birthdayPopup.classList.add("opacity-100");
+        }, 500);
+
+        // Botão de fechar
+        closeBirthday.addEventListener("click", () => {
+            birthdayPopup.classList.add("opacity-0", "pointer-events-none");
+            birthdayPopup.classList.remove("opacity-100");
+        });
+    }
+});
+
+
+// ============================
     // Cookie Banner Logic
     // ============================
 document.addEventListener("DOMContentLoaded", () => {
@@ -47,8 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
-
 
 // ============================
 // Year in footer

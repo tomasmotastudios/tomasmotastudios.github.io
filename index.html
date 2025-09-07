@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
     <!-- ===================== -->
     <!-- Metadados da Página -->
@@ -12,44 +13,42 @@
     <title>Tomás Mota - Home</title>
 
 </head>
+
 <body>
     <!-- ===================== -->
     <!-- Header / Navegação -->
     <!-- ===================== -->
     <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
         <!-- Logo / Nome -->
-        <a href="/" class="flex items-center space-x-3" >
+        <a href="/" class="flex items-center space-x-3">
             <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
-            <span class="font-bold text-xl">Tomás Mota </span> 
+            <span class="font-bold text-xl">Tomás Mota </span>
         </a>
 
         <!-- Navegação Desktop -->
         <nav class="hidden md:flex space-x-3">
             <!-- Links principais -->
 
-                <a href="/about" 
-                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+            <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:underline"
                 style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
                 About
-                </a>
-            
-                <a href="/projects" 
-                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+            </a>
+
+            <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
                 style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
                 FullStack Projects
-                </a>
+            </a>
 
-                <a href="/cv" 
-                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+            <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
                 style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
                 CV
-                </a>
+            </a>
 
             <!-- Dropdown Creative Work -->
             <div class="dropdown">
                 <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
-                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                Creative Work ▾
+                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                    Creative Work ▾
                 </a>
                 <div class="dropdown-content">
                     <a href="/photography">Photography</a>
@@ -58,68 +57,98 @@
                 </div>
             </div>
 
-                <a href="/contact" 
-                class="px-4 py-2 rounded-lg text-white transition hover:underline"
+            <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
                 style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
                 Contact
-                </a>          
+            </a>
         </nav>
-      
+
         <!-- Menu Mobile -->
         <div class="md:hidden">
             <button id="menu-btn" class="focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>
     </header>
 
-<!-- ===================== -->
-<!-- Mobile Menu -->
-<!-- ===================== -->
-<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
-    <!-- Links principais -->      
-    <a href="/about" class="block">About</a>
-    <a href="/projects" class="block">FullStack Work</a> 
-    <a href="/cv" class="block">CV</a>
+    <!-- ===================== -->
+    <!-- Mobile Menu -->
+    <!-- ===================== -->
+    <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+        <!-- Links principais -->
+        <a href="/about" class="block">About</a>
+        <a href="/projects" class="block">FullStack Work</a>
+        <a href="/cv" class="block">CV</a>
 
-    <!-- Dropdown Creative Work Mobile -->
-    <div class="flex flex-col">
-        <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
-        <div id="mobile-photography-menu" class="mobile-dropdown-content">
-            <a href="/photography" class="block">Photography</a>
-            <a href="/music" class="block">Music</a>
-            <a href="/articles" class="block">Articles</a>
+        <!-- Dropdown Creative Work Mobile -->
+        <div class="flex flex-col">
+            <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
+            <div id="mobile-photography-menu" class="mobile-dropdown-content">
+                <a href="/photography" class="block">Photography</a>
+                <a href="/music" class="block">Music</a>
+                <a href="/articles" class="block">Articles</a>
+            </div>
+        </div>
+
+        <a href="/contact" class="block">Contact</a>
+
+    </div>
+
+    <!-- Popup de Aniversário / Apenas 8 de Setembro -->
+    <div id="birthday-popup"
+        class="fixed inset-0 flex items-center justify-center bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 z-[9999]">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-lg w-full p-4 sm:p-6 relative text-center">
+
+            <!-- Botão de Fechar -->
+            <button id="close-birthday"
+                class="absolute top-3 right-3 text-gray-500 hover:text-red-500 text-2xl font-bold">&times;</button>
+
+            <!-- Logo -->
+            <img src="src/img/25/09/1010022031087.png" alt="Logo" class="mx-auto mb-2 max-w-[180px] h-auto object-contain">
+
+            <!-- Imagem de Perfil -->
+            <img src="src/img/25/09/1010022027740.jpg" alt="Foto"
+                class="mx-auto rounded-full w-28 h-28 object-cover mb-3 border-4 border-blue-500">
+
+            <!-- Título -->
+            <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800 dark:text-gray-100">🎉 Today is my birthday! 🎂</h2>
+
+            <!-- Texto -->
+            <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+                I'm happy to share this special day with you. <br> Thank you for being part of my journey! 💙
+            </p>
         </div>
     </div>
 
-    <a href="/contact" class="block">Contact</a>
 
-</div>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner"
+        class="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-11/12 md:w-3/4 lg:w-1/2 bg-gray-900 text-gray-100 rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4 z-50 opacity-0 pointer-events-none transition-opacity duration-500">
+        <p class="text-sm md:text-base leading-relaxed text-center md:text-left flex-1">
+            🍪 We use cookies to enhance your experience, analyze traffic, and provide personalized content.
+            By continuing, you consent to our use of cookies.
+            <a href="/cookies" class="underline text-blue-400 hover:text-blue-500">Learn more</a>.
+        </p>
+        <div class="flex gap-3 mt-3 md:mt-0 justify-center md:justify-end items-center">
+            <button id="accept-cookies"
+                class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition">
+                Accept
+            </button>
+            <button id="decline-cookies"
+                class="px-5 py-2 rounded-xl bg-gray-700 hover:bg-gray-600 text-white font-semibold transition">
+                Decline
+            </button>
+            <button id="close-cookies"
+                class="ml-2 text-gray-300 hover:text-white text-xl font-bold transition">&times;</button>
+        </div>
+    </div>
 
     <!-- ===================== -->
     <!-- Hero Section / Sobre Mim -->
     <!-- ===================== -->
-<!-- Cookie Consent Banner -->
-<!-- Cookie Consent Banner -->
-<div id="cookie-banner" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-11/12 md:w-3/4 lg:w-1/2 bg-gray-900 text-gray-100 rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4 z-50 opacity-0 pointer-events-none transition-opacity duration-500">
-    <p class="text-sm md:text-base leading-relaxed text-center md:text-left flex-1">
-        🍪 We use cookies to enhance your experience, analyze traffic, and provide personalized content. 
-        By continuing, you consent to our use of cookies. 
-        <a href="/cookies" class="underline text-blue-400 hover:text-blue-500">Learn more</a>.
-    </p>
-    <div class="flex gap-3 mt-3 md:mt-0 justify-center md:justify-end items-center">
-        <button id="accept-cookies" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition">
-            Accept
-        </button>
-        <button id="decline-cookies" class="px-5 py-2 rounded-xl bg-gray-700 hover:bg-gray-600 text-white font-semibold transition">
-            Decline
-        </button>
-        <button id="close-cookies" class="ml-2 text-gray-300 hover:text-white text-xl font-bold transition">&times;</button>
-    </div>
-</div>
-
     <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
         <div class="hero-wrap card p-8 md:p-12 rounded-2xl">
             <!-- Subtítulo -->
@@ -132,263 +161,282 @@
             </h1>
             <!-- Descrição / Subtítulo secundário -->
             <p id="herop" class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
-                I am <span class="font-semibold text-[var(--c-red)]">Developer Fullstack</span> — I transform ideas into digital experiences. I build modern websites and apps with optimized, engaging interfaces.
+                I am <span class="font-semibold text-[var(--c-red)]">Developer Fullstack</span> — I transform ideas into
+                digital experiences. I build modern websites and apps with optimized, engaging interfaces.
             </p>
 
             <!-- Skills / Tecnologias -->
             <div class="mt-8 bg-[var(--c-gray)]/80 backdrop-blur px-4 py-4 md:py-5 rounded-2xl ">
                 <div class="flex flex-wrap gap-3 justify-center">
                     <!-- Lista de ícones de tecnologias -->
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40"/>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" width="40"/>
-                    <img src="https://www.svgrepo.com/show/473751/phpmyadmin.svg" width="40"/>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                        width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                        width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                        width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                        width="40" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" width="40" />
+                    <img src="https://www.svgrepo.com/show/473751/phpmyadmin.svg" width="40" />
                 </div>
             </div>
         </div>
-   
 
-    <!-- ===================== -->
-    <!-- Projects Section -->
-    <!-- ===================== -->
-    <section id="projects" class="px-6 py-12">
-        <!-- Título -->
-        <h2 class="text-2xl font-bold mb-6">Projects</h2>
-        <!-- Lista de projetos -->
-        <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
-            
-            <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
-                <article class="card p-4 text-left rounded-xl shadow-md">
-                    <!-- Imagem do projeto -->
-                    <img src="projects/src/img/devprojects07.png" alt="Project 1" class="w-full h-40 object-cover rounded-xl mb-3">
-                    <!-- Nome do projeto -->
-                    <h3 class="font-bold">Website/Portfolio</h3>
-                    <!-- Descrição / Tecnologias -->
-                    <p class="text-gray-200 text-sm">Made with HTML, CSS, JavaScript, and Tailwind CSS. A demonstration of my frontend skills.</p>
-                </article>
-            </a>
 
-            <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
-                <article class="card p-4 text-left rounded-xl shadow-md">
-                    <!-- Imagem do projeto -->
-                    <img src="projects/src/img/devprojects06.png" alt="Project 1" class="w-full h-40 object-cover rounded-xl mb-3">
-                    <!-- Nome do projeto -->
-                    <h3 class="font-bold">Flash Sale</h3>
-                    <!-- Descrição / Tecnologias -->
-                    <p class="text-gray-200 text-sm">Calculates discount based on purchase amount.</p>
-                </article>
-            </a>
+        <!-- ===================== -->
+        <!-- Projects Section -->
+        <!-- ===================== -->
+        <section id="projects" class="px-6 py-12">
+            <!-- Título -->
+            <h2 class="text-2xl font-bold mb-6">Projects</h2>
+            <!-- Lista de projetos -->
+            <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
 
-            <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
-                <article class="card p-4 text-left rounded-xl shadow-md">
-                    <!-- Imagem do projeto -->
-                    <img src="projects/src/img/devprojects05.png" alt="Project 1" class="w-full h-40 object-cover rounded-xl mb-3">
-                    <!-- Nome do projeto -->
-                    <h3 class="font-bold">Organizing Inventory</h3>
-                    <!-- Descrição / Tecnologias -->
-                    <p class="text-gray-200 text-sm">Organizes and summarizes store inventory data.</p>
-                </article>
-            </a>
-                
-        </div> 
+                <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
+                    <article class="card p-4 text-left rounded-xl shadow-md">
+                        <!-- Imagem do projeto -->
+                        <img src="projects/src/img/devprojects07.png" alt="Project 1"
+                            class="w-full h-40 object-cover rounded-xl mb-3">
+                        <!-- Nome do projeto -->
+                        <h3 class="font-bold">Website/Portfolio</h3>
+                        <!-- Descrição / Tecnologias -->
+                        <p class="text-gray-200 text-sm">Made with HTML, CSS, JavaScript, and Tailwind CSS. A
+                            demonstration of my frontend skills.</p>
+                    </article>
+                </a>
 
-        
-                <!-- Botão Ver Mais -->
-                <div class="w-full flex justify-center mt-6">
-                <a href="/projects"
-                class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                See more </a>
-                </div>
-    </section>
+                <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
+                    <article class="card p-4 text-left rounded-xl shadow-md">
+                        <!-- Imagem do projeto -->
+                        <img src="projects/src/img/devprojects06.png" alt="Project 1"
+                            class="w-full h-40 object-cover rounded-xl mb-3">
+                        <!-- Nome do projeto -->
+                        <h3 class="font-bold">Flash Sale</h3>
+                        <!-- Descrição / Tecnologias -->
+                        <p class="text-gray-200 text-sm">Calculates discount based on purchase amount.</p>
+                    </article>
+                </a>
 
-    <!-- ===================== -->
-    <!-- CV / Experiência Profissional -->
-    <!-- ===================== -->
-    <section id="cv" class="bg-gray-50 py-14">
-        <div class="max-w-5xl mx-auto px-4">
-            <!-- Título da seção -->
-            <h2 class="text-3xl font-extrabold mb-10">Profession Experience</h2>
-            <!-- Timeline de experiência -->
-            <div class="relative timeline">
-                <div class="space-y-12">
-                    <!-- Item da timeline -->
-                    <div class="flex flex-col md:flex-row gap-6 items-center">
-                        <!-- Lado esquerdo / Data e cargo -->
-                        <div class="md:w-1/2 md:text-right md:pr-10">
-                            <p class="text-sm text-gray-500">2024 — Today</p>
-                            <h3 class="font-bold">Fullstack Developer</h3>
-                            <p class="text-gray-600">Freelancher</p>
+                <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
+                    <article class="card p-4 text-left rounded-xl shadow-md">
+                        <!-- Imagem do projeto -->
+                        <img src="projects/src/img/devprojects05.png" alt="Project 1"
+                            class="w-full h-40 object-cover rounded-xl mb-3">
+                        <!-- Nome do projeto -->
+                        <h3 class="font-bold">Organizing Inventory</h3>
+                        <!-- Descrição / Tecnologias -->
+                        <p class="text-gray-200 text-sm">Organizes and summarizes store inventory data.</p>
+                    </article>
+                </a>
+
+            </div>
+
+
+            <!-- Botão Ver Mais -->
+            <div class="w-full flex justify-center mt-6">
+                <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                    See more </a>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- CV / Experiência Profissional -->
+        <!-- ===================== -->
+        <section id="cv" class="bg-gray-50 py-14">
+            <div class="max-w-5xl mx-auto px-4">
+                <!-- Título da seção -->
+                <h2 class="text-3xl font-extrabold mb-10">Profession Experience</h2>
+                <!-- Timeline de experiência -->
+                <div class="relative timeline">
+                    <div class="space-y-12">
+                        <!-- Item da timeline -->
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+                            <!-- Lado esquerdo / Data e cargo -->
+                            <div class="md:w-1/2 md:text-right md:pr-10">
+                                <p class="text-sm text-gray-500">2024 — Today</p>
+                                <h3 class="font-bold">Fullstack Developer</h3>
+                                <p class="text-gray-600">Freelancher</p>
+                            </div>
+                            <!-- Lado direito / Descrição -->
+                            <div class="md:w-1/2 md:text-left md:pl-10">
+                                <p class="text-gray-700">I transform ideas into digital experiences. I build modern
+                                    websites and apps with optimized, engaging interfaces.</p>
+                            </div>
                         </div>
-                        <!-- Lado direito / Descrição -->
-                        <div class="md:w-1/2 md:text-left md:pl-10">
-                            <p class="text-gray-700">I transform ideas into digital experiences. I build modern websites and apps with optimized, engaging interfaces.</p>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===================== -->
-    <!-- Certificates Section -->
-    <!-- ===================== -->
-    <section id="certificados" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <!-- Título -->
-        <h2 class="text-3xl font-extrabold mb-8">Certificates</h2>
-        <div class="relative card bg-white p-4">
-            <!-- Carrossel de certificados -->
-            <div id="cert-track" class="flex gap-4 overflow-x-auto scroll-smooth">
+        <!-- ===================== -->
+        <!-- Certificates Section -->
+        <!-- ===================== -->
+        <section id="certificados" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+            <!-- Título -->
+            <h2 class="text-3xl font-extrabold mb-8">Certificates</h2>
+            <div class="relative card bg-white p-4">
+                <!-- Carrossel de certificados -->
+                <div id="cert-track" class="flex gap-4 overflow-x-auto scroll-smooth">
 
-                <!-- Certificado 1 -->
-                <article class="card p-4 text-left flex-shrink-0 w-80">
-                    <img src="src/img/GVICZUBH.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                    <h3 class="font-bold text-lg">Programming Logic</h3>
-                    <p class="text-gray-400 text-sm">DIO and Savegnago</p>
-                </article>
+                    <!-- Certificado 1 -->
+                    <article class="card p-4 text-left flex-shrink-0 w-80">
+                        <img src="src/img/GVICZUBH.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Programming Logic</h3>
+                        <p class="text-gray-400 text-sm">DIO and Savegnago</p>
+                    </article>
 
-                <!-- Certificado 2 -->
-                <article class="card p-4 text-left flex-shrink-0 w-80">
-                    <img src="src/img/XXV6HR2X.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                    <h3 class="font-bold text-lg">Programming Logic</h3>
-                    <p class="text-gray-400 text-sm">DIO and GFT</p>
-                </article>
+                    <!-- Certificado 2 -->
+                    <article class="card p-4 text-left flex-shrink-0 w-80">
+                        <img src="src/img/XXV6HR2X.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Programming Logic</h3>
+                        <p class="text-gray-400 text-sm">DIO and GFT</p>
+                    </article>
 
-                <!-- Certificado 3 -->
-                <article class="card p-4 text-left flex-shrink-0 w-80">
-                    <img src="src/img/XDSCTEF8.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
-                    <h3 class="font-bold text-lg">GitHub Copilot</h3>
-                    <p class="text-gray-400 text-sm">DIO and Microsoft</p>
-                </article>
+                    <!-- Certificado 3 -->
+                    <article class="card p-4 text-left flex-shrink-0 w-80">
+                        <img src="src/img/XDSCTEF8.jpg" class="w-full h-40 object-cover rounded-xl mb-3"
+                            alt="Certificado 3">
+                        <h3 class="font-bold text-lg">GitHub Copilot</h3>
+                        <p class="text-gray-400 text-sm">DIO and Microsoft</p>
+                    </article>
 
-                <!-- Certificado 4 -->
-                <article class="card p-4 text-left flex-shrink-0 w-80">
-                    <img src="src/img/OA-2025-0611001221149.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 4">
-                    <h3 class="font-bold text-lg">Storytelling for Digital Marketing</h3>
-                    <p class="text-gray-400 text-sm">Santander and University Of Chicago</p>
-                </article>
+                    <!-- Certificado 4 -->
+                    <article class="card p-4 text-left flex-shrink-0 w-80">
+                        <img src="src/img/OA-2025-0611001221149.jpg" class="w-full h-40 object-cover rounded-xl mb-3"
+                            alt="Certificado 4">
+                        <h3 class="font-bold text-lg">Storytelling for Digital Marketing</h3>
+                        <p class="text-gray-400 text-sm">Santander and University Of Chicago</p>
+                    </article>
 
-                <!-- Certificado 5 -->
-                <article class="card p-4 text-left flex-shrink-0 w-80">
-                    <img src="src/img/OA-2025-0707001338334.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 5">
-                    <h3 class="font-bold text-lg">AI and Productivity</h3>
-                    <p class="text-gray-400 text-sm">Santander and Google</p>
-                </article>
+                    <!-- Certificado 5 -->
+                    <article class="card p-4 text-left flex-shrink-0 w-80">
+                        <img src="src/img/OA-2025-0707001338334.jpg" class="w-full h-40 object-cover rounded-xl mb-3"
+                            alt="Certificado 5">
+                        <h3 class="font-bold text-lg">AI and Productivity</h3>
+                        <p class="text-gray-400 text-sm">Santander and Google</p>
+                    </article>
 
-                <!-- Repete certificados para fazer a animação -->
+                    <!-- Repete certificados para fazer a animação -->
 
-                                <!-- Certificado 1 -->
-                <article class="card p-4 text-left flex-shrink-0 w-80">
-                    <img src="src/img/GVICZUBH.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                    <h3 class="font-bold text-lg">Programming Logic</h3>
-                    <p class="text-gray-400 text-sm">DIO and Savegnago</p>
-                </article>
+                    <!-- Certificado 1 -->
+                    <article class="card p-4 text-left flex-shrink-0 w-80">
+                        <img src="src/img/GVICZUBH.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Programming Logic</h3>
+                        <p class="text-gray-400 text-sm">DIO and Savegnago</p>
+                    </article>
 
-                <!-- Certificado 2 -->
-                <article class="card p-4 text-left flex-shrink-0 w-80">
-                    <img src="src/img/XXV6HR2X.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                    <h3 class="font-bold text-lg">Programming Logic</h3>
-                    <p class="text-gray-400 text-sm">DIO and GFT</p>
-                </article>
+                    <!-- Certificado 2 -->
+                    <article class="card p-4 text-left flex-shrink-0 w-80">
+                        <img src="src/img/XXV6HR2X.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Programming Logic</h3>
+                        <p class="text-gray-400 text-sm">DIO and GFT</p>
+                    </article>
 
-                <!-- Certificado 3 -->
-                <article class="card p-4 text-left flex-shrink-0 w-80">
-                    <img src="src/img/XDSCTEF8.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 3">
-                    <h3 class="font-bold text-lg">GitHub Copilot</h3>
-                    <p class="text-gray-400 text-sm">DIO and Microsoft</p>
-                </article>
+                    <!-- Certificado 3 -->
+                    <article class="card p-4 text-left flex-shrink-0 w-80">
+                        <img src="src/img/XDSCTEF8.jpg" class="w-full h-40 object-cover rounded-xl mb-3"
+                            alt="Certificado 3">
+                        <h3 class="font-bold text-lg">GitHub Copilot</h3>
+                        <p class="text-gray-400 text-sm">DIO and Microsoft</p>
+                    </article>
 
-                <!-- Certificado 4 -->
-                <article class="card p-4 text-left flex-shrink-0 w-80">
-                    <img src="src/img/OA-2025-0611001221149.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 4">
-                    <h3 class="font-bold text-lg">Storytelling for Digital Marketing</h3>
-                    <p class="text-gray-400 text-sm">Santander and University Of Chicago</p>
-                </article>
+                    <!-- Certificado 4 -->
+                    <article class="card p-4 text-left flex-shrink-0 w-80">
+                        <img src="src/img/OA-2025-0611001221149.jpg" class="w-full h-40 object-cover rounded-xl mb-3"
+                            alt="Certificado 4">
+                        <h3 class="font-bold text-lg">Storytelling for Digital Marketing</h3>
+                        <p class="text-gray-400 text-sm">Santander and University Of Chicago</p>
+                    </article>
 
-                <!-- Certificado 5 -->
-                <article class="card p-4 text-left flex-shrink-0 w-80">
-                    <img src="src/img/OA-2025-0707001338334.jpg" class="w-full h-40 object-cover rounded-xl mb-3" alt="Certificado 5">
-                    <h3 class="font-bold text-lg">AI and Productivity</h3>
-                    <p class="text-gray-400 text-sm">Santander and Google</p>
-                </article>
+                    <!-- Certificado 5 -->
+                    <article class="card p-4 text-left flex-shrink-0 w-80">
+                        <img src="src/img/OA-2025-0707001338334.jpg" class="w-full h-40 object-cover rounded-xl mb-3"
+                            alt="Certificado 5">
+                        <h3 class="font-bold text-lg">AI and Productivity</h3>
+                        <p class="text-gray-400 text-sm">Santander and Google</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- Creative Work Section -->
+        <!-- ===================== -->
+        <section id="photography" class="px-6 py-12">
+            <!-- Título -->
+            <h2 class="text-2xl font-bold mb-6">Creative Work</h2>
+            <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
+
+                <!-- Photography -->
+                <a href="/photography" class="block w-full md:w-[calc(33.333333%-16px)]">
+                    <article class="card p-4 text-left rounded-xl shadow-md">
+                        <div class="slideshow-container">
+                            <img src="photography/src/img/sport16.jpg" alt="Sport Photography 1" class="slide active">
+                            <img src="photography/src/img/music05.jpg" alt="Music Photography 2" class="slide">
+                            <img src="photography/src/img/casual04.jpg" alt="Casual Photography 3" class="slide">
+                        </div>
+                        <h3 class="font-bold">Photography</h3>
+                        <p class="text-gray-200 text-sm">Here you can find my work as a photographer.</p>
+                    </article>
+                </a>
+
+                <!-- Music -->
+                <a href="/music" class="block w-full md:w-[calc(33.333333%-16px)]">
+                    <article class="card p-4 text-left rounded-xl shadow-md">
+                        <div class="slideshow-container">
+                            <img src="music/src/img/single01.jpg" alt="Music 1" class="slide active">
+                            <img src="music/src/img/album01.jpg" alt="Music 2" class="slide">
+                        </div>
+                        <h3 class="font-bold">Music</h3>
+                        <p class="text-gray-200 text-sm">Here you can find my work as a musician.</p>
+                    </article>
+                </a>
 
             </div>
-        </div>
-    </section>
-
-    <!-- ===================== -->
-    <!-- Creative Work Section -->
-    <!-- ===================== -->
-    <section id="photography" class="px-6 py-12">
-        <!-- Título -->
-        <h2 class="text-2xl font-bold mb-6">Creative Work</h2>
-        <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
-
-            <!-- Photography -->
-            <a href="/photography" class="block w-full md:w-[calc(33.333333%-16px)]">
-                <article class="card p-4 text-left rounded-xl shadow-md">
-                    <div class="slideshow-container">
-                        <img src="photography/src/img/sport16.jpg" alt="Sport Photography 1" class="slide active">
-                        <img src="photography/src/img/music05.jpg" alt="Music Photography 2" class="slide">
-                        <img src="photography/src/img/casual04.jpg" alt="Casual Photography 3" class="slide">
-                    </div>
-                    <h3 class="font-bold">Photography</h3>
-                    <p class="text-gray-200 text-sm">Here you can find my work as a photographer.</p>
-                </article>
-            </a>
-
-            <!-- Music -->
-            <a href="/music" class="block w-full md:w-[calc(33.333333%-16px)]">
-                <article class="card p-4 text-left rounded-xl shadow-md">
-                    <div class="slideshow-container">
-                        <img src="music/src/img/single01.jpg" alt="Music 1" class="slide active">
-                        <img src="music/src/img/album01.jpg" alt="Music 2" class="slide">
-                    </div>
-                    <h3 class="font-bold">Music</h3>
-                    <p class="text-gray-200 text-sm">Here you can find my work as a musician.</p>
-                </article>
-            </a>
-
-        </div>
-    </section>
+        </section>
     </section>
 
     <!-- ===================== -->
     <!-- Footer -->
     <!-- ===================== -->
-<footer class="py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <footer class="py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
 
-    <!-- Direitos Autorais -->
-    <div class="text-center md:text-left">
-      © 2024 - <span id="year"></span> 
-      <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All Rights Reserved.
-    </div>
+            <!-- Direitos Autorais -->
+            <div class="text-center md:text-left">
+                © 2024 - <span id="year"></span>
+                <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All
+                Rights Reserved.
+            </div>
 
-    <!-- Links Legais -->
-    <nav class="flex flex-wrap justify-center gap-4 text-center">
-      <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
-      <a href="/cookies" class="hover:text-white no-underline transition">Cookies Policy</a>
-      <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
-    </nav>
-  </div>
-</footer>
+            <!-- Links Legais -->
+            <nav class="flex flex-wrap justify-center gap-4 text-center">
+                <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+                <a href="/cookies" class="hover:text-white no-underline transition">Cookies Policy</a>
+                <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
 
-<!-- ===================== -->
-<!-- Scripts -->
-<!-- ===================== -->
-<script src="script.js"></script>
+    <!-- ===================== -->
+    <!-- Scripts -->
+    <!-- ===================== -->
+    <script src="script.js"></script>
 
-        
+
 </body>
+
 </html>

@@ -213,6 +213,57 @@ header a:hover {
   display: flex;
 }
 
+/* =====================
+   FOTOGRFIA
+   ===================== */
+/* Foto flutuante */
+@keyframes floatPhoto {
+  0%   { transform: translateX(0px) translateY(0px) rotate(0deg); }
+  20%  { transform: translateX(-12px) translateY(-6px) rotate(-2deg); }
+  40%  { transform: translateX(10px) translateY(-8px) rotate(1deg); }
+  60%  { transform: translateX(-8px) translateY(12px) rotate(2deg); }
+  80%  { transform: translateX(12px) translateY(6px) rotate(-1deg); }
+  100% { transform: translateX(0px) translateY(0px) rotate(0deg); }
+}
+
+.animated-photo {
+  border-radius: 50%;
+  animation: floatPhoto 8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+
+
+/* Borda com gradiente animado (pseudo-elemento) */
+.photo-container {
+  position: relative;
+  border-radius: 50%;
+}
+
+.photo-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 4px; /* espessura da borda */
+  background: conic-gradient(from 0deg, var(--c-red), var(--c-blue), var(--c-red));
+  -webkit-mask: 
+    radial-gradient(farthest-side, black calc(100% - 4px), transparent calc(100% - 4px));
+  mask: 
+    radial-gradient(farthest-side, black calc(100% - 4px), transparent calc(100% - 4px));
+  animation: rotateGradient 6s linear infinite;
+  pointer-events: none;
+}
+
+/* Gradiente girando */
+@keyframes rotateGradient {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
 /* ===================== */
 /* Hero Section */
 /* ===================== */

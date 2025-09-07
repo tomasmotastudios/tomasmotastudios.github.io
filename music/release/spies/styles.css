@@ -214,15 +214,11 @@ header a:hover {
   display: flex;
 }
         /* Estilos específicos da página do single */
-        main {
-            padding-top: 2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
         h1 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            padding-top: 2rem;
         }
         h3 {
             color: var(--c-white2);
