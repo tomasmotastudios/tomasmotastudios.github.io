@@ -281,6 +281,30 @@ header a:hover {
             border-bottom: none;
         }
 
+/* Desktop grande */
+@media (min-width: 1024px) {
+  .album-cover {
+    max-width: 300px; /* menor que antes */
+    width: 80%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .album-cover {
+    max-width: 250px;
+    width: 80%;
+  }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+  .album-cover {
+    max-width: 200px;
+    width: 90%;
+  }
+}
+
 /* ===================== */
 /* Footer */
 /* ===================== */
