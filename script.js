@@ -111,27 +111,24 @@ mobilePhotoBtn.addEventListener('click', () => {
 // Initialize particles
 // ============================
 document.addEventListener("DOMContentLoaded", () => {
-    initParticles();
+const slideshowContainers = document.querySelectorAll('.slideshow-container');
+slideshowContainers.forEach(container => {
+    const slides = container.querySelectorAll('.slide');
+    if (slides.length < 2) return;
 
+    let current = 0;
+    slides[current].classList.add('active');
 
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
 
-    // ============================
-    // Slideshow @ Photography
-    // ============================
-    const slideshowContainers = document.querySelectorAll('.slideshow-container');
-    slideshowContainers.forEach(container => {
-        const slides = container.querySelectorAll('.slide');
-        if (slides.length < 2) return;
+        // Força repaint (às vezes necessário)
+        slides[current].offsetHeight;
+    }, 3000);
+});
 
-        let current = 0;
-        function showNextSlide() {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }
-        slides[0].classList.add('active');
-        setInterval(showNextSlide, 3000);
-    });
 });
 
 // ============================
