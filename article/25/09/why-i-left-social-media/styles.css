@@ -221,6 +221,11 @@ article p {
     text-align: justify;
 }
 
+.card {
+  background-color: rgba(15, 22, 32, 0.500); /* fundo semi-transparente */
+  backdrop-filter: blur(10px); /* efeito blur */
+}
+
 /* ===================== */
 /* Footer */
 /* ===================== */
