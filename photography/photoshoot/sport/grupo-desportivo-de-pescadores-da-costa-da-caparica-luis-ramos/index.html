@@ -13,6 +13,7 @@
 
 <body class="min-h-screen flex flex-col">
   <main class="flex-grow">
+
     <!-- ===================== -->
     <!-- Header / Navegação -->
     <!-- ===================== -->
@@ -27,7 +28,7 @@
       <nav class="hidden md:flex space-x-3">
         <!-- Links principais -->
 
-        <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+        <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
           style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
           About
         </a>
@@ -59,30 +60,6 @@
           style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
           Contact
         </a>
-
-        <!-- Language Switcher -->
-        <div class="dropdown">
-          <a id="lang-btn"
-            class="px-4 py-2 rounded-lg text-white flex items-center justify-center transition hover:underline"
-            style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-            <img id="lang-flag" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-              alt="EN" class="w-5 h-5 mr-2 rounded-sm">
-            EN ▾
-          </a>
-          <div id="lang-menu" class="dropdown-content flex flex-col hidden">
-            <a href="/" class="flex items-center px-4 py-2 hover:bg-gray-700">
-              <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
-                class="w-5 h-5 mr-2 rounded-sm"> English
-            </a>
-            <a href="/pt" class="flex items-center px-4 py-2 hover:bg-gray-700">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
-                class="w-5 h-5 mr-2 rounded-sm"> Português
-            </a>
-            <a href="/es" class="flex items-center px-4 py-2 hover:bg-gray-700">
-              <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
-                class="w-5 h-5 mr-2 rounded-sm"> Español
-            </a>
-          </div>
       </nav>
 
       <!-- Menu Mobile -->
@@ -116,33 +93,6 @@
 
       <a href="/contact" class="block">Contact</a>
 
-      <!-- Language Switcher Mobile -->
-      <div class="flex flex-col items-center mt-4 relative">
-        <!-- Botão principal -->
-        <button id="mobile-lang-btn"
-          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 focus:outline-none">
-          <img id="mobile-lang-flag" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-            alt="EN" class="w-5 h-5 rounded-sm">
-          Language ▾
-        </button>
-
-        <!-- Menu de bandeiras -->
-        <div id="mobile-lang-menu"
-          class="hidden mt-2 flex flex-col gap-2 w-full bg-gray-800 rounded-lg shadow-lg absolute top-full left-0">
-          <a href="/" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
-              class="w-6 h-6 rounded-sm">
-          </a>
-          <a href="/pt" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
-              class="w-6 h-6 rounded-sm">
-          </a>
-          <a href="/es" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
-            <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
-              class="w-6 h-6 rounded-sm">
-          </a>
-        </div>
-      </div>
     </div>
 
 
