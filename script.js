@@ -108,85 +108,27 @@ mobilePhotoBtn.addEventListener('click', () => {
   mobilePhotoBtn.classList.toggle('active', !isOpen);
 });
 
-const langBtn = document.getElementById('lang-btn');
-const langFlag = document.getElementById('lang-flag');
-const langMenu = document.getElementById('lang-menu');
 
-// Detecta idioma pela URL
-function updateLanguageButton() {
-  const path = window.location.pathname;
-  let flag = "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg";
-  let label = "EN";
+// Slideshow @ Photography
+document.addEventListener('DOMContentLoaded', () => {
+    const slideshowContainers = document.querySelectorAll('.slideshow-container');
+    slideshowContainers.forEach(container => {
+        const slides = container.querySelectorAll('.slide');
+        if (slides.length < 2) return; 
 
-  if (path.startsWith("/pt")) {
-    flag = "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg";
-    label = "PT";
-  } else if (path.startsWith("/es")) {
-    flag = "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg";
-    label = "ES";
-  }
+        let current = 0;
 
-  langFlag.src = flag;
-  langBtn.innerHTML = `<img id="lang-flag" src="${flag}" alt="${label}" class="w-5 h-5 mr-2 rounded-sm"> ${label} ▾`;
-}
+        function showNextSlide() {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }
 
-// Chama ao carregar
-updateLanguageButton();
-
-// Toggle menu
-langBtn.addEventListener("click", () => {
-  langMenu.classList.toggle("hidden");
-});
-
-// Fechar ao clicar fora
-document.addEventListener("click", e => {
-  if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
-    langMenu.classList.add("hidden");
-  }
-});
-
-// Mobile Language Switcher
-const mobileLangBtn = document.getElementById('mobile-lang-btn');
-const mobileLangMenu = document.getElementById('mobile-lang-menu');
-
-mobileLangMenu.style.display = 'none';
-mobileLangBtn.classList.remove('active');
-
-mobileLangBtn.addEventListener('click', () => {
-  const isOpen = mobileLangMenu.style.display === 'block';
-  mobileLangMenu.style.display = isOpen ? 'none' : 'block';
-  mobileLangBtn.classList.toggle('active', !isOpen);
-});
-
-
-// Inicializa partículas quando a página carrega
-document.addEventListener("DOMContentLoaded", () => {
-    initParticles();
-});
-
-
-// ============================
-// Initialize particles
-// ============================
-document.addEventListener("DOMContentLoaded", () => {
-const slideshowContainers = document.querySelectorAll('.slideshow-container');
-slideshowContainers.forEach(container => {
-    const slides = container.querySelectorAll('.slide');
-    if (slides.length < 2) return;
-
-    let current = 0;
-    slides[current].classList.add('active');
-
-    setInterval(() => {
-        slides[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('active');
-
-        // Força repaint (às vezes necessário)
-        slides[current].offsetHeight;
-    }, 3000);
-});
-
+        // Garante que a primeira imagem está ativa ao carregar
+        slides[0].classList.add('active');
+        
+        setInterval(showNextSlide, 3000);
+    });
 });
 
 // ============================
