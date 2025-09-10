@@ -13,8 +13,8 @@
     <title>Tomás Mota - Home</title>
 
 </head>
-
 <body>
+
     <!-- ===================== -->
     <!-- Header / Navegação -->
     <!-- ===================== -->
@@ -29,7 +29,7 @@
         <nav class="hidden md:flex space-x-3">
             <!-- Links principais -->
 
-            <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+            <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
                 style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
                 About
             </a>
@@ -61,31 +61,6 @@
                 style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
                 Contact
             </a>
-
-            <!-- Language Switcher -->
-            <div class="dropdown">
-                <a id="lang-btn"
-                    class="px-4 py-2 rounded-lg text-white flex items-center justify-center transition hover:underline"
-                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                    <img id="lang-flag"
-                        src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
-                        class="w-5 h-5 mr-2 rounded-sm">
-                    EN ▾
-                </a>
-                <div id="lang-menu" class="dropdown-content flex flex-col hidden">
-                    <a href="/" class="flex items-center px-4 py-2 hover:bg-gray-700">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-                            alt="EN" class="w-5 h-5 mr-2 rounded-sm"> English
-                    </a>
-                    <a href="/pt" class="flex items-center px-4 py-2 hover:bg-gray-700">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
-                            class="w-5 h-5 mr-2 rounded-sm"> Português
-                    </a>
-                    <a href="/es" class="flex items-center px-4 py-2 hover:bg-gray-700">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
-                            class="w-5 h-5 mr-2 rounded-sm"> Español
-                    </a>
-                </div>
         </nav>
 
         <!-- Menu Mobile -->
@@ -120,61 +95,34 @@
 
         <a href="/contact" class="block">Contact</a>
 
-        <!-- Language Switcher Mobile -->
-        <div class="flex flex-col items-center mt-4 relative">
-            <!-- Botão principal -->
-            <button id="mobile-lang-btn"
-                class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 focus:outline-none">
-                <img id="mobile-lang-flag"
-                    src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
-                    class="w-5 h-5 rounded-sm">
-                Language ▾
-            </button>
+    </div>
 
-            <!-- Menu de bandeiras -->
-            <div id="mobile-lang-menu"
-                class="hidden mt-2 flex flex-col gap-2 w-full bg-gray-800 rounded-lg shadow-lg absolute top-full left-0">
-                <a href="/" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
-                        class="w-6 h-6 rounded-sm">
-                </a>
-                <a href="/pt" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
-                        class="w-6 h-6 rounded-sm">
-                </a>
-                <a href="/es" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
-                        class="w-6 h-6 rounded-sm">
-                </a>
-            </div>
+    <!-- Popup de Aniversário / Apenas 8 de Setembro -->
+    <div id="birthday-popup"
+        class="fixed inset-0 flex items-center justify-center bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 z-[9999]">
+        <div class="bg-gray-900 rounded-2xl shadow-2xl max-w-lg w-full p-4 sm:p-6 relative text-center">
+
+            <!-- Botão de Fechar -->
+            <button id="close-birthday"
+                class="absolute top-3 right-3 text-gray-200 hover:text-red-500 text-2xl font-bold">&times;</button>
+
+            <!-- Logo -->
+            <img src="src/img/25/09/1010022031087.png" alt="Logo"
+                class="mx-auto mb-2 max-w-[180px] h-auto object-contain">
+
+            <!-- Imagem de Perfil -->
+            <img src="src/img/25/09/1010022027740.jpg" alt="Foto"
+                class="mx-auto rounded-full w-28 h-28 object-cover mb-3 border-4 border-blue-500">
+
+            <!-- Título -->
+            <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-100">🎉 Today is my birthday! 🎂</h2>
+
+            <!-- Texto -->
+            <p class="text-gray-300 text-sm sm:text-base">
+                I'm happy to share this special day with you. <br> Thank you for being part of my journey! 💙
+            </p>
         </div>
-
-        <!-- Popup de Aniversário / Apenas 8 de Setembro -->
-        <div id="birthday-popup"
-            class="fixed inset-0 flex items-center justify-center bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 z-[9999]">
-            <div class="bg-gray-900 rounded-2xl shadow-2xl max-w-lg w-full p-4 sm:p-6 relative text-center">
-
-                <!-- Botão de Fechar -->
-                <button id="close-birthday"
-                    class="absolute top-3 right-3 text-gray-200 hover:text-red-500 text-2xl font-bold">&times;</button>
-
-                <!-- Logo -->
-                <img src="src/img/25/09/1010022031087.png" alt="Logo"
-                    class="mx-auto mb-2 max-w-[180px] h-auto object-contain">
-
-                <!-- Imagem de Perfil -->
-                <img src="src/img/25/09/1010022027740.jpg" alt="Foto"
-                    class="mx-auto rounded-full w-28 h-28 object-cover mb-3 border-4 border-blue-500">
-
-                <!-- Título -->
-                <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-100">🎉 Today is my birthday! 🎂</h2>
-
-                <!-- Texto -->
-                <p class="text-gray-300 text-sm sm:text-base">
-                    I'm happy to share this special day with you. <br> Thank you for being part of my journey! 💙
-                </p>
-            </div>
-        </div>
+    </div>
     </div>
 
 
