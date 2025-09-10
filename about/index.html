@@ -2,350 +2,326 @@
 <html lang="en-GB">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/profile.jpg" type="image/jpg" />
-  <title>Tomás Mota — Acerca de</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/profile.jpg" type="image/jpg" />
+    <title>Tomás Mota — About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="min-h-screen flex flex-col">
-  <main class="flex-grow">
+    <main class="flex-grow">
 
-    <!-- ===================== -->
-    <!-- Header / Navegação -->
-    <!-- ===================== -->
-    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
-      <!-- Logo / Nome -->
-      <a href="/" class="flex items-center space-x-3">
-        <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
-        <span class="font-bold text-xl">Tomás Mota </span>
-      </a>
-
-      <!-- Navegação Desktop -->
-      <nav class="hidden md:flex space-x-3">
-        <!-- Links principais -->
-
-        <a href="/es/about" class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
-          style="background-color: rgba(15, 22, 32, 0); backdrop-filter: blur(10px);">
-          Acerca De
-        </a>
-
-        <a href="/es/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-          style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-          FullStack Proyectos
-        </a>
-
-        <a href="/es/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-          style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-          CV
-        </a>
-
-        <!-- Dropdown Creative Work -->
-        <div class="dropdown">
-          <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
-            style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-            Trabajo Creativo ▾
-          </a>
-          <div class="dropdown-content">
-            <a href="/es/photography">Fotografía</a>
-            <a href="/es/music">Música</a>
-            <a href="/es/articles">Artículos</a>
-          </div>
-        </div>
-
-        <a href="/es/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-          style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-          Contacto
-        </a>
-
-        <!-- Language Switcher -->
-        <div class="dropdown">
-          <a id="lang-btn"
-            class="px-4 py-2 rounded-lg text-white flex items-center justify-center transition hover:underline"
-            style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-            <img id="lang-flag" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-              alt="EN" class="w-5 h-5 mr-2 rounded-sm">
-            EN ▾
-          </a>
-          <div id="lang-menu" class="dropdown-content flex flex-col hidden">
-            <a href="/" class="flex items-center px-4 py-2 hover:bg-gray-700">
-              <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
-                class="w-5 h-5 mr-2 rounded-sm"> English
+        <!-- ===================== -->
+        <!-- Header / Navegação -->
+        <!-- ===================== -->
+        <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+            <!-- Logo / Nome -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+                <span class="font-bold text-xl">Tomás Mota </span>
             </a>
-            <a href="/pt" class="flex items-center px-4 py-2 hover:bg-gray-700">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
-                class="w-5 h-5 mr-2 rounded-sm"> Português
-            </a>
-            <a href="/es" class="flex items-center px-4 py-2 hover:bg-gray-700">
-              <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
-                class="w-5 h-5 mr-2 rounded-sm"> Español
-            </a>
-          </div>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex space-x-3">
+                <!-- Links principais -->
+
+                <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
+                    style="background-color: rgba(15, 22, 32, 0); backdrop-filter: blur(10px);">
+                    About
+                </a>
+
+                <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                    FullStack Projects
+                </a>
+
+                <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                    CV
+                </a>
+
+                <!-- Dropdown Creative Work -->
+                <div class="dropdown">
+                    <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
+                        style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                        Creative Work ▾
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/photography">Photography</a>
+                        <a href="/music">Music</a>
+                        <a href="/articles">Articles</a>
+                    </div>
+                </div>
+
+                <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                    Contact
+                </a>
+
+<!-- Language Switcher -->
+<div class="dropdown">
+  <a id="lang-btn" class="px-4 py-2 rounded-lg text-white flex items-center justify-center transition hover:underline"
+     style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+    <img id="lang-flag" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" 
+         alt="EN" class="w-5 h-5 mr-2 rounded-sm">
+    EN ▾
+  </a>
+  <div id="lang-menu" class="dropdown-content flex flex-col hidden">
+    <a href="/" class="flex items-center px-4 py-2 hover:bg-gray-700">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN" class="w-5 h-5 mr-2 rounded-sm"> English
+    </a>
+    <a href="/pt" class="flex items-center px-4 py-2 hover:bg-gray-700">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT" class="w-5 h-5 mr-2 rounded-sm"> Português
+    </a>
+    <a href="/es" class="flex items-center px-4 py-2 hover:bg-gray-700">
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES" class="w-5 h-5 mr-2 rounded-sm"> Español
+    </a>
+  </div>
+</nav>
+
+    <!-- Menu Mobile -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== -->
+  <!-- Mobile Menu -->
+  <!-- ===================== -->
+  <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+    <!-- Links principais -->
+    <a href="/about" class="block">About</a>
+    <a href="/projects" class="block">FullStack Work</a>
+    <a href="/cv" class="block">CV</a>
+
+    <!-- Dropdown Creative Work Mobile -->
+    <div class="flex flex-col">
+      <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
+      <div id="mobile-photography-menu" class="mobile-dropdown-content">
+        <a href="/photography" class="block">Photography</a>
+        <a href="/music" class="block">Music</a>
+        <a href="/articles" class="block">Articles</a>
+      </div>
+    </div>
+
+    <a href="/contact" class="block">Contact</a>
+
+<!-- Language Switcher Mobile -->
+<div class="flex flex-col items-center mt-4 relative">
+  <!-- Botão principal -->
+  <button id="mobile-lang-btn" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 focus:outline-none">
+    <img id="mobile-lang-flag" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" 
+         alt="EN" class="w-5 h-5 rounded-sm">
+    Language ▾
+  </button>
+
+  <!-- Menu de bandeiras -->
+  <div id="mobile-lang-menu" class="hidden mt-2 flex flex-col gap-2 w-full bg-gray-800 rounded-lg shadow-lg absolute top-full left-0">
+    <a href="/" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN" class="w-6 h-6 rounded-sm">
+    </a>
+    <a href="/pt" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT" class="w-6 h-6 rounded-sm">
+    </a>
+    <a href="/es" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES" class="w-6 h-6 rounded-sm">
+    </a>
+  </div>
+</div>
+  </div>
+
+        <!-- ===================== -->
+        <!-- Hero Section -->
+        <!-- ===================== -->
+        <main class="max-w-4xl mx-auto px-4 py-8 text-left">
+
+            <div class="flex items-start gap-6 mb-12">
+                <!-- Foto à esquerda (visível só em desktop/tablet) -->
+                <div class="hidden md:flex flex-shrink-0 justify-center">
+<div class="photo-container w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 relative">
+  <img src="../src/img/25/09/1010022022129.png" alt="Tomás Mota"
+       class="animated-photo w-full h-full object-cover rounded-full">
+</div>
+
+
+
+
+
+                </div>
+
+                <!-- Texto à direita -->
+                <div class="flex flex-col justify-start w-full">
+                    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-left">
+                        <span class="text-[var(--c-red)]">&lt;</span>
+                        <span class="text-white">About Me</span>
+                        <span class="text-[var(--c-red)]">/&gt;</span>
+                    </h1>
+                    <p class="text-lg text-[var(--c-white2)] text-justify">
+                        <strong>Full-stack developer</strong> from Marinha Grande, Portugal 🇵🇹.
+                        He works as a freelancer, focusing on building modern, accessible, and responsive interfaces —
+                        always balancing aesthetics with functionality.
+                    </p>
+                </div>
+            </div>
+
+
+
+
+            <!-- ===================== -->
+            <!-- About Section -->
+            <!-- ===================== -->
+            <div class="card p-8 md:p-12 mb-8">
+                <h3 class="text-2xl font-bold mb-4">💻 Technical Experience</h3>
+                <p>Tomás has hands-on experience with:</p>
+                <ul class="list-disc list-inside mt-4">
+                    <li><strong>Tech Stack</strong></li>
+                    <li>Languages: <strong>HTML, CSS, JavaScript, PHP, Java</strong></li>
+                    <li>Tools: <strong>Git, GitHub, VS Code</strong></li>
+                    <li>Additional Skills: <strong>Basic UI/UX, responsive design, a11y (web accessibility)</strong>
+                    </li>
+                </ul>
+                <p>He focuses on <strong>clean code</strong>, <strong>solid version control practices</strong>, and
+                    <strong>reusable components</strong> — always aiming to deliver digital products that balance
+                    <strong>usability, performance, and visual design.</strong></p>
+            </div>
+            <div class="card p-8 md:p-12 mb-8">
+                <h3 class="text-2xl font-bold mb-4">🎓 Creative & Technical Background</h3>
+                <p>He’s currently completing a professional <strong>Multimedia</strong> course, where he has gained both
+                    technical and creative skills, including:</p>
+                <ul class="list-disc list-inside mt-4">
+                    <li>📸 <strong>Photography</strong> (sports, music, casual)</li>
+                    <li>🎨 <strong>Graphic design</strong> and branding</li>
+                    <li>🤖 <strong>Robotics programming</strong> (Arduino & basic automation)</li>
+                    <li>🎬 <strong>Video production</strong> and multimedia content creation</li>
+                </ul>
+                <p>This creative background enhances his development work, bringing a more visual, organized, and
+                    user-centered approach to everything he builds.</p>
+            </div>
+            <div class="card p-8 md:p-12 mb-8">
+                <h3 class="text-2xl font-bold mb-4">🧠 Professional Profile</h3>
+                <p>Tomás is someone who:</p>
+                <ul class="list-disc list-inside mt-4">
+                    <li>🧼 Writes clean and well-structured code</li>
+                    <li>👁️ Pays attention to detail and visual aesthetics</li>
+                    <li>📚 Is always learning new tools and technologies</li>
+                    <li>🤝 Values collaboration, communication, and feedback</li>
+                    <li>⚡ Has real-world experience with clients and local institutions</li>
+                </ul>
+            </div>
+            <div class="card p-8 md:p-12 mb-8">
+                <blockquote class="mt-8 text-center max-w-full mx-auto">“Tomás is where code meets creativity.”
+                </blockquote>
+            </div>
+        </main>
+    </main>
+
+<!-- ===================== -->
+<!-- Footer -->
+<!-- ===================== -->
+<!-- Footer Desktop -->
+<footer class="hidden md:flex py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
+  <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+
+    <!-- Copyright à esquerda -->
+    <div class="text-left">
+      © 2024 - <span class="year"></span>
+      <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights Reserved.
+    </div>
+
+    <!-- Redes sociais acima dos links legais, à direita -->
+    <div class="flex flex-col items-end">
+
+      <!-- Redes sociais -->
+      <div class="flex gap-4 mb-2">
+        <a href="/linkedin" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="GitHub" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/github" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/facebook" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="LinkedIn" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/instagram" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="LinkedIn" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/x" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/tiktok" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="LinkedIn" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/youtube" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="LinkedIn" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+      </div>
+
+      <!-- Links legais -->
+      <nav class="flex gap-4">
+        <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+        <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+        <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
       </nav>
 
-      <!-- Menu Mobile -->
-      <div class="md:hidden">
-        <button id="menu-btn" class="focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
-      </div>
-    </header>
-
-    <!-- ===================== -->
-    <!-- Mobile Menu -->
-    <!-- ===================== -->
-    <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
-      <!-- Links principais -->
-      <a href="/es/about" class="block">Acerca De</a>
-      <a href="/es/projects" class="block">FullStack Proyectos</a>
-      <a href="/es/cv" class="block">CV</a>
-
-      <!-- Dropdown Creative Work Mobile -->
-      <div class="flex flex-col">
-        <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Trabajo Creativo ▾</span>
-        <div id="mobile-photography-menu" class="mobile-dropdown-content">
-          <a href="/es/photography" class="block">Fotografía</a>
-          <a href="/es/music" class="block">Música</a>
-          <a href="/es/articles" class="block">Artículos</a>
-        </div>
-      </div>
-
-      <a href="/es/contact" class="block">Contacto</a>
-
-      <!-- Language Switcher Mobile -->
-      <div class="flex flex-col items-center mt-4 relative">
-        <!-- Botão principal -->
-        <button id="mobile-lang-btn"
-          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 focus:outline-none">
-          <img id="mobile-lang-flag" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-            alt="EN" class="w-5 h-5 rounded-sm">
-          Idioma ▾
-        </button>
-
-        <!-- Menu de bandeiras -->
-        <div id="mobile-lang-menu"
-          class="hidden mt-2 flex flex-col gap-2 w-full bg-gray-800 rounded-lg shadow-lg absolute top-full left-0">
-          <a href="/" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
-              class="w-6 h-6 rounded-sm">
-          </a>
-          <a href="/pt" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
-              class="w-6 h-6 rounded-sm">
-          </a>
-          <a href="/es" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
-            <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
-              class="w-6 h-6 rounded-sm">
-          </a>
-        </div>
-      </div>
     </div>
 
+  </div>
+</footer>
+
+<!-- Footer Mobile -->
+<footer class="flex flex-col md:hidden py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm items-center gap-4">
+
+  <!-- Redes sociais -->
+  <div class="flex justify-center gap-4">
+        <a href="/linkedin" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="GitHub" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/github" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/facebook" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="LinkedIn" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/instagram" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="LinkedIn" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/x" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/tiktok" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="LinkedIn" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+        <a href="/youtube" target="_blank" class="hover:text-white transition">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="LinkedIn" class="w-6 h-6 filter brightness-0 invert">
+        </a>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center">
+    © 2024 - <span class="year"></span>
+    <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights Reserved.
+  </div>
+
+  <!-- Links legais -->
+  <nav class="flex flex-wrap justify-center gap-4 text-center">
+    <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+    <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+    <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
+  </nav>
+
+</footer>
+
     <!-- ===================== -->
-    <!-- Hero Section -->
+    <!-- Scripts -->
     <!-- ===================== -->
-    <main class="max-w-4xl mx-auto px-4 py-8 text-left">
-
-      <div class="flex items-start gap-6 mb-12">
-        <!-- Foto à esquerda (visível só em desktop/tablet) -->
-        <div class="hidden md:flex flex-shrink-0 justify-center">
-          <div class="photo-container w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 relative">
-            <img src="../../src/img/25/09/1010022022129.png" alt="Tomás Mota"
-              class="animated-photo w-full h-full object-cover rounded-full">
-          </div>
-
-
-
-
-
-        </div>
-
-        <!-- Texto à direita -->
-        <div class="flex flex-col justify-start w-full">
-          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-left">
-            <span class="text-[var(--c-red)]">&lt;</span>
-            <span class="text-white">Acerca de Mí</span>
-            <span class="text-[var(--c-red)]">/&gt;</span>
-          </h1>
-          <p class="text-lg text-[var(--c-white2)] text-justify">
-            <strong>Desarrollador full-stack</strong> de Marinha Grande, Portugal 🇵🇹. Trabaja como freelance, enfocándose en crear
-            interfaces modernas, accesibles y responsivas, buscando siempre un equilibrio entre estética y
-            funcionalidad.
-          </p>
-        </div>
-      </div>
-
-
-
-
-      <!-- ===================== -->
-      <!-- About Section -->
-      <!-- ===================== -->
-      <div class="card p-8 md:p-12 mb-8">
-        <h3 class="text-2xl font-bold mb-4">💻 Experiencia Técnica</h3>
-        <p>Tomás tiene experiencia práctica con:</p>
-        <ul class="list-disc list-inside mt-4">
-          <li><strong>Tech Stack</strong></li>
-          <li>Lenguajes: <strong>HTML, CSS, JavaScript, PHP, Java</strong></li>
-          <li>Herramientas: <strong>Git, GitHub, VS Code</strong></li>
-          <li>Habilidades Adicionales: <strong>UI/UX básica, diseño responsivo, a11y (accesibilidad web)</strong>
-          </li>
-        </ul>
-        <p>Se centra en <strong>código limpio</strong>, <strong>prácticas sólidas de control de versiones</strong>, y
-          <strong>componentes reutilizables</strong> — Siempre con el objetivo de ofrecer productos digitales que equilibren
-          <strong>usabilidad, rendimiento y diseño visual.</strong>
-        </p>
-      </div>
-      <div class="card p-8 md:p-12 mb-8">
-        <h3 class="text-2xl font-bold mb-4">🎓 Antecedentes Creativos y Técnicos</h3>
-        <p>Actualmente está completando una carrera profesional. Curso de <strong>Multimedia</strong>, donde ha adquirido habilidades tanto técnicas como creativas, incluyendo:</p>
-        <ul class="list-disc list-inside mt-4">
-          <li>📸 <strong>Fotografía</strong> (deportes, música, casual)</li>
-          <li>🎨 <strong>Diseño gráfico</strong> y marca</li>
-          <li>🤖 <strong>Programación robótica</strong> (Arduino y automatización básica))</li>
-          <li>🎬 <strong>Producción de vídeo</strong> y creación de contenidos multimedia</li>
-        </ul>
-        <p>Esta experiencia creativa enriquece su trabajo de desarrollo, aportando un enfoque más visual, organizado y centrado en el usuario a todo lo que crea.</p>
-      </div>
-      <div class="card p-8 md:p-12 mb-8">
-        <h3 class="text-2xl font-bold mb-4">🧠 Perfil Profesional</h3>
-        <p>Tomás es alguien que:</p>
-        <ul class="list-disc list-inside mt-4">
-          <li>🧼 Escribe código limpio y bien estructurado.</li>
-          <li>👁️ Presta atención a los detalles y la estética visual.</li>
-          <li>📚 Siempre está aprendiendo nuevas herramientas y tecnologías.</li>
-          <li>🤝 Valora la colaboración, la comunicación y la retroalimentación.</li>
-          <li>⚡ Tiene experiencia real con clientes e instituciones locales.</li>
-        </ul>
-      </div>
-      <div class="card p-8 md:p-12 mb-8">
-        <blockquote class="mt-8 text-center max-w-full mx-auto">“Tomás es donde el código se encuentra con la creatividad.”
-        </blockquote>
-      </div>
-    </main>
-  </main>
-
-  <!-- ===================== -->
-  <!-- Footer -->
-  <!-- ===================== -->
-  <!-- Footer Desktop -->
-  <footer
-    class="hidden md:flex py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
-    <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
-
-      <!-- Copyright à esquerda -->
-      <div class="text-left">
-        © 2024 - <span class="year"></span>
-        <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. Reservados Todos Los Derechos.
-      </div>
-
-      <!-- Redes sociais acima dos links legais, à direita -->
-      <div class="flex flex-col items-end">
-
-        <!-- Redes sociais -->
-        <div class="flex gap-4 mb-2">
-          <a href="/linkedin" target="_blank" class="hover:text-white transition">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="GitHub"
-              class="w-6 h-6 filter brightness-0 invert">
-          </a>
-          <a href="/github" target="_blank" class="hover:text-white transition">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
-              class="w-6 h-6 filter brightness-0 invert">
-          </a>
-          <a href="/facebook" target="_blank" class="hover:text-white transition">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="LinkedIn"
-              class="w-6 h-6 filter brightness-0 invert">
-          </a>
-          <a href="/instagram" target="_blank" class="hover:text-white transition">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="LinkedIn"
-              class="w-6 h-6 filter brightness-0 invert">
-          </a>
-          <a href="/x" target="_blank" class="hover:text-white transition">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter"
-              class="w-6 h-6 filter brightness-0 invert">
-          </a>
-          <a href="/tiktok" target="_blank" class="hover:text-white transition">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="LinkedIn"
-              class="w-6 h-6 filter brightness-0 invert">
-          </a>
-          <a href="/youtube" target="_blank" class="hover:text-white transition">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="LinkedIn"
-              class="w-6 h-6 filter brightness-0 invert">
-          </a>
-        </div>
-
-        <!-- Links legais -->
-        <nav class="flex gap-4">
-          <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy de Privacidad</a>
-          <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
-          <a href="/terms-of-service" class="hover:text-white no-underline transition">Condiciones de Servicio</a>
-        </nav>
-
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- Footer Mobile -->
-  <footer
-    class="flex flex-col md:hidden py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm items-center gap-4">
-
-    <!-- Redes sociais -->
-    <div class="flex justify-center gap-4">
-      <a href="/linkedin" target="_blank" class="hover:text-white transition">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="GitHub"
-          class="w-6 h-6 filter brightness-0 invert">
-      </a>
-      <a href="/github" target="_blank" class="hover:text-white transition">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
-          class="w-6 h-6 filter brightness-0 invert">
-      </a>
-      <a href="/facebook" target="_blank" class="hover:text-white transition">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="LinkedIn"
-          class="w-6 h-6 filter brightness-0 invert">
-      </a>
-      <a href="/instagram" target="_blank" class="hover:text-white transition">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="LinkedIn"
-          class="w-6 h-6 filter brightness-0 invert">
-      </a>
-      <a href="/x" target="_blank" class="hover:text-white transition">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter"
-          class="w-6 h-6 filter brightness-0 invert">
-      </a>
-      <a href="/tiktok" target="_blank" class="hover:text-white transition">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="LinkedIn"
-          class="w-6 h-6 filter brightness-0 invert">
-      </a>
-      <a href="/youtube" target="_blank" class="hover:text-white transition">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="LinkedIn"
-          class="w-6 h-6 filter brightness-0 invert">
-      </a>
-    </div>
-
-    <!-- Copyright -->
-    <div class="text-center">
-      © 2024 - <span class="year"></span>
-      <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. Reservados Todos Los Derechos.
-    </div>
-
-    <!-- Links legais -->
-    <nav class="flex flex-wrap justify-center gap-4 text-center">
-      <a href="/privacy-policy" class="hover:text-white no-underline transition">Politica de Privacidad</a>
-      <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
-      <a href="/terms-of-service" class="hover:text-white no-underline transition">Condiciones de Servicio</a>
-    </nav>
-
-  </footer>
-
-  <!-- ===================== -->
-  <!-- Scripts -->
-  <!-- ===================== -->
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
