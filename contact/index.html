@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" href="/profile.jpg" type="image/jpg" />
-<title>Tomás Mota - Contact</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/profile.jpg" type="image/jpg" />
+  <title>Tomás Mota - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="min-h-screen flex flex-col">
   <main class="flex-grow">
 
@@ -15,175 +17,304 @@
     <!-- Header / Navegação -->
     <!-- ===================== -->
     <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
-        <!-- Logo / Nome -->
-        <a href="/" class="flex items-center space-x-3" >
-            <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
-            <span class="font-bold text-xl">Tomás Mota </span> 
+      <!-- Logo / Nome -->
+      <a href="/" class="flex items-center space-x-3">
+        <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+        <span class="font-bold text-xl">Tomás Mota </span>
+      </a>
+
+      <!-- Navegação Desktop -->
+      <nav class="hidden md:flex space-x-3">
+        <!-- Links principais -->
+
+        <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+          style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+          About
         </a>
 
-        <!-- Navegação Desktop -->
-        <nav class="hidden md:flex space-x-3">
-            <!-- Links principais -->
+        <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+          style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+          FullStack Projects
+        </a>
 
-                <a href="/about" 
-                class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                About
-                </a>
-            
-                <a href="/projects" 
-                class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                FullStack Projects
-                </a>
+        <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+          style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+          CV
+        </a>
 
-                <a href="/cv" 
-                class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                CV
-                </a>
-
-            <!-- Dropdown Creative Work -->
-            <div class="dropdown">
-                <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
-                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                Creative Work ▾
-                </a>
-                <div class="dropdown-content">
-                    <a href="/photography">Photography</a>
-                    <a href="/music">Music</a>
-                    <a href="/articles">Articles</a>
-                </div>
-            </div>
-
-                <a href="/contact" 
-                class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
-                style="background-color: rgba(15, 22, 32, 0); backdrop-filter: blur(10px);">
-                Contact
-                </a>          
-        </nav>
-      
-        <!-- Menu Mobile -->
-        <div class="md:hidden">
-            <button id="menu-btn" class="focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
+        <!-- Dropdown Creative Work -->
+        <div class="dropdown">
+          <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
+            style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+            Creative Work ▾
+          </a>
+          <div class="dropdown-content">
+            <a href="/photography">Photography</a>
+            <a href="/music">Music</a>
+            <a href="/articles">Articles</a>
+          </div>
         </div>
+
+        <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+          style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+          Contact
+        </a>
+
+        <!-- Language Switcher -->
+        <div class="dropdown">
+          <a id="lang-btn"
+            class="px-4 py-2 rounded-lg text-white flex items-center justify-center transition hover:underline"
+            style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+            <img id="lang-flag" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+              alt="EN" class="w-5 h-5 mr-2 rounded-sm">
+            EN ▾
+          </a>
+          <div id="lang-menu" class="dropdown-content flex flex-col hidden">
+            <a href="/" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
+                class="w-5 h-5 mr-2 rounded-sm"> English
+            </a>
+            <a href="/pt" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
+                class="w-5 h-5 mr-2 rounded-sm"> Português
+            </a>
+            <a href="/es" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
+                class="w-5 h-5 mr-2 rounded-sm"> Español
+            </a>
+          </div>
+      </nav>
+
+      <!-- Menu Mobile -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
     </header>
 
-<!-- ===================== -->
-<!-- Mobile Menu -->
-<!-- ===================== -->
-<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
-    <!-- Links principais -->      
-    <a href="/about" class="block">About</a>
-    <a href="/projects" class="block">FullStack Work</a> 
-    <a href="/cv" class="block">CV</a>
+    <!-- ===================== -->
+    <!-- Mobile Menu -->
+    <!-- ===================== -->
+    <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+      <!-- Links principais -->
+      <a href="/about" class="block">About</a>
+      <a href="/projects" class="block">FullStack Work</a>
+      <a href="/cv" class="block">CV</a>
 
-    <!-- Dropdown Creative Work Mobile -->
-    <div class="flex flex-col">
+      <!-- Dropdown Creative Work Mobile -->
+      <div class="flex flex-col">
         <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
         <div id="mobile-photography-menu" class="mobile-dropdown-content">
-            <a href="/photography" class="block">Photography</a>
-            <a href="/music" class="block">Music</a>
-            <a href="/articles" class="block">Articles</a>
+          <a href="/photography" class="block">Photography</a>
+          <a href="/music" class="block">Music</a>
+          <a href="/articles" class="block">Articles</a>
         </div>
+      </div>
+
+      <a href="/contact" class="block">Contact</a>
+
+      <!-- Language Switcher Mobile -->
+      <div class="flex flex-col items-center mt-4 relative">
+        <!-- Botão principal -->
+        <button id="mobile-lang-btn"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 focus:outline-none">
+          <img id="mobile-lang-flag" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+            alt="EN" class="w-5 h-5 rounded-sm">
+          Language ▾
+        </button>
+
+        <!-- Menu de bandeiras -->
+        <div id="mobile-lang-menu"
+          class="hidden mt-2 flex flex-col gap-2 w-full bg-gray-800 rounded-lg shadow-lg absolute top-full left-0">
+          <a href="/" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
+              class="w-6 h-6 rounded-sm">
+          </a>
+          <a href="/pt" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
+              class="w-6 h-6 rounded-sm">
+          </a>
+          <a href="/es" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
+              class="w-6 h-6 rounded-sm">
+          </a>
+        </div>
+      </div>
     </div>
-
-    <a href="/contact" class="block">Contact</a>
-
-</div>
 
     <!-- ===================== -->
     <!-- Hero Section / Sobre Mim -->
     <!-- ===================== -->
     <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-        <div class="hero-wrap card p-8 md:p-10 rounded-1xl">
-            <!-- Título -->
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
-                <span class="text-[var(--c-red)]">&lt;</span>
-                <span class="text-white">Contact</span>
-                <span class="text-[var(--c-red)]" /> /&gt;</span>
-            </h1>
-            <!-- Descrição / Subtítulo secundário -->
-            <p id="herop" class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
-                <span class="font-semibold text-[var(--c-white)]">Contact me</span> by filling out the form below — Will be answered within a maximum of 48 hours
-            </p>
+      <div class="hero-wrap card p-8 md:p-10 rounded-1xl">
+        <!-- Título -->
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+          <span class="text-[var(--c-red)]">&lt;</span>
+          <span class="text-white">Contact</span>
+          <span class="text-[var(--c-red)]" /> /&gt;</span>
+        </h1>
+        <!-- Descrição / Subtítulo secundário -->
+        <p id="herop" class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
+          <span class="font-semibold text-[var(--c-white)]">Contact me</span> by filling out the form below — Will be
+          answered within a maximum of 48 hours
+        </p>
 
-            <div class="flex justify-center items-center">
-  <div class="contact-icons flex justify-center gap-4">
+      </div>
 
-    <a href="/github" target="_blank" class="flex flex-col items-center">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg" alt="GitHub" class="w-5 h-5 mb-1">
-    </a>
+      <!-- ===================== -->
+      <!-- Quadro 2: Redes sociais -->
+      <!-- ===================== -->
+      <!-- Container centralizado horizontal e verticalmente -->
+      <section class="contact-section max-w-4xl mx-auto mt-16 px-6 py-12 space-y-10">
 
-    <a href="/linkedin" target="_blank" class="flex flex-col items-center">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/linkedin.svg" alt="LinkedIn" class="w-5 h-5 mb-1">
-    </a>
+        <!-- ===================== -->
+        <!-- Contact Section -->
+        <!-- ===================== -->
 
-    <a href="/youtube" target="_blank" class="flex flex-col items-center">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/youtube.svg" alt="YouTube" class="w-5 h-5 mb-1">
-    </a>
-  </div>
-</div>
-            
+        <!-- ===================== -->
+        <!-- Quadro 1: Formulário -->
+        <!-- ===================== -->
+        <div>
+          <h2 class="text-1xl font-extrabold mb-6">Send Me a Message</h2>
+          <p>*Required</p>
+          <form action="https://formspree.io/f/xvgbagja" method="POST" class="flex flex-col gap-4">
+            <input type="text" name="Name" placeholder="Name*" required
+              class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
+            <input type="email" name="Email" placeholder="Email*" required
+              class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
+            <input type="number" name="Phone Number" placeholder="Phone Number" required
+              class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
+            <textarea name="Message" rows="5" placeholder="Message*" required
+              class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]"></textarea>
+            <button type="submit" class="btn mt-2 px-6 py-3 w-max self-center">Send Message</button>
+          </form>
         </div>
-  
-  <!-- ===================== -->
-  <!-- Quadro 2: Redes sociais -->
-  <!-- ===================== -->
-<!-- Container centralizado horizontal e verticalmente -->
-<section class="contact-section max-w-4xl mx-auto mt-16 px-6 py-12 space-y-10">
-    
-<!-- ===================== -->
-<!-- Contact Section -->
-<!-- ===================== -->
-
-  <!-- ===================== -->
-  <!-- Quadro 1: Formulário -->
-  <!-- ===================== -->
-<div>
-    <h2 class="text-1xl font-extrabold mb-6">Send Me a Message</h2>
-    <p>*Required</p>
-    <form action="https://formspree.io/f/xvgbagja" method="POST" class="flex flex-col gap-4">
-      <input type="text" name="Name" placeholder="Name*" required class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
-      <input type="email" name="Email" placeholder="Email*" required class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
-      <input type="number" name="Phone Number" placeholder="Phone Number" required class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
-      <textarea name="Message" rows="5" placeholder="Message*" required class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]"></textarea>
-      <button type="submit" class="btn mt-2 px-6 py-3 w-max self-center">Send Message</button>
-    </form>
-  </div>
-</section>
-</section>
-</main>
+      </section>
+    </section>
+  </main>
 
 
-    <!-- ===================== -->
-    <!-- Footer -->
-    <!-- ===================== -->
-<footer class="py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+  <!-- ===================== -->
+  <!-- Footer -->
+  <!-- ===================== -->
+  <footer
+    class="hidden md:flex py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
+    <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
 
-    <!-- Direitos Autorais -->
-    <div class="text-center md:text-left">
-      © 2024 - <span id="year"></span> 
-      <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All Rights Reserved.
+      <!-- Copyright à esquerda -->
+      <div class="text-left">
+        © 2024 - <span class="year"></span>
+        <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
+        Reserved.
+      </div>
+
+      <!-- Redes sociais acima dos links legais, à direita -->
+      <div class="flex flex-col items-end">
+
+        <!-- Redes sociais -->
+        <div class="flex gap-4 mb-2">
+          <a href="/linkedin" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="GitHub"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/github" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/facebook" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="LinkedIn"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/instagram" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="LinkedIn"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/x" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/tiktok" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="LinkedIn"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/youtube" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="LinkedIn"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+        </div>
+
+        <!-- Links legais -->
+        <nav class="flex gap-4">
+          <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+          <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+          <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of
+            Service</a>
+        </nav>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Footer Mobile -->
+  <footer
+    class="flex flex-col md:hidden py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm items-center gap-4">
+
+    <!-- Redes sociais -->
+    <div class="flex justify-center gap-4">
+      <a href="/linkedin" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="GitHub"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/github" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/facebook" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="LinkedIn"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/instagram" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="LinkedIn"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/x" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/tiktok" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="LinkedIn"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/youtube" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="LinkedIn"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
     </div>
 
-    <!-- Links Legais -->
+    <!-- Copyright -->
+    <div class="text-center">
+      © 2024 - <span class="year"></span>
+      <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
+      Reserved.
+    </div>
+
+    <!-- Links legais -->
     <nav class="flex flex-wrap justify-center gap-4 text-center">
       <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
-      <a href="/cookies" class="hover:text-white no-underline transition">Cookies Policy</a>
+      <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
       <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
     </nav>
-  </div>
-</footer>
 
-<!-- ===================== -->
-<!-- Scripts -->
-<!-- ===================== -->
-<script src="script.js"></script>
+  </footer>
+
+  <!-- ===================== -->
+  <!-- Scripts -->
+  <!-- ===================== -->
+  <script src="script.js"></script>
 </body>
+
 </html>

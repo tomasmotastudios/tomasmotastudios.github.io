@@ -60,6 +60,30 @@
           style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
           Contact
         </a>
+
+        <!-- Language Switcher -->
+        <div class="dropdown">
+          <a id="lang-btn"
+            class="px-4 py-2 rounded-lg text-white flex items-center justify-center transition hover:underline"
+            style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+            <img id="lang-flag" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+              alt="EN" class="w-5 h-5 mr-2 rounded-sm">
+            EN ▾
+          </a>
+          <div id="lang-menu" class="dropdown-content flex flex-col hidden">
+            <a href="/" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
+                class="w-5 h-5 mr-2 rounded-sm"> English
+            </a>
+            <a href="/pt" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
+                class="w-5 h-5 mr-2 rounded-sm"> Português
+            </a>
+            <a href="/es" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
+                class="w-5 h-5 mr-2 rounded-sm"> Español
+            </a>
+          </div>
       </nav>
 
       <!-- Menu Mobile -->
@@ -93,6 +117,33 @@
 
       <a href="/contact" class="block">Contact</a>
 
+      <!-- Language Switcher Mobile -->
+      <div class="flex flex-col items-center mt-4 relative">
+        <!-- Botão principal -->
+        <button id="mobile-lang-btn"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 focus:outline-none">
+          <img id="mobile-lang-flag" src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+            alt="EN" class="w-5 h-5 rounded-sm">
+          Language ▾
+        </button>
+
+        <!-- Menu de bandeiras -->
+        <div id="mobile-lang-menu"
+          class="hidden mt-2 flex flex-col gap-2 w-full bg-gray-800 rounded-lg shadow-lg absolute top-full left-0">
+          <a href="/" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
+              class="w-6 h-6 rounded-sm">
+          </a>
+          <a href="/pt" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
+              class="w-6 h-6 rounded-sm">
+          </a>
+          <a href="/es" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
+              class="w-6 h-6 rounded-sm">
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- ===================== -->
@@ -123,9 +174,9 @@
               </article>
             </a>
 
-            <!-- <a href="/music/release/bittersweet" class="music-item">
+             <!-- <a href="/music/release/bittersweet" class="music-item">
         <article class="card p-4 text-left rounded-xl shadow-md">
-          <img src="../src/img/25/09/1010022041739.jpg"> alt="Album: A Bad Dream" class="w-full h-auto object-cover rounded-xl mb-3">
+          <img src="../src/img/25/09/1010022041739.jpg" alt="Album: A Bad Dream" class="w-full h-auto object-cover rounded-xl mb-3">
           <h3>Bittersweet</h3>
           <p>Release Date: 31 OCT 2025</p>
         </article> 
@@ -186,23 +237,115 @@
   <!-- ===================== -->
   <!-- Footer -->
   <!-- ===================== -->
-  <footer class="py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+  <footer
+    class="hidden md:flex py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
+    <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
 
-      <!-- Direitos Autorais -->
-      <div class="text-center md:text-left">
-        © 2024 - <span id="year"></span>
-        <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All Rights
+      <!-- Copyright à esquerda -->
+      <div class="text-left">
+        © 2024 - <span class="year"></span>
+        <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
         Reserved.
       </div>
 
-      <!-- Links Legais -->
-      <nav class="flex flex-wrap justify-center gap-4 text-center">
-        <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
-        <a href="/cookies" class="hover:text-white no-underline transition">Cookies Policy</a>
-        <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
-      </nav>
+      <!-- Redes sociais acima dos links legais, à direita -->
+      <div class="flex flex-col items-end">
+
+        <!-- Redes sociais -->
+        <div class="flex gap-4 mb-2">
+          <a href="/linkedin" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="GitHub"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/github" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/facebook" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="LinkedIn"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/instagram" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="LinkedIn"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/x" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/tiktok" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="LinkedIn"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+          <a href="/youtube" target="_blank" class="hover:text-white transition">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="LinkedIn"
+              class="w-6 h-6 filter brightness-0 invert">
+          </a>
+        </div>
+
+        <!-- Links legais -->
+        <nav class="flex gap-4">
+          <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+          <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+          <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of
+            Service</a>
+        </nav>
+
+      </div>
+
     </div>
+  </footer>
+
+  <!-- Footer Mobile -->
+  <footer
+    class="flex flex-col md:hidden py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm items-center gap-4">
+
+    <!-- Redes sociais -->
+    <div class="flex justify-center gap-4">
+      <a href="/linkedin" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="GitHub"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/github" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/facebook" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="LinkedIn"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/instagram" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="LinkedIn"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/x" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/tiktok" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="LinkedIn"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+      <a href="/youtube" target="_blank" class="hover:text-white transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="LinkedIn"
+          class="w-6 h-6 filter brightness-0 invert">
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center">
+      © 2024 - <span class="year"></span>
+      <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
+      Reserved.
+    </div>
+
+    <!-- Links legais -->
+    <nav class="flex flex-wrap justify-center gap-4 text-center">
+      <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+      <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+      <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
+    </nav>
+
   </footer>
 
   <!-- ===================== -->

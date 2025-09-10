@@ -1,5 +1,7 @@
-// Atualiza ano no rodapé
-document.getElementById("year").textContent = new Date().getFullYear();
+// Atualiza todos os elementos com a classe 'year'
+document.querySelectorAll('.year').forEach(el => {
+  el.textContent = new Date().getFullYear();
+});
 
 // Fade-in dos elementos principais
 document.addEventListener("DOMContentLoaded", () => {

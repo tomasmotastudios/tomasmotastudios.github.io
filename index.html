@@ -61,6 +61,31 @@
                 style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
                 Contact
             </a>
+
+            <!-- Language Switcher -->
+            <div class="dropdown">
+                <a id="lang-btn"
+                    class="px-4 py-2 rounded-lg text-white flex items-center justify-center transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                    <img id="lang-flag"
+                        src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
+                        class="w-5 h-5 mr-2 rounded-sm">
+                    EN ▾
+                </a>
+                <div id="lang-menu" class="dropdown-content flex flex-col hidden">
+                    <a href="/" class="flex items-center px-4 py-2 hover:bg-gray-700">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+                            alt="EN" class="w-5 h-5 mr-2 rounded-sm"> English
+                    </a>
+                    <a href="/pt" class="flex items-center px-4 py-2 hover:bg-gray-700">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
+                            class="w-5 h-5 mr-2 rounded-sm"> Português
+                    </a>
+                    <a href="/es" class="flex items-center px-4 py-2 hover:bg-gray-700">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
+                            class="w-5 h-5 mr-2 rounded-sm"> Español
+                    </a>
+                </div>
         </nav>
 
         <!-- Menu Mobile -->
@@ -95,31 +120,60 @@
 
         <a href="/contact" class="block">Contact</a>
 
-    </div>
+        <!-- Language Switcher Mobile -->
+        <div class="flex flex-col items-center mt-4 relative">
+            <!-- Botão principal -->
+            <button id="mobile-lang-btn"
+                class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 focus:outline-none">
+                <img id="mobile-lang-flag"
+                    src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
+                    class="w-5 h-5 rounded-sm">
+                Language ▾
+            </button>
 
-    <!-- Popup de Aniversário / Apenas 8 de Setembro -->
-    <div id="birthday-popup"
-        class="fixed inset-0 flex items-center justify-center bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 z-[9999]">
-        <div class="bg-gray-900 rounded-2xl shadow-2xl max-w-lg w-full p-4 sm:p-6 relative text-center">
+            <!-- Menu de bandeiras -->
+            <div id="mobile-lang-menu"
+                class="hidden mt-2 flex flex-col gap-2 w-full bg-gray-800 rounded-lg shadow-lg absolute top-full left-0">
+                <a href="/" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="EN"
+                        class="w-6 h-6 rounded-sm">
+                </a>
+                <a href="/pt" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="PT"
+                        class="w-6 h-6 rounded-sm">
+                </a>
+                <a href="/es" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded w-full">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="ES"
+                        class="w-6 h-6 rounded-sm">
+                </a>
+            </div>
+        </div>
 
-            <!-- Botão de Fechar -->
-            <button id="close-birthday"
-                class="absolute top-3 right-3 text-gray-200 hover:text-red-500 text-2xl font-bold">&times;</button>
+        <!-- Popup de Aniversário / Apenas 8 de Setembro -->
+        <div id="birthday-popup"
+            class="fixed inset-0 flex items-center justify-center bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300 z-[9999]">
+            <div class="bg-gray-900 rounded-2xl shadow-2xl max-w-lg w-full p-4 sm:p-6 relative text-center">
 
-            <!-- Logo -->
-            <img src="src/img/25/09/1010022031087.png" alt="Logo" class="mx-auto mb-2 max-w-[180px] h-auto object-contain">
+                <!-- Botão de Fechar -->
+                <button id="close-birthday"
+                    class="absolute top-3 right-3 text-gray-200 hover:text-red-500 text-2xl font-bold">&times;</button>
 
-            <!-- Imagem de Perfil -->
-            <img src="src/img/25/09/1010022027740.jpg" alt="Foto"
-                class="mx-auto rounded-full w-28 h-28 object-cover mb-3 border-4 border-blue-500">
+                <!-- Logo -->
+                <img src="src/img/25/09/1010022031087.png" alt="Logo"
+                    class="mx-auto mb-2 max-w-[180px] h-auto object-contain">
 
-            <!-- Título -->
-            <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-100">🎉 Today is my birthday! 🎂</h2>
+                <!-- Imagem de Perfil -->
+                <img src="src/img/25/09/1010022027740.jpg" alt="Foto"
+                    class="mx-auto rounded-full w-28 h-28 object-cover mb-3 border-4 border-blue-500">
 
-            <!-- Texto -->
-            <p class="text-gray-300 text-sm sm:text-base">
-                I'm happy to share this special day with you. <br> Thank you for being part of my journey! 💙
-            </p>
+                <!-- Título -->
+                <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-100">🎉 Today is my birthday! 🎂</h2>
+
+                <!-- Texto -->
+                <p class="text-gray-300 text-sm sm:text-base">
+                    I'm happy to share this special day with you. <br> Thank you for being part of my journey! 💙
+                </p>
+            </div>
         </div>
     </div>
 
@@ -161,7 +215,8 @@
             </h1>
             <!-- Descrição / Subtítulo secundário -->
             <p id="herop" class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
-                I am <span class="font-semibold text-[var(--c-red)]">Developer Fullstack</span> — I transform ideas into
+                I am <span class="font-semibold text-[var(--c-red)]">Developer Fullstack</span> — I transform ideas
+                into
                 digital experiences. I build modern websites and apps with optimized, engaging interfaces.
             </p>
 
@@ -412,23 +467,116 @@
     <!-- ===================== -->
     <!-- Footer -->
     <!-- ===================== -->
-    <footer class="py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <!-- Footer Desktop -->
+    <footer
+        class="hidden md:flex py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
 
-            <!-- Direitos Autorais -->
-            <div class="text-center md:text-left">
-                © 2024 - <span id="year"></span>
-                <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All
-                Rights Reserved.
+            <!-- Copyright à esquerda -->
+            <div class="text-left">
+                © 2024 - <span class="year"></span>
+                <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
+                Reserved.
             </div>
 
-            <!-- Links Legais -->
-            <nav class="flex flex-wrap justify-center gap-4 text-center">
-                <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
-                <a href="/cookies" class="hover:text-white no-underline transition">Cookies Policy</a>
-                <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
-            </nav>
+            <!-- Redes sociais acima dos links legais, à direita -->
+            <div class="flex flex-col items-end">
+
+                <!-- Redes sociais -->
+                <div class="flex gap-4 mb-2">
+                    <a href="/linkedin" target="_blank" class="hover:text-white transition">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="GitHub"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/github" target="_blank" class="hover:text-white transition">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/facebook" target="_blank" class="hover:text-white transition">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="LinkedIn"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/instagram" target="_blank" class="hover:text-white transition">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="LinkedIn"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/x" target="_blank" class="hover:text-white transition">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/tiktok" target="_blank" class="hover:text-white transition">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="LinkedIn"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/youtube" target="_blank" class="hover:text-white transition">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="LinkedIn"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                </div>
+
+                <!-- Links legais -->
+                <nav class="flex gap-4">
+                    <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+                    <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+                    <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of
+                        Service</a>
+                </nav>
+
+            </div>
+
         </div>
+    </footer>
+
+    <!-- Footer Mobile -->
+    <footer
+        class="flex flex-col md:hidden py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm items-center gap-4">
+
+        <!-- Redes sociais -->
+        <div class="flex justify-center gap-4">
+            <a href="/linkedin" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="GitHub"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/github" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/facebook" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="LinkedIn"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/instagram" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="LinkedIn"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/x" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/tiktok" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="LinkedIn"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/youtube" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="LinkedIn"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center">
+            © 2024 - <span class="year"></span>
+            <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
+            Reserved.
+        </div>
+
+        <!-- Links legais -->
+        <nav class="flex flex-wrap justify-center gap-4 text-center">
+            <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+            <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+            <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
+        </nav>
+
     </footer>
 
     <!-- ===================== -->

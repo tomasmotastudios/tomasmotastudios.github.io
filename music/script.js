@@ -1,5 +1,8 @@
-// Ano do footer
-document.getElementById('year').textContent = new Date().getFullYear();
+// Atualiza todos os elementos com a classe 'year'
+document.querySelectorAll('.year').forEach(el => {
+  el.textContent = new Date().getFullYear();
+});
+
 
 //
 // Mobile Menu
@@ -12,9 +15,7 @@ menuBtn.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
 });
 
-// =====================
-// Dropdown Photography (Mobile)
-// =====================
+// Dropdown Photography
 const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
 const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
 
@@ -27,21 +28,56 @@ mobilePhotoBtn.addEventListener('click', () => {
   mobilePhotoBtn.classList.toggle('active', !isOpen);
 });
 
+const langBtn = document.getElementById('lang-btn');
+const langFlag = document.getElementById('lang-flag');
+const langMenu = document.getElementById('lang-menu');
 
-// =====================
-// Dropdown Contact (Mobile) [se existir no HTML]
-// =====================
-const mobileContactBtn = document.getElementById('mobile-contact-btn');
-const mobileContactMenu = document.getElementById('mobile-contact-menu');
+// Detecta idioma pela URL
+function updateLanguageButton() {
+  const path = window.location.pathname;
+  let flag = "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg";
+  let label = "EN";
 
-mobileContactMenu.style.display = 'none';
-mobileContactBtn.classList.remove('active');
+  if (path.startsWith("/pt")) {
+    flag = "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg";
+    label = "PT";
+  } else if (path.startsWith("/es")) {
+    flag = "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg";
+    label = "ES";
+  }
 
-mobileContactBtn.addEventListener('click', () => {
-  const isOpen = mobileContactMenu.style.display === 'block';
-  mobileContactMenu.style.display = isOpen ? 'none' : 'block';
-  mobileContactBtn.classList.toggle('active', !isOpen);
+  langFlag.src = flag;
+  langBtn.innerHTML = `<img id="lang-flag" src="${flag}" alt="${label}" class="w-5 h-5 mr-2 rounded-sm"> ${label} ▾`;
+}
+
+// Chama ao carregar
+updateLanguageButton();
+
+// Toggle menu
+langBtn.addEventListener("click", () => {
+  langMenu.classList.toggle("hidden");
 });
+
+// Fechar ao clicar fora
+document.addEventListener("click", e => {
+  if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
+    langMenu.classList.add("hidden");
+  }
+});
+
+// Mobile Language Switcher
+const mobileLangBtn = document.getElementById('mobile-lang-btn');
+const mobileLangMenu = document.getElementById('mobile-lang-menu');
+
+mobileLangMenu.style.display = 'none';
+mobileLangBtn.classList.remove('active');
+
+mobileLangBtn.addEventListener('click', () => {
+  const isOpen = mobileLangMenu.style.display === 'block';
+  mobileLangMenu.style.display = isOpen ? 'none' : 'block';
+  mobileLangBtn.classList.toggle('active', !isOpen);
+});
+
 
 // =====================
 // Tabs (Discography / Tour)
