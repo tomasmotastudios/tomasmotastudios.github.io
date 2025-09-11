@@ -28,8 +28,8 @@ body {
 /* ===================== */
 body {
   background: 
-    radial-gradient(circle at 15% 20%, rgba(116, 212, 230, 0.534), transparent 50%),
-    radial-gradient(circle at 85% 80%,  #0b8f8fa9, transparent 50%),
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.534), transparent 50%),
+    radial-gradient(circle at 85% 80%,  #f7f7f7a9, transparent 50%),
     linear-gradient(180deg, #464749 0%, #141b2a 100%);
   background-size: 200% 200%;
   background-position: 0% 0%;
@@ -218,8 +218,8 @@ header a:hover {
 /* ===================== */
 .hero-wrap {
   background: 
-    radial-gradient(1200px 600px at 10% 10%, rgba(155, 155, 155, 0.300), transparent 70%),
-    radial-gradient(900px 500px at 90% 80%,  rgba(167, 167, 167, 0.300), transparent 70%);
+    radial-gradient(1200px 600px at 10% 10%, rgba(155, 155, 155, 0.500), transparent 70%),
+    radial-gradient(900px 500px at 90% 80%,  rgba(167, 167, 167, 0.500), transparent 70%);
     position: relative;
     z-index: 0;
 }
