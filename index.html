@@ -126,6 +126,52 @@
     </div>
     </div>
 
+    <!-- ===================== -->
+    <!-- Popup de Apresentação DEV (Responsivo) -->
+    <!-- ===================== -->
+    <div id="intro-popup"
+        class="fixed inset-0 flex items-center justify-center bg-black/70 opacity-0 pointer-events-none transition-opacity duration-500 z-[9999]">
+        <div
+            class="bg-gray-900 rounded-2xl shadow-2xl w-11/12 max-w-xl p-6 sm:p-8 relative text-center animate-fadeIn overflow-y-auto max-h-[90vh]">
+
+            <!-- Botão Fechar -->
+            <button id="close-intro"
+                class="absolute top-3 right-3 text-gray-300 hover:text-red-500 text-2xl font-bold">&times;</button>
+
+            <!-- Foto de Perfil -->
+            <img src="profile.jpg" alt="Tomás Mota"
+                class="mx-auto rounded-full w-24 h-24 sm:w-28 sm:h-28 object-cover mb-4 border-4 border-blue-500 shadow-lg">
+
+            <!-- Título -->
+            <h2 class="text-2xl sm:text-3xl font-bold mb-3 text-white">👨‍💻 Welcome</h2>
+
+            <!-- Texto principal -->
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 px-1">
+                I’m <span class="text-blue-400 font-semibold">Tomás Mota</span>, a
+                <span class="text-[var(--c-red)] font-semibold">Fullstack Developer</span> passionate about crafting
+                clean, scalable and user-focused applications.
+                <br><br>
+                Skilled in <span class="font-semibold">modern web technologies</span> — building seamless
+                <span class="text-blue-400 font-semibold">frontends</span> and robust
+                <span class="text-[var(--c-red)] font-semibold">backends</span>.
+                My focus is turning complex problems into intuitive solutions 🚀
+            </p>
+
+            <!-- Destaques visuais -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                <img src="projects/src/img/devprojects07.png" alt="Developer Project 1"
+                    class="rounded-xl w-full h-32 sm:h-36 object-cover shadow-md">
+                <img src="projects/src/img/devprojects03.png" alt="Developer Project 2"
+                    class="rounded-xl w-full h-32 sm:h-36 object-cover shadow-md">
+            </div>
+
+            <!-- Call to Action -->
+            <button id="explore-btn"
+                class="mt-2 sm:mt-4 w-full sm:w-auto px-6 sm:px-8 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg transition">
+                🚀 Explore My Work
+            </button>
+        </div>
+    </div>
 
     <!-- Cookie Consent Banner -->
     <div id="cookie-banner"
@@ -417,7 +463,8 @@
                 <a href="/music" class="block w-full md:w-[calc(33.333333%-16px)]">
                     <article class="card p-4 text-left rounded-xl shadow-md">
                         <div class="slideshow-container">
-                            <img src="src/img/25/09/1010022057235.png" alt="Music 1" class="slide active">
+                            <img src="src/img/25/09/1010022043773.jpg" alt="Music 1" class="slide active">
+                            <img src="src/img/25/09/1010022043773.jpg" alt="Music 2" class="slide">
                             <img src="src/img/25/09/1010022043773.jpg" alt="Music 2" class="slide">
                         </div>
                         <h3 class="font-bold">Music</h3>
@@ -464,20 +511,16 @@
                     <a href="/instagram" target="_blank" title="Instagram" class="hover:text-white transition">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
                             class="w-6 h-6 filter brightness-0 invert">
-                    </a>
-                    <a href="/x" target="_blank" title="X (formely Twitter)" class="hover:text-white transition">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X (formely Twitter)"
-                            class="w-6 h-6 filter brightness-0 invert">
-                    </a>
-                    <a href="/youtube" target="_blank" title="YouTube" class="hover:text-white transition">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube"
-                            class="w-6 h-6 filter brightness-0 invert">
-                    </a>
-                    <a rel="alternate" type="application/rss+xml" title="RSS" target="_blank" href="/rss.xml"
-                        class="hover:text-white transition">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/rss.svg" alt="RSS"
-                            class="w-6 h-6 filter brightness-0 invert">
-                    </a>
+
+                        <a href="/youtube" target="_blank" title="YouTube" class="hover:text-white transition">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube"
+                                class="w-6 h-6 filter brightness-0 invert">
+                        </a>
+                        <a rel="alternate" type="application/rss+xml" title="RSS" target="_blank" href="/rss.xml"
+                            class="hover:text-white transition">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/rss.svg" alt="RSS"
+                                class="w-6 h-6 filter brightness-0 invert">
+                        </a>
                 </div>
 
                 <!-- Links legais -->
@@ -513,10 +556,6 @@
             </a>
             <a href="/instagram" target="_blank" class="hover:text-white transition">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
-                    class="w-6 h-6 filter brightness-0 invert">
-            </a>
-            <a href="/x" target="_blank" class="hover:text-white transition">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X (Formely Twitter)"
                     class="w-6 h-6 filter brightness-0 invert">
             </a>
             <a href="/youtube" target="_blank" class="hover:text-white transition">

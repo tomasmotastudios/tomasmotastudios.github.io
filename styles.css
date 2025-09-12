@@ -365,3 +365,12 @@ footer {
   opacity: 1 !important;
   pointer-events: auto !important;
 }
+
+/* Animação suave */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}

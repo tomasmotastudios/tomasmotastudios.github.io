@@ -27,6 +27,38 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+// ============================
+// Popup de Apresentação DEV
+// ============================
+document.addEventListener("DOMContentLoaded", () => {
+    const introPopup = document.getElementById("intro-popup");
+    const exploreBtn = document.getElementById("explore-btn");
+    const closeIntro = document.getElementById("close-intro");
+
+    if (!introPopup || !exploreBtn || !closeIntro) return;
+
+    //if (!localStorage.getItem("introShown")) {
+        setTimeout(() => {
+            introPopup.classList.remove("opacity-0", "pointer-events-none");
+            introPopup.classList.add("opacity-100");
+        }, 500);
+
+        // Fecha pelo botão principal
+        exploreBtn.addEventListener("click", () => {
+            introPopup.classList.add("opacity-0", "pointer-events-none");
+            introPopup.classList.remove("opacity-100");
+            localStorage.setItem("introShown", "true");
+        });
+
+        // Fecha pelo "X"
+        closeIntro.addEventListener("click", () => {
+            introPopup.classList.add("opacity-0", "pointer-events-none");
+            introPopup.classList.remove("opacity-100");
+            localStorage.setItem("introShown", "true");
+        });
+    //}
+});
+
 
 
 // ============================
