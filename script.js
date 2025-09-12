@@ -1,3 +1,18 @@
+// Preloader
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  if (!preloader) return;
+
+  // fade out
+  preloader.style.transition = "opacity 0.7s ease";
+  preloader.style.opacity = "0";
+
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 700);
+});
+
+
 
 // ============================
 // Popup de Aniversário (apenas 8 de setembro)

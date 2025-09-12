@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - Tomás Mota</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="page-container">
+
+    <!-- Conteúdo principal -->
+    <main class="flex-grow flex items-center justify-center">
+      <div class="login-container">
+        <h2>Admin Login</h2>
+        
+        <form id="admin-login-form">
+          <input type="text" id="username" placeholder="Username">
+          <input type="password" id="password" placeholder="Password">
+          <button type="submit">Login</button>
+          <p id="error-msg">Invalid credentials</p>
+        </form>
+      </div>
+    </main>
+
+<footer
+    class="hidden md:flex py-6 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
+    <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+
+        <!-- Copyright -->
+        <div class="text-left">
+            © 2024 - <span class="year"></span>
+            <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
+            Reserved.
+        </div>
+
+        <!-- Redes sociais e links legais -->
+        <div class="flex flex-col items-end">
+
+            <!-- Redes sociais -->
+            <div class="flex gap-3 mb-2">
+                <a href="/linkedin" target="_blank" title="LinkedIn" class="hover:text-white transition">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
+                        class="w-6 h-6 rounded-full bg-gray-700 p-1">
+                </a>
+                <a href="/github" target="_blank" title="GitHub" class="hover:text-white transition">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+                        class="w-6 h-6 rounded-full bg-gray-700 p-1">
+                </a>
+                <a href="/facebook" target="_blank" title="Facebook" class="hover:text-white transition">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
+                        class="w-6 h-6 rounded-full bg-gray-700 p-1">
+                </a>
+                <a href="/instagram" target="_blank" title="Instagram" class="hover:text-white transition">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
+                        class="w-6 h-6 rounded-full bg-gray-700 p-1">
+                </a>
+                <a href="/youtube" target="_blank" title="YouTube" class="hover:text-white transition">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube"
+                        class="w-6 h-6 rounded-full bg-gray-700 p-1">
+                </a>
+                <a rel="alternate" type="application/rss+xml" target="_blank" href="/rss.xml"
+                    class="hover:text-white transition">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/rss.svg" alt="RSS"
+                        class="w-6 h-6 rounded-full bg-gray-700 p-1">
+                </a>
+            </div>
+
+            <!-- Links legais -->
+            <nav class="flex gap-4">
+                <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+                <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+                <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of
+                    Service</a>
+            </nav>
+
+        </div>
+
+    </div>
+</footer>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
