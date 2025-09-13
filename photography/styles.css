@@ -284,3 +284,51 @@ footer {
   background-color: rgba(15, 22, 32, 0.349); /* mesmo fundo */
   backdrop-filter: blur(5px);              /* mesmo blur */
 }
+
+/* Animação de entrada suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ===================== */
+/* Botões customizados */
+/* ===================== */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--c-blue);
+  color: var(--c-white);
+}
+
+.btn-primary:hover {
+  background: #0f5ae5;
+  transform: translateY(-2px);
+}
+
+/* ===================== */
+/* Animação de fade-in */
+/* ===================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+#closePopup { line-height: 1; }
+#closePopup:hover { transform: translateY(-2px); transition: transform .15s; }
+

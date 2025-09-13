@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!introPopup || !exploreBtn || !closeIntro) return;
 
-    //if (!localStorage.getItem("introShown")) {
+    if (!localStorage.getItem("introShown")) {
         setTimeout(() => {
             introPopup.classList.remove("opacity-0", "pointer-events-none");
             introPopup.classList.add("opacity-100");
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
             introPopup.classList.remove("opacity-100");
             localStorage.setItem("introShown", "true");
         });
-    //}
+    }
 });
 
 
