@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
 // ============================
 // Popup de Apresentação DEV
 // ============================
@@ -52,27 +53,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!introPopup || !exploreBtn || !closeIntro) return;
 
+    // =====================
+    // VERSÃO 1 - Sempre aparece
+    // =====================
+    setTimeout(() => {
+        introPopup.classList.remove("opacity-0", "pointer-events-none");
+        introPopup.classList.add("opacity-100");
+    }, 500);
+
+    // Fecha pelo botão principal
+    exploreBtn.addEventListener("click", () => {
+        introPopup.classList.add("opacity-0", "pointer-events-none");
+        introPopup.classList.remove("opacity-100");
+    });
+
+    // Fecha pelo "X"
+    closeIntro.addEventListener("click", () => {
+        introPopup.classList.add("opacity-0", "pointer-events-none");
+        introPopup.classList.remove("opacity-100");
+    });
+
+
+    // =====================
+    // VERSÃO 2 - Apenas uma vez (comentar VERSÃO 1 se usar esta)
+    // =====================
+    /*
     if (!localStorage.getItem("introShown")) {
         setTimeout(() => {
             introPopup.classList.remove("opacity-0", "pointer-events-none");
             introPopup.classList.add("opacity-100");
         }, 500);
 
-        // Fecha pelo botão principal
         exploreBtn.addEventListener("click", () => {
             introPopup.classList.add("opacity-0", "pointer-events-none");
             introPopup.classList.remove("opacity-100");
             localStorage.setItem("introShown", "true");
         });
 
-        // Fecha pelo "X"
         closeIntro.addEventListener("click", () => {
             introPopup.classList.add("opacity-0", "pointer-events-none");
             introPopup.classList.remove("opacity-100");
             localStorage.setItem("introShown", "true");
         });
     }
+    */
 });
+
 
 
 
