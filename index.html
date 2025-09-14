@@ -45,36 +45,28 @@
         <nav class="hidden md:flex space-x-3">
             <!-- Links principais -->
 
-            <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
-                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+            <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
                 About
             </a>
 
             <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
                 FullStack Projects
             </a>
 
             <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
                 CV
             </a>
 
-            <!-- Dropdown Creative Work -->
-            <div class="dropdown">
-                <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
-                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                    Creative Work ▾
-                </a>
-                <div class="dropdown-content">
-                    <a href="/photography">Photography</a>
-                    <a href="/music">Music</a>
-                    <a href="/articles">Articles</a>
-                </div>
-            </div>
+            <a href="/photography" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                Photography
+            </a>
 
             <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
                 Contact
             </a>
         </nav>
@@ -98,17 +90,7 @@
         <a href="/about" class="block">About</a>
         <a href="/projects" class="block">FullStack Work</a>
         <a href="/cv" class="block">CV</a>
-
-        <!-- Dropdown Creative Work Mobile -->
-        <div class="flex flex-col">
-            <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
-            <div id="mobile-photography-menu" class="mobile-dropdown-content">
-                <a href="/photography" class="block">Photography</a>
-                <a href="/music" class="block">Music</a>
-                <a href="/articles" class="block">Articles</a>
-            </div>
-        </div>
-
+        <a href="/photography" class="block">Photography</a>
         <a href="/contact" class="block">Contact</a>
 
     </div>
@@ -472,20 +454,6 @@
                         <p class="text-gray-200 text-sm">Here you can find my work as a photographer.</p>
                     </article>
                 </a>
-
-                <!-- Music -->
-                <a href="/music" class="block w-full md:w-[calc(33.333333%-16px)]">
-                    <article class="card p-4 text-left rounded-xl shadow-md">
-                        <div class="slideshow-container">
-                            <img src="src/img/25/09/1010022043773.jpg" alt="Music 1" class="slide active">
-                            <img src="src/img/25/09/1010022043773.jpg" alt="Music 2" class="slide">
-                            <img src="src/img/25/09/1010022043773.jpg" alt="Music 2" class="slide">
-                        </div>
-                        <h3 class="font-bold">Music</h3>
-                        <p class="text-gray-200 text-sm">Here you can find my work as a musician.</p>
-                    </article>
-                </a>
-
             </div>
         </section>
     </section>

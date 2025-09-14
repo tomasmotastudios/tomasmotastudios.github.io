@@ -1,0 +1,418 @@
+/* ===================== */
+/* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
+/* ===================== */
+:root {
+  --c-white: #ffffff;
+  --c-white2: #cfcfcf;
+  --c-black: #000000;
+  --c-gray: #2b2f36;
+  --c-gray-2: #3a3f46;
+  --c-red: #ff3b3b;
+  --c-blue: #1a73ff;
+  --c-yellow: #ffd43b;
+}
+
+/* ===================== */
+/* Estilos Globais */
+/* ===================== */
+body {
+  text-align: center;
+  color: var(--c-white);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================== */
+/* Background Animado do Site */
+/* ===================== */
+body {
+  background-color: #fff;
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  color: var(--c-white);
+  min-height: 100vh;
+  animation: moveBackground 30s ease infinite;
+}
+
+/* Animação suave do background */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* ===================== */
+/* Header e Menus */
+/* ===================== */
+header {
+    background-color: #1e293b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+    /* ===================== */
+    /* Archive */
+    /* ===================== */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 8rem 1.5rem 4rem;
+    }
+
+    .archive-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .archive-header h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+    }
+
+    .archive-header p {
+      color: var(--c-white2);
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .archive-section {
+      background-color: rgba(15, 22, 32, 0.4);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .archive-section h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .archive-links {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .archive-links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .archive-links {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .archive-links a {
+      background-color: var(--c-gray-2);
+      color: var(--c-white);
+      padding: 1rem 1.2rem;
+      border-radius: 0.8rem;
+      font-weight: 500;
+      font-size: 1rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .archive-links a:hover {
+      background-color: var(--c-red);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    }   
+
+/* ===================== */
+/* Footer */
+/* ===================== */
+footer {
+  color: var(--c-white);
+  background-color: rgba(15, 22, 32, 0.349);
+  /* mesmo fundo */
+  backdrop-filter: blur(5px);
+  /* mesmo blur */
+}
+
+/* Reset e box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #1F2937; /* bg-gray-900 */
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* garante que o footer fique no final */
+}
+
+/* Faz main ocupar espaço restante */
+main {
+  flex: 1;
+}
+
+/* Login container */
+.login-container {
+  background-color: #374151; /* bg-gray-800 */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Título */
+.login-container h2 {
+  color: #FFFFFF;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Inputs */
+.login-container input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #4B5563; /* bg-gray-700 */
+  color: #FFFFFF;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.login-container input:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+/* Botão */
+.login-container button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #3B82F6;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #2563EB;
+}
+
+/* Mensagem de erro */
+#error-msg {
+  color: #F87171; /* vermelho */
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  display: none;
+  text-align: left;
+}
+
+
+
+/* Tipografia */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Botões */
+button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1e293b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+/* Menu lateral */
+.sidebar {
+    background-color: #0f172a;
+    color: #fff;
+    min-width: 220px;
+    height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+}
+
+.sidebar a:hover {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+/* Cards */
+.card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Footer */
+footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.875rem;
+}
+
+/* Formulários */
+input, textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid #cbd5e1;
+    margin-bottom: 1rem;
+}
+
+input:focus, textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f6f8;
+}
+
+/* Alertas */
+.alert {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+}
+
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* styles.css */
+
+/* Container central */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Cards */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Botões */
+.btn {
+  @apply px-4 py-2 rounded font-semibold transition;
+}
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+.btn-danger {
+  @apply bg-red-500 text-white hover:bg-red-600;
+}
+
+/* Tabela */
+.table {
+  @apply w-full border-collapse;
+}
+.table th, .table td {
+  @apply border border-gray-200 p-3 text-left;
+}
+
+/* Inputs */
+.input {
+  @apply border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Header dashboard */
+.dashboard-header {
+  @apply flex justify-between items-center mb-6;
+}

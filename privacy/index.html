@@ -18,83 +18,66 @@
   <!-- ===================== -->
   <!-- Header / Navegação -->
   <!-- ===================== -->
-  <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
-    <!-- Logo / Nome -->
-    <a href="/" class="flex items-center space-x-3">
-      <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
-      <span class="font-bold text-xl">Tomás Mota </span>
-    </a>
-
-    <!-- Navegação Desktop -->
-    <nav class="hidden md:flex space-x-3">
-      <!-- Links principais -->
-
-      <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
-        style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-        About
-      </a>
-
-      <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-        style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-        FullStack Projects
-      </a>
-
-      <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-        style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-        CV
-      </a>
-
-      <!-- Dropdown Creative Work -->
-      <div class="dropdown">
-        <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
-          style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-          Creative Work ▾
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <!-- Logo / Nome -->
+        <a href="/" class="flex items-center space-x-3">
+            <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota </span>
         </a>
-        <div class="dropdown-content">
-          <a href="/photography">Photography</a>
-          <a href="/music">Music</a>
-          <a href="/articles">Articles</a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <!-- Links principais -->
+
+            <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                About
+            </a>
+
+            <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                FullStack Projects
+            </a>
+
+            <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                CV
+            </a>
+
+            <a href="/photography" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                Photography
+            </a>
+
+            <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                Contact
+            </a>
+        </nav>
+
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
-      </div>
+    </header>
 
-      <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-        style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-        Contact
-      </a>
-    </nav>
-
-    <!-- Menu Mobile -->
-    <div class="md:hidden">
-      <button id="menu-btn" class="focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
-    </div>
-  </header>
-
-  <!-- ===================== -->
-  <!-- Mobile Menu -->
-  <!-- ===================== -->
-  <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
-    <!-- Links principais -->
-    <a href="/about" class="block">About</a>
-    <a href="/projects" class="block">FullStack Work</a>
-    <a href="/cv" class="block">CV</a>
-
-    <!-- Dropdown Creative Work Mobile -->
-    <div class="flex flex-col">
-      <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
-      <div id="mobile-photography-menu" class="mobile-dropdown-content">
+    <!-- ===================== -->
+    <!-- Mobile Menu -->
+    <!-- ===================== -->
+    <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+        <!-- Links principais -->
+        <a href="/about" class="block">About</a>
+        <a href="/projects" class="block">FullStack Work</a>
+        <a href="/cv" class="block">CV</a>
         <a href="/photography" class="block">Photography</a>
-        <a href="/music" class="block">Music</a>
-        <a href="/articles" class="block">Articles</a>
-      </div>
+        <a href="/contact" class="block">Contact</a>
+
     </div>
-
-    <a href="/contact" class="block">Contact</a>
-
-  </div>
 
   <!-- ===================== -->
   <!-- Privacy Policy Section -->
