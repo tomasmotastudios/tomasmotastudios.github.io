@@ -15,19 +15,6 @@ menuBtn.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
 });
 
-// Dropdown Photography
-const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
-const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
-
-mobilePhotoMenu.style.display = 'none';
-mobilePhotoBtn.classList.remove('active');
-
-mobilePhotoBtn.addEventListener('click', () => {
-  const isOpen = mobilePhotoMenu.style.display === 'block';
-  mobilePhotoMenu.style.display = isOpen ? 'none' : 'block';
-  mobilePhotoBtn.classList.toggle('active', !isOpen);
-});
-
   // Seleciona todas as imagens do photoshoot
   const photos = document.querySelectorAll('#photoshoot img');
   const lightbox = document.getElementById('lightbox');
