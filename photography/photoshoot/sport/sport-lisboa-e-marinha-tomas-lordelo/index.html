@@ -2,152 +2,153 @@
 <html lang="en-GB">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/profile.jpg" type="image/jpg" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles.css">
-  <title>Tomás Mota – Photography – Photoshoot – Sport Lisboa e Marinha – Tomás Lordelo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/profile.jpg" type="image/jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Tomás Mota – Photography – Photoshoot – Sport Lisboa e Marinha – Tomás Lordelo</title>
 </head>
 
 <body class="min-h-screen flex flex-col">
-  <main class="flex-grow">
-    
-    <!-- ===================== -->
-    <!-- Header / Navegação -->
-    <!-- ===================== -->
-    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
-        <!-- Logo / Nome -->
-        <a href="/" class="flex items-center space-x-3">
-            <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
-            <span class="font-bold text-xl">Tomás Mota </span>
-        </a>
+    <main class="flex-grow">
 
-        <!-- Navegação Desktop -->
-        <nav class="hidden md:flex space-x-3">
+        <!-- ===================== -->
+        <!-- Header / Navegação -->
+        <!-- ===================== -->
+        <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+            <!-- Logo / Nome -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+                <span class="font-bold text-xl">Tomás Mota </span>
+            </a>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex space-x-3">
+                <!-- Links principais -->
+
+                <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                    About
+                </a>
+
+                <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                    Developer
+                </a>
+
+                <a href="/photography" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                    Photographer
+                </a>
+
+                <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                    CV
+                </a>
+
+                <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                    Contact
+                </a>
+            </nav>
+
+            <!-- Menu Mobile -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- ===================== -->
+        <!-- Mobile Menu -->
+        <!-- ===================== -->
+        <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
             <!-- Links principais -->
+            <a href="/about" class="block">About</a>
+            <a href="/projects" class="block">Developer</a>
+            <a href="/photography" class="block">Photographer</a>
+            <a href="/cv" class="block">CV</a>
+            <a href="/contact" class="block">Contact</a>
 
-            <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-                About
-            </a>
-
-            <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-                Developer
-            </a>
-
-            <a href="/photography" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-                Photographer
-            </a>
-
-            <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-                CV
-            </a>
-
-            <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-                Contact
-            </a>
-        </nav>
-
-        <!-- Menu Mobile -->
-        <div class="md:hidden">
-            <button id="menu-btn" class="focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
-        </div>
-    </header>
-
-    <!-- ===================== -->
-    <!-- Mobile Menu -->
-    <!-- ===================== -->
-    <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
-        <!-- Links principais -->
-        <a href="/about" class="block">About</a>
-        <a href="/projects" class="block">Developer</a>
-        <a href="/photography" class="block">Photographer</a>
-        <a href="/cv" class="block">CV</a>
-        <a href="/contact" class="block">Contact</a>
-
-    </div>
-
-
-    <!-- ===================== -->
-    <!-- Photoshoot Gallery -->
-    <!-- ===================== -->
-    <section id="photoshoot" class="px-6 py-12">
-      <h2 class="text-3xl font-bold mb-8 text-center">Sport Lisboa e Marinha – Tomás Lordelo</h2>
-
-      <div class="grid grid-cols-3 lg:grid-cols-7 gap-4">
-
-        <!-- Fotos -->
-        <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
-          <img src="src/img/1.jpg" alt="Foto 1"
-            class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
         </div>
 
-        <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
-          <img src="src/img/2.jpg" alt="Foto 2"
-            class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+
+        <!-- ===================== -->
+        <!-- Photoshoot Gallery -->
+        <!-- ===================== -->
+        <section id="photoshoot" class="px-6 py-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Sport Lisboa e Marinha – Tomás Lordelo</h2>
+
+            <div class="grid grid-cols-3 lg:grid-cols-7 gap-4">
+
+                <!-- Fotos -->
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="src/img/1.jpg" alt="Foto 1"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="src/img/2.jpg" alt="Foto 2"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="src/img/3.jpg" alt="Foto 3"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="src/img/4.jpg" alt="Foto 4"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="src/img/5.jpg" alt="Foto 5"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="src/img/6.jpg" alt="Foto 6"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="src/img/7.jpg" alt="Foto 7"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="src/img/8.jpg" alt="Foto 8"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="src/img/9.jpg" alt="Foto 9"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="src/img/10.jpg" alt="Foto 10"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- Lightbox Overlay -->
+        <!-- ===================== -->
+        <div id="lightbox"
+            class="fixed inset-0 hidden bg-black/70 backdrop-blur-sm z-50 cursor-pointer flex items-center justify-center">
+            <img id="lightbox-img" src="" alt="Expanded Photo" class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl">
         </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
-          <img src="src/img/3.jpg" alt="Foto 3"
-            class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
-          <img src="src/img/4.jpg" alt="Foto 4"
-            class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
-          <img src="src/img/5.jpg" alt="Foto 5"
-            class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
-          <img src="src/img/6.jpg" alt="Foto 6"
-            class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
-          <img src="src/img/7.jpg" alt="Foto 7"
-            class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
-          <img src="src/img/8.jpg" alt="Foto 8"
-            class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
-          <img src="src/img/9.jpg" alt="Foto 9"
-            class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
-          <img src="src/img/10.jpg" alt="Foto 10"
-            class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===================== -->
-    <!-- Lightbox Overlay -->
-    <!-- ===================== -->
-    <div id="lightbox"
-      class="fixed inset-0 hidden bg-black/70 backdrop-blur-sm z-50 cursor-pointer flex items-center justify-center">
-      <img id="lightbox-img" src="" alt="Expanded Photo" class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl">
-    </div>
-  </main>
+    </main>
 
     <!-- ===================== -->
     <!-- Footer -->
@@ -169,31 +170,26 @@
 
                 <!-- Redes sociais -->
                 <div class="flex gap-4 mb-2">
-                    <a href="/linkedin" target="_blank" title="LinkedIn" class="hover:text-white transition">
+                    <a href="/social/linkedin" target="_blank" title="LinkedIn">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
                             class="w-6 h-6 filter brightness-0 invert">
                     </a>
-                    <a href="/github" target="_blank" title="GitHub" class="hover:text-white transition">
+                    <a href="/social/github" target="_blank" title="GitHub">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
                             class="w-6 h-6 filter brightness-0 invert">
                     </a>
-                    <a href="/facebook" target="_blank" title="Facebook" class="hover:text-white transition">
+                    <a href="/social/facebook" target="_blank" title="Facebook">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
                             class="w-6 h-6 filter brightness-0 invert">
                     </a>
-                    <a href="/instagram" target="_blank" title="Instagram" class="hover:text-white transition">
+                    <a href="/social/instagram" target="_blank" title="Instagram">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
                             class="w-6 h-6 filter brightness-0 invert">
 
-                        <a href="/youtube" target="_blank" title="YouTube" class="hover:text-white transition">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube"
-                                class="w-6 h-6 filter brightness-0 invert">
-                        </a>
-                        <a rel="alternate" type="application/rss+xml" title="RSS" target="_blank" href="/rss.xml"
-                            class="hover:text-white transition">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/rss.svg" alt="RSS"
-                                class="w-6 h-6 filter brightness-0 invert">
-                        </a>
+                        <!-- <a href="/music/listen" target="_blank" title="Listen to Tomás Mota's official music">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/applemusic.svg" alt="Listen to Tomás Mota's official music"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a> -->
                 </div>
 
                 <!-- Links legais -->
@@ -215,31 +211,26 @@
 
         <!-- Redes sociais -->
         <div class="flex justify-center gap-4">
-            <a href="/linkedin" target="_blank" class="hover:text-white transition">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LInkedIn"
+            <a href="/social/linkedin" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
                     class="w-6 h-6 filter brightness-0 invert">
             </a>
-            <a href="/github" target="_blank" class="hover:text-white transition">
+            <a href="/social/github" target="_blank">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
                     class="w-6 h-6 filter brightness-0 invert">
             </a>
-            <a href="/facebook" target="_blank" class="hover:text-white transition">
+            <a href="/social/facebook" target="_blank">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
                     class="w-6 h-6 filter brightness-0 invert">
             </a>
-            <a href="/instagram" target="_blank" class="hover:text-white transition">
+            <a href="/social/instagram" target="_blank">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
                     class="w-6 h-6 filter brightness-0 invert">
             </a>
-            <a href="/youtube" target="_blank" class="hover:text-white transition">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube"
+            <!-- <a href="/music/listen" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/applemusic.svg" alt="Listen to Tomás Mota's official music"
                     class="w-6 h-6 filter brightness-0 invert">
-            </a>
-            <a rel="alternate" type="application/rss+xml" target="_blank" href="/rss.xml"
-                class="hover:text-white transition">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/rss.svg" alt="RSS"
-                    class="w-6 h-6 filter brightness-0 invert">
-            </a>
+            </a> -->
         </div>
 
         <!-- Copyright -->
@@ -258,10 +249,10 @@
 
     </footer>
 
-  <!-- ===================== -->
-  <!-- Scripts -->
-  <!-- ===================== -->
-  <script src="script.js"></script>
+    <!-- ===================== -->
+    <!-- Scripts -->
+    <!-- ===================== -->
+    <script src="script.js"></script>
 
 </body>
 
