@@ -1,131 +1,79 @@
-// ======================
-// Atualiza o ano no footer
-// ======================
-document.querySelectorAll(".year").forEach((el) => {
+// Atualiza todos os elementos com a classe 'year'
+document.querySelectorAll('.year').forEach(el => {
   el.textContent = new Date().getFullYear();
 });
 
-// ======================
-// Menu Mobile
-// ======================
-document.addEventListener("DOMContentLoaded", function () {
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
 
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
+//
+// Mobile Menu
+//
+// Menu mobile toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+});
+
+// Dropdown Photography
+const mobilePhotoBtn = document.getElementById('mobile-photography-btn');
+const mobilePhotoMenu = document.getElementById('mobile-photography-menu');
+
+mobilePhotoMenu.style.display = 'none';
+mobilePhotoBtn.classList.remove('active');
+
+mobilePhotoBtn.addEventListener('click', () => {
+  const isOpen = mobilePhotoMenu.style.display === 'block';
+  mobilePhotoMenu.style.display = isOpen ? 'none' : 'block';
+  mobilePhotoBtn.classList.toggle('active', !isOpen);
+});
+
+const langBtn = document.getElementById('lang-btn');
+const langFlag = document.getElementById('lang-flag');
+const langMenu = document.getElementById('lang-menu');
+
+// Detecta idioma pela URL
+function updateLanguageButton() {
+  const path = window.location.pathname;
+  let flag = "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg";
+  let label = "EN";
+
+  if (path.startsWith("/pt")) {
+    flag = "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg";
+    label = "PT";
+  } else if (path.startsWith("/es")) {
+    flag = "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg";
+    label = "ES";
+  }
+
+  langFlag.src = flag;
+  langBtn.innerHTML = `<img id="lang-flag" src="${flag}" alt="${label}" class="w-5 h-5 mr-2 rounded-sm"> ${label} ▾`;
+}
+
+// Chama ao carregar
+updateLanguageButton();
+
+// Toggle menu
+langBtn.addEventListener("click", () => {
+  langMenu.classList.toggle("hidden");
+});
+
+// Fechar ao clicar fora
+document.addEventListener("click", e => {
+  if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
+    langMenu.classList.add("hidden");
   }
 });
 
-// ======================
-// Proteção de login (apenas páginas de admin)
-// ======================
-document.addEventListener("DOMContentLoaded", function () {
-  const isDashboard = document.body.classList.contains("admin-page"); // exemplo de flag
-  if (isDashboard) {
-    if (localStorage.getItem("loggedIn") !== "true") {
-      window.location.href = "../index.html";
-    }
-  }
-});
+// Mobile Language Switcher
+const mobileLangBtn = document.getElementById('mobile-lang-btn');
+const mobileLangMenu = document.getElementById('mobile-lang-menu');
 
-// ======================
-// Logout (apenas páginas de admin)
-// ======================
-document.addEventListener("DOMContentLoaded", function () {
-  const logoutBtn = document.getElementById("logoutBtn");
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", () => {
-      localStorage.removeItem("loggedIn");
-      alert("Logout efetuado!");
-      window.location.href = "../index.html";
-    });
-  }
-});
+mobileLangMenu.style.display = 'none';
+mobileLangBtn.classList.remove('active');
 
-// ======================
-// Popup Último Photoshoot
-// ======================
-document.addEventListener("DOMContentLoaded", function () {
-  const popup = document.getElementById("photoshootPopup");
-  const closeBtn = document.getElementById("closePopup");
-  const seeMoreBtn = document.getElementById("seeMoreBtn");
-
-  function openPopup() {
-    if (!popup) return;
-    popup.classList.remove("hidden");
-    popup.style.display = "flex";
-    popup.setAttribute("aria-hidden", "false");
-  }
-
-  function closePopup() {
-    if (!popup) return;
-    popup.classList.add("hidden");
-    popup.style.display = "none";
-    popup.setAttribute("aria-hidden", "true");
-  }
-
-  // Abrir popup após 800ms
-  //if (popup) {
-  //  setTimeout(openPopup, 800);
-  //}
-
-  // Abrir popup após 800ms (apenas na primeira visita da sessão)
-  //if (popup && !sessionStorage.getItem("photoshootSeen")) {
-  //  setTimeout(openPopup, 800);
-  //  sessionStorage.setItem("photoshootSeen", "true");
-  //}
-
-  // Abrir popup após 800ms (apenas uma vez por dia)
-  if (popup) {
-    const today = new Date().toDateString();
-    const lastSeen = localStorage.getItem("photoshootSeen");
-
-    if (lastSeen !== today) {
-      setTimeout(openPopup, 800);
-      localStorage.setItem("photoshootSeen", today);
-    }
-  }
-
-
-  // Fechar ao clicar no X
-  if (closeBtn) {
-    closeBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      closePopup();
-    });
-  }
-
-  // Fechar ao clicar fora do conteúdo
-  if (popup) {
-    popup.addEventListener("click", (e) => {
-      if (e.target === popup) closePopup();
-    });
-  }
-
-  // Botão "Ver mais"
-  if (seeMoreBtn) {
-    seeMoreBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      closePopup();
-
-      const href = seeMoreBtn.getAttribute("href") || "#photography";
-      const targetId = href.startsWith("#") ? href : null;
-
-      setTimeout(() => {
-        if (targetId) {
-          const targetEl = document.querySelector(targetId);
-          if (targetEl) {
-            targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
-            return;
-          }
-        }
-        if (href && href !== "#") {
-          window.location.href = href;
-        }
-      }, 160);
-    });
-  }
+mobileLangBtn.addEventListener('click', () => {
+  const isOpen = mobileLangMenu.style.display === 'block';
+  mobileLangMenu.style.display = isOpen ? 'none' : 'block';
+  mobileLangBtn.classList.toggle('active', !isOpen);
 });

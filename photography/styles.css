@@ -1,3 +1,4 @@
+
 /* ===================== */
 /* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
 /* ===================== */
@@ -124,7 +125,6 @@ header a:hover {
   display: block;
 }
 
-
 /* =====================
    Menu Mobile Fullscreen
    ===================== */
@@ -214,121 +214,22 @@ header a:hover {
   display: flex;
 }
 
-/* ===================== */
-/* Cards (Projetos, Fotografia, Certificados) */
-/* ===================== */
+
+
+/* Sombra suave e borda arredondada padrão */
 .card {
-    background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
+border-radius: 1rem;
+box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+  background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
   backdrop-filter: blur(10px) !important;
-  color: var(--c-white);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
-  border-radius: 1rem;
-}
-
-.card img {
-  filter: brightness(0.8);
-}
-
-.card h3 {
-  color: var(--c-white);
+color: var(--c-white);
 }
 
 
 
-
-
-/* ===================== */
-/* Hero Section */
-/* ===================== */
-.hero-wrap {
-  background: 
-    radial-gradient(1200px 600px at 10% 10%, rgba(155, 155, 155, 0.300), transparent 70%),
-    radial-gradient(900px 500px at 90% 80%,  rgba(167, 167, 167, 0.500), transparent 70%);
-    position: relative;
-    z-index: 0;
-}
-
-/* ===================== */
-/* Slideshow (Fotografia) */
-/* ===================== */
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  padding-top: 66.66%; /* proporção 3:2 */
-  overflow: hidden;
-  border-radius: 1rem;
-  margin-bottom: 12px;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-
-/* ===================== */
-/* Footer */
-/* ===================== */
+/* Footer ajustado para o tema escuro */
 footer {
   color: var(--c-white);
   background-color: rgba(15, 22, 32, 0.349); /* mesmo fundo */
   backdrop-filter: blur(5px);              /* mesmo blur */
 }
-
-/* Animação de entrada suave */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.4s ease-out;
-}
-
-/* ===================== */
-/* Botões customizados */
-/* ===================== */
-.btn {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  border-radius: 0.6rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary {
-  background: var(--c-blue);
-  color: var(--c-white);
-}
-
-.btn-primary:hover {
-  background: #0f5ae5;
-  transform: translateY(-2px);
-}
-
-/* ===================== */
-/* Animação de fade-in */
-/* ===================== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.4s ease-out;
-}
-
-#closePopup { line-height: 1; }
-#closePopup:hover { transform: translateY(-2px); transition: transform .15s; }
-

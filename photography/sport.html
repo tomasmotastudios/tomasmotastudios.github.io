@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/profile.jpg" type="image/jpg" />
+    <title>Tomás Mota - Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ===================== -->
+    <!-- Header / Navegação -->
+    <!-- ===================== -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <!-- Logo / Nome -->
+        <a href="/" class="flex items-center space-x-3">
+            <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota </span>
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <a href="/about.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                About
+            </a>
+
+            <div class="dropdown group relative">
+                <a href="#" class="px-4 py-2 rounded-lg text-white transition hover:no-underline dropdown-toggle"
+                    style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                    Developer <span class="arrow-down">▾</span>
+                </a>
+                <div
+                    class="dropdown-content absolute left-0 mt-2 w-48 bg-[var(--c-gray-2)] rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+                    <a href="/projects/highlights.html" class="block px-4 py-2 text-white hover:underline">Highlights
+                    </a>
+                    <a href="/projects/frontend.html" class="block px-4 py-2 text-white hover:underline">Front-end
+                        Projects</a>
+                    <a href="/projects/backend.html" class="block px-4 py-2 text-white hover:underline">Back-end
+                        Projects</a>
+                </div>
+            </div>
+
+            <div class="dropdown group relative">
+                <a href="#" class="px-4 py-2 rounded-lg text-white transition hover:no-underline dropdown-toggle"
+                    style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                    Photographer <span class="arrow-down">▾</span>
+                </a>
+                <div
+                    class="dropdown-content absolute left-0 mt-2 w-48 bg-[var(--c-gray-2)] rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+                    <a href="/photography/sport.html" class="block px-4 py-2 text-white hover:underline">Sport</a>
+                    <a href="/photography/music.html" class="block px-4 py-2 text-white hover:underline">Music</a>
+                    <a href="/photography/casual.html" class="block px-4 py-2 text-white hover:underline">Casual</a>
+                </div>
+            </div>
+
+            <a href="/cv.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                CV
+            </a>
+
+            <a href="/contact.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                Contact
+            </a>
+        </nav>
+
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===================== -->
+    <!-- Mobile Menu -->
+    <!-- ===================== -->
+    <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+        <a href="/about.html" class="block">About</a>
+
+        <div class="flex flex-col">
+            <span id="mobile-developer-btn" class="mobile-dropdown-btn block hover:no-underline transition">Developer
+                ▾</span>
+            <div id="mobile-developer-menu" class="mobile-dropdown-content">
+                <a href="/projects/highlights.html" class="block">Highlights</a>
+                <a href="/projects/frontend.html" class="block">Front-end Projects</a>
+                <a href="/projects/backend.html" class="block">Back-end Projects</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <span id="mobile-photographer-btn"
+                class="mobile-dropdown-btn block hover:no-underline transition">Photographer ▾</span>
+            <div id="mobile-photographer-menu" class="mobile-dropdown-content">
+                <a href="/photography/sport.htm" class="block">Sport</a>
+                <a href="/photography/music.html" class="block">Music</a>
+                <a href="/photography/casual.html" class="block">Casual</a>
+            </div>
+        </div>
+
+        <a href="/cv.html" class="block">CV</a>
+        <a href="/contact.html" class="block">Contact</a>
+    </div>
+
+    <!-- PHOTOGRAPHY -->
+    <section id="photography" class="px-6 py-12">
+        <h2 class="text-2xl font-bold mb-6">Sport Photography</h2>
+        <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
+
+            <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport16.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">União de Leiria</h3>
+                    <p class="text-gray-200 text-sm">Tomás Macedo</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/atletico-clube-marinhense-season-finale-party-two-thousand-and-twenty-four-and-twenty-five"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport15.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Atlético Clube Marinhense</h3>
+                    <p class="text-gray-200 text-sm">Season Finale Party 2024.25</p>
+                </article>
+            </a>
+
+            <!-- <a href="https://www.behance.net/gallery/231756789/Sport-ACM-U-13-Trainings" class="block w-full md:w-[calc(33.333333%-16px)]">
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="src/img/sport14.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Atlético Clube Marinhense</h3>
+                <p class="text-gray-200 text-sm">U-13 Trainings</p>
+            </article>
+        </a> -->
+
+            <a href="photoshoot/sport/atletico-clube-marinhense-joao-fazendeiro"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport13.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Atlético Clube Marinhense</h3>
+                    <p class="text-gray-200 text-sm">João Fazendeiro</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/atletico-clube-marinhense-afonso-correira"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport12.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Atlético Clube Marinhense</h3>
+                    <p class="text-gray-200 text-sm">Afonso Correia</p>
+                </article>
+            </a>
+
+            <!-- <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="src/img/sport17.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Atlético Clube Marinhense</h3>
+                <p class="text-gray-200 text-sm">Dinis Rodrigues</p>
+            </article>
+        </a>
+
+        <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
+            <article class="card p-4 text-left rounded-xl shadow-md">
+                <img src="src/img/sport18.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                <h3 class="font-bold">Atlético Clube Marinhense</h3>
+                <p class="text-gray-200 text-sm">Diego Franco</p>
+            </article>
+        </a> -->
+
+            <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport11.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Atlético Clube Marinhense</h3>
+                    <p class="text-gray-200 text-sm">Alexandre Sancheira</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/atletico-clube-marinhense-pombal-cup"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport10.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Atlético Clube Marinhense</h3>
+                    <p class="text-gray-200 text-sm">2025 PombalCup</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/grupo-desportivo-de-pescadores-da-costa-da-caparica-tomas-ramos"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport09.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">GD Pescadores da Costa da Caparica</h3>
+                    <p class="text-gray-200 text-sm">Tomás Ramos</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/grupo-desportivo-de-pescadores-da-costa-da-caparica-luis-ramos"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport08.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">GD Pescadores da Costa da Caparica</h3>
+                    <p class="text-gray-200 text-sm">Luís Santos</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/grupo-desportivo-de-pescadores-da-costa-da-caparica-impor-four-mill-summer-cup"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport07.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">GD Pescadores da Costa da Caparica</h3>
+                    <p class="text-gray-200 text-sm">Impor4mill Summer Cup</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/iberoalpla-inter-company-tournament"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport06.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">IberoAlpla</h3>
+                    <p class="text-gray-200 text-sm">Inter-Company Tournament</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/sport-lisboa-e-marinha-francisco-teixeira"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport05.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Sport Lisboa e Marinha</h3>
+                    <p class="text-gray-200 text-sm">Francisco Teixeira</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/sport-lisboa-e-marinha-brazao"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport04.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Sport Lisboa e Marinha</h3>
+                    <p class="text-gray-200 text-sm">Brazão</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/sport-lisboa-e-marinha-bernardo-lopes"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport03.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Sport Lisboa e Marinha</h3>
+                    <p class="text-gray-200 text-sm">Bernardo Lopes</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/sport-lisboa-e-marinha-tomas-lordelo"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport02.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Sport Lisboa e Marinha</h3>
+                    <p class="text-gray-200 text-sm">Tomás Lordelo</p>
+                </article>
+            </a>
+
+            <a href="photoshoot/sport/sport-lisboa-e-marinha-pedro-baptista"
+                class="block w-full md:w-[calc(33.333333%-16px)]">
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/sport01.jpg" alt="" class="w-full h-auto object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Sport Lisboa e Marinha</h3>
+                    <p class="text-gray-200 text-sm">Pedro Baptista</p>
+                </article>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ===================== -->
+    <!-- Footer -->
+    <!-- ===================== -->
+    <!-- Footer Desktop -->
+    <footer
+        class="hidden md:flex py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+
+            <!-- Copyright à esquerda -->
+            <div class="text-left">
+                © 2024 - <span class="year"></span>
+                <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All Rights
+                Reserved.
+            </div>
+
+            <!-- Redes sociais acima dos links legais, à direita -->
+            <div class="flex flex-col items-end">
+
+                <!-- Redes sociais -->
+                <div class="flex gap-4 mb-2">
+                    <a href="/links/linkedin.html" target="_blank" title="LinkedIn">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/links/github.html" target="_blank" title="GitHub">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/links/facebook.html" target="_blank" title="Facebook">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/links/instagram.html" target="_blank" title="Instagram">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/links/whatsapp.html" target="_blank" title="Send me a mesage via WhatsApp">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                            alt="WhastApp" class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/links/email.html" target="_blank" title="Send me a email">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Gmail"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/links/listen.html" target="_blank" title="Listen to Tomás Mota's official music">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/applemusic.svg"
+                            alt="Listen to Tomás Mota's official music" class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                </div>
+
+                <!-- Links legais -->
+                <nav class="flex gap-4">
+                    <a href="/privacypolicy.html" class="hover:text-white no-underline transition">Privacy Policy</a>
+                    <a href="/cookies.html" class="hover:text-white no-underline transition">Cookies</a>
+                    <a href="/termsofservice.html" class="hover:text-white no-underline transition">Terms of
+                        Service</a>
+                </nav>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Footer Mobile -->
+    <footer
+        class="flex flex-col md:hidden py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm items-center gap-4">
+
+        <!-- Redes sociais -->
+        <div class="flex justify-center gap-4">
+            <a href="/links/linkedin.html" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/links/github.html" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/links/facebook.html" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/links/instagram.html" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/links/whatsapp.html" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/links/email.html" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Gmail"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/links/listen.html" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/applemusic.svg"
+                    alt="Listen to Tomás Mota's official music" class="w-6 h-6 filter brightness-0 invert">
+            </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center">
+            © 2024 - <span class="year"></span>
+            <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All Rights
+            Reserved.
+        </div>
+
+        <!-- Links legais -->
+        <nav class="flex flex-wrap justify-center gap-4 text-center">
+            <a href="/privacypolicy.html" class="hover:text-white no-underline transition">Privacy Policy</a>
+            <a href="/cookies.html" class="hover:text-white no-underline transition">Cookies</a>
+            <a href="/termsofservice.html" class="hover:text-white no-underline transition">Terms of Service</a>
+        </nav>
+
+    </footer>
+
+    <!-- ===================== -->
+    <!-- Scripts -->
+    <!-- ===================== -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
