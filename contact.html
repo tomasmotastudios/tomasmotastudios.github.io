@@ -13,6 +13,19 @@
 <body class="min-h-screen flex flex-col">
   <main class="flex-grow">
 
+    <!-- Preloader Profissional -->
+    <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-gray-900 z-[9999]">
+
+        <!-- Logo / iniciais animadas -->
+        <div class="text-4xl sm:text-5xl font-bold text-blue-500 animate-bounce-slow">TM</div>
+
+        <!-- Linha de loading -->
+        <div class="mt-4 w-20 h-1 bg-blue-500 rounded-full animate-loading"></div>
+
+        <!-- Texto Loading -->
+        <p class="mt-4 text-gray-300 text-sm sm:text-base animate-pulse">Loading...</p>
+    </div>
+
     <!-- ===================== -->
     <!-- Header / Navegação -->
     <!-- ===================== -->
@@ -144,14 +157,14 @@
         <!-- Quadro 1: Formulário -->
         <!-- ===================== -->
         <div>
-          <h2 class="text-1xl font-extrabold mb-6">Send Me a Message</h2>
-          <p>*Required</p>
+          <!-- <h2 class="text-1xl font-extrabold mb-6">Send Me a Message</h2>
+          <p>*Required</p> -->
           <form action="https://formspree.io/f/xvgbagja" method="POST" class="flex flex-col gap-4">
             <input type="text" name="Name" placeholder="Name*" required
               class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
             <input type="email" name="Email" placeholder="Email*" required
               class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
-            <input type="number" name="Phone Number" placeholder="Phone Number" required
+            <input type="number" name="Phone Number" placeholder="Phone Number*" required
               class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
             <textarea name="Message" rows="5" placeholder="Message*" required
               class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]"></textarea>

@@ -8,10 +8,24 @@
     <title>Tomás Mota - Dev Projects - Back-End</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="min-h-screen flex flex-col">
     <main class="flex-grow">
+
+        <!-- Preloader Profissional -->
+        <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-gray-900 z-[9999]">
+
+            <!-- Logo / iniciais animadas -->
+            <div class="text-4xl sm:text-5xl font-bold text-blue-500 animate-bounce-slow">TM</div>
+
+            <!-- Linha de loading -->
+            <div class="mt-4 w-20 h-1 bg-blue-500 rounded-full animate-loading"></div>
+
+            <!-- Texto Loading -->
+            <p class="mt-4 text-gray-300 text-sm sm:text-base animate-pulse">Loading...</p>
+        </div>
 
         <!-- ===================== -->
         <!-- Header / Navegação -->
@@ -25,7 +39,7 @@
 
             <!-- Navegação Desktop -->
             <nav class="hidden md:flex space-x-3">
-                <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                <a href="/about.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
                     style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
                     About
                 </a>
@@ -50,25 +64,22 @@
                 <div class="dropdown group relative">
                     <a href="#" class="px-4 py-2 rounded-lg text-white transition hover:no-underline dropdown-toggle"
                         style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-                        Photography <span class="arrow-down">▾</span>
+                        Photographer <span class="arrow-down">▾</span>
                     </a>
                     <div
                         class="dropdown-content absolute left-0 mt-2 w-48 bg-[var(--c-gray-2)] rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
-                        <a href="/photography/sport.html" class="block px-4 py-2 text-white hover:underline">Sport
-                            Photographs</a>
-                        <a href="/photography/music.html" class="block px-4 py-2 text-white hover:underline">Music
-                            Photographs</a>
-                        <a href="/photography/casual.html" class="block px-4 py-2 text-white hover:underline">Casual
-                            Photographs</a>
+                        <a href="/photography/sport.html" class="block px-4 py-2 text-white hover:underline">Sport</a>
+                        <a href="/photography/music.html" class="block px-4 py-2 text-white hover:underline">Music</a>
+                        <a href="/photography/casual.html" class="block px-4 py-2 text-white hover:underline">Casual</a>
                     </div>
                 </div>
 
-                <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                <a href="/cv.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
                     style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
                     CV
                 </a>
 
-                <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                <a href="/contact.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
                     style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
                     Contact
                 </a>
@@ -90,7 +101,7 @@
         <!-- Mobile Menu -->
         <!-- ===================== -->
         <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
-            <a href="/about" class="block">About</a>
+            <a href="/about.html" class="block">About</a>
 
             <div class="flex flex-col">
                 <span id="mobile-developer-btn"
@@ -105,16 +116,16 @@
 
             <div class="flex flex-col">
                 <span id="mobile-photographer-btn"
-                    class="mobile-dropdown-btn block hover:no-underline transition">Photography ▾</span>
+                    class="mobile-dropdown-btn block hover:no-underline transition">Photographer ▾</span>
                 <div id="mobile-photographer-menu" class="mobile-dropdown-content">
-                    <a href="/photography/sport.htm" class="block">Sport Photography</a>
-                    <a href="/photography/music.html" class="block">Music Photography</a>
-                    <a href="/photography/casual.html" class="block">Casual Photography</a>
+                    <a href="/photography/sport.htm" class="block">Sport</a>
+                    <a href="/photography/music.html" class="block">Music</a>
+                    <a href="/photography/casual.html" class="block">Casual</a>
                 </div>
             </div>
 
-            <a href="/cv" class="block">CV</a>
-            <a href="/contact" class="block">Contact</a>
+            <a href="/cv.html" class="block">CV</a>
+            <a href="/contact.html" class="block">Contact</a>
         </div>
 
 
@@ -222,7 +233,8 @@
             <!-- Copyright à esquerda -->
             <div class="text-left">
                 © 2024 - <span class="year"></span>
-                <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All Rights
+                <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All
+                Rights
                 Reserved.
             </div>
 
@@ -248,8 +260,8 @@
                             class="w-6 h-6 filter brightness-0 invert">
                     </a>
                     <a href="/links/whatsapp.html" target="_blank" title="Send me a mesage via WhatsApp">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
-                            alt="WhastApp" class="w-6 h-6 filter brightness-0 invert">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhastApp"
+                            class="w-6 h-6 filter brightness-0 invert">
                     </a>
                     <a href="/links/email.html" target="_blank" title="Send me a email">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Gmail"
@@ -329,7 +341,7 @@
     <!-- ===================== -->
     <!-- Scripts -->
     <!-- ===================== -->
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 
 </body>
 

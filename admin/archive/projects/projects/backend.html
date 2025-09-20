@@ -5,28 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/profile.jpg" type="image/jpg" />
-    <title>Tomás Mota — About</title>
+    <title>Tomás Mota - Dev Projects - Back-End</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="min-h-screen flex flex-col">
     <main class="flex-grow">
-
-        <!-- Preloader Profissional -->
-        <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-gray-900 z-[9999]">
-
-            <!-- Logo / iniciais animadas -->
-            <div class="text-4xl sm:text-5xl font-bold text-blue-500 animate-bounce-slow">TM</div>
-
-            <!-- Linha de loading -->
-            <div class="mt-4 w-20 h-1 bg-blue-500 rounded-full animate-loading"></div>
-
-            <!-- Texto Loading -->
-            <p class="mt-4 text-gray-300 text-sm sm:text-base animate-pulse">Loading...</p>
-        </div>
-
 
         <!-- ===================== -->
         <!-- Header / Navegação -->
@@ -40,7 +25,7 @@
 
             <!-- Navegação Desktop -->
             <nav class="hidden md:flex space-x-3">
-                <a href="/about.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:underline"
                     style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
                     About
                 </a>
@@ -65,22 +50,25 @@
                 <div class="dropdown group relative">
                     <a href="#" class="px-4 py-2 rounded-lg text-white transition hover:no-underline dropdown-toggle"
                         style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-                        Photographer <span class="arrow-down">▾</span>
+                        Photography <span class="arrow-down">▾</span>
                     </a>
                     <div
                         class="dropdown-content absolute left-0 mt-2 w-48 bg-[var(--c-gray-2)] rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
-                        <a href="/photography/sport.html" class="block px-4 py-2 text-white hover:underline">Sport</a>
-                        <a href="/photography/music.html" class="block px-4 py-2 text-white hover:underline">Music</a>
-                        <a href="/photography/casual.html" class="block px-4 py-2 text-white hover:underline">Casual</a>
+                        <a href="/photography/sport.html" class="block px-4 py-2 text-white hover:underline">Sport
+                            Photographs</a>
+                        <a href="/photography/music.html" class="block px-4 py-2 text-white hover:underline">Music
+                            Photographs</a>
+                        <a href="/photography/casual.html" class="block px-4 py-2 text-white hover:underline">Casual
+                            Photographs</a>
                     </div>
                 </div>
 
-                <a href="/cv.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
                     style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
                     CV
                 </a>
 
-                <a href="/contact.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
                     style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
                     Contact
                 </a>
@@ -102,7 +90,7 @@
         <!-- Mobile Menu -->
         <!-- ===================== -->
         <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
-            <a href="/about.html" class="block">About</a>
+            <a href="/about" class="block">About</a>
 
             <div class="flex flex-col">
                 <span id="mobile-developer-btn"
@@ -117,96 +105,111 @@
 
             <div class="flex flex-col">
                 <span id="mobile-photographer-btn"
-                    class="mobile-dropdown-btn block hover:no-underline transition">Photographer ▾</span>
+                    class="mobile-dropdown-btn block hover:no-underline transition">Photography ▾</span>
                 <div id="mobile-photographer-menu" class="mobile-dropdown-content">
-                    <a href="/photography/sport.htm" class="block">Sport</a>
-                    <a href="/photography/music.html" class="block">Music</a>
-                    <a href="/photography/casual.html" class="block">Casual</a>
+                    <a href="/photography/sport.htm" class="block">Sport Photography</a>
+                    <a href="/photography/music.html" class="block">Music Photography</a>
+                    <a href="/photography/casual.html" class="block">Casual Photography</a>
                 </div>
             </div>
 
-            <a href="/cv.html" class="block">CV</a>
-            <a href="/contact.html" class="block">Contact</a>
+            <a href="/cv" class="block">CV</a>
+            <a href="/contact" class="block">Contact</a>
         </div>
+
 
         <!-- ===================== -->
         <!-- Hero Section -->
         <!-- ===================== -->
-        <main class="max-w-4xl mx-auto px-4 py-8 text-left">
-
-            <div class="flex items-start gap-6 mb-12">
-                <!-- Foto à esquerda (visível só em desktop/tablet) -->
-                <div class="hidden md:flex flex-shrink-0 justify-center">
-                    <div class="photo-container w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 relative">
-                        <!-- <img src="../src/img/25/09/1010022022129.png" alt="Tomás Mota"-->
-                        <img src="../profile.jpg" alt="Tomás Mota"
-                            class="animated-photo w-full h-full object-cover rounded-full">
-                    </div>
-                </div>
-
-                <!-- Texto à direita -->
-                <div class="flex flex-col justify-start w-full">
-                    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-left">
-                        <span class="text-[var(--c-red)]">&lt;</span>
-                        <span class="text-white">About Me</span>
-                        <span class="text-[var(--c-red)]">/&gt;</span>
-                    </h1>
-                    <p class="text-lg text-[var(--c-white2)] text-justify">
-                        <strong>Full-stack developer</strong> from Marinha Grande, Portugal 🇵🇹.
-                        He works as a freelancer, focusing on building modern, accessible, and responsive interfaces —
-                        always balancing aesthetics with functionality.
-                    </p>
-                </div>
-            </div>
-
-            <!-- ===================== -->
-            <!-- About Section -->
-            <!-- ===================== -->
-            <div class="card p-8 md:p-12 mb-8">
-                <h3 class="text-2xl font-bold mb-4">💻 Technical Experience</h3>
-                <p>Tomás has hands-on experience with:</p>
-                <ul class="list-disc list-inside mt-4">
-                    <li><strong>Tech Stack</strong></li>
-                    <li>Languages: <strong>HTML, CSS, JavaScript, PHP, Java</strong></li>
-                    <li>Tools: <strong>Git, GitHub, VS Code</strong></li>
-                    <li>Additional Skills: <strong>Basic UI/UX, responsive design, a11y (web accessibility)</strong>
-                    </li>
-                </ul>
-                <p>He focuses on <strong>clean code</strong>, <strong>solid version control practices</strong>, and
-                    <strong>reusable components</strong> — always aiming to deliver digital products that balance
-                    <strong>usability, performance, and visual design.</strong>
+        <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+            <div class="hero-wrap card p-8 md:p-12 rounded-2xl">
+                <!-- Título -->
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+                    <span class="text-[var(--c-red)]">&lt;</span>
+                    <span class="text-white">Back-end Projects</span>
+                    <span class="text-[var(--c-red)]" /> /&gt;</span>
+                </h1>
+                <!-- Descrição / Subtítulo secundário -->
+                <p id="herop" class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
+                    Here you'll find all my <span class="font-semibold text-[var(--c-white)]">back-end
+                        projects</span>. — Each project reflects my learning and passion for transforming ideas into
+                    functional and creative digital solutions.
                 </p>
             </div>
-            <div class="card p-8 md:p-12 mb-8">
-                <h3 class="text-2xl font-bold mb-4">🎓 Creative & Technical Background</h3>
-                <p>He’s currently completing a professional <strong>Multimedia</strong> course, where he has gained both
-                    technical and creative skills, including:</p>
-                <ul class="list-disc list-inside mt-4">
-                    <li>📸 <strong>Photography</strong> (sports, music, casual)</li>
-                    <li>🎨 <strong>Graphic design</strong> and branding</li>
-                    <li>🤖 <strong>Robotics programming</strong> (Arduino & basic automation)</li>
-                    <li>🎬 <strong>Video production</strong> and multimedia content creation</li>
-                </ul>
-                <p>This creative background enhances his development work, bringing a more visual, organized, and
-                    user-centered approach to everything he builds.</p>
+
+            <!-- ===================== -->
+            <!-- Projects Section -->
+            <!-- ===================== -->
+            <!-- <h2 class="text-2xl font-bold mb-6 mt-12">Explore my Projects</h2> -->
+            <h1>ㅤ</h1>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-y-6 md:gap-x-8">
+
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/devprojects06.png" alt="Flash Sale"
+                        class="w-full h-40 object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Flash Sale</h3>
+                    <p class="text-gray-200 text-sm">Calcula desconto com base no valor da compra.</p>
+                    <a href="https://github.com/tomasmotahq/exploring-java-syntax-and-logic/tree/main/flash-sale"
+                        target="_blank" class="btn">GitHub Repository</a>
+                    <a href="https://tomasmotahq.github.io/exploring-java-syntax-and-logic/flash-sale" target="_blank"
+                        class="btn">Live Demo</a>
+                </article>
+
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/devprojects05.png" alt="Organizing Inventory"
+                        class="w-full h-40 object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Organizing Inventory</h3>
+                    <p class="text-gray-200 text-sm">Organiza e resume dados de inventário de lojas.</p>
+                    <a href="https://github.com/tomasmotahq/exploring-java-syntax-and-logic/tree/main/organizing-inventory"
+                        target="_blank" class="btn">GitHub Repository</a>
+                    <a href="https://tomasmotahq.github.io/exploring-java-syntax-and-logic/organizing-inventory"
+                        target="_blank" class="btn">Live Demo</a>
+                </article>
+
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/devprojects04.png" alt="Hero Level Classifier"
+                        class="w-full h-40 object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Hero Level Classifier</h3>
+                    <p class="text-gray-200 text-sm">Classifica nível de herói de Iron a Radiant.</p>
+                    <a href="https://github.com/tomasmotahq/hero-level-classifier" target="_blank" class="btn">GitHub
+                        Repository</a>
+                    <a href="https://tomasmotahq.github.io/hero-level-classifier" target="_blank" class="btn">Live
+                        Demo</a>
+                </article>
+
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/devprojects03.png" alt="Ranked Calculator"
+                        class="w-full h-40 object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Ranked Calculator</h3>
+                    <p class="text-gray-200 text-sm">Calcula ranking de jogador baseado em vitórias e derrotas.</p>
+                    <a href="https://github.com/tomasmotahq/ranked-calculator" target="_blank" class="btn">GitHub
+                        Repository</a>
+                    <a href="https://tomasmotahq.github.io/ranked-calculator" target="_blank" class="btn">Live Demo</a>
+                </article>
+
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/devprojects02.png" alt="Writing Hero Class Game"
+                        class="w-full h-40 object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Writing Hero Class Game</h3>
+                    <p class="text-gray-200 text-sm">Projeto OOP com classes de herói e métodos de ataque.</p>
+                    <a href="https://github.com/tomasmotahq/hero_game" target="_blank" class="btn">GitHub Repository</a>
+                    <a href="https://tomasmotahq.github.io/hero_game" target="_blank" class="btn">Live Demo</a>
+                </article>
+
+                <article class="card p-4 text-left rounded-xl shadow-md">
+                    <img src="src/img/devprojects01.png" alt="Credit Card Brand Validator"
+                        class="w-full h-40 object-cover rounded-xl mb-3">
+                    <h3 class="font-bold">Credit Card Brand Validator</h3>
+                    <p class="text-gray-200 text-sm">Detecta bandeira de cartão usando regex.</p>
+                    <a href="https://github.com/tomasmotahq/credit-card-brand-validator" target="_blank"
+                        class="btn">GitHub Repository</a>
+                    <a href="https://tomasmotahq.github.io/credit-card-brand-validator" target="_blank" class="btn">Live
+                        Demo</a>
+                </article>
             </div>
-            <div class="card p-8 md:p-12 mb-8">
-                <h3 class="text-2xl font-bold mb-4">🧠 Professional Profile</h3>
-                <p>Tomás is someone who:</p>
-                <ul class="list-disc list-inside mt-4">
-                    <li>🧼 Writes clean and well-structured code</li>
-                    <li>👁️ Pays attention to detail and visual aesthetics</li>
-                    <li>📚 Is always learning new tools and technologies</li>
-                    <li>🤝 Values collaboration, communication, and feedback</li>
-                    <li>⚡ Has real-world experience with clients and local institutions</li>
-                </ul>
-            </div>
-            <div class="card p-8 md:p-12 mb-8">
-                <blockquote class="mt-8 text-center max-w-full mx-auto">“Tomás is where code meets creativity.”
-                </blockquote>
-            </div>
-        </main>
     </main>
+    <h2 class="grid grid-cols-1 md:grid-cols-4 gap-y-6 md:gap-x-8 text-1l font-bold mb-6 mt-12">ㅤ</h2>
+
 
     <!-- ===================== -->
     <!-- Footer -->
@@ -219,8 +222,7 @@
             <!-- Copyright à esquerda -->
             <div class="text-left">
                 © 2024 - <span class="year"></span>
-                <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All
-                Rights
+                <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota Studios</a>. All Rights
                 Reserved.
             </div>
 
@@ -246,8 +248,8 @@
                             class="w-6 h-6 filter brightness-0 invert">
                     </a>
                     <a href="/links/whatsapp.html" target="_blank" title="Send me a mesage via WhatsApp">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhastApp"
-                            class="w-6 h-6 filter brightness-0 invert">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+                            alt="WhastApp" class="w-6 h-6 filter brightness-0 invert">
                     </a>
                     <a href="/links/email.html" target="_blank" title="Send me a email">
                         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Gmail"
@@ -328,6 +330,7 @@
     <!-- Scripts -->
     <!-- ===================== -->
     <script src="script.js"></script>
+    <script src="../script.js"></script>
 
 </body>
 
