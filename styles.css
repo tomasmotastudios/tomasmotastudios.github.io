@@ -474,6 +474,24 @@ footer {
   transition: background 0.2s ease;
 }
 
+/* divisória entre código e botões */
+#code-demos .card .flex {
+  border-top: 1px solid #333;   /* cor da linha */
+  padding-top: 0.75rem;         /* espaço interno acima dos botões */
+  margin-top: 0.75rem;          /* espaço externo entre o código e a linha */
+}
+
+/* adiciona espaço entre os botões e o output */
+.card pre#python-output,
+.card pre#cs-output {
+  margin-top: 0.75rem; /* ou 1rem se quiseres mais espaço */
+  padding: 0.5rem;     /* opcional, deixa o output mais "respirado" */
+  background-color: #1e1e1e; /* opcional, deixa como bloco de saída */
+  color: #f0f0f0;           /* opcional, contraste com fundo escuro */
+  border-radius: 0.5rem;    /* opcional, cantos arredondados */
+}
+
+
 #code-demos a {
   background: #374151;
 }
@@ -487,7 +505,7 @@ footer {
 }
 
 /* output Python */
-#python-output {
+#python-output, #cs-output {
   background: #000;
   color: #10b981;
   padding: 0.75rem;
