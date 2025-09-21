@@ -311,3 +311,17 @@ if (track) {
 // ============================
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
+
+// ============================
+// Print Code
+// ============================
+  async function runCsharp() {
+    let code = document.getElementById("codigo-cs").textContent;
+    let match = code.match(/Console\.WriteLine\("([^"]+)"\);/);
+
+    if (match) {
+      document.getElementById("cs-output").textContent = match[1];
+    } else {
+      document.getElementById("cs-output").textContent = "⚠️ Don't find Console.WriteLine(...) in the code.";
+    }
+  }

@@ -414,3 +414,83 @@ footer {
   transform-origin: left;
   animation: loading-bar 1.5s infinite;
 }
+
+/* ====================== */
+/* Code Demos Section     */
+/* ====================== */
+
+/* Section Code Demos */
+#code-demos {
+  padding: 4rem 1rem;
+}
+
+#code-demos h2 {
+  text-align: center;
+  /* font-size: 1.8rem; */
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+/* grid responsivo */
+#code-demos .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  #code-demos .grid {
+    grid-template-columns: repeat(2, 1fr); /* lado a lado */
+  }
+}
+
+/* cards */
+#code-demos .card {
+  background: #1e1e1e;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* blocos de código */
+#code-demos pre {
+  background: #0d0d0d;
+  color: #eee;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+/* botões */
+#code-demos button,
+#code-demos a {
+  background: #2563eb;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#code-demos a {
+  background: #374151;
+}
+
+#code-demos button:hover {
+  background: #1d4ed8;
+}
+
+#code-demos a:hover {
+  background: #4b5563;
+}
+
+/* output Python */
+#python-output {
+  background: #000;
+  color: #10b981;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}

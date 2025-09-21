@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Demos - Tomás</title>
+
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body style="font-family: Arial; background:#111; color:#eee; padding:20px;">
+
+  <h1>🚀 Code Demos</h1>
+  <p>Exemplos interativos de Python e C#</p>
+
+  <section id="code-demos" class="px-6 py-12">
+    <h2>🐍 Python Example</h2>
+    <pre><code id="codigo-python" class="language-python"></code></pre>
+    <button onclick="runPython()">▶️ Run</button>
+    <a href="scripts/meu_script.py" download>📥 Download</a>
+    <pre id="python-output" style="background:#000; color:#0f0; padding:10px; border-radius:5px;"></pre>
+
+    <h2>⚙️ C# Example</h2>
+    <pre><code id="codigo-cs" class="language-cs"></code></pre>
+    <a href="scripts/program.cs" download>📥 Download</a>
+    <div class="dotnet-interactive" style="margin-top:10px;">
+```csharp
+Console.WriteLine("Hello from Try .NET!");
+```
+    </div>
+  </section>
+
+  <!-- Pyodide -->
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+
+  <!-- Try .NET -->
+  <script src="https://dotnet.microsoft.com/static/trydotnet/v1/trydotnet.js"></script>
+
+  <script>
+    // Carregar os arquivos reais
+    fetch("scripts/meu_script.py")
+      .then(r => r.text())
+      .then(t => {
+        document.getElementById("codigo-python").textContent = t;
+        hljs.highlightAll();
+      });
+
+    fetch("scripts/program.cs")
+      .then(r => r.text())
+      .then(t => {
+        document.getElementById("codigo-cs").textContent = t;
+        hljs.highlightAll();
+      });
+
+    // Executar Python
+    async function runPython() {
+      let pyodide = await loadPyodide();
+      let code = document.getElementById("codigo-python").textContent;
+      let result = await pyodide.runPythonAsync(code);
+      document.getElementById("python-output").textContent = "Output: " + result;
+    }
+  </script>
+
+</body>
+</html>
