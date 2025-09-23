@@ -7,6 +7,7 @@
   <link rel="icon" href="/profile.jpg" type="image/jpg" />
   <title>Tomás Mota - Contact</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"/>
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
@@ -71,7 +72,7 @@
               class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
             <input type="email" name="Email" placeholder="Email*" required
               class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
-            <input type="number" name="Phone Number" placeholder="Phone Number*" required
+            <input id="phone" type="tel" name="phone" placeholder="Phone Number*" required
               class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]">
             <textarea name="Message" rows="5" placeholder="Message*" required
               class="p-3 rounded-lg bg-[rgba(15,22,32,0.6)] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--c-red)]"></textarea>
@@ -91,7 +92,9 @@
   <!-- ===================== -->
   <!-- Scripts -->
   <!-- ===================== -->
+  <script src="/assets/js/contact.js"></script>
   <script src="/assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 </body>
 
 </html>
