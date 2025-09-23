@@ -1,15 +1,15 @@
 // Preloader
 window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  if (!preloader) return;
+    const preloader = document.getElementById("preloader");
+    if (!preloader) return;
 
-  // fade out
-  preloader.style.transition = "opacity 0.7s ease";
-  preloader.style.opacity = "0";
+    // fade out
+    preloader.style.transition = "opacity 0.7s ease";
+    preloader.style.opacity = "0";
 
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 700);
+    setTimeout(() => {
+        preloader.style.display = "none";
+    }, 700);
 });
 
 
@@ -101,8 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // ============================
-    // Cookie Banner Logic
-    // ============================
+// Cookie Banner Logic
+// ============================
 document.addEventListener("DOMContentLoaded", () => {
     const cookieBanner = document.getElementById("cookie-banner");
     const acceptBtn = document.getElementById("accept-cookies");
@@ -150,105 +150,51 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Atualiza todos os elementos com a classe 'year'
-document.querySelectorAll('.year').forEach(el => {
-  el.textContent = new Date().getFullYear();
-});
-
 //
-// Mobile Menu
+// Footer
 //
-// Menu mobile toggle
-const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
+fetch("/includes/footer.html")
+    .then(response => response.text())
+    .then(data => {
+    // Insere o HTML do footer
+        document.getElementById("footer").innerHTML = data;
 
-menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
-});
-
-// ============================
-// Dropdown Developer
-// ============================
-const mobileDevBtn = document.getElementById('mobile-developer-btn');
-const mobileDevMenu = document.getElementById('mobile-developer-menu');
-
-mobileDevMenu.style.display = 'none';
-mobileDevBtn.classList.remove('active');
-
-mobileDevBtn.addEventListener('click', () => {
-  const isOpen = mobileDevMenu.style.display === 'block';
-  
-  // Fecha outros dropdowns se estiverem abertos
-  mobilePhotoMenu.style.display = 'none';
-  mobilePhotoBtn.classList.remove('active');
-
-  mobileDevMenu.style.display = isOpen ? 'none' : 'block';
-  mobileDevBtn.classList.toggle('active', !isOpen);
-});
-
-// ============================
-// Dropdown Photographer
-// ============================
-const mobilePhotoBtn = document.getElementById('mobile-photographer-btn');
-const mobilePhotoMenu = document.getElementById('mobile-photographer-menu');
-
-mobilePhotoMenu.style.display = 'none';
-mobilePhotoBtn.classList.remove('active');
-
-mobilePhotoBtn.addEventListener('click', () => {
-  const isOpen = mobilePhotoMenu.style.display === 'block';
-
-  // Fecha outros dropdowns se estiverem abertos
-  mobileDevMenu.style.display = 'none';
-  mobileDevBtn.classList.remove('active');
-
-  mobilePhotoMenu.style.display = isOpen ? 'none' : 'block';
-  mobilePhotoBtn.classList.toggle('active', !isOpen);
-});
-
-// ============================
-// Dropdown no Desktop (clique)
-// ============================
-document.addEventListener("DOMContentLoaded", () => {
-    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
-
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener("click", (event) => {
-            event.preventDefault(); 
-            
-            const parentDropdown = toggle.closest(".dropdown");
-            const dropdownContent = parentDropdown.querySelector(".dropdown-content");
-            const isCurrentlyActive = parentDropdown.classList.contains("active");
-
-            // Fecha todos os outros dropdowns
-            document.querySelectorAll(".dropdown.active").forEach(otherDropdown => {
-                if (otherDropdown !== parentDropdown) {
-                    otherDropdown.classList.remove("active");
-                    otherDropdown.querySelector(".dropdown-content").classList.remove("opacity-100", "pointer-events-auto");
-                }
-            });
-
-            // Alterna o dropdown atual
-            if (!isCurrentlyActive) {
-                parentDropdown.classList.add("active");
-                dropdownContent.classList.add("opacity-100", "pointer-events-auto");
-            } else {
-                parentDropdown.classList.remove("active");
-                dropdownContent.classList.remove("opacity-100", "pointer-events-auto");
-            }
-        });
+    // Carrega o JS do header (mobile menu, dropdowns etc.)
+    const script = document.createElement("script");
+    script.src = "/assets/js/footer.js";
+    document.body.appendChild(script);
     });
 
-    // Fecha os dropdowns ao clicar fora
-    document.addEventListener("click", (event) => {
-        if (!event.target.closest(".dropdown")) {
-            document.querySelectorAll(".dropdown.active").forEach(dropdown => {
-                dropdown.classList.remove("active");
-                dropdown.querySelector(".dropdown-content").classList.remove("opacity-100", "pointer-events-auto");
-            });
-        }
-    });
-});
+//
+// Header
+//
+fetch("/includes/header.html")
+  .then(response => response.text())
+  .then(data => {
+    // Insere o HTML do header
+    document.getElementById("header").innerHTML = data;
+
+function loadCSS(href) {
+  if (!document.querySelector(`link[href="${href}"]`)) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = href;
+    document.head.appendChild(link);
+  }
+}
+
+loadCSS("/assets/css/styles.css");
+loadCSS("/assets/css/header.css");
+
+    // Carrega o JS do header (mobile menu, dropdowns etc.)
+    const script = document.createElement("script");
+    script.src = "/assets/js/header.js";
+    document.body.appendChild(script);
+  });
+
+
+
+
 
 
 // Slideshow @ Photography
@@ -256,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slideshowContainers = document.querySelectorAll('.slideshow-container');
     slideshowContainers.forEach(container => {
         const slides = container.querySelectorAll('.slide');
-        if (slides.length < 2) return; 
+        if (slides.length < 2) return;
 
         let current = 0;
 
@@ -268,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Garante que a primeira imagem está ativa ao carregar
         slides[0].classList.add('active');
-        
+
         setInterval(showNextSlide, 3000);
     });
 });
@@ -313,13 +259,13 @@ const body = document.body;
 // ============================
 // Print Code
 // ============================
-  async function runCsharp() {
+async function runCsharp() {
     let code = document.getElementById("codigo-cs").textContent;
     let match = code.match(/Console\.WriteLine\("([^"]+)"\);/);
 
     if (match) {
-      document.getElementById("cs-output").textContent = match[1];
+        document.getElementById("cs-output").textContent = match[1];
     } else {
-      document.getElementById("cs-output").textContent = "⚠️ Don't find Console.WriteLine(...) in the code.";
+        document.getElementById("cs-output").textContent = "⚠️ Don't find Console.WriteLine(...) in the code.";
     }
-  }
+}
