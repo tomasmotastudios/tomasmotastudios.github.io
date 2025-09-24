@@ -90,9 +90,9 @@ header a:hover {
   background-color: rgba(15, 22, 32, 0.45);
 }
 
- * =====================
+/* =====================
  * Menu Mobile Fullscreen
- * =====================
+ * ===================== */
 #mobile-menu {
   background-color: rgba(15, 22, 32, 0.712); /* mesmo fundo */
   backdrop-filter: blur(10px);              /* mesmo blur */
