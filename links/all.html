@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Mota's Links</title>
+    <link rel="icon" href="../../src/img/25/09/1010022025269.jpg" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: "class" }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(270deg, #0f172a, #1e293b, #334155);
+            background-size: 600% 600%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .btn-link {
+            transition: transform 0.35s ease-in-out,
+                box-shadow 0.35s ease-in-out,
+                background-color 0.35s ease,
+                color 0.35s ease;
+        }
+
+        .btn-link:hover {
+            transform: translateY(-6px) scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .transition-theme {
+            transition: background-color 0.8s ease,
+                color 0.8s ease,
+                border-color 0.8s ease;
+        }
+
+        .photo-container {
+            position: relative;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body class="font-sans overflow-x-hidden overflow-y-auto text-white transition-colors duration-500">
+    <div class="min-h-screen flex flex-col items-center justify-center py-12 px-4">
+        <div
+            class="relative bg-gray-800 backdrop-blur shadow-2xl border border-gray-700 rounded-2xl p-10 max-w-md w-full text-center transition-theme">
+
+            <!-- Foto -->
+            <div class="photo-container w-28 h-28 sm:w-32 sm:h-32 mx-auto mb-4 relative">
+                <div class="photo-inner w-full h-full rounded-full overflow-hidden">
+                    <img src="../../src/img/25/09/1010022025269.jpg" alt="Profile Photo">
+                </div>
+            </div>
+
+            <!--<h1 class="text-2xl sm:text-3xl font-bold text-white transition-theme">Tomás Mota</h1>
+            <p class="text-gray-300 text-sm mb-8 transition-theme">Fullstack Dev & Photographer</p> -->
+
+            <!-- Links -->
+            <div class="space-y-3 sm:space-y-4">
+                <a href="../index.html" target="_blank"
+                    class="btn-link flex items-center justify-center gap-2 bg-gray-700 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-gray-800 text-sm sm:text-base transition-theme">
+                    Website
+                </a>
+                <a href="https://www.linkedin.com/in/tomasmotahq" target="_blank"
+                    class="btn-link flex items-center justify-center gap-2 bg-gray-700 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-gray-800 text-sm sm:text-base transition-theme">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/tomasmotahq" target="_blank"
+                    class="btn-link flex items-center justify-center gap-2 bg-gray-700 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-gray-800 text-sm sm:text-base transition-theme">
+                    GitHub
+                </a>
+                <a href="https://www.instagram.com/tomasmotahq" target="_blank"
+                    class="btn-link flex items-center justify-center gap-2 bg-gray-700 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-gray-800 text-sm sm:text-base transition-theme">
+                    Instagram
+                </a>
+                <a href="https://www.facebook.com/tomasmotahq" target="_blank"
+                    class="btn-link flex items-center justify-center gap-2 bg-gray-700 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-gray-800 text-sm sm:text-base transition-theme">
+                    Facebook
+                </a>
+                <a href="https://www.facebook.com/tomasmakyneta" target="_blank"
+                    class="btn-link flex items-center justify-center gap-2 bg-gray-700 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-gray-800 text-sm sm:text-base transition-theme">
+                    Facebook2
+                </a>
+                <a href="https://wa.me/351913936776" target="_blank"
+                    class="btn-link flex items-center justify-center gap-2 bg-gray-700 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-gray-800 text-sm sm:text-base transition-theme">
+                    WhatsApp
+                </a>
+                <a href="email.html"
+                    class="btn-link flex items-center justify-center gap-2 bg-gray-700 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-gray-800 text-sm sm:text-base transition-theme">
+                    Email
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <p class="text-xs text-gray-400 mt-8 transition-theme">© & ℗ 2024 - <span class="year"></span>
+                <a href="../index.html"><strong>Tomás Mota Studios</strong></a>. All Rights Reserved.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll(".year").forEach(span => {
+            span.textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+
+</html>
