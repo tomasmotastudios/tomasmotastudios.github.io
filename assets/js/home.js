@@ -18,7 +18,7 @@ async function runPython() {
     let pyodide = await loadPyodide();
     let code = document.getElementById("codigo-python").textContent;
     let result = await pyodide.runPythonAsync(code);
-    document.getElementById("python-output").textContent = "Output: " + result;
+    document.getElementById("python-output").textContent = result;
 }
 
 // MODAL FOR CERTIFICATES
