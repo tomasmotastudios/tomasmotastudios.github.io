@@ -1,4 +1,4 @@
-#tomasmotahq.github.io
+# tomasmotahq.github.io
 
 Bem-vindo ao meu site pessoal, criado e alojado com o **GitHub Pages**. Este espaço serve como o meu portefólio digital, mostrando quem sou e o que faço — tudo concebido a pensar na simplicidade e na clareza.
 
@@ -36,7 +36,7 @@ Construindo sempre com foco e minimalismo.
 
 ## 📬 Contacto
 
-Sinta-se à vontade para se ligar através de [https://tomasmotahq.github.io/contact](https://tomasmotahq.github.io/contact)
+Sinta-se à vontade para se ligar através de [https://tomasmotahq.github.io/contacto](https://tomasmotahq.github.io/contacto)
 
 ---
 
