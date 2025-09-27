@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <!-- ===================== -->
+  <!-- Metadados da Página -->
+  <!-- ===================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/profile.jpg" type="image/jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Tomás Mota - Privacy</title>
+
+</head>
+<body>
+  
+  <!-- ===================== -->
+  <!-- Header / Navegação -->
+  <!-- ===================== -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+        <!-- Logo / Nome -->
+        <a href="/" class="flex items-center space-x-3">
+            <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota </span>
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <!-- Links principais -->
+
+            <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                About
+            </a>
+
+            <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                Developer
+            </a>
+
+            <a href="/photography" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                Photographer
+            </a>
+
+            <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                CV
+            </a>
+
+            <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                Contact
+            </a>
+        </nav>
+
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===================== -->
+    <!-- Mobile Menu -->
+    <!-- ===================== -->
+    <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+        <!-- Links principais -->
+        <a href="/about" class="block">About</a>
+        <a href="/projects" class="block">Developer</a>
+        <a href="/photography" class="block">Photographer</a>
+        <a href="/cv" class="block">CV</a>
+        <a href="/contact" class="block">Contact</a>
+
+    </div>
+
+  <!-- ===================== -->
+  <!-- Privacy Policy Section -->
+  <!-- ===================== -->
+  <section id="privacy" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="card p-8 md:p-12 rounded-2xl text-left">
+      <!-- Título -->
+      <h1 class="text-3xl font-bold mb-6 text-[var(--c-red)]">Terms of Service</h1>
+
+      <p class="mb-4">By accessing and using <strong>Tomás Mota</strong> (“site”), you agree to be bound by
+        these Terms of Service. If you do not agree, please refrain from using the website.</p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-3 text-[var(--c-white)]">1. Permitted Use</h2>
+      <ul class="list-disc list-inside mb-4">
+        <li>The site is intended for informational, portfolio, and institutional purposes only.</li>
+        <li>Users must not engage in illegal, harmful, or disruptive activities.</li>
+        <li>Copying, distributing, or modifying content without permission is prohibited.</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-3 text-[var(--c-white)]">2. Intellectual Property</h2>
+      <p class="mb-4">All content, including text, images, logos, videos, and code, is owned or licensed by Tomás Mota.
+        Any unauthorized use may violate copyright, trademark, or other laws.</p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-3 text-[var(--c-white)]">3. User Responsibilities</h2>
+      <ul class="list-disc list-inside mb-4">
+        <li>Provide accurate and lawful information when submitting forms or requests.</li>
+        <li>Respect the rights of third parties and comply with applicable laws.</li>
+        <li>Do not attempt to hack, exploit, or otherwise compromise website security.</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-3 text-[var(--c-white)]">4. Limitation of Liability</h2>
+      <p class="mb-4">The website is provided “as-is.” Tomás Mota is not liable for direct, indirect,
+        incidental, or consequential damages arising from use, inability to use, or content errors.</p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-3 text-[var(--c-white)]">5. Modifications</h2>
+      <p class="mb-4">We reserve the right to update these Terms at any time. Continued use of the site implies
+        acceptance of the revised terms.</p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-3 text-[var(--c-white)]">6. Governing Law</h2>
+      <p class="mb-4">These Terms are governed by the laws applicable in your jurisdiction. Any disputes shall be
+        resolved according to these laws and through competent courts.</p>
+    </div>
+  </section>
+
+
+    <!-- ===================== -->
+    <!-- Footer -->
+    <!-- ===================== -->
+    <!-- Footer Desktop -->
+    <footer
+        class="hidden md:flex py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+
+            <!-- Copyright à esquerda -->
+            <div class="text-left">
+                © 2024 - <span class="year"></span>
+                <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
+                Reserved.
+            </div>
+
+            <!-- Redes sociais acima dos links legais, à direita -->
+            <div class="flex flex-col items-end">
+
+                <!-- Redes sociais -->
+                <div class="flex gap-4 mb-2">
+                    <a href="/social/linkedin" target="_blank" title="LinkedIn">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/social/github" target="_blank" title="GitHub">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/social/facebook" target="_blank" title="Facebook">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/social/instagram" target="_blank" title="Instagram">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
+                            class="w-6 h-6 filter brightness-0 invert">
+
+                    <!-- <a href="/music/listen" target="_blank" title="Listen to Tomás Mota's official music">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/applemusic.svg" alt="Listen to Tomás Mota's official music"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a> -->
+                </div>
+
+                <!-- Links legais -->
+                <nav class="flex gap-4">
+                    <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+                    <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+                    <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of
+                        Service</a>
+                </nav>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Footer Mobile -->
+    <footer
+        class="flex flex-col md:hidden py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm items-center gap-4">
+
+        <!-- Redes sociais -->
+        <div class="flex justify-center gap-4">
+            <a href="/social/linkedin" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/social/github" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/social/facebook" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/social/instagram" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <!-- <a href="/music/listen" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/applemusic.svg" alt="Listen to Tomás Mota's official music"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a> -->
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center">
+            © 2024 - <span class="year"></span>
+            <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
+            Reserved.
+        </div>
+
+        <!-- Links legais -->
+        <nav class="flex flex-wrap justify-center gap-4 text-center">
+            <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+            <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+            <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
+        </nav>
+
+    </footer>
+
+
+  <!-- ===================== -->
+  <!-- Scripts -->
+  <!-- ===================== -->
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gonçalo Teixeira — Link in Bio</title>
+  <link rel="icon" href="profile.jpg" type="image/jpg" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilo exclusivo da página BIO */
+    body {
+      background: linear-gradient(135deg, #1a1a1a, #000);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .bio-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .bio-profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #e30613; /* vermelho */
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .bio-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .bio-subtitle {
+      font-size: 1rem;
+      color: #cfcfcf;
+      margin-bottom: 2rem;
+    }
+
+    .bio-links a {
+      display: block;
+      background: #e30613;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0.75rem 0;
+      padding: 0.9rem 1.2rem;
+      border-radius: 0.8rem;
+      transition: all 0.3s;
+    }
+
+    .bio-links a:hover {
+      background: #fff;
+      color: #e30613;
+      transform: translateY(-3px);
+    }
+
+    .bio-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .bio-gallery img {
+      width: 100%;
+      border-radius: 1rem;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .bio-gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bio-container">
+    <div class="bio-profile">
+      <img src="goncalo.jpg" alt="Foto de Gonçalo Teixeira">
+      <div class="bio-name">Gonçalo Teixeira</div>
+      <div class="bio-subtitle">Futebolista Profissional ⚽</div>
+    </div>
+
+    <div class="bio-links">
+      <a href="https://www.instagram.com/" target="_blank">📸 Instagram</a>
+      <a href="https://www.tiktok.com/" target="_blank">🎥 TikTok</a>
+      <a href="https://www.facebook.com/" target="_blank">📘 Facebook</a>
+      <a href="contact.html">✉️ Contacto</a>
+    </div>
+
+    <div class="bio-gallery">
+      <img src="jogo1.jpg" alt="Imagem 1">
+      <img src="jogo2.jpg" alt="Imagem 2">
+      <img src="jogo3.jpg" alt="Imagem 3">
+      <img src="treino.jpg" alt="Imagem 4">
+    </div>
+  </div>
+
+</body>
+</html>

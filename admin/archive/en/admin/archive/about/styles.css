@@ -1,0 +1,321 @@
+        /* ===================== */
+/* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
+/* ===================== */
+:root {
+  --c-white: #ffffff;
+  --c-white2: #cfcfcf;
+  --c-black: #000000;
+  --c-gray: #2b2f36;
+  --c-gray-2: #3a3f46;
+  --c-red: #ff3b3b;
+  --c-blue: #1a73ff;
+  --c-yellow: #ffd43b;
+}
+
+/* ===================== */
+/* Estilos Globais */
+/* ===================== */
+body {
+  text-align: center;
+  color: var(--c-white);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================== */
+/* Background Animado do Site */
+/* ===================== */
+body {
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.534), transparent 50%),
+    radial-gradient(circle at 85% 80%,  #f7f7f7a9, transparent 50%),
+    linear-gradient(180deg, #464749 0%, #141b2a 100%);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  color: var(--c-white);
+  min-height: 100vh;
+  animation: moveBackground 30s ease infinite;
+}
+
+/* Animação suave do background */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* ===================== */
+/* Header e Menus */
+/* ===================== */
+header {
+  background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
+  backdrop-filter: blur(10px) !important;
+  color: var(--c-white);
+}
+
+/* Remove background apenas do link do logo */
+header > a:first-child {
+  background: transparent;
+}
+
+
+header a {
+  background: var(--c-gray-2);
+  color: var(--c-white);
+}
+
+header a:hover {
+  color: var(--c-white);
+}
+
+#mobile-menu {
+  background: var(--c-gray-2);
+  color: var(--c-white);
+}
+
+#mobile-menu a {
+  color: var(--c-white);
+}
+
+/* Dropdown Desktop */
+.dropdown {
+  position: relative;
+  display: flex;       /* alinhar com os outros links */
+  align-items: center; /* centraliza verticalmente */
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--c-gray-2);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.dropdown-content a {
+  color: var(--c-white);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--c-gray);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* =====================
+   Menu Mobile Fullscreen
+   ===================== */
+#mobile-menu {
+  background-color: rgba(15, 22, 32, 0.349); /* mesmo fundo */
+  backdrop-filter: blur(10px);              /* mesmo blur */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--c-white);
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 2rem 2rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 40;
+}
+
+/* Menu ativo */
+#mobile-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* =====================
+   Todos os links Mobile e títulos dropdown
+   ===================== */
+#mobile-menu a,
+.mobile-dropdown-btn {
+  background-color: rgba(15, 22, 32, 0.349);
+  backdrop-filter: blur(10px);
+  color: var(--c-white);
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: block; /* garante que ocupam toda a largura */
+  text-decoration: none;
+}
+
+/* Hover */
+#mobile-menu a:hover,
+.mobile-dropdown-btn:hover {
+  text-decoration: underline;
+  background-color: rgba(15, 22, 32, 0.45);
+}
+
+/* =====================
+   Dropdown Mobile
+   ===================== */
+.mobile-dropdown-content {
+  display: none; /* inicia fechado */
+  flex-direction: column;
+  margin-left: 0.5rem; /* indentação dos sublinks */
+}
+
+/* Links dentro do dropdown: mesmo estilo dos outros */
+.mobile-dropdown-content a {
+  background-color: rgba(15, 22, 32, 0.349); /* mesmo fundo */
+  backdrop-filter: blur(10px);              /* mesmo blur */
+  color: var(--c-white);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+/* Hover dos links do dropdown */
+.mobile-dropdown-content a:hover {
+  text-decoration: underline;
+  background-color: rgba(15, 22, 32, 0);
+}
+
+/* =====================
+   Mostrar dropdown quando ativo
+   ===================== */
+.mobile-dropdown-btn.active + .mobile-dropdown-content {
+  display: flex;
+}
+
+/* =====================
+   FOTOGRFIA
+   ===================== */
+/* Foto flutuante */
+@keyframes floatPhoto {
+  0%   { transform: translateX(0px) translateY(0px) rotate(0deg); }
+  20%  { transform: translateX(-12px) translateY(-6px) rotate(-2deg); }
+  40%  { transform: translateX(10px) translateY(-8px) rotate(1deg); }
+  60%  { transform: translateX(-8px) translateY(12px) rotate(2deg); }
+  80%  { transform: translateX(12px) translateY(6px) rotate(-1deg); }
+  100% { transform: translateX(0px) translateY(0px) rotate(0deg); }
+}
+
+.animated-photo {
+  border-radius: 50%;
+  animation: floatPhoto 8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+
+
+/* Borda com gradiente animado (pseudo-elemento) */
+.photo-container {
+  position: relative;
+  border-radius: 50%;
+}
+
+.photo-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 4px; /* espessura da borda */
+  background: conic-gradient(from 0deg, var(--c-red), var(--c-blue), var(--c-red));
+  -webkit-mask: 
+    radial-gradient(farthest-side, black calc(100% - 4px), transparent calc(100% - 4px));
+  mask: 
+    radial-gradient(farthest-side, black calc(100% - 4px), transparent calc(100% - 4px));
+  animation: rotateGradient 6s linear infinite;
+  pointer-events: none;
+}
+
+/* Gradiente girando */
+@keyframes rotateGradient {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+/* ===================== */
+/* Hero Section */
+/* ===================== */
+.hero-wrap {
+  background: 
+    radial-gradient(1200px 600px at 10% 10%, rgba(255, 255, 255, 0.61), transparent 70%),
+    radial-gradient(900px 500px at 90% 80%,  rgba(224, 224, 224, 0.548), transparent 70%),
+    linear-gradient(180deg, #69621d 0%, #4e5319a6 50%) !important;
+    position: relative;
+    z-index: 0;
+}
+
+
+        /* Card (usado para sections no CV) */
+        .card {
+            border-radius: 1rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+            background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
+            backdrop-filter: blur(10px) !important;
+            color: var(--c-white);
+        }
+
+
+
+        /* Estilos adaptados do About original para o novo tema */
+        h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff; width: 100%; text-align: left; }
+        h3 { font-size: 1.4rem; font-weight: 600; color: #ccc; margin-top: 2rem; margin-bottom: 1rem; text-align: left; width: 100%; }
+        p, li { color: #eee; font-size: 1rem; margin-bottom: 1rem; }
+        ul { padding-left: 1.2rem; margin-bottom: 1rem; list-style-type: disc; }
+        ul li::marker { color: #fff; }
+        a { color: #fff; text-decoration: none; }
+        a:hover { color: #bbb; text-decoration: underline; }
+        blockquote { margin: 2rem 0; font-style: italic; color: #aaa; border-left: 4px solid #fff; padding-left: 1rem; max-width: 700px; }
+        hr { border: none; border-top: 1px solid #444; margin: 2rem 0; }
+        
+        /* Styles for Links section from original About */
+        .links { display: flex; flex-direction: column; gap: 1rem; width: 100%; max-width: 320px; margin-top: 1rem; align-items: flex-start; }
+        a.button {
+            background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */ padding: 0.9rem 1.2rem;
+            backdrop-filter: blur(10px) !important;
+            border-radius: 0.5rem; font-weight: 600; font-size: 1rem;
+            text-decoration: none; transition: all 0.3s ease;
+            width: 100%; text-align: left;
+        }
+        a.button:hover { background-color: #333; color: #eee; }
+
+        /* ===================== */
+/* Footer */
+/* ===================== */
+footer {
+  color: var(--c-white);
+  background-color: rgba(15, 22, 32, 0.349); /* mesmo fundo */
+  backdrop-filter: blur(5px);              /* mesmo blur */
+}
+

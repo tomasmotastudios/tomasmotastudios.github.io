@@ -1,0 +1,495 @@
+#preloader {
+  animation: fadeOut 0.7s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+.animate-loading {
+  animation: loading 1.5s infinite;
+}
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+@keyframes loading {
+  0%, 100% {
+    width: 20px;
+  }
+  50% {
+    width: 80px;
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Base styles */
+/* Definições de cores base (Modo Escuro Padrão) */
+/* Definições de cores base (Modo Escuro Padrão) */
+:root {
+  --c-white: #e9e9e9;
+  --c-black: #0f1620;
+  --c-gray: #1f2937;
+  --c-gray-2: rgba(15, 22, 32, 0.356);
+}
+
+/* Regras para o Modo Claro */
+html[data-theme='light'] {
+  --c-white: #0f1620;
+  --c-black: #e9e9e9;
+  --c-gray: #e5e7eb;
+  --c-gray-2: rgba(243, 244, 246, 0.356);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--c-black);
+  color: var(--c-white);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =====================
+   Header e Menus
+   ===================== */
+header {
+  background-color: var(--c-gray-2);
+  backdrop-filter: blur(10px);
+  color: var(--c-white); /* Garante que a cor do texto muda com o tema */
+}
+
+/* Garante que o fundo do logo/nome também mude */
+header > a:first-child {
+  background-color: var(--c-gray-2);
+}
+
+.nav-link,
+.dropdown-toggle {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.dropdown-toggle:hover {
+    background-color: var(--c-gray);
+}
+
+/* Dropdown Desktop */
+.dropdown {
+  position: relative;
+}
+
+.dropdown.active .arrow-down {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  background-color: var(--c-gray-2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-content a {
+  color: var(--c-white);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown.active .dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Ícones de tema */
+.sun-icon {
+    display: block;
+}
+
+.moon-icon {
+    display: none;
+}
+
+html[data-theme='light'] .sun-icon {
+    display: none;
+}
+
+html[data-theme='light'] .moon-icon {
+    display: block;
+}
+
+/* =====================
+   Menu Mobile - Estilo fixo (sempre escuro)
+   ===================== */
+#mobile-menu {
+    background-color: rgba(15, 22, 32, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #e9e9e9; /* Cor do texto fixa */
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 40;
+}
+
+#mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#mobile-menu a,
+.mobile-dropdown-btn {
+    background-color: rgba(15, 22, 32, 0.349);
+    backdrop-filter: blur(10px);
+    color: #e9e9e9; /* Cor do texto fixa */
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    display: block;
+    text-decoration: none;
+}
+
+#mobile-menu a:hover,
+.mobile-dropdown-btn:hover {
+    text-decoration: underline;
+    background-color: rgba(15, 22, 32, 0.45);
+}
+
+.mobile-dropdown-content {
+    display: none;
+    flex-direction: column;
+    margin-left: 0.5rem;
+}
+
+.mobile-dropdown-content a {
+    background-color: rgba(15, 22, 32, 0.349);
+    backdrop-filter: blur(10px);
+    color: #e9e9e9; /* Cor do texto fixa */
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.mobile-dropdown-content a:hover {
+    text-decoration: underline;
+    background-color: rgba(15, 22, 32, 0.45);
+}
+
+.mobile-dropdown-btn.active + .mobile-dropdown-content {
+    display: flex;
+}
+
+/* =====================
+   Footer
+   ===================== */
+footer {
+    background-color: var(--c-black);
+    color: var(--c-white);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* =====================
+   Menu Mobile Fullscreen
+   ===================== */
+#mobile-menu {
+  background-color: rgba(15, 22, 32, 0.349);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--c-white);
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 2rem 2rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 40;
+}
+
+#mobile-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* =====================
+   Links Mobile e títulos dropdown
+   ===================== */
+#mobile-menu a,
+.mobile-dropdown-btn {
+  background-color: rgba(15, 22, 32, 0.349);
+  backdrop-filter: blur(10px);
+  color: var(--c-white);
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  display: block;
+  text-decoration: none;
+}
+
+#mobile-menu a:hover,
+.mobile-dropdown-btn:hover {
+  text-decoration: underline;
+  background-color: rgba(15, 22, 32, 0.45);
+}
+
+/* =====================
+   Dropdown Mobile
+   ===================== */
+.mobile-dropdown-content {
+  display: none;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+
+.mobile-dropdown-content a {
+  background-color: rgba(15, 22, 32, 0.349);
+  backdrop-filter: blur(10px);
+  color: var(--c-white);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.mobile-dropdown-content a:hover {
+  text-decoration: underline;
+  background-color: rgba(15, 22, 32, 0.45);
+}
+
+.mobile-dropdown-btn.active + .mobile-dropdown-content {
+  display: flex;
+}
+
+/* ===================== */
+/* Hero Section */
+/* ===================== */
+.hero-wrap {
+  background: 
+    radial-gradient(1200px 600px at 10% 10%, rgba(155, 155, 155, 0.300), transparent 70%),
+    radial-gradient(900px 500px at 90% 80%,  rgba(167, 167, 167, 0.500), transparent 70%);
+    position: relative;
+    z-index: 0;
+}
+
+/* ===================== */
+/* Cards (Projetos, Fotografia, Certificados) */
+/* ===================== */
+.card {
+    background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
+  backdrop-filter: blur(0px) !important;
+  color: var(--c-white);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+  border-radius: 1rem;
+}
+
+.card img {
+  filter: brightness(0.8);
+}
+
+.card h3 {
+  color: var(--c-white);
+}
+
+/* Alteração específica: descrição dos certificados */
+#certificados .card p {
+  color: var(--c-white);
+}
+
+/* ===================== */
+/* Certificados com bordas arredondadas */
+/* ===================== */
+#certificados .card {
+  border-radius: 1rem; /* bordas arredondadas mais suaves */
+  overflow: hidden;      /* garante que imagens respeitem as bordas */
+}
+
+#cert-track {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* ===================== */
+/* Botões Primários */
+/* ===================== */
+.btn {
+  border-radius: .8rem;
+  font-weight: 600;
+  transition: transform .15s ease, box-shadow .15s ease;
+  background: var(--c-blue);
+  color: var(--c-white);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* ===================== */
+/* Timeline (Experiência Profissional) */
+/* ===================== */
+@media (min-width: 768px) {
+  .timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, var(--c-red), var(--c-blue));
+    border-radius: 999px;
+  }
+}
+
+/* ===================== */
+/* Carrossel de Certificados - Ocultar barra de rolagem */
+/* ===================== */
+#cert-track {
+  scrollbar-width: none;
+}
+
+#cert-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===================== */
+/* Slideshow (Fotografia) */
+/* ===================== */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  padding-top: 66.66%; /* proporção 3:2 */
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 12px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* ===================== */
+/* Experiência Profissional (CV) */
+/* ===================== */
+#cv {
+    border-radius: 1rem;
+
+  background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
+  backdrop-filter: blur(10px) !important;
+    position: relative;
+    z-index: 0;
+}
+
+#cv p {
+  color: var(--c-white2);
+}
+
+#cv h3 {
+  color: var(--c-white);
+}
+
+/* ===================== */
+/* Footer */
+/* ===================== */
+footer {
+  color: var(--c-white);
+  background-color: rgba(15, 22, 32, 0.349); /* mesmo fundo */
+  backdrop-filter: blur(5px);              /* mesmo blur */
+}
+
+/* Popup de Aniversário ativo */
+#birthday-popup.show {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Bounce lento do logo */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15%); }
+}
+.animate-bounce-slow { animation: bounce-slow 1.5s infinite; }
+
+/* Linha de loading que se expande */
+@keyframes loading-bar {
+  0% { transform: scaleX(0); }
+  50% { transform: scaleX(1); }
+  100% { transform: scaleX(0); }
+}
+.animate-loading {
+  transform-origin: left;
+  animation: loading-bar 1.5s infinite;
+}

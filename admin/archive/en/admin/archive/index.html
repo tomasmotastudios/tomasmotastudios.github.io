@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/profile.jpg" type="image/jpg" />
+    <title>Tomás Mota — Archive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+        <!-- ===================== -->
+        <!-- Header / Navegação -->
+        <!-- ===================== -->
+    <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-gray-800">Admin Dashboard</h1>
+        <nav class="flex gap-4">
+            <a href="../dashboard.html" class="text-gray-600 hover:text-gray-900 transition">Dashboard</a>
+            <a href="archive/index.html" class="text-gray-600 hover:text-gray-900 transition">Arquivo</a>
+            <a href="../usuarios.html" class="text-gray-600 hover:text-gray-900 transition">Usuários</a>
+            <a href="../configs.html" class="text-gray-600 hover:text-gray-900 transition">Configurações</a>
+            <a href="../estatisticas.html" class="text-gray-600 hover:text-gray-900 transition">Estatísticas</a>
+            <a id="logoutBtn" class="text-red-500 hover:text-red-700 transition font-semibold cursor-pointer">Logout</a>
+        </nav>
+    </header>
+
+        <!-- ===================== -->
+        <!-- Mobile Menu -->
+        <!-- ===================== -->
+        <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+            <!-- Links principais -->
+            <a href="/about" class="block">About</a>
+            <a href="/projects" class="block">FullStack Work</a>
+            <a href="/cv" class="block">CV</a>
+
+            <!-- Dropdown Creative Work Mobile -->
+            <div class="flex flex-col">
+                <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
+                <div id="mobile-photography-menu" class="mobile-dropdown-content">
+                    <a href="/photography" class="block">Photography</a>
+                    <a href="/music" class="block">Music</a>
+                    <a href="/articles" class="block">Articles</a>
+                </div>
+            </div>
+
+            <a href="/contact" class="block">Contact</a>
+
+        </div>
+
+
+<!-- ===================== -->
+<!-- Conteúdo principal -->
+<!-- ===================== -->
+<main class="flex-1 max-w-5xl mx-auto px-6 pt-8 pb-16 space-y-12">
+
+  <!-- Conteúdo principal -->
+  <div class="archive-header">
+    <h1>&lt;Archive/&gt;</h1>
+    <p>Última atualização: 11 Sep <span class="year"></span></p>
+  </div>
+
+  <section class="archive-section">
+    <h2>⚙️ Ferramentas</h2>
+    <div class="archive-links">
+      <a href="generatecode.html">Generate Code</a>
+      <a href="generatevevo.html">Generate Vevo</a>
+      <a href="login/backup.html">Login</a>
+    </div>
+  </section>
+
+  <section class="archive-section">
+    <h2>📚 Conteúdo</h2>
+    <div class="archive-links">
+      <a href="podcast/index.html">Podcast</a>
+      <a href="projects/old.html">Projects</a>
+      <a href="music/index.html">Music</a>
+      <a href="articles/index.html">Articles</a>
+      <a href="why-i-left-social-media/index.html">Why I Left Social Media</a>
+    </div>
+  </section>
+
+</main>
+
+
+  <footer
+        class="hidden md:flex py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+            <div class="text-left">
+                © 2024 - <span class="year"></span>
+                <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
+                Reserved.
+            </div>
+            <div class="flex flex-col items-end">
+                <nav class="flex gap-4">
+                    <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+                    <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+                    <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== -->
+    <!-- Scripts -->
+    <!-- ===================== -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

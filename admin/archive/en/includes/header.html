@@ -1,0 +1,94 @@
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)]"">
+        <!-- Logo / Nome -->
+        <a href="/" class="flex items-center space-x-3">
+            <img src="/src/img/25/09/1010022024854.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <span class="font-bold text-xl">Tomás Mota </span>
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="hidden md:flex space-x-3">
+            <a href="/about.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                About
+            </a>
+
+            <div class="dropdown group relative">
+                <a href="#" class="px-4 py-2 rounded-lg text-white transition hover:no-underline dropdown-toggle"
+                    style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                    Developer <span class="arrow-down">▾</span>
+                </a>
+                <div
+                    class="dropdown-content absolute left-0 mt-2 w-48 bg-[var(--c-gray-2)] rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+                    <a href="/projects/highlights.html" class="block px-4 py-2 text-white hover:underline">Highlights
+                    </a>
+                    <a href="/projects/frontend.html" class="block px-4 py-2 text-white hover:underline">Front-end
+                        Projects</a>
+                    <a href="/projects/backend.html" class="block px-4 py-2 text-white hover:underline">Back-end
+                        Projects</a>
+                </div>
+            </div>
+
+            <div class="dropdown group relative">
+                <a href="#" class="px-4 py-2 rounded-lg text-white transition hover:no-underline dropdown-toggle"
+                    style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                    Photographer <span class="arrow-down">▾</span>
+                </a>
+                <div
+                    class="dropdown-content absolute left-0 mt-2 w-48 bg-[var(--c-gray-2)] rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+                    <a href="/photography/sport.html" class="block px-4 py-2 text-white hover:underline">Sport</a>
+                    <a href="/photography/music.html" class="block px-4 py-2 text-white hover:underline">Music</a>
+                    <a href="/photography/casual.html" class="block px-4 py-2 text-white hover:underline">Casual</a>
+                </div>
+            </div>
+
+            <a href="/cv.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                CV
+            </a>
+
+            <a href="/contact.html" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
+                Contact
+            </a>
+        </nav>
+
+        <!-- Menu Mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===================== -->
+    <!-- Mobile Menu -->
+    <!-- ===================== -->
+    <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+        <a href="/about.html" class="block">About</a>
+
+        <div class="flex flex-col">
+            <span id="mobile-developer-btn" class="mobile-dropdown-btn block hover:no-underline transition">Developer
+                ▾</span>
+            <div id="mobile-developer-menu" class="mobile-dropdown-content">
+                <a href="/projects/highlights.html" class="block">Highlights</a>
+                <a href="/projects/frontend.html" class="block">Front-end Projects</a>
+                <a href="/projects/backend.html" class="block">Back-end Projects</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <span id="mobile-photographer-btn"
+                class="mobile-dropdown-btn block hover:no-underline transition">Photographer ▾</span>
+            <div id="mobile-photographer-menu" class="mobile-dropdown-content">
+                <a href="/photography/sport.htm" class="block">Sport</a>
+                <a href="/photography/music.html" class="block">Music</a>
+                <a href="/photography/casual.html" class="block">Casual</a>
+            </div>
+        </div>
+
+        <a href="/cv.html" class="block">CV</a>
+        <a href="/contact.html" class="block">Contact</a>
+    </div>

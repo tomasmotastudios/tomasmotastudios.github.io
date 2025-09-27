@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/profile.jpg" type="image/jpeg" />
+    <title>Spies – Single by Makyneta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <main class="flex-grow">
+
+        <!-- ===================== -->
+        <!-- Header / Navegação -->
+        <!-- ===================== -->
+        <header class="flex justify-between items-center px-6 py-4 shadow-md bg-[var(--c-gray-2)] sticky top-0 z-50">
+            <!-- Logo / Nome -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+                <span class="font-bold text-xl">Tomás Mota </span>
+            </a>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex space-x-3">
+                <!-- Links principais -->
+
+                <a href="/about" class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
+                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                    About
+                </a>
+
+                <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                    FullStack Projects
+                </a>
+
+                <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                    CV
+                </a>
+
+                <!-- Dropdown Creative Work -->
+                <div class="dropdown">
+                    <a class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
+                        style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                        Creative Work ▾
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/photography">Photography</a>
+                        <a href="/music">Music</a>
+                        <a href="/articles">Articles</a>
+                    </div>
+                </div>
+
+                <a href="/contact" class="px-4 py-2 rounded-lg text-white transition hover:underline"
+                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
+                    Contact
+                </a>
+            </nav>
+
+            <!-- Menu Mobile -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- ===================== -->
+        <!-- Mobile Menu -->
+        <!-- ===================== -->
+        <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+            <!-- Links principais -->
+            <a href="/about" class="block">About</a>
+            <a href="/projects" class="block">FullStack Work</a>
+            <a href="/cv" class="block">CV</a>
+
+            <!-- Dropdown Creative Work Mobile -->
+            <div class="flex flex-col">
+                <span id="mobile-photography-btn" class="mobile-dropdown-btn block">Creative Work ▾</span>
+                <div id="mobile-photography-menu" class="mobile-dropdown-content">
+                    <a href="/photography" class="block">Photography</a>
+                    <a href="/music" class="block">Music</a>
+                    <a href="/articles" class="block">Articles</a>
+                </div>
+            </div>
+
+            <a href="/contact" class="block">Contact</a>
+
+        </div>
+
+        <!-- ===================== -->
+        <!-- Music -->
+        <!-- ===================== -->
+        <main>
+            <h1 class="text-4xl sm:text-4xl md:text-4xl font-extrabold tracking-tight mb-4">
+                <span class="text-[var(--c-red)]">&lt;</span>
+                <span class="text-white">A Bad Dream</span>
+                <span class="text-[var(--c-red)]" /> /&gt;</span>
+            </h1>
+
+            <h3 class="text-4m md:text-1.5xl font-bold tracking-tight mb-4">
+                <span class="text-white" data-aos="fade-up">Release @ 02 Jan 2026</span>
+            </h3>
+
+            <img src="../../../src/img/25/09/1010022057235.png" alt="Spies Song Cover" class="album-cover mx-auto"
+                data-aos="zoom-in">
+
+            <div class="links">
+                <a href="https://lnkfi.re/5063845763900" class="link-btn">Pre-save</a> <a
+                    href="https://lnkfi.re/5063845763900/umgofficialartiststore" class="link-btn">Pre-order CD &
+                    Vinyl</a>
+            </div>
+
+            <section class="tracklist" data-aos="fade-up">
+                <div class="track">
+                    <span>01</span> <a href="/music/song/spies">Spies</a> <span>Lyrics</span>
+                </div>
+            </section>
+        </main>
+    </main>
+
+    <!-- ===================== -->
+    <!-- Footer -->
+    <!-- ===================== -->
+    <!-- Footer Desktop -->
+    <footer
+        class="hidden md:flex py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+
+            <!-- Copyright à esquerda -->
+            <div class="text-left">
+                © 2024 - <span class="year"></span>
+                <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
+                Reserved.
+            </div>
+
+            <!-- Redes sociais acima dos links legais, à direita -->
+            <div class="flex flex-col items-end">
+
+                <!-- Redes sociais -->
+                <div class="flex gap-4 mb-2">
+                    <a href="/linkedin" target="_blank" title="LinkedIn" class="hover:text-white transition">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/github" target="_blank" title="GitHub" class="hover:text-white transition">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/facebook" target="_blank" title="Facebook" class="hover:text-white transition">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
+                            class="w-6 h-6 filter brightness-0 invert">
+                    </a>
+                    <a href="/instagram" target="_blank" title="Instagram" class="hover:text-white transition">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
+                            class="w-6 h-6 filter brightness-0 invert">
+
+                        <a href="/youtube" target="_blank" title="YouTube" class="hover:text-white transition">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube"
+                                class="w-6 h-6 filter brightness-0 invert">
+                        </a>
+                        <a rel="alternate" type="application/rss+xml" title="RSS" target="_blank" href="/rss.xml"
+                            class="hover:text-white transition">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/rss.svg" alt="RSS"
+                                class="w-6 h-6 filter brightness-0 invert">
+                        </a>
+                </div>
+
+                <!-- Links legais -->
+                <nav class="flex gap-4">
+                    <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+                    <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+                    <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of
+                        Service</a>
+                </nav>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Footer Mobile -->
+    <footer
+        class="flex flex-col md:hidden py-8 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm items-center gap-4">
+
+        <!-- Redes sociais -->
+        <div class="flex justify-center gap-4">
+            <a href="/linkedin" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LInkedIn"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/github" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/facebook" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/instagram" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a href="/youtube" target="_blank" class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+            <a rel="alternate" type="application/rss+xml" target="_blank" href="/rss.xml"
+                class="hover:text-white transition">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/rss.svg" alt="RSS"
+                    class="w-6 h-6 filter brightness-0 invert">
+            </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center">
+            © 2024 - <span class="year"></span>
+            <a href="/" class="hover:text-white transition no-underline font-bold">Tomás Mota</a>. All Rights
+            Reserved.
+        </div>
+
+        <!-- Links legais -->
+        <nav class="flex flex-wrap justify-center gap-4 text-center">
+            <a href="/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
+            <a href="/cookies" class="hover:text-white no-underline transition">Cookies</a>
+            <a href="/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
+        </nav>
+
+    </footer>
+
+    <!-- ===================== -->
+    <!-- Scripts -->
+    <!-- ===================== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

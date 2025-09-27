@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Mota's Links</title>
+    <link rel="icon" href="../../src/img/25/09/1010022025269.jpg" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: "class" }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(270deg, #1e3a8a, #3b82f6, #1e40af);
+            background-size: 600% 600%;
+            animation: gradientAnimation 15s ease infinite;
+            transition: background 0.8s ease;
+        }
+
+        html.dark body {
+            background: linear-gradient(270deg, #0f172a, #1e293b, #334155);
+            background-size: 600% 600%;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Botões mais suaves */
+        .btn-link {
+            transition: transform 0.35s ease-in-out,
+                box-shadow 0.35s ease-in-out,
+                background-color 0.35s ease,
+                color 0.35s ease;
+            will-change: transform, box-shadow;
+        }
+
+        .btn-link:hover {
+            transform: translateY(-6px) scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Transições suaves para mudança de tema */
+        .transition-theme {
+            transition: background-color 0.8s ease,
+                color 0.8s ease,
+                border-color 0.8s ease;
+        }
+
+        /* Foto com borda animada */
+        .photo-container {
+            position: relative;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .photo-container::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            padding: 4px;
+            /* espessura da borda */
+            background: conic-gradient(from 0deg, #3b82f6, #9333ea, #3b82f6);
+            -webkit-mask:
+                radial-gradient(farthest-side, #000 calc(100% - 4px), transparent calc(100% - 4px));
+            mask:
+                radial-gradient(farthest-side, #000 calc(100% - 4px), transparent calc(100% - 4px));
+            animation: rotateGradient 6s linear infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .photo-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            animation: floatPhoto 8s ease-in-out infinite;
+            transition: transform 0.5s ease;
+        }
+
+        .photo-inner:hover {
+            transform: scale(1.1);
+        }
+
+        .animated-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 50%;
+        }
+
+        /* Gradiente girando */
+        @keyframes rotateGradient {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Foto flutuante contínua */
+        @keyframes floatPhoto {
+            0% {
+                transform: translateX(0px) translateY(0px);
+            }
+
+            20% {
+                transform: translateX(-12px) translateY(-6px);
+            }
+
+            40% {
+                transform: translateX(10px) translateY(-8px);
+            }
+
+            60% {
+                transform: translateX(-8px) translateY(12px);
+            }
+
+            80% {
+                transform: translateX(12px) translateY(6px);
+            }
+
+            100% {
+                transform: translateX(0px) translateY(0px);
+            }
+        }
+    </style>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body class="font-sans overflow-x-hidden overflow-y-auto transition-colors duration-500">
+    <div class="min-h-screen flex flex-col items-center justify-center py-12 px-4">
+        <div
+            class="relative bg-white/90 dark:bg-gray-800 backdrop-blur shadow-2xl border border-gray-200 dark:border-gray-700 rounded-2xl p-10 max-w-md w-full text-center transition-theme">
+
+            <!-- Top action buttons -->
+            <button id="share-btn"
+                class="absolute top-4 left-4 w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 shadow transition-theme">
+                <i data-lucide="share-2" class="w-5 h-5"></i>
+            </button>
+
+            <button id="theme-btn"
+                class="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 shadow transition-theme">
+                <i id="theme-icon" data-lucide="sun" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Website -->
+            <!-- <div class="mb-6">
+        <a href="../" target="_blank"
+          class="btn-link inline-block bg-gradient-to-r from-blue-700 to-blue-500 dark:from-indigo-600 dark:to-indigo-400 text-white px-6 py-2 rounded-full font-medium shadow hover:from-blue-800 hover:to-blue-600 dark:hover:from-indigo-700 dark:hover:to-indigo-500 text-sm sm:text-base transition-theme">
+          Visit My Website
+        </a>
+      </div> -->
+
+            <!-- Photo / Name -->
+            <div class="photo-container w-28 h-28 sm:w-32 sm:h-32 mx-auto mb-4 relative">
+                <div class="photo-inner w-full h-full rounded-full overflow-hidden">
+                    <img src="../../src/img/25/09/1010022025269.jpg" alt="Profile Photo"
+                        class="animated-photo w-full h-full object-cover">
+                </div>
+            </div>
+
+            <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white transition-theme">Tomás Mota</h1>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-8 transition-theme">Fullstack Dev & Photographer</p>
+
+
+            <!-- Links -->
+            <div class="space-y-3 sm:space-y-4">
+                <a href="../index.html" target="_blank"
+                    class="btn-link flex items-center justify-center gap-2 bg-indigo-700 dark:bg-indigo-600 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-indigo-800 dark:hover:bg-indigo-700 text-sm sm:text-base transition-theme">
+                    <i data-lucide="folder-kanban" class="w-5 h-5"></i> Website / Portfolio
+                </a>
+                <a href="../cv.html" target="_blank"
+                    class="btn-link flex items-center justify-center gap-2 bg-blue-700 dark:bg-blue-600 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-blue-800 dark:hover:bg-blue-700 text-sm sm:text-base transition-theme">
+                    <i data-lucide="file-text" class="w-5 h-5"></i> CV
+                </a>
+                <a href="linkedin.html" target="_blank"
+                    class="btn-link flex items-center justify-center gap-2 bg-gray-900 dark:bg-gray-700 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-black dark:hover:bg-gray-800 text-sm sm:text-base transition-theme">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn
+                </a>
+                <a href="github.html" target="_blank"
+                    class="btn-link flex items-center justify-center gap-2 bg-gray-800 dark:bg-gray-700 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-gray-900 dark:hover:bg-gray-800 text-sm sm:text-base transition-theme">
+                    <i data-lucide="github" class="w-5 h-5"></i> GitHub
+                </a>
+                <a href="email.html"
+                    class="btn-link flex items-center justify-center gap-2 bg-green-700 dark:bg-green-600 text-white py-2 sm:py-3 rounded-lg font-medium shadow hover:bg-green-800 dark:hover:bg-green-700 text-sm sm:text-base transition-theme">
+                    <i data-lucide="mail" class="w-5 h-5"></i> Email
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-8 transition-theme">© & ℗ 2024 - <span
+                    class="year"></span>
+                <a href="../index.html"><strong>Tomás Mota Studios</strong></a>. All Rights Reserved.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Dynamic year
+        document.querySelectorAll(".year").forEach(span => {
+            span.textContent = new Date().getFullYear();
+        });
+
+        // Inicializar icons
+        lucide.createIcons();
+
+        // Theme toggle
+        const themeBtn = document.getElementById("theme-btn");
+        const themeIcon = document.getElementById("theme-icon");
+
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+            document.documentElement.classList.add("dark");
+            themeIcon.setAttribute("data-lucide", "moon");
+        }
+
+        function updateIcon() {
+            if (document.documentElement.classList.contains("dark")) {
+                themeIcon.setAttribute("data-lucide", "moon");
+            } else {
+                themeIcon.setAttribute("data-lucide", "sun");
+            }
+            lucide.createIcons();
+        }
+
+        themeBtn.addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark");
+            localStorage.setItem("theme",
+                document.documentElement.classList.contains("dark") ? "dark" : "light"
+            );
+            updateIcon();
+        });
+
+        // Share button
+        document.getElementById("share-btn").addEventListener("click", async () => {
+            if (navigator.share) {
+                await navigator.share({
+                    title: "Check out Tomás Mota",
+                    text: "Here are my professional links:",
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert("Link copied to clipboard!");
+            }
+        });
+    </script>
+</body>
+
+</html>
