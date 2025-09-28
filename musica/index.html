@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <div id="favicon"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Mota - Música</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/musica.css">
+</head>
+
+<body class="bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 animate-gradient-bg text-white">
+
+    <!-- Header -->
+    <header
+        class="flex justify-between items-center px-8 py-5 bg-black bg-opacity-50 backdrop-blur-md fixed w-full z-50">
+        <div class="flex items-center space-x-4">
+            <!-- <img src="../src/img/favicon/favicon02.jpg" alt="Logo" class="w-12 h-12 rounded-full shadow-lg">-->
+            <h1 class="text-2xl font-bold tracking-wide">Tomás Mota</h1>
+        </div>
+        <nav class="space-x-6">
+            <a href="../index.html" class="hover:text-yellow-400 transition duration-300">Página Inicial</a>
+            <a href="#" class="hover:text-yellow-400 transition duration-300">Discografia</a>
+            <a href="tour.html" class="hover:text-yellow-400 transition duration-300">Tour</a>
+            <a href="../contacto.html" class="hover:text-yellow-400 transition duration-300">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <h1>ㅤ</h1>
+    <main class="pt-24 px-8 space-y-20">
+
+        <!-- Home Section -->
+        <section id="home" class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 px-8">
+            <!-- Foto -->
+            <div class="flex-shrink-0">
+                <img id="fotoArtista" src="../src/img/favicon/favicon02.jpg" alt="Foto do Artista"
+                    class="w-48 h-48 object-cover rounded-full shadow-lg cursor-pointer transition-transform duration-500 hover:scale-110">
+            </div>
+
+            <!-- Texto -->
+            <div class="text-center md:text-left space-y-4">
+                <h2 class="text-4xl font-extrabold border-b-4 border-yellow-400 inline-block pb-2">Bem-vindo ao Meu
+                    Mundo Musical</h2>
+                <p class="text-lg max-w-xl">Entre, descubra e viva minha música. Cada nota é uma história, cada batida
+                    uma emoção. Seja parte dessa jornada sonora.</p>
+            </div>
+        </section>
+
+
+        <!-- Discografia Section -->
+        <section id="discografia" class="bg-black bg-opacity-30 p-8 rounded-lg shadow-lg space-y-8">
+            <h2 class="text-3xl font-bold border-b-4 border-yellow-400 inline-block pb-2">Discografia</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Álbum -->
+                <div class="bg-gray-900 bg-opacity-50 p-4 rounded-lg shadow-lg">
+                    <img src="assets/images/album1.jpg" alt="Álbum 1" class="rounded-md mb-4">
+                    <h3 class="text-xl font-bold">Ecos do Amanhã</h3>
+                    <p class="mt-2">Álbum lançado em 2023, trazendo uma fusão de música eletrônica com ritmos
+                        brasileiros.</p>
+                    <span class="block mt-2 text-yellow-400 font-semibold">Lançado: 15 Março 2023</span>
+                </div>
+
+                <!-- Álbum -->
+                <div class="bg-gray-900 bg-opacity-50 p-4 rounded-lg shadow-lg">
+                    <img src="assets/images/album2.jpg" alt="Álbum 2" class="rounded-md mb-4">
+                    <h3 class="text-xl font-bold">Noite Estelar</h3>
+                    <p class="mt-2">Single lançado em 2024, uma faixa contemplativa com influências de synthwave.</p>
+                    <span class="block mt-2 text-yellow-400 font-semibold">Lançado: 22 Janeiro 2024</span>
+                </div>
+
+                <!-- Álbum -->
+                <div class="bg-gray-900 bg-opacity-50 p-4 rounded-lg shadow-lg">
+                    <img src="assets/images/album3.jpg" alt="Álbum 3" class="rounded-md mb-4">
+                    <h3 class="text-xl font-bold">Batidas do Coração</h3>
+                    <p class="mt-2">Coletânea lançada em 2025, reunindo meus singles mais populares e inéditos.</p>
+                    <span class="block mt-2 text-yellow-400 font-semibold">Lançado: 10 Julho 2025</span>
+                </div>
+            </div>
+        </section>
+
+        <div id="lightbox"
+            class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 opacity-0 transition-opacity duration-500">
+            <span id="fecharLightbox" class="absolute top-6 right-6 text-white text-4xl cursor-pointer">&times;</span>
+            <img id="lightboxImagem" src="" alt="Foto Ampliada"
+                class="max-w-full max-h-full rounded-3xl shadow-2xl transform scale-90 opacity-0 transition-all duration-500">
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <div id="footer" class="mt-20"></div>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/musica.js"></script>
+</body>
+
+</html>
