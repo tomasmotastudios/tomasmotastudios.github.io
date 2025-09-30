@@ -4,8 +4,8 @@ header {
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: rgba(15, 22, 32, 0.589);
-  backdrop-filter: blur(10px);
+  background-color: rgba(15, 22, 32, 0.50); /* mesmo fundo */
+  backdrop-filter: blur(30px);              /* mesmo blur */
   color: var(--c-white);
 }
 
