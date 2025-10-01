@@ -1,26 +1,3 @@
-// Carregar os arquivos reais
-fetch("scripts/meu_script.py")
-    .then(r => r.text())
-    .then(t => {
-        document.getElementById("codigo-python").textContent = t;
-        hljs.highlightAll();
-    });
-
-fetch("scripts/program.cs")
-    .then(r => r.text())
-    .then(t => {
-        document.getElementById("codigo-cs").textContent = t;
-        hljs.highlightAll();
-    });
-
-// Executar Python
-async function runPython() {
-    let pyodide = await loadPyodide();
-    let code = document.getElementById("codigo-python").textContent;
-    let result = await pyodide.runPythonAsync(code);
-    document.getElementById("python-output").textContent = result;
-}
-
 // MODAL FOR CERTIFICATES
     const modal = document.getElementById('cert-modal');
     const modalImg = document.getElementById('modal-img');
