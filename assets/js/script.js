@@ -1,3 +1,55 @@
+//
+// Favicon
+//
+  fetch("/includes/favicon.html")
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById("favicon").innerHTML = html;
+    })
+    .catch(err => console.error('Erro ao carregar favicon:', err));
+
+//
+// Footer
+//
+fetch("/includes/footer.html")
+    .then(response => response.text())
+    .then(data => {
+    // Insere o HTML do footer
+        document.getElementById("footer").innerHTML = data;
+
+    // Carrega o JS do header (mobile menu, dropdowns etc.)
+    const script = document.createElement("script");
+    script.src = "/assets/js/footer.js";
+    document.body.appendChild(script);
+    });
+
+//
+// Header
+//
+fetch("/includes/header.html")
+  .then(response => response.text())
+  .then(data => {
+    // Insere o HTML do header
+    document.getElementById("header").innerHTML = data;
+
+function loadCSS(href) {
+  if (!document.querySelector(`link[href="${href}"]`)) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = href;
+    document.head.appendChild(link);
+  }
+}
+
+loadCSS("/assets/css/styles.css");
+loadCSS("/assets/css/header.css");
+
+    // Carrega o JS do header (mobile menu, dropdowns etc.)
+    const script = document.createElement("script");
+    script.src = "/assets/js/header.js";
+    document.body.appendChild(script);
+  });
+  
 // Preloader
 window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
@@ -61,63 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
-//
-// Favicon
-//
-  fetch("/includes/favicon.html")
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById("favicon").innerHTML = html;
-    })
-    .catch(err => console.error('Erro ao carregar favicon:', err));
-
-//
-// Footer
-//
-fetch("/includes/footer.html")
-    .then(response => response.text())
-    .then(data => {
-    // Insere o HTML do footer
-        document.getElementById("footer").innerHTML = data;
-
-    // Carrega o JS do header (mobile menu, dropdowns etc.)
-    const script = document.createElement("script");
-    script.src = "/assets/js/footer.js";
-    document.body.appendChild(script);
-    });
-
-//
-// Header
-//
-fetch("/includes/header.html")
-  .then(response => response.text())
-  .then(data => {
-    // Insere o HTML do header
-    document.getElementById("header").innerHTML = data;
-
-function loadCSS(href) {
-  if (!document.querySelector(`link[href="${href}"]`)) {
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = href;
-    document.head.appendChild(link);
-  }
-}
-
-loadCSS("/assets/css/styles.css");
-loadCSS("/assets/css/header.css");
-
-    // Carrega o JS do header (mobile menu, dropdowns etc.)
-    const script = document.createElement("script");
-    script.src = "/assets/js/header.js";
-    document.body.appendChild(script);
-  });
-
-
-
-
-
 
 // Slideshow @ Photography
 document.addEventListener('DOMContentLoaded', () => {
