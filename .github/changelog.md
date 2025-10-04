@@ -1,5 +1,8 @@
 # Registo de alterações
 
+## [3.1.0] - 04/10/2025
+- Remoção da secção de administrador do website.
+
 ## [3.0.0] - 27/09/2025
 - Atualização oficial do website para português, junto do arquivamento da versão anterior em inglês.
 

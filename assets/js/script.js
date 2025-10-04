@@ -137,37 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ============================
-// Carrossel de certificados
-// ============================
-const track = document.getElementById('cert-track');
-const scrollInterval = 3000; // Tempo entre cada rolagem
-let autoScroll;
-
-function startAutoScroll() {
-    if (!track) return;
-    const firstCard = track.querySelector('article');
-    const cardWidth = firstCard ? firstCard.offsetWidth + 16 : 300;
-
-    autoScroll = setInterval(() => {
-        const maxScrollLeft = track.scrollWidth - track.clientWidth;
-        const originalEndPosition = maxScrollLeft / 2;
-
-        if (track.scrollLeft >= originalEndPosition) {
-            track.scrollBy({ left: -track.scrollLeft, behavior: 'instant' });
-        } else {
-            track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-        }
-    }, scrollInterval);
-}
-function stopAutoScroll() { clearInterval(autoScroll); }
-
-startAutoScroll();
-if (track) {
-    track.addEventListener('mouseenter', stopAutoScroll);
-    track.addEventListener('mouseleave', startAutoScroll);
-}
-
-// ============================
 // Theme Toggle
 // ============================
 const toggleBtn = document.getElementById("theme-toggle");
