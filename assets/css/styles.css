@@ -3,7 +3,7 @@
 /* ===================== */
 :root {
   --c-white: #ffffff;
-  --c-white2: #cfcfcf;
+  --c-white2: #eeeeee;
   --c-black: #000000;
   --c-gray: #2b2f36;
   --c-gray-2: #3a3f46;
@@ -17,7 +17,7 @@
 /* ===================== */
 body {
   text-align: center;
-  color: var(--c-white);
+  color: var(--c-gray);
   font-family: sans-serif;
   margin: 0;
   padding: 0;
@@ -28,9 +28,9 @@ body {
 /* ===================== */
 body {
   background: 
-    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.534), transparent 50%),
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.81), transparent 50%),
     radial-gradient(circle at 85% 80%,  #f7f7f7a9, transparent 50%),
-    linear-gradient(180deg, #464749 0%, #141b2a 100%);
+    linear-gradient(180deg, #afb1b5 0%, #8d8e92 100%);
   background-size: 200% 200%;
   background-position: 0% 0%;
   color: var(--c-white);
@@ -57,6 +57,32 @@ body {
  * =====================
  */
 
+ h2 {
+  color: var(--c-gray);
+  font-size: 2.2rem;
+}
+
+#developer h3,
+#photographer h3,
+#certificados h3,
+#cv h2,
+#proj h3,
+#foto h3,
+#cvcnt h3,
+#sbrcnt h3 {
+  color: var(--c-white);
+}
+
+#idx p,
+#developer p,
+#photographer p,
+#certificados p,
+#proj p,
+#foto p, 
+#cvcnt p, ul,
+#sbrcnt p, blockquote {
+  color: var(--c-white2)
+}
 
 /* ===================== */
 /* Hero Section */
@@ -73,9 +99,9 @@ body {
 /* Cards (Projetos, Fotografia, Certificados) */
 /* ===================== */
 .card {
-    background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
+    background-color: rgba(106, 109, 112, 0.356) !important; /* leve transparência */
   backdrop-filter: blur(0px) !important;
-  color: var(--c-white);
+  color: var(--c-gray);
   box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
   border-radius: 1rem;
 }
@@ -85,7 +111,7 @@ body {
 }
 
 .card h3 {
-  color: var(--c-white);
+  color: var(--c-gray);
 }
 
 /* Alteração específica: descrição dos certificados */
@@ -201,7 +227,7 @@ body {
 /* ===================== */
 footer {
   color: var(--c-white);
-  background-color: rgba(15, 22, 32, 0.50); /* mesmo fundo */
+  background-color: rgba(99, 102, 104, 0.434); /* mesmo fundo */
   backdrop-filter: blur(30px);              /* mesmo blur */
 }
 
