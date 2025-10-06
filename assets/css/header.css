@@ -19,20 +19,14 @@ header > a:first-child {
   background: transparent;
 }
 
-
-header a {
-  background: var(--c-gray);
-  color: var(--c-white);
-}
-
-header a:hover {
-  color: var(--c-white);
-  background: var(--c-white);
+/* Remove background apenas do link do logo */
+header > a:hover:first-child {
+  background: transparent !important;
 }
 
 #mobile-menu {
   background: var(--c-gray-2);
-  color: var(--c-white);
+  color:  rgba(15, 22, 32, 0.587);
 }
 
 #mobile-menu a {
