@@ -99,7 +99,7 @@ body {
 /* Cards (Projetos, Fotografia, Certificados) */
 /* ===================== */
 .card {
-    background-color: rgba(106, 109, 112, 0.356) !important; /* leve transparência */
+    background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
   backdrop-filter: blur(0px) !important;
   color: var(--c-gray);
   box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
@@ -227,7 +227,7 @@ body {
 /* ===================== */
 footer {
   color: var(--c-white);
-  background-color: rgba(99, 102, 104, 0.434); /* mesmo fundo */
+  background-color: rgba(15, 22, 32, 0.356); /* mesmo fundo */
   backdrop-filter: blur(30px);              /* mesmo blur */
 }
 

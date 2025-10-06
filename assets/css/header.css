@@ -4,7 +4,7 @@ header {
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: rgba(151, 156, 163, 0.5); /* mesmo fundo */
+  background-color: rgba(15, 22, 32, 0.356); /* mesmo fundo */
   backdrop-filter: blur(30px);              /* mesmo blur */
   color: var(--c-white);
 }
@@ -21,12 +21,13 @@ header > a:first-child {
 
 
 header a {
-  background: var(--c-gray-2);
+  background: var(--c-gray);
   color: var(--c-white);
 }
 
 header a:hover {
   color: var(--c-white);
+  background: var(--c-white);
 }
 
 #mobile-menu {
