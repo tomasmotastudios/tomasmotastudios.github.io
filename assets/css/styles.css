@@ -138,9 +138,15 @@ body {
 .btn {
   border-radius: .8rem;
   font-weight: 600;
-  transition: transform .15s ease, box-shadow .15s ease;
-  background: var(--c-blue);
+  transition: transform .15s ease, box-shadow .15s ease !important;
+  background: var(--c-gray-2);
   color: var(--c-white);
+}
+
+.btn:hover {
+  background: var(--c-white2);
+  color: var(--c-black);
+  transition: transform .15s ease, box-shadow .15s ease !important;
 }
 
 .btn:active {
@@ -291,73 +297,4 @@ footer {
   #code-demos .grid {
     grid-template-columns: repeat(2, 1fr); /* lado a lado */
   }
-}
-
-/* cards */
-#code-demos .card {
-  background: #1e1e1e;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-/* blocos de código */
-#code-demos pre {
-  background: #0d0d0d;
-  color: #eee;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-}
-
-/* botões */
-#code-demos button,
-#code-demos a {
-  background: #2563eb;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-/* divisória entre código e botões */
-#code-demos .card .flex {
-  border-top: 1px solid #333;   /* cor da linha */
-  padding-top: 0.75rem;         /* espaço interno acima dos botões */
-  margin-top: 0.75rem;          /* espaço externo entre o código e a linha */
-}
-
-/* adiciona espaço entre os botões e o output */
-.card pre#python-output,
-.card pre#cs-output {
-  margin-top: 0.75rem; /* ou 1rem se quiseres mais espaço */
-  padding: 0.5rem;     /* opcional, deixa o output mais "respirado" */
-  background-color: #1e1e1e; /* opcional, deixa como bloco de saída */
-  color: #f0f0f0;           /* opcional, contraste com fundo escuro */
-  border-radius: 0.5rem;    /* opcional, cantos arredondados */
-}
-
-
-#code-demos a {
-  background: #374151;
-}
-
-#code-demos button:hover {
-  background: #1d4ed8;
-}
-
-#code-demos a:hover {
-  background: #4b5563;
-}
-
-/* output Python */
-#python-output, #cs-output {
-  background: #000;
-  color: #10b981;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
 }

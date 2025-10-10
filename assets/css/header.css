@@ -59,10 +59,10 @@ header > a:hover:first-child {
 .dropdown-content {
   /* Não adicione display: none aqui */
   position: absolute;
-  background-color: rgba(15, 22, 32, 0.103);
-  backdrop-filter: blur(10px);
+  background-color: rgba(15, 22, 32, 0.103) !important;
+  backdrop-filter: blur(10px) !important;
   min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2) !important;
   z-index: 1;
   border-radius: 0.5rem;
   overflow: hidden;
