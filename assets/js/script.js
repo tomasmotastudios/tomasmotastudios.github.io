@@ -24,33 +24,72 @@ fetch("/includes/footer.html")
     });
 
 //
+// Footer EN
+//
+fetch("/includes/footer-en.html")
+    .then(response => response.text())
+    .then(data => {
+    // Insere o HTML do footer
+        document.getElementById("footeren").innerHTML = data;
+
+    // Carrega o JS do header (mobile menu, dropdowns etc.)
+    const script = document.createElement("script");
+    script.src = "/assets/js/footer.js";
+    document.body.appendChild(script);
+    });
+
+//
 // Header
 //
 fetch("/includes/header.html")
   .then(response => response.text())
   .then(data => {
-    // Insere o HTML do header
     document.getElementById("header").innerHTML = data;
 
-function loadCSS(href) {
-  if (!document.querySelector(`link[href="${href}"]`)) {
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = href;
-    document.head.appendChild(link);
-  }
-}
+    function loadCSS(href) {
+      if (!document.querySelector(`link[href="${href}"]`)) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = href;
+        document.head.appendChild(link);
+      }
+    }
 
-loadCSS("/assets/css/styles.css");
-loadCSS("/assets/css/header.css");
+    loadCSS("/assets/css/styles.css");
+    loadCSS("/assets/css/header.css");
 
-    // Carrega o JS do header (mobile menu, dropdowns etc.)
     const script = document.createElement("script");
     script.src = "/assets/js/header.js";
     document.body.appendChild(script);
   });
-  
-// Preloader
+
+
+//
+// Header EN
+//
+fetch("/includes/header-en.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("headeren").innerHTML = data;
+
+    function loadCSS(href) {
+      if (!document.querySelector(`link[href="${href}"]`)) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = href;
+        document.head.appendChild(link);
+      }
+    }
+
+    loadCSS("/assets/css/styles.css");
+    loadCSS("/assets/css/header.css");
+
+    const script = document.createElement("script");
+    script.src = "/assets/js/header.js";
+    document.body.appendChild(script);
+  });
+
+  // Preloader
 window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
     if (!preloader) return;
@@ -113,31 +152,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
-// Slideshow @ Photography
-document.addEventListener('DOMContentLoaded', () => {
-    const slideshowContainers = document.querySelectorAll('.slideshow-container');
-    slideshowContainers.forEach(container => {
-        const slides = container.querySelectorAll('.slide');
-        if (slides.length < 2) return;
-
-        let current = 0;
-
-        function showNextSlide() {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }
-
-        // Garante que a primeira imagem está ativa ao carregar
-        slides[0].classList.add('active');
-
-        setInterval(showNextSlide, 3000);
-    });
-});
-
-// ============================
-// Theme Toggle
-// ============================
-const toggleBtn = document.getElementById("theme-toggle");
-const body = document.body;
