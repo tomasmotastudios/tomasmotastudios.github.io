@@ -1,4 +1,4 @@
-# tomasmotahq.github.io
+# Tomás Mota
 
 Bem-vindo ao meu site pessoal, criado e alojado com o **GitHub Pages**. Este espaço serve como o meu portefólio digital, mostrando quem sou e o que faço — tudo concebido a pensar na simplicidade e na clareza.
 
