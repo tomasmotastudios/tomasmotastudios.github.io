@@ -31,12 +31,12 @@ Este site é automaticamente implantado através de [GitHub Pages](https://pages
 
 ## 👤 Autor
 
-**[Tomás Mota](https://tomasmotahq.github.io/)**
+**[Tomás Mota](https://tomasmotastudios.github.io/)**
 Construindo sempre com foco e minimalismo.
 
 ## 📬 Contacto
 
-Sinta-se à vontade para se ligar através de [https://tomasmotahq.github.io/contacto](https://tomasmotahq.github.io/contacto)
+Sinta-se à vontade para se ligar através de [https://tomasmotastudios.github.io/contacto](https://tomasmotastudios.github.io/contacto)
 
 ---
 
