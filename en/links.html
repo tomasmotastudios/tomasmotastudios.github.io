@@ -153,13 +153,96 @@
             box-shadow: 0 8px 20px rgba(59, 130, 246, 0.5);
         }
 
+        /* Container para a sobreposição das fotos */
+        .profile-group {
+            position: relative;
+            /* Permite que os filhos se posicionem */
+            width: 140px;
+            /* Tamanho do container = tamanho das fotos */
+            height: 140px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+        }
+
+        .profile-photo {
+            /* Estilos base */
+            width: 100%;
+            /* Ocupa o total do container (140px) */
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3b82f6;
+
+            /* Configuração para a animação */
+            position: absolute;
+            /* Coloca as duas imagens no mesmo lugar */
+            top: 0;
+            left: 0;
+            opacity: 0;
+            /* Começa invisível */
+            animation-duration: 10s;
+            /* Duração total do ciclo (5s por imagem) */
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        /* Animação Keyframes */
+        @keyframes photo-fade {
+            0% {
+                opacity: 1;
+            }
+
+            /* Início: Foto 1 visível */
+            25% {
+                opacity: 1;
+            }
+
+            /* Mantém visível */
+            50% {
+                opacity: 0;
+            }
+
+            /* Transição para invisível */
+            75% {
+                opacity: 0;
+            }
+
+            /* Mantém invisível */
+            100% {
+                opacity: 1;
+            }
+
+            /* Volta a ser visível */
+        }
+
+        /* Aplicar a animação à primeira foto (alterna entre 1 e 0) */
+        .photo-1 {
+            animation-name: photo-fade;
+            z-index: 2;
+            /* Garante que está por cima no início */
+        }
+
+        /* Aplicar a animação à segunda foto (começa a meio do ciclo) */
+        .photo-2 {
+            animation-name: photo-fade;
+            animation-delay: -5s;
+            /* Começa a animação a meio do ciclo (5s mais cedo) */
+            z-index: 1;
+            /* Garante que está por baixo no início */
+        }
+
+        /* Remover o efeito hover da foto (já não se aplica bem a duas fotos animadas) */
+        /* .profile-photo:hover { transform: none; } */
     </style>
 </head>
 
 <body>
     <div class="container">
-        
-        <img src="../src/img/1010022036936.jpg" alt="Profile Photo" class="profile-photo">
+
+        <div class="profile-group">
+            <img src="../src/img/1010022023743.jpg" alt="Profile Photo 1" class="profile-photo photo-1">
+            <img src="../src/img/1010022036936.jpg" alt="Profile Photo 2" class="profile-photo photo-2">
+        </div>
         <h1>Tomás Mota</h1>
         <!-- <p style="font-size: 1.1em; color: #a0a0a0; margin-bottom: 20px;">Dev Fullstack | Fotógrafo</p> -->
 
